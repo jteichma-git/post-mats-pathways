@@ -1,0 +1,782 @@
+[
+  {
+    "name": "80K Hours Upskilling Resources",
+    "url": "https://80000hours.org/2025/06/technical-ai-safety-upskilling-resources/",
+    "category": "community",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "Curated list of 67 resources for technical AI safety skill development.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "80K Hours AI Safety Career Review",
+    "url": "https://80000hours.org/career-reviews/ai-safety-researcher/",
+    "category": "community",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "In-depth career guide with salary data, fit assessment, and strategic advice for AI safety researchers.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "AISafety.com Events & Training",
+    "url": "https://www.aisafety.com/events-and-training",
+    "category": "community",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "Directory of workshops, conferences, and training programs in AI safety.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "AISafety.com Self-Study",
+    "url": "https://www.aisafety.com/self-study",
+    "category": "community",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "Curated self-study materials for Technical AI Safety and Frontier AI Governance.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Apart Research Hackathons",
+    "url": "https://apartresearch.com/",
+    "category": "community",
+    "current_status": "open",
+    "current_deadline": "Recurring events",
+    "current_details": "Regular alignment research sprints. Great for building portfolio, meeting collaborators, and quick research contributions.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "BlueDot Impact",
+    "url": "https://bluedot.org/",
+    "category": "community",
+    "current_status": "open",
+    "current_deadline": "Multiple cohorts per year",
+    "current_details": "Free 12-week AI safety courses (Technical + Policy tracks). 4,000+ alumni community. Also runs mentor matching via BlueDot Connect.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "MATS Slack #opportunities",
+    "url": "https://mats-program.slack.com/archives/C05LWT1UG67",
+    "category": "community",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "Contract work, facilitation gigs, paper reviews, and collaboration opportunities from the MATS community.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Outsider's Roadmap to AI Safety (LessWrong)",
+    "url": "https://www.lesswrong.com/posts/bcuzjKmNZHWDuEwBz/an-outsider-s-roadmap-into-ai-safety-research-2025",
+    "category": "community",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "Comprehensive guide for breaking into AI safety research. Great to share with interested peers.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Anthropic Fellows Program",
+    "url": "https://alignment.anthropic.com/2025/anthropic-fellows-program-2026/",
+    "category": "fellowships",
+    "current_status": "open",
+    "current_deadline": "July 2026 cohort \u2014 rolling applications",
+    "current_details": "4-month program. $3,850/week + ~$15K/mo compute. Scalable oversight, interpretability, adversarial robustness. US, UK, or Canada work authorization required. No PhD needed.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "CAIS AI & Society Fellowship",
+    "url": "https://safe.ai/fellowship",
+    "category": "fellowships",
+    "current_status": "upcoming",
+    "current_deadline": "Deadline: March 24, 2026",
+    "current_details": "3 months in SF. $25K stipend + travel + meals. Social/policy focus.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "ERA Fellowship (Cambridge)",
+    "url": "https://erafellowship.org",
+    "category": "fellowships",
+    "current_status": "closed",
+    "current_deadline": "Winter 2026 closed \u2014 sign up for next round",
+    "current_details": "8 weeks fully funded. Competitive stipend + lodging. Technical safety & governance.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Global AI Safety Fellowship",
+    "url": "https://globalaisafetyfellowship.com/",
+    "category": "fellowships",
+    "current_status": "closed",
+    "current_deadline": "2025 cycle closed \u2014 express interest for next iteration",
+    "current_details": "Up to 6 months at FAR.AI, CHAI, Conjecture, UK AISI. Up to $30K.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Iliad Intensive / Fellowship",
+    "url": "https://www.iliad.ac/",
+    "category": "fellowships",
+    "current_status": "upcoming",
+    "current_deadline": "April 2026 Intensive closed \u2014 check site for future cohorts",
+    "current_details": "Intensive: 1-month math intro to alignment. Travel + housing covered. London. Fellowship: 3 months, $6K\u2013$15K stipend. June\u2013Aug 2026.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "MATS (ML Alignment Theory Scholars)",
+    "url": "https://www.matsprogram.org/",
+    "category": "fellowships",
+    "current_status": "closed",
+    "current_deadline": "Summer 2026 (June\u2013Aug) apps closed \u2014 Autumn 2026 apps open late April",
+    "current_details": "12-week in-person research program. $15K stipend + $12K compute + private housing + catered meals. 120 fellows, 100 mentors. Berkeley & London. 5 streams. ~70% receive 6\u201312 month extensions.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Pivotal Research Fellowship",
+    "url": "https://www.pivotal-research.org/fellowship",
+    "category": "fellowships",
+    "current_status": "upcoming",
+    "current_deadline": "Current cohort (Feb\u2013April 2026) in progress; check for Q3/Autumn 2026 applications",
+    "current_details": "9 weeks in London. \u00a36K\u20138K stipend + accommodation + compute. ~70% get extensions up to 6 months.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Second Look Research (UChicago XLab)",
+    "url": "https://secondlookresearch.com/",
+    "category": "fellowships",
+    "current_status": "closed",
+    "current_deadline": "Closed \u2014 deadline passed March 15",
+    "current_details": "Replicate load-bearing AI safety papers. Contact zroe@uchicago.edu for details.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "SPAR",
+    "url": "https://sparai.org/",
+    "category": "fellowships",
+    "current_status": "closed",
+    "current_deadline": "Spring 2026 in progress \u2014 check for fall cycle",
+    "current_details": "3-month remote, part-time (5\u201340 hrs/wk). Compute covered. $7K in Demo Day prizes.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Coefficient Giving \u2014 Transition Grants",
+    "url": "https://coefficientgiving.org/funds/global-catastrophic-risks-opportunities/career-development-and-transition-funding/",
+    "category": "grants",
+    "current_status": "upcoming",
+    "current_deadline": "Check current deadline on site",
+    "current_details": "Career transitions into AI safety. Covers study, internships, training. Case-by-case amounts. Global.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Coefficient Giving \u2014 Technical AI Safety RFP",
+    "url": "https://coefficientgiving.org/funds/navigating-transformative-ai/request-for-proposals-technical-ai-safety-research/",
+    "category": "grants",
+    "current_status": "closed",
+    "current_deadline": "Closed \u2014 applications ended July 15, 2025",
+    "current_details": "$50K\u2013$5M per grant. ~$40M total across 21 research areas.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Foresight Institute AI Nodes",
+    "url": "https://foresight.org/grants/grants-ai-for-science-safety/",
+    "category": "grants",
+    "current_status": "open",
+    "current_deadline": "Rolling",
+    "current_details": "Grants + office/community space in SF and Berlin (Berlin opening April 1, 2026).",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Long-Term Future Fund (LTFF)",
+    "url": "https://funds.effectivealtruism.org/funds/far-future",
+    "category": "grants",
+    "current_status": "open",
+    "current_deadline": "Always open \u2014 rolling",
+    "current_details": "EA Funds. Wide range: $5K\u2013$120K+. Technical research, policy, infrastructure. 6\u20138 week response.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Manifund Regranting",
+    "url": "https://manifund.org/about/regranting",
+    "category": "grants",
+    "current_status": "open",
+    "current_deadline": "Always open \u2014 rolling",
+    "current_details": "Expert regrantors with $100K+ budgets each. $5K\u2013$50K typical grants. Can fund in under 1 week.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Schmidt Sciences \u2014 Trustworthy AI RFP",
+    "url": "https://www.schmidtsciences.org/opportunity/2026-science-of-trustworthy-ai-rfp/",
+    "category": "grants",
+    "current_status": "upcoming",
+    "current_deadline": "Deadline: May 17, 2026",
+    "current_details": "Up to $5M per grant (Tier 1: up to $1M, Tier 2: $1M\u2013$5M). 1\u20133 year projects + compute.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Survival & Flourishing Fund (SFF)",
+    "url": "https://survivalandflourishing.fund/2026/application",
+    "category": "grants",
+    "current_status": "upcoming",
+    "current_deadline": "Main round: April 22, 2026",
+    "current_details": "$20\u201340M+ total across multiple tracks. Main, Freedom, and Fairness tracks.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "UK AISI Alignment Project",
+    "url": "https://alignmentproject.aisi.gov.uk/",
+    "category": "grants",
+    "current_status": "upcoming",
+    "current_deadline": "Applications currently closed; expected to reopen summer 2026",
+    "current_details": "Up to \u00a31M per project + cloud compute + AISI team support. \u00a327M+ in Round 1.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "5050 AI (Fifty Years)",
+    "url": "https://fiftyyears.com/5050/ai-2",
+    "category": "startups",
+    "current_status": "upcoming",
+    "current_deadline": "Cohort 3 (London/SF) running March\u2013June 2026; next applications likely late 2026",
+    "current_details": "13-week accelerator. No equity, no fees. 340+ alumni, 78 companies, 95% seed raise rate. Mentors from OpenAI, Anthropic, FLI. SF and London (ARIA partnership) cohorts.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Catalyze Impact",
+    "url": "https://catalyze-impact.org/the-program",
+    "category": "startups",
+    "current_status": "open",
+    "current_deadline": "Rolling applications",
+    "current_details": "501(c)(3) incubator. ~15 orgs incubated, majority raised 6\u20137 figures. Co-founder matching, stipends, seed funding access.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Halcyon Futures",
+    "url": "https://halcyonfutures.org/",
+    "category": "startups",
+    "current_status": "open",
+    "current_deadline": "Rolling",
+    "current_details": "Nonprofit incubator + Halcyon Ventures fund (~$20M). 1,000+ community. Helped launch 20+ orgs (e.g., Goodfire, Transluce) backed by $350M+ collectively.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "ImpactOps",
+    "url": "https://impact-ops.org/",
+    "category": "startups",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "Operations support and incubation for high-impact organizations.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Rethink Priorities Special Projects",
+    "url": "https://rethinkpriorities.org/our-services/special-projects/",
+    "category": "startups",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "Fiscal sponsorship and operational support for new research projects.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Seldon Lab",
+    "url": "https://seldonlab.com/",
+    "category": "startups",
+    "current_status": "upcoming",
+    "current_deadline": "Batch 2 in progress \u2014 check for Batch 3",
+    "current_details": "AI safety startup accelerator. Batch 1: $10M+ raised collectively, sold to xAI & Anthropic. Non-dilutive funding via SFF. Focus: alignment infrastructure, zero-trust AI, autonomous cyber defense.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "WorkStream",
+    "url": "https://workstreamnonprofit.org/",
+    "category": "startups",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "Nonprofit incorporation and operations support for new organizations.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "80,000 Hours Job Board",
+    "url": "https://jobs.80000hours.org/",
+    "category": "jobs",
+    "current_status": "open",
+    "current_deadline": "Updated continuously",
+    "current_details": "~810 high-impact jobs. ~105 AI roles/month. CAIS, OpenAI, FAR AI, DeepMind, and many more.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "AISafety.com Jobs",
+    "url": "https://www.aisafety.com/jobs",
+    "category": "jobs",
+    "current_status": "open",
+    "current_deadline": "Updated continuously",
+    "current_details": "Dedicated AI safety job board. Research, policy, ops, infosec, SWE, legal. Entry to senior level. Full-time, part-time, internships.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Center for AI Safety (CAIS)",
+    "url": "https://safe.ai/careers",
+    "category": "jobs",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "Direct hiring page for CAIS research and operations positions.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "FAR AI Careers",
+    "url": "https://www.far.ai/careers",
+    "category": "jobs",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "Research positions focused on trustworthy and beneficial AI systems.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "MATS Alumni Hiring Database",
+    "url": "https://forms.matsprogram.org/t/9Lfc9j2KJhus",
+    "category": "jobs",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "Internal database connecting MATS alumni with hiring organizations.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "MATS Careers (Staff Hiring)",
+    "url": "https://www.matsprogram.org/careers",
+    "category": "jobs",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "Open roles on the MATS team itself (operations, program staff, etc.).",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "What AI Safety Orgs Want in a Hire",
+    "url": "https://80000hours.org/2025/09/survey-results-what-ai-safety-orgs-want-in-a-hire/",
+    "category": "jobs",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "Survey of 38 org leaders on what they look for. Great prep resource for applications.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Apollo Research",
+    "url": "https://www.apolloresearch.ai/careers/",
+    "category": "orgs-to-watch",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "Deceptive AI detection. No internship \u2014 mentors through MATS & LASR. Expression of interest form available. London + DC.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Beneficial AI Foundation",
+    "url": "https://www.beneficialaifoundation.org/jobs",
+    "category": "orgs-to-watch",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "Max Tegmark's nonprofit. Research Scientist ($70K\u2013$180K), Full Stack Engineer ($40/hr). Remote or MIT Cambridge.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Forethought",
+    "url": "https://www.forethought.org/careers",
+    "category": "orgs-to-watch",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "Expression of interest open (no deadline). Oxford or Berkeley, remote negotiable.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Goodfire",
+    "url": "https://www.goodfire.ai/careers",
+    "category": "orgs-to-watch",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "Interpretability startup. Full-time, in-person roles. No current internship. Backed by Juniper Ventures.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Gray Swan AI",
+    "url": "https://www.grayswan.ai/careers",
+    "category": "orgs-to-watch",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "AI safety evaluation & red-teaming. No current internship. Join their Talent Newsletter for future postings.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "LawZero",
+    "url": "https://job-boards.greenhouse.io/lawzero",
+    "category": "orgs-to-watch",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "Nonprofit safety lab (Yoshua Bengio). Raised $30M. 8 full-time roles in Montreal. ML Research Scientists, Developers, Engineers.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "METR (formerly ARC Evals)",
+    "url": "https://metr.org/careers",
+    "category": "orgs-to-watch",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "AI evaluation. Full-time roles only: MTS Research $250K\u2013$450K. Berkeley, on-site.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "MIRI TGT Research Fellowship",
+    "url": "https://techgov.intelligence.org/blog/announcing-miri-technical-governance-team-research-fellowship",
+    "category": "orgs-to-watch",
+    "current_status": "closed",
+    "current_deadline": "Jan 2026 closed \u2014 register for next round",
+    "current_details": "8 weeks, $1,200/wk. Remote + 1-week Berkeley kickoff. Register interest for future cohorts.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Redwood Research",
+    "url": "https://www.redwoodresearch.org/careers",
+    "category": "orgs-to-watch",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "Leading AI safety lab. No direct internship \u2014 mentors through MATS. Check careers page for full-time roles.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "SAIF (Safe AI Forum)",
+    "url": "https://saif.org/opportunities/",
+    "category": "orgs-to-watch",
+    "current_status": "closed",
+    "current_deadline": "Listed roles closed \u2014 check for new postings",
+    "current_details": "AI safety forum. Current listed roles (Events Associate, Operations) are closed. Check page for future openings.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Simplex",
+    "url": "https://www.simplexaisafety.com/",
+    "category": "orgs-to-watch",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "Computational Mechanics for interpretability. Hiring Research Scientists. Bay Area & London.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Transluce",
+    "url": "https://transluce.org/",
+    "category": "orgs-to-watch",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "AI transparency org. No current internship. May post periodically on AISafety.com.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "WhiteBox Research Fellowship",
+    "url": "https://www.whiteboxresearch.org/",
+    "category": "orgs-to-watch",
+    "current_status": "open",
+    "current_deadline": "Rolling cohorts",
+    "current_details": "Interpretability/safety upskilling. SE Asia focused. Virtual or in-person (Philippines). $200 completion reward.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "aisafety.com/funding",
+    "url": "https://www.aisafety.com/funding",
+    "category": "phd",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "Comprehensive, regularly updated directory of all AI safety funding including academic support.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Cooperative AI PhD Fellowship",
+    "url": "https://www.cooperativeai.com/post/announcing-the-2026-cooperative-ai-phd-fellows",
+    "category": "phd",
+    "current_status": "upcoming",
+    "current_deadline": "Check website for next cycle",
+    "current_details": "Up to $40K/yr for up to 3 years. Cooperative AI and safety topics. 240 applicants in 2026 cohort.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Cooperative AI Research Fellowship (Cape Town)",
+    "url": "https://www.cai-research-fellowship.com/",
+    "category": "phd",
+    "current_status": "closed",
+    "current_deadline": "Applications closed \u2014 check website for next cycle",
+    "current_details": "3 months in Cape Town. $3K/mo + flights, housing, office, meals, compute. Great for junior researchers.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "FLI AI Safety PhD Advisor Directory",
+    "url": "https://futureoflife.org/about-us/our-people/ai-existential-safety-community/",
+    "category": "phd",
+    "current_status": "unknown",
+    "current_deadline": null,
+    "current_details": "Find faculty advisors working on AI existential safety at universities worldwide.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "PIBBSS x Iliad Research Residency",
+    "url": "https://princint.ai/programs/residency/",
+    "category": "phd",
+    "current_status": "open",
+    "current_deadline": "Rolling \u2014 apply early",
+    "current_details": "6-week residency for math researchers. $6K\u2013$15K. London or remote. Mentorship + post-residency funding support.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Schmidt Sciences AI2050",
+    "url": "https://ai2050.schmidtsciences.org/",
+    "category": "phd",
+    "current_status": "closed",
+    "current_deadline": "Nomination-based \u2014 no open application",
+    "current_details": "Multi-year awards for Early Career & Senior Fellows. 2025 cohort: 28 scholars, $18M+ total. Nomination-based only \u2014 cannot directly apply.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Vitalik Buterin PhD Fellowship (FLI)",
+    "url": "https://futureoflife.org/grant-program/phd-fellowships/",
+    "category": "phd",
+    "current_status": "upcoming",
+    "current_deadline": "Next cycle ~November 2026",
+    "current_details": "5-year PhD. Full tuition + $40K/yr stipend + $10K/yr research fund. US/UK/Canada universities. Strongly technical focus.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Americans for Responsible Innovation",
+    "url": "https://ari.us/careers/",
+    "category": "policy-internships",
+    "current_status": "upcoming",
+    "current_deadline": "Check ARI careers page for current openings",
+    "current_details": "AI policy nonprofit. Washington, DC. Check careers page for current open roles.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "CNAS Nye Internship",
+    "url": "https://center-for-a-new-american-security.breezy.hr/p/5e0162b7f5ba-joseph-s-nye-jr--national-security-internship-and-mentoring-program",
+    "category": "policy-internships",
+    "current_status": "upcoming",
+    "current_deadline": "Current posting \u2014 see department-specific start dates",
+    "current_details": "6 months full-time at leading national security think tank. $1,900/mo + $75/mo transport. AI policy, tech & security. Washington, DC, in-person.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "CSET Summer Internship (Georgetown)",
+    "url": "https://cset.georgetown.edu/cset-summer-internship-program/",
+    "category": "policy-internships",
+    "current_status": "upcoming",
+    "current_deadline": "Check website for 2026 dates",
+    "current_details": "10 weeks. AI, cybersecurity, biotech policy. Competitive wage + living stipend + housing + travel. Washington, DC.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "GovAI Summer Fellowship",
+    "url": "https://www.governance.ai/post/summer-fellowship-2026-research-track",
+    "category": "policy-internships",
+    "current_status": "closed",
+    "current_deadline": "Summer 2026 closed \u2014 check for next cycle",
+    "current_details": "3 months in London. \u00a312K stipend + travel + lunch. Research and Applied tracks. Highly selective. Visa sponsorship available.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Horizon Fellowship",
+    "url": "https://horizonpublicservice.org/programs/become-a-fellow/",
+    "category": "policy-internships",
+    "current_status": "closed",
+    "current_deadline": "2026 cohort closed \u2014 next cycle ~Sept 2026",
+    "current_details": "Up to 2 years. Congressional, Think Tank, Executive Branch tracks. $75K\u2013$113K/yr + $15K health + relocation. Washington, DC.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "IAPS AI Policy Fellowship",
+    "url": "https://www.iaps.ai/fellowship",
+    "category": "policy-internships",
+    "current_status": "upcoming",
+    "current_deadline": "Fall 2026 apps open ~April 2026",
+    "current_details": "3 months. $15K (Fellows) / $22K (Senior). Healthcare + prof dev. Write policy briefs, brief government officials. 2-week DC residency + remote. International welcome.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "RAND CAST Fellows",
+    "url": "https://www.rand.org/global-and-emerging-risks/centers/ai-security-and-technology/fellows.html",
+    "category": "policy-internships",
+    "current_status": "open",
+    "current_deadline": "Accepted continuously, reviewed quarterly",
+    "current_details": "AI security & tech policy research. $40K\u2013$200K/yr + health/dental. 6 months to 3 years, full- or part-time. US or UK. Security clearance eligible.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Tarbell AI Journalism Fellowship",
+    "url": "https://www.tarbellcenter.org/fellowship",
+    "category": "policy-internships",
+    "current_status": "closed",
+    "current_deadline": "2026 closed \u2014 check for 2027",
+    "current_details": "1 year. $60K\u2013$110K. 10-week course + 9-month newsroom placement (Bloomberg, TIME, MIT Tech Review, etc.).",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Andon Labs \u2014 Summer 2026 Role",
+    "url": "https://www.ycombinator.com/companies/andon-labs/jobs",
+    "category": "tech-internships",
+    "current_status": "upcoming",
+    "current_deadline": "Check YC jobs page for current listing",
+    "current_details": "YC W24 startup (Safe Autonomous Organizations). $5K\u2013$6K/mo. San Francisco or Stockholm. Short-term staff role.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "ARC Visiting Researcher",
+    "url": "https://www.alignment.org/hiring/",
+    "category": "tech-internships",
+    "current_status": "open",
+    "current_deadline": "Accepting visitors year-round",
+    "current_details": "Year-round visiting researcher positions (~10 weeks). Strong theoretical background in math, physics, or CS. Berkeley, CA.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "CAIS Research Engineer Intern (Fall 2026)",
+    "url": "https://safe.ai/careers",
+    "category": "tech-internships",
+    "current_status": "open",
+    "current_deadline": "Currently posted \u2014 check Lever for deadline",
+    "current_details": "Full-time paid internship. Trojans, adversarial robustness, machine ethics. $9K\u2013$19.2K stipend. San Francisco.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "CHAI Internship (UC Berkeley)",
+    "url": "https://humancompatible.ai/jobs",
+    "category": "tech-internships",
+    "current_status": "closed",
+    "current_deadline": "2026 apps closed \u2014 check for next cycle",
+    "current_details": "12\u201316 weeks. $5K/mo in-person, $3.5K/mo remote. Most interns produce first-author papers.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "CLR Summer Research Fellowship",
+    "url": "https://longtermrisk.org/summer-research-fellowship/",
+    "category": "tech-internships",
+    "current_status": "upcoming",
+    "current_deadline": "Deadline: March 22, 2026",
+    "current_details": "8-week fellowship on s-risks & technical AI safety. \u00a34,925/mo + travel/visa. Mentored research project. London, in-person. Summer 2026.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Constellation Astra Fellowship",
+    "url": "https://www.constellation.org/programs/astra-fellowship",
+    "category": "tech-internships",
+    "current_status": "upcoming",
+    "current_deadline": "Expression of interest open for future cohorts",
+    "current_details": "3\u20136 months. Fully funded: stipend + up to $15K/mo compute + visa support + meals. Berkeley, in-person.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "DeepMind Student Researcher",
+    "url": "https://deepmind.google/student-researcher-program/",
+    "category": "tech-internships",
+    "current_status": "upcoming",
+    "current_deadline": "Program page \u2014 check Google Careers for current openings",
+    "current_details": "12\u201324 week paid research placements for BSc/MSc/PhD students, in person at a Google office.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "LASR Labs \u2014 Summer 2026",
+    "url": "https://www.lasrlabs.org/",
+    "category": "tech-internships",
+    "current_status": "upcoming",
+    "current_deadline": "Deadline: March 30, 2026",
+    "current_details": "13-week AI safety research program. \u00a311K stipend + food, office, travel. Produce a paper + blog post. Alumni at UK AISI, Apollo, Leap Labs. London, in-person, full-time. July\u2013October 2026.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "OpenAI Emerging Talent",
+    "url": "https://openai.com/careers/emerging-talent/",
+    "category": "tech-internships",
+    "current_status": "upcoming",
+    "current_deadline": "Program page \u2014 check for current openings",
+    "current_details": "Internships, residencies, and full-time roles for early-career talent. Check current openings on the page.",
+    "last_checked": null,
+    "js_only": false
+  },
+  {
+    "name": "Tilde Research",
+    "url": "https://jobs.ashbyhq.com/tilderesearch",
+    "category": "tech-internships",
+    "current_status": "upcoming",
+    "current_deadline": "Link resolves (JS-only) \u2014 check Ashby page for current listings",
+    "current_details": "Mechanistic interpretability lab (Khosla Ventures). San Francisco, on-site.",
+    "last_checked": null,
+    "js_only": true
+  },
+  {
+    "name": "Virtue AI",
+    "url": "https://jobs.ashbyhq.com/virtue-AI",
+    "category": "tech-internships",
+    "current_status": "upcoming",
+    "current_deadline": "Link resolves (JS-only) \u2014 check Ashby page for current listings",
+    "current_details": "AI security/compliance platform (founded by Bo Li, Dawn Song). San Francisco, on-site.",
+    "last_checked": null,
+    "js_only": true
+  }
+]
