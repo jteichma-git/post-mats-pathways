@@ -264,9 +264,26 @@ def run_updater(dry_run: bool = False) -> int:
     logger.info(f"\nUpdating {INDEX_FILE}...")
     idx_updates = update_index_html(changes, dry_run=dry_run)
 
+    # Update the "last updated" date on both pages
+    update_last_updated_date()
+
     total = dir_updates + idx_updates
     logger.info(f"\nTotal updates applied: {total} ({dir_updates} in directory.html, {idx_updates} in index.html)")
     return total
+
+
+def update_last_updated_date():
+    """Update the 'Last updated' date in both HTML files to today."""
+    from datetime import datetime, timezone
+    today = datetime.now(timezone.utc).strftime("%B %d, %Y")
+    pattern = re.compile(r'(id="last-updated">Last updated: )(.*?)(</)')
+
+    for filepath in [INDEX_FILE, DIRECTORY_FILE]:
+        content = filepath.read_text(encoding="utf-8")
+        new_content = pattern.sub(rf'\g<1>{today}\3', content)
+        if new_content != content:
+            filepath.write_text(new_content, encoding="utf-8")
+            logger.info(f"  Updated 'Last updated' date to {today} in {filepath.name}")
 
 
 if __name__ == "__main__":
