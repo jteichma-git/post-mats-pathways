@@ -77,7 +77,7 @@ def save_report(report: list[dict]) -> None:
     logger.info(f"Change report saved to {REPORT_FILE}")
 
 
-def fetch_url(url: str) -> tuple[str | None, int | None, str | None]:
+def fetch_url(url):
     """
     Fetch URL content. Returns (html_content, status_code, error_message).
     """
@@ -131,9 +131,7 @@ def detect_js_only(html: str) -> bool:
     return False
 
 
-def analyze_with_claude(
-    resource: dict, page_text: str, client
-) -> dict | None:
+def analyze_with_claude(resource, page_text, client):
     """
     Send page content to Claude Haiku for status analysis.
     Returns parsed JSON response or None on failure.

@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).parent
 REPORT_FILE = BASE_DIR / "change_report.json"
 
 
-def run_command(cmd: list[str], cwd: Path | None = None) -> tuple[int, str, str]:
+def run_command(cmd, cwd=None):
     """Run a command and return (returncode, stdout, stderr)."""
     result = subprocess.run(
         cmd,

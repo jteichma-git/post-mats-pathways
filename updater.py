@@ -54,7 +54,7 @@ def status_to_class(status: str) -> str:
     return mapping.get(status, "")
 
 
-def format_deadline_text(change: dict) -> str | None:
+def format_deadline_text(change):
     """
     Format the deadline text for display.
     Returns None if no meaningful deadline to display.
