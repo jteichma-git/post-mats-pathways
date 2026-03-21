@@ -1,0 +1,47 @@
+name: Scan for New AI Safety Opportunities
+
+on:
+  schedule:
+    # 1st of each month at 9am UTC
+    - cron: '0 9 1 * *'
+  workflow_dispatch:
+    # Allow manual triggering from GitHub Actions UI
+
+permissions:
+  issues: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run discovery scanner
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scanner.py
+
+      - name: Create GitHub Issue with results
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python create_issue.py
+
+      - name: Upload scan results as artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scan-results
+          path: suggested_additions.json
+          retention-days: 30
