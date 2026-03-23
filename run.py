@@ -22,13 +22,14 @@ BASE_DIR = Path(__file__).parent
 REPORT_FILE = BASE_DIR / "change_report.json"
 
 
-def run_command(cmd, cwd=None):
+def run_command(cmd, cwd=None, timeout=None):
     """Run a command and return (returncode, stdout, stderr)."""
     result = subprocess.run(
         cmd,
         cwd=cwd or BASE_DIR,
         capture_output=True,
         text=True,
+        timeout=timeout,
     )
     return result.returncode, result.stdout, result.stderr
 
@@ -110,6 +111,11 @@ def main():
         action="store_true",
         help="Show what would change without modifying any files",
     )
+    parser.add_argument(
+        "--review",
+        action="store_true",
+        help="Run cross-check reviewer after updating (uses Claude Sonnet)",
+    )
     args = parser.parse_args()
 
     # Step 1: Run crawler
@@ -146,10 +152,27 @@ def main():
         logger.error(f"Updater failed with exit code {code}")
         sys.exit(1)
 
-    # Step 3: Optionally commit and push
+    # Step 3: Optionally run cross-check reviewer
+    if args.review:
+        logger.info("=" * 60)
+        logger.info("STEP 3: Running cross-check reviewer...")
+        logger.info("=" * 60)
+
+        reviewer_args = [sys.executable, str(BASE_DIR / "reviewer.py")]
+        if args.dry_run:
+            reviewer_args.append("--dry-run")
+
+        code, stdout, stderr = run_command(reviewer_args, timeout=600)
+        print(stdout)
+        if stderr:
+            print(stderr, file=sys.stderr)
+        if code != 0:
+            logger.warning(f"Reviewer finished with exit code {code} (non-fatal)")
+
+    # Step 4: Optionally commit and push
     if args.commit and not args.dry_run:
         logger.info("=" * 60)
-        logger.info("STEP 3: Checking for changes to commit...")
+        logger.info("STEP 4: Checking for changes to commit...")
         logger.info("=" * 60)
 
         if has_git_changes():
