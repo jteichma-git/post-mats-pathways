@@ -133,7 +133,7 @@ def detect_js_only(html: str) -> bool:
 
 def analyze_with_claude(resource, page_text, client):
     """
-    Send page content to Claude Haiku for status analysis.
+    Send page content to Claude Sonnet for status analysis.
     Returns parsed JSON response or None on failure.
     """
     prompt = f"""Analyze this web page content for an AI safety opportunity/resource tracker.
@@ -173,7 +173,7 @@ Rules for status:
 
     try:
         message = client.messages.create(
-            model="claude-haiku-4-5-20251001",
+            model="claude-sonnet-4-5-20250929",
             max_tokens=500,
             messages=[{"role": "user", "content": prompt}],
         )
