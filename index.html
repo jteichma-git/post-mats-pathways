@@ -378,6 +378,26 @@
     padding: 5px 16px;
     letter-spacing: 0.3px;
   }
+
+  /* Responsive */
+  @media (max-width: 1200px) {
+    .slide { width: 100%; padding: 32px 24px; }
+    .grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  }
+
+  @media (max-width: 700px) {
+    body { padding: 8px; }
+    .slide { padding: 20px 16px; border-radius: 10px; }
+    .header h1 { font-size: 24px; }
+    .subtitle { font-size: 13px; }
+    .grid { grid-template-columns: 1fr; gap: 14px; }
+    .card-container { min-height: 260px; }
+    .card-inner { min-height: 260px; }
+    .card-front { min-height: 260px; }
+    .card-back { max-height: 80vh; }
+    .footer { flex-direction: column; gap: 12px; text-align: center; }
+    .footer-right { justify-content: center; flex-wrap: wrap; }
+  }
 </style>
 </head>
 <body>
