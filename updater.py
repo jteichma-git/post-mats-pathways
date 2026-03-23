@@ -10,6 +10,7 @@ import json
 import logging
 import re
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 
@@ -39,6 +40,99 @@ def load_report() -> list[dict]:
 def get_changes(report: list[dict]) -> list[dict]:
     """Filter report to only entries with actual changes."""
     return [r for r in report if r.get("action") == "changed"]
+
+
+def extract_deadline_date(deadline_text: str):
+    """
+    Try to extract a concrete date from deadline text.
+    Returns a datetime if found, None otherwise.
+    Handles formats like:
+      - "March 22, 2026"
+      - "23:59 PT Sunday 22nd March"
+      - "May 17, 2026 11:59 PM"
+      - "March 30, 2026 at 23:59 GMT"
+      - "April 22, 2026 11:59:59 PM PT"
+      - "January 7, 2026"
+    """
+    if not deadline_text:
+        return None
+
+    # Skip entries that are clearly not concrete deadlines
+    skip_phrases = [
+        "rolling", "continuous", "unknown", "tbd", "not yet",
+        "not announced", "check ", "year-round", "updated ",
+        "recurring", "multiple cohorts",
+    ]
+    lower = deadline_text.lower()
+    if any(phrase in lower for phrase in skip_phrases):
+        return None
+
+    # Remove ordinal suffixes (1st, 2nd, 3rd, 22nd, etc.)
+    cleaned = re.sub(r'(\d+)(st|nd|rd|th)\b', r'\1', deadline_text)
+
+    # Common date formats to try
+    date_patterns = [
+        # "March 22, 2026" or "March 22 2026"
+        r'((?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4})',
+        # "22 March 2026"
+        r'(\d{1,2}\s+(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{4})',
+        # "March 30 2026" (without comma)
+        r'((?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2}\s+\d{4})',
+    ]
+
+    date_formats = [
+        "%B %d, %Y",   # March 22, 2026
+        "%B %d %Y",    # March 22 2026
+        "%d %B %Y",    # 22 March 2026
+    ]
+
+    for pattern in date_patterns:
+        match = re.search(pattern, cleaned, re.IGNORECASE)
+        if match:
+            date_str = match.group(1)
+            for fmt in date_formats:
+                try:
+                    return datetime.strptime(date_str, fmt)
+                except ValueError:
+                    continue
+
+    # Try to find month + day without year — assume current year
+    month_day_pattern = r'(?:23:59|11:59).*?((?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2})\b'
+    match = re.search(month_day_pattern, cleaned, re.IGNORECASE)
+    if not match:
+        # Also try "day month" order: "22 March", "30 March"
+        month_day_pattern2 = r'(\d{1,2})\s+((?:January|February|March|April|May|June|July|August|September|October|November|December))\b'
+        match = re.search(month_day_pattern2, cleaned, re.IGNORECASE)
+        if match:
+            date_str = f"{match.group(2)} {match.group(1)} {datetime.now().year}"
+            try:
+                return datetime.strptime(date_str, "%B %d %Y")
+            except ValueError:
+                pass
+    else:
+        date_str = f"{match.group(1)} {datetime.now().year}"
+        try:
+            return datetime.strptime(date_str, "%B %d %Y")
+        except ValueError:
+            pass
+
+    return None
+
+
+def check_deadline_passed(status: str, deadline_text: str) -> str:
+    """
+    If a deadline date is in the past and the status is not already 'closed',
+    override the status to 'closed'.
+    """
+    if status == "closed":
+        return status
+
+    deadline_date = extract_deadline_date(deadline_text)
+    if deadline_date and deadline_date.date() < datetime.now().date():
+        logger.info(f"    Deadline '{deadline_text}' is in the past — overriding status to 'closed'")
+        return "closed"
+
+    return status
 
 
 def status_to_class(status: str) -> str:
@@ -109,6 +203,10 @@ def _apply_changes_via_regex(content: str, changes: list[dict], file_label: str,
 
         if not new_status or new_status == "unknown":
             continue
+
+        # Check if the deadline date has passed — override status to closed
+        if new_deadline_text:
+            new_status = check_deadline_passed(new_status, new_deadline_text)
 
         new_css_class = status_to_class(new_status)
 
@@ -202,6 +300,21 @@ def run_updater(dry_run: bool = False) -> int:
     logger.info(f"\nUpdating {INDEX_FILE}...")
     idx_updates = update_index_html(changes, dry_run=dry_run)
 
+    # Close any deadlines that have passed (catches entries not in the change report)
+    logger.info(f"\nChecking for past deadlines in {DIRECTORY_FILE}...")
+    dir_content = DIRECTORY_FILE.read_text(encoding="utf-8")
+    dir_content, dir_closed = close_past_deadlines(dir_content, "directory.html", "deadline")
+    if dir_closed > 0:
+        DIRECTORY_FILE.write_text(dir_content, encoding="utf-8")
+        dir_updates += dir_closed
+
+    logger.info(f"\nChecking for past deadlines in {INDEX_FILE}...")
+    idx_content = INDEX_FILE.read_text(encoding="utf-8")
+    idx_content, idx_closed = close_past_deadlines(idx_content, "index.html", "opp-deadline")
+    if idx_closed > 0:
+        INDEX_FILE.write_text(idx_content, encoding="utf-8")
+        idx_updates += idx_closed
+
     # Update the "last updated" date on both pages
     update_last_updated_date()
 
@@ -210,9 +323,40 @@ def run_updater(dry_run: bool = False) -> int:
     return total
 
 
+def close_past_deadlines(content: str, file_label: str,
+                         deadline_class_prefix: str = "opp-deadline") -> tuple:
+    """
+    Scan HTML for any deadline divs with dates in the past that are still
+    marked as 'open' or 'upcoming', and flip them to 'closed'.
+    This catches entries not in the change report.
+    Returns (updated_content, update_count).
+    """
+    updates = 0
+    # Match deadline divs with open/upcoming class
+    pattern = re.compile(
+        rf'<div\s+class="({deadline_class_prefix})\s+(open|upcoming)">(.*?)</div>',
+        re.DOTALL,
+    )
+
+    for match in pattern.finditer(content):
+        css_class = match.group(2)
+        deadline_text = match.group(3).strip()
+        deadline_date = extract_deadline_date(deadline_text)
+
+        if deadline_date and deadline_date.date() < datetime.now().date():
+            old_div = match.group(0)
+            new_div = f'<div class="{deadline_class_prefix} closed">{deadline_text}</div>'
+            content = content.replace(old_div, new_div, 1)
+            logger.info(
+                f"  [{file_label}] Closed past deadline: '{deadline_text}' "
+                f"(was {css_class})"
+            )
+            updates += 1
+
+    return content, updates
+
+
 def update_last_updated_date():
-    """Update the 'Last updated' date in both HTML files to today."""
-    from datetime import datetime, timezone
     today = datetime.now(timezone.utc).strftime("%B %d, %Y")
     pattern = re.compile(r'(id="last-updated">Last updated: )(.*?)(</)')
 
