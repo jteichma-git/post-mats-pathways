@@ -12,7 +12,6 @@ import re
 import sys
 from pathlib import Path
 
-from bs4 import BeautifulSoup
 
 logging.basicConfig(
     level=logging.INFO,
@@ -68,17 +67,39 @@ def format_deadline_text(change):
 def update_directory_html(changes: list[dict], dry_run: bool = False) -> int:
     """
     Update directory.html with changed statuses and deadlines.
-    Matches entries by their href URL within <h3><a href="..."> tags.
+    Uses targeted regex replacement to avoid BeautifulSoup re-serialization
+    which can mangle closing div tags.
     Returns count of updates made.
     """
     if not DIRECTORY_FILE.exists():
         logger.warning(f"Directory file not found: {DIRECTORY_FILE}")
         return 0
 
-    with open(DIRECTORY_FILE, "r", encoding="utf-8") as f:
-        content = f.read()
+    content = DIRECTORY_FILE.read_text(encoding="utf-8")
+    new_content, updates = _apply_changes_via_regex(
+        content, changes, "directory.html", deadline_class_prefix="deadline"
+    )
 
-    soup = BeautifulSoup(content, "html.parser")
+    if not dry_run and updates > 0:
+        DIRECTORY_FILE.write_text(new_content, encoding="utf-8")
+        logger.info(f"  Wrote {updates} updates to {DIRECTORY_FILE}")
+
+    return updates
+
+
+def _apply_changes_via_regex(content: str, changes: list[dict], file_label: str,
+                              deadline_class_prefix: str = "opp-deadline") -> tuple[str, int]:
+    """
+    Apply deadline/status changes to HTML content using targeted regex
+    replacements instead of re-serializing the whole DOM with BeautifulSoup.
+
+    This avoids BeautifulSoup's html.parser mangling closing tags on write-back.
+    We still use BeautifulSoup to *find* which URLs exist and what their current
+    deadline text is, but all mutations happen via string replacement on the
+    original content.
+
+    Returns (updated_content, update_count).
+    """
     updates = 0
 
     for change in changes:
@@ -89,146 +110,63 @@ def update_directory_html(changes: list[dict], dry_run: bool = False) -> int:
         if not new_status or new_status == "unknown":
             continue
 
-        # Find all links matching this URL in h3 tags
-        links = soup.find_all("a", href=url)
-        for link in links:
-            # Verify this is inside an opp div (h3 > a pattern in directory.html)
-            parent_h3 = link.find_parent("h3")
-            if not parent_h3:
-                continue
-            opp_div = parent_h3.find_parent("div", class_="opp")
-            if not opp_div:
-                continue
+        new_css_class = status_to_class(new_status)
 
-            # Update or create deadline div
-            deadline_div = opp_div.find("div", class_="deadline")
+        # Escape URL for use in regex
+        escaped_url = re.escape(url)
 
-            if new_deadline_text:
-                new_class = status_to_class(new_status)
-                if deadline_div:
-                    # Update existing deadline
-                    old_text = deadline_div.get_text()
-                    old_classes = deadline_div.get("class", [])
-                    deadline_div.string = new_deadline_text
-                    deadline_div["class"] = ["deadline"]
-                    if new_class:
-                        deadline_div["class"].append(new_class)
-                    logger.info(
-                        f"  [directory.html] Updated deadline for '{change['name']}': "
-                        f"'{old_text}' -> '{new_deadline_text}' (class: {old_classes} -> {deadline_div['class']})"
-                    )
-                else:
-                    # Create new deadline div
-                    new_div = soup.new_tag("div")
-                    new_div["class"] = ["deadline"]
-                    if new_class:
-                        new_div["class"].append(new_class)
-                    new_div.string = new_deadline_text
-                    opp_div.append(new_div)
-                    logger.info(
-                        f"  [directory.html] Added deadline for '{change['name']}': '{new_deadline_text}'"
-                    )
+        # Find the opp-deadline div that follows an <a> with this href.
+        # Pattern: ...href="<url>"... then the next opp-deadline div
+        deadline_pattern = re.compile(
+            rf'(href="{escaped_url}"[^>]*>.*?)'
+            rf'(<div\s+class="({deadline_class_prefix})\s*[^"]*">)(.*?)(</div>)',
+            re.DOTALL,
+        )
+
+        match = deadline_pattern.search(content)
+        if match and new_deadline_text:
+            old_div = match.group(2) + match.group(4) + match.group(5)
+            new_class_attr = f'{deadline_class_prefix} {new_css_class}'.strip()
+            new_div = f'<div class="{new_class_attr}">{new_deadline_text}</div>'
+            content = content.replace(old_div, new_div, 1)
+            logger.info(
+                f"  [{file_label}] Updated deadline for '{change['name']}': "
+                f"'{match.group(4)}' -> '{new_deadline_text}'"
+            )
+            updates += 1
+        elif match and not new_deadline_text:
+            # Update just the CSS class
+            old_div_tag = match.group(2)
+            new_class_attr = f'{deadline_class_prefix} {new_css_class}'.strip()
+            new_div_tag = f'<div class="{new_class_attr}">'
+            if old_div_tag != new_div_tag:
+                content = content.replace(old_div_tag, new_div_tag, 1)
+                logger.info(
+                    f"  [{file_label}] Updated status class for '{change['name']}'"
+                )
                 updates += 1
-            elif deadline_div:
-                # Update just the class if status changed but no new deadline text
-                new_class = status_to_class(new_status)
-                old_classes = deadline_div.get("class", [])
-                deadline_div["class"] = ["deadline"]
-                if new_class:
-                    deadline_div["class"].append(new_class)
-                if deadline_div["class"] != old_classes:
-                    logger.info(
-                        f"  [directory.html] Updated status class for '{change['name']}': "
-                        f"{old_classes} -> {deadline_div['class']}"
-                    )
-                    updates += 1
 
-    if not dry_run and updates > 0:
-        # Write back preserving original formatting as much as possible
-        output = str(soup)
-        with open(DIRECTORY_FILE, "w", encoding="utf-8") as f:
-            f.write(output)
-        logger.info(f"  Wrote {updates} updates to {DIRECTORY_FILE}")
-
-    return updates
+    return content, updates
 
 
 def update_index_html(changes: list[dict], dry_run: bool = False) -> int:
     """
     Update index.html with changed statuses and deadlines.
-    Matches entries by their href URL within opp-name links.
+    Uses targeted regex replacement to avoid BeautifulSoup re-serialization
+    which can mangle closing div tags.
     Returns count of updates made.
     """
     if not INDEX_FILE.exists():
         logger.warning(f"Index file not found: {INDEX_FILE}")
         return 0
 
-    with open(INDEX_FILE, "r", encoding="utf-8") as f:
-        content = f.read()
-
-    soup = BeautifulSoup(content, "html.parser")
-    updates = 0
-
-    for change in changes:
-        url = change["url"]
-        new_status = change.get("new_status")
-        new_deadline_text = format_deadline_text(change)
-
-        if not new_status or new_status == "unknown":
-            continue
-
-        # Find all links matching this URL (opp-name class in index.html)
-        links = soup.find_all("a", href=url)
-        for link in links:
-            # Check if this is an opp-name link or h3 > a link
-            opp_div = link.find_parent("div", class_="opp")
-            if not opp_div:
-                continue
-
-            # Find the deadline div (opp-deadline class in index.html)
-            deadline_div = opp_div.find("div", class_=re.compile(r"opp-deadline"))
-
-            if new_deadline_text:
-                new_class = status_to_class(new_status)
-                if deadline_div:
-                    old_text = deadline_div.get_text()
-                    old_classes = deadline_div.get("class", [])
-                    deadline_div.string = new_deadline_text
-                    deadline_div["class"] = ["opp-deadline"]
-                    if new_class:
-                        deadline_div["class"].append(new_class)
-                    logger.info(
-                        f"  [index.html] Updated deadline for '{change['name']}': "
-                        f"'{old_text}' -> '{new_deadline_text}' (class: {old_classes} -> {deadline_div['class']})"
-                    )
-                else:
-                    new_div = soup.new_tag("div")
-                    new_div["class"] = ["opp-deadline"]
-                    if new_class:
-                        new_div["class"].append(new_class)
-                    new_div.string = new_deadline_text
-                    opp_div.append(new_div)
-                    logger.info(
-                        f"  [index.html] Added deadline for '{change['name']}': '{new_deadline_text}'"
-                    )
-                updates += 1
-            elif deadline_div:
-                new_class = status_to_class(new_status)
-                old_classes = deadline_div.get("class", [])
-                deadline_div["class"] = ["opp-deadline"]
-                if new_class:
-                    deadline_div["class"].append(new_class)
-                if deadline_div["class"] != old_classes:
-                    logger.info(
-                        f"  [index.html] Updated status class for '{change['name']}': "
-                        f"{old_classes} -> {deadline_div['class']}"
-                    )
-                    updates += 1
+    content = INDEX_FILE.read_text(encoding="utf-8")
+    new_content, updates = _apply_changes_via_regex(
+        content, changes, "index.html", deadline_class_prefix="opp-deadline"
+    )
 
     if not dry_run and updates > 0:
-        output = str(soup)
-        with open(INDEX_FILE, "w", encoding="utf-8") as f:
-            f.write(output)
+        INDEX_FILE.write_text(new_content, encoding="utf-8")
         logger.info(f"  Wrote {updates} updates to {INDEX_FILE}")
 
     return updates
