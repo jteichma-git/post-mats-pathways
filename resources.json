@@ -220,6 +220,16 @@
     "js_only": false
   },
   {
+    "name": "Meridian Cambridge — Research Accelerator Week",
+    "url": "https://www.meridiancambridge.org/research-accelerator-week",
+    "category": "grants",
+    "current_status": "open",
+    "current_deadline": "April 5, 2025 (next cohort May 18–23, 2026)",
+    "current_details": "Intensive 6-day program in Cambridge, UK for AI safety researchers transitioning to independent research. Includes dedicated funding pathway via Coefficient Giving, fiscal sponsorship, workspace, travel support (up to £700 international), accommodation, and meals. Previous cohort secured over $1M in funding. Ideal for MATS/Astra/ERA/LASR graduates, unfunded PhD/postdocs, and independent researchers.",
+    "last_checked": "2026-03-26T00:00:00.000000+00:00",
+    "js_only": false
+  },
+  {
     "name": "Schmidt Sciences — Trustworthy AI RFP",
     "url": "https://www.schmidtsciences.org/opportunity/2026-science-of-trustworthy-ai-rfp/",
     "category": "grants",
