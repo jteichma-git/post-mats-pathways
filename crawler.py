@@ -31,6 +31,7 @@ REPORT_FILE = Path(__file__).parent / "change_report.json"
 
 # Request settings
 REQUEST_TIMEOUT = 30
+PLAYWRIGHT_TIMEOUT = 20000  # ms
 REQUEST_DELAY = 2  # seconds between requests to be polite
 USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -52,6 +53,31 @@ JS_REQUIRED_PHRASES = [
     "enable javascript to view",
     "javascript must be enabled",
 ]
+
+# Ashby API: map domains to org slugs for direct API access
+ASHBY_ORGS = {
+    "jobs.ashbyhq.com/tilderesearch": "tilderesearch",
+    "jobs.ashbyhq.com/virtue-AI": "virtue-AI",
+    "jobs.ashbyhq.com/virtue-ai": "virtue-AI",
+}
+
+# Check if Playwright is available
+_playwright_available = None
+
+def is_playwright_available() -> bool:
+    """Check if Playwright and its browsers are installed."""
+    global _playwright_available
+    if _playwright_available is None:
+        try:
+            from playwright.sync_api import sync_playwright
+            # Quick check that browsers are installed
+            with sync_playwright() as p:
+                browser = p.chromium.launch(headless=True)
+                browser.close()
+            _playwright_available = True
+        except Exception:
+            _playwright_available = False
+    return _playwright_available
 
 
 def load_resources() -> list[dict]:
@@ -94,6 +120,97 @@ def fetch_url(url):
         return None, None, "Too many redirects"
     except requests.exceptions.RequestException as e:
         return None, None, f"Request error: {str(e)}"
+
+
+def fetch_with_playwright(url):
+    """
+    Fetch URL using a headless browser (Playwright).
+    Renders JavaScript and returns (html_content, status_code, error_message).
+    Used as fallback for JS-only pages and sites that block simple requests.
+    """
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        return None, None, "Playwright not installed"
+
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            context = browser.new_context(user_agent=USER_AGENT)
+            page = context.new_page()
+            # Use domcontentloaded (faster) then wait briefly for JS to render
+            response = page.goto(url, wait_until="domcontentloaded", timeout=PLAYWRIGHT_TIMEOUT)
+            # Give JS frameworks time to hydrate
+            page.wait_for_timeout(3000)
+            status_code = response.status if response else None
+            html = page.content()
+            browser.close()
+
+            if status_code and status_code >= 400:
+                return None, status_code, f"HTTP {status_code}"
+            return html, status_code, None
+    except Exception as e:
+        return None, None, f"Playwright error: {str(e)}"
+
+
+def fetch_ashby_api(url):
+    """
+    Fetch job listings from Ashby's public API for known org slugs.
+    Returns (text_content, 200, error_message) — text is pre-extracted, not HTML.
+    """
+    from urllib.parse import urlparse
+    parsed = urlparse(url)
+    path_key = f"{parsed.netloc}{parsed.path}".rstrip("/")
+
+    org_slug = None
+    for pattern, slug in ASHBY_ORGS.items():
+        if pattern in path_key:
+            org_slug = slug
+            break
+
+    if not org_slug:
+        return None, None, "Not an Ashby URL"
+
+    api_url = "https://api.ashbyhq.com/posting-api/job-board/" + org_slug
+    try:
+        resp = requests.get(api_url, timeout=REQUEST_TIMEOUT)
+        if resp.status_code != 200:
+            return None, resp.status_code, f"Ashby API HTTP {resp.status_code}"
+        data = resp.json()
+    except Exception as e:
+        return None, None, f"Ashby API error: {str(e)}"
+
+    # Convert job listings to readable text
+    jobs = data.get("jobs", [])
+    if not jobs:
+        text = f"{org_slug} job board: No open positions listed."
+        return text, 200, None
+
+    lines = [f"{org_slug} job board — {len(jobs)} open position(s):\n"]
+    for job in jobs:
+        title = job.get("title", "Untitled")
+        location = job.get("location", "Unknown location")
+        team = job.get("department", "")
+        employment = job.get("employmentType", "")
+        published = job.get("publishedAt", "")
+        parts = [f"- {title}"]
+        if location:
+            parts.append(f"  Location: {location}")
+        if team:
+            parts.append(f"  Team: {team}")
+        if employment:
+            parts.append(f"  Type: {employment}")
+        if published:
+            parts.append(f"  Posted: {published}")
+        lines.append("\n".join(parts))
+
+    text = "\n\n".join(lines)
+    return text, 200, None
+
+
+def is_ashby_url(url: str) -> bool:
+    """Check if a URL is a known Ashby job board."""
+    return any(pattern in url for pattern in ASHBY_ORGS)
 
 
 def extract_text_from_html(html: str) -> str:
@@ -230,71 +347,84 @@ def run_crawler(dry_run: bool = False) -> list[dict]:
             resource["last_checked"] = now
             continue
 
-        # Fetch the page
-        html, status_code, error = fetch_url(url)
+        # --- Fetch pipeline: try Ashby API, then requests, then Playwright ---
+        page_text = None
+        fetch_method = None
+        final_error = None
 
-        if error:
-            logger.warning(f"  Fetch error: {error}")
+        # 1) Ashby API shortcut — returns pre-extracted text
+        if is_ashby_url(url):
+            logger.info(f"  Trying Ashby API...")
+            text, status_code, error = fetch_ashby_api(url)
+            if text and not error:
+                page_text = text
+                fetch_method = "ashby_api"
+                logger.info(f"  Fetched via Ashby API ({len(page_text)} chars)")
+
+        # 2) Standard requests fetch
+        if page_text is None:
+            html, status_code, error = fetch_url(url)
+            needs_fallback = False
+
+            if error:
+                logger.warning(f"  Fetch error: {error}")
+                needs_fallback = True
+                final_error = error
+            elif status_code and status_code >= 400:
+                logger.warning(f"  HTTP {status_code}")
+                needs_fallback = True
+                final_error = f"HTTP {status_code}"
+            else:
+                logger.info(f"  Fetched OK (HTTP {status_code})")
+                is_js = detect_js_only(html)
+                if is_js:
+                    if not resource.get("js_only"):
+                        logger.info(f"  Detected as JS-only page")
+                        resource["js_only"] = True
+                    needs_fallback = True
+                    final_error = "JS-only page"
+                else:
+                    page_text = extract_text_from_html(html)
+                    fetch_method = "requests"
+
+            # 3) Playwright fallback for 403s, connection errors, and JS-only pages
+            if needs_fallback and is_playwright_available():
+                logger.info(f"  Retrying with Playwright...")
+                html, status_code, pw_error = fetch_with_playwright(url)
+                if html and not pw_error:
+                    text = extract_text_from_html(html)
+                    if len(text) >= MIN_TEXT_LENGTH:
+                        page_text = text
+                        fetch_method = "playwright"
+                        resource["js_only"] = False  # Playwright can handle it now
+                        logger.info(f"  Fetched via Playwright ({len(page_text)} chars)")
+                    else:
+                        logger.warning(f"  Playwright returned too little text ({len(text)} chars)")
+                else:
+                    logger.warning(f"  Playwright fallback failed: {pw_error}")
+
+        # If all fetch methods failed, record the error and move on
+        if page_text is None:
+            error_action = "fetch_error"
+            if final_error and final_error.startswith("HTTP"):
+                error_action = "http_error"
+            elif final_error == "JS-only page":
+                error_action = "js_only"
             change_report.append({
                 "name": name,
                 "url": url,
-                "action": "fetch_error",
-                "error": error,
+                "action": error_action,
+                "error": final_error,
                 "old_status": resource["current_status"],
                 "new_status": None,
                 "old_deadline": resource.get("current_deadline"),
                 "new_deadline": None,
-                "key_changes": f"Could not fetch: {error}",
+                "key_changes": f"Could not fetch: {final_error}",
             })
             resource["last_checked"] = now
             time.sleep(REQUEST_DELAY)
             continue
 
-        if status_code and status_code >= 400:
-            logger.warning(f"  HTTP {status_code}")
-            change_report.append({
-                "name": name,
-                "url": url,
-                "action": "http_error",
-                "error": f"HTTP {status_code}",
-                "old_status": resource["current_status"],
-                "new_status": None,
-                "old_deadline": resource.get("current_deadline"),
-                "new_deadline": None,
-                "key_changes": f"HTTP error: {status_code}",
-            })
-            resource["last_checked"] = now
-            time.sleep(REQUEST_DELAY)
-            continue
-
-        logger.info(f"  Fetched OK (HTTP {status_code})")
-
-        # Check for JS-only pages
-        is_js_only = detect_js_only(html)
-        if is_js_only and not resource.get("js_only"):
-            logger.info(f"  Detected as JS-only page - flagging for manual review")
-            resource["js_only"] = True
-        elif is_js_only:
-            logger.info(f"  Known JS-only page - flagging for manual review")
-
-        if is_js_only:
-            change_report.append({
-                "name": name,
-                "url": url,
-                "action": "js_only",
-                "error": None,
-                "old_status": resource["current_status"],
-                "new_status": None,
-                "old_deadline": resource.get("current_deadline"),
-                "new_deadline": None,
-                "key_changes": "JS-only page - requires manual review",
-            })
-            resource["last_checked"] = now
-            time.sleep(REQUEST_DELAY)
-            continue
-
-        # Extract text for Claude
-        page_text = extract_text_from_html(html)
         if len(page_text) < 50:
             logger.warning(f"  Very little text content extracted ({len(page_text)} chars)")
 

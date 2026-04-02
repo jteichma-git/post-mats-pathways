@@ -42,17 +42,37 @@ def get_changes(report: list[dict]) -> list[dict]:
     return [r for r in report if r.get("action") == "changed"]
 
 
+def _expand_month(text: str) -> str:
+    """Expand abbreviated month names to full names for consistent parsing."""
+    abbrevs = {
+        "Jan": "January", "Feb": "February", "Mar": "March",
+        "Apr": "April", "Jun": "June", "Jul": "July",
+        "Aug": "August", "Sep": "September", "Oct": "October",
+        "Nov": "November", "Dec": "December",
+    }
+    for abbr, full in abbrevs.items():
+        # Match abbreviation followed by word boundary (with optional period)
+        text = re.sub(rf'\b{abbr}\.?\b', full, text)
+    return text
+
+
+# Regex fragment matching any full month name (used in date patterns)
+_MONTH = r'(?:January|February|March|April|May|June|July|August|September|October|November|December)'
+
+
 def extract_deadline_date(deadline_text: str):
     """
     Try to extract a concrete date from deadline text.
     Returns a datetime if found, None otherwise.
     Handles formats like:
-      - "March 22, 2026"
+      - "March 22, 2026" / "Sep 14, 2025"
       - "23:59 PT Sunday 22nd March"
       - "May 17, 2026 11:59 PM"
       - "March 30, 2026 at 23:59 GMT"
       - "April 22, 2026 11:59:59 PM PT"
       - "January 7, 2026"
+      - "March 24, 11:59 PM PDT" (no year)
+      - "Sep 26" (abbreviated month, no year)
     """
     if not deadline_text:
         return None
@@ -61,60 +81,62 @@ def extract_deadline_date(deadline_text: str):
     skip_phrases = [
         "rolling", "continuous", "unknown", "tbd", "not yet",
         "not announced", "check ", "year-round", "updated ",
-        "recurring", "multiple cohorts",
+        "recurring", "multiple cohorts", "always open",
     ]
     lower = deadline_text.lower()
     if any(phrase in lower for phrase in skip_phrases):
         return None
 
-    # Remove ordinal suffixes (1st, 2nd, 3rd, 22nd, etc.)
-    cleaned = re.sub(r'(\d+)(st|nd|rd|th)\b', r'\1', deadline_text)
+    # Normalize: expand abbreviated months and remove ordinal suffixes
+    cleaned = _expand_month(deadline_text)
+    cleaned = re.sub(r'(\d+)(st|nd|rd|th)\b', r'\1', cleaned)
 
-    # Common date formats to try
-    date_patterns = [
+    # --- Patterns with an explicit year ---
+    year_patterns = [
         # "March 22, 2026" or "March 22 2026"
-        r'((?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4})',
+        rf'({_MONTH}\s+\d{{1,2}},?\s+\d{{4}})',
         # "22 March 2026"
-        r'(\d{1,2}\s+(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{4})',
-        # "March 30 2026" (without comma)
-        r'((?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2}\s+\d{4})',
+        rf'(\d{{1,2}}\s+{_MONTH}\s+\d{{4}})',
     ]
 
-    date_formats = [
+    year_formats = [
         "%B %d, %Y",   # March 22, 2026
         "%B %d %Y",    # March 22 2026
         "%d %B %Y",    # 22 March 2026
     ]
 
-    for pattern in date_patterns:
+    for pattern in year_patterns:
         match = re.search(pattern, cleaned, re.IGNORECASE)
         if match:
             date_str = match.group(1)
-            for fmt in date_formats:
+            for fmt in year_formats:
                 try:
                     return datetime.strptime(date_str, fmt)
                 except ValueError:
                     continue
 
-    # Try to find month + day without year — assume current year
-    month_day_pattern = r'(?:23:59|11:59).*?((?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2})\b'
-    match = re.search(month_day_pattern, cleaned, re.IGNORECASE)
-    if not match:
-        # Also try "day month" order: "22 March", "30 March"
-        month_day_pattern2 = r'(\d{1,2})\s+((?:January|February|March|April|May|June|July|August|September|October|November|December))\b'
-        match = re.search(month_day_pattern2, cleaned, re.IGNORECASE)
+    # --- Patterns without a year (assume current year) ---
+    current_year = datetime.now().year
+
+    no_year_patterns = [
+        # "March 24" — month then day (possibly followed by comma/time)
+        rf'({_MONTH})\s+(\d{{1,2}})\b',
+        # "24 March" — day then month
+        rf'(\d{{1,2}})\s+({_MONTH})\b',
+    ]
+
+    for i, pattern in enumerate(no_year_patterns):
+        match = re.search(pattern, cleaned, re.IGNORECASE)
         if match:
-            date_str = f"{match.group(2)} {match.group(1)} {datetime.now().year}"
+            if i == 0:
+                month_str, day_str = match.group(1), match.group(2)
+            else:
+                day_str, month_str = match.group(1), match.group(2)
+            date_str = f"{month_str} {day_str} {current_year}"
             try:
                 return datetime.strptime(date_str, "%B %d %Y")
             except ValueError:
-                pass
-    else:
-        date_str = f"{match.group(1)} {datetime.now().year}"
-        try:
-            return datetime.strptime(date_str, "%B %d %Y")
-        except ValueError:
-            pass
+                continue
 
     return None
 
@@ -278,14 +300,13 @@ def run_updater(dry_run: bool = False) -> int:
     changes = get_changes(report)
 
     if not changes:
-        logger.info("No changes to apply. HTML files are up to date.")
-        return 0
-
-    logger.info(f"Found {len(changes)} changes to apply:")
-    for c in changes:
-        logger.info(f"  - {c['name']}: {c['old_status']} -> {c['new_status']}")
-        if c.get("new_deadline"):
-            logger.info(f"    Deadline: {c.get('old_deadline')} -> {c.get('new_deadline')}")
+        logger.info("No status/deadline changes to apply.")
+    else:
+        logger.info(f"Found {len(changes)} changes to apply:")
+        for c in changes:
+            logger.info(f"  - {c['name']}: {c['old_status']} -> {c['new_status']}")
+            if c.get("new_deadline"):
+                logger.info(f"    Deadline: {c.get('old_deadline')} -> {c.get('new_deadline')}")
 
     if dry_run:
         logger.info("\n[DRY RUN] Would update the following files:")
@@ -294,11 +315,15 @@ def run_updater(dry_run: bool = False) -> int:
         logger.info("No files were modified.")
         return len(changes)
 
-    logger.info(f"\nUpdating {DIRECTORY_FILE}...")
-    dir_updates = update_directory_html(changes, dry_run=dry_run)
+    dir_updates = 0
+    idx_updates = 0
 
-    logger.info(f"\nUpdating {INDEX_FILE}...")
-    idx_updates = update_index_html(changes, dry_run=dry_run)
+    if changes:
+        logger.info(f"\nUpdating {DIRECTORY_FILE}...")
+        dir_updates = update_directory_html(changes, dry_run=dry_run)
+
+        logger.info(f"\nUpdating {INDEX_FILE}...")
+        idx_updates = update_index_html(changes, dry_run=dry_run)
 
     # Close any deadlines that have passed (catches entries not in the change report)
     logger.info(f"\nChecking for past deadlines in {DIRECTORY_FILE}...")
@@ -314,6 +339,10 @@ def run_updater(dry_run: bool = False) -> int:
     if idx_closed > 0:
         INDEX_FILE.write_text(idx_content, encoding="utf-8")
         idx_updates += idx_closed
+
+    # Update the "What's New" section with this week's changes
+    logger.info(f"\nUpdating 'What's New' section...")
+    update_whats_new(report)
 
     # Update the "last updated" date on both pages
     update_last_updated_date()
@@ -354,6 +383,105 @@ def close_past_deadlines(content: str, file_label: str,
             updates += 1
 
     return content, updates
+
+
+def generate_whats_new_html(report: list[dict]) -> str:
+    """
+    Generate the inner HTML for the 'What's New' dropdown from the change report.
+    Groups items into: status changes, deadline updates, newly closed (past deadline),
+    and errors/flags.
+    """
+    today = datetime.now(timezone.utc).strftime("%B %d, %Y")
+
+    status_changes = []
+    deadline_updates = []
+    errors = []
+
+    for entry in report:
+        action = entry.get("action", "")
+        name = entry.get("name", "Unknown")
+
+        if action == "changed":
+            old_s = entry.get("old_status", "unknown")
+            new_s = entry.get("new_status", "unknown")
+            old_d = entry.get("old_deadline")
+            new_d = entry.get("new_deadline")
+            key_changes = entry.get("key_changes", "")
+
+            if new_s != old_s and new_s != "unknown":
+                status_changes.append(
+                    f'<li><strong>{name}</strong> — status changed from '
+                    f'<span class="wn-old">{old_s}</span> to '
+                    f'<span class="wn-new wn-{new_s}">{new_s}</span></li>'
+                )
+            if new_d and new_d != "null" and new_d != old_d:
+                deadline_updates.append(
+                    f'<li><strong>{name}</strong> — deadline updated to {new_d}</li>'
+                )
+        elif action in ("fetch_error", "http_error"):
+            errors.append(
+                f'<li><strong>{name}</strong> — {entry.get("error", "could not fetch")}</li>'
+            )
+
+    if not status_changes and not deadline_updates and not errors:
+        inner = '<p class="wn-empty">No changes detected this cycle.</p>'
+    else:
+        parts = []
+        if status_changes:
+            parts.append(
+                '<div class="wn-group"><h4>Status Changes</h4><ul>'
+                + "\n".join(status_changes) + "</ul></div>"
+            )
+        if deadline_updates:
+            parts.append(
+                '<div class="wn-group"><h4>Deadline Updates</h4><ul>'
+                + "\n".join(deadline_updates) + "</ul></div>"
+            )
+        if errors:
+            parts.append(
+                '<div class="wn-group"><h4>Fetch Errors</h4><ul>'
+                + "\n".join(errors) + "</ul></div>"
+            )
+        inner = "\n".join(parts)
+
+    return (
+        f'<details class="whats-new" id="whats-new">\n'
+        f'<summary>What\'s New &mdash; {today}</summary>\n'
+        f'<div class="wn-content">\n{inner}\n</div>\n'
+        f'</details>'
+    )
+
+
+def update_whats_new(report: list[dict]) -> None:
+    """
+    Insert or replace the 'What's New' section in both HTML files.
+    Looks for the marker <!-- whats-new --> or existing <details id="whats-new">.
+    """
+    new_html = generate_whats_new_html(report)
+
+    # Pattern to match existing whats-new block
+    existing_pattern = re.compile(
+        r'<details class="whats-new" id="whats-new">.*?</details>',
+        re.DOTALL,
+    )
+
+    for filepath in [INDEX_FILE, DIRECTORY_FILE]:
+        content = filepath.read_text(encoding="utf-8")
+
+        if existing_pattern.search(content):
+            # Replace existing block
+            new_content = existing_pattern.sub(new_html, content)
+        elif '<!-- whats-new -->' in content:
+            # Replace placeholder marker
+            new_content = content.replace('<!-- whats-new -->', new_html)
+        else:
+            # No marker found — skip (will be added manually once)
+            logger.warning(f"  No whats-new marker found in {filepath.name} — skipping")
+            continue
+
+        if new_content != content:
+            filepath.write_text(new_content, encoding="utf-8")
+            logger.info(f"  Updated 'What's New' section in {filepath.name}")
 
 
 def update_last_updated_date():

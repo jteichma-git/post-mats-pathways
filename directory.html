@@ -147,6 +147,58 @@
   }
   footer a { color: #818cf8; text-decoration: none; }
   footer a:hover { text-decoration: underline; }
+  /* What's New dropdown */
+  .whats-new {
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(99,102,241,0.15);
+    border-radius: 12px;
+    margin-bottom: 40px;
+    overflow: hidden;
+  }
+  .whats-new summary {
+    padding: 14px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #a5b4fc;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .whats-new summary::-webkit-details-marker { display: none; }
+  .whats-new summary::before {
+    content: '▸';
+    font-size: 12px;
+    transition: transform 0.2s;
+  }
+  .whats-new[open] summary::before { transform: rotate(90deg); }
+  .wn-content {
+    padding: 0 24px 16px;
+    font-size: 13px;
+    color: #cbd5e1;
+  }
+  .wn-group { margin-bottom: 12px; }
+  .wn-group h4 {
+    font-size: 12px;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+  .wn-group ul { list-style: none; padding: 0; }
+  .wn-group li {
+    padding: 4px 0;
+    border-bottom: 1px solid rgba(99,102,241,0.06);
+  }
+  .wn-group li:last-child { border-bottom: none; }
+  .wn-old { color: #64748b; text-decoration: line-through; }
+  .wn-new { font-weight: 600; }
+  .wn-open { color: #34d399; }
+  .wn-closed { color: #64748b; }
+  .wn-upcoming { color: #fbbf24; }
+  .wn-empty { color: #64748b; font-style: italic; }
   @media (max-width: 700px) { .desktop-only { display: none; } }
 </style>
 <script type="application/ld+json">
@@ -186,6 +238,40 @@
 <li><a href="#tech-internships">9. Technical Safety Internships</a></li>
 </ol>
 </nav>
+<details class="whats-new" id="whats-new">
+<summary>What's New &mdash; April 02, 2026</summary>
+<div class="wn-content">
+<div class="wn-group"><h4>Status Changes</h4><ul><li><strong>ERA Fellowship (Cambridge)</strong> — status changed from <span class="wn-old">closed</span> to <span class="wn-new wn-upcoming">upcoming</span></li>
+<li><strong>SPAR</strong> — status changed from <span class="wn-old">closed</span> to <span class="wn-new wn-expression_of_interest">expression_of_interest</span></li>
+<li><strong>Schmidt Sciences — Trustworthy AI RFP</strong> — status changed from <span class="wn-old">upcoming</span> to <span class="wn-new wn-open">open</span></li>
+<li><strong>Survival & Flourishing Fund (SFF)</strong> — status changed from <span class="wn-old">upcoming</span> to <span class="wn-new wn-open">open</span></li>
+<li><strong>Gray Swan AI</strong> — status changed from <span class="wn-old">unknown</span> to <span class="wn-new wn-expression_of_interest">expression_of_interest</span></li>
+<li><strong>LawZero</strong> — status changed from <span class="wn-old">unknown</span> to <span class="wn-new wn-open">open</span></li>
+<li><strong>WhiteBox Research Fellowship</strong> — status changed from <span class="wn-old">expression_of_interest</span> to <span class="wn-new wn-open">open</span></li>
+<li><strong>Vitalik Buterin PhD Fellowship (FLI)</strong> — status changed from <span class="wn-old">closed</span> to <span class="wn-new wn-upcoming">upcoming</span></li>
+<li><strong>Constellation Astra Fellowship</strong> — status changed from <span class="wn-old">expression_of_interest</span> to <span class="wn-new wn-open">open</span></li></ul></div>
+<div class="wn-group"><h4>Deadline Updates</h4><ul><li><strong>CAIS AI & Society Fellowship</strong> — deadline updated to March 24, 11:59 PM PDT</li>
+<li><strong>ERA Fellowship (Cambridge)</strong> — deadline updated to July 6 - September 11, 2026</li>
+<li><strong>Global AI Safety Fellowship</strong> — deadline updated to Final deadline was 31 December 2024. Applications for second iteration not yet open - accepting expressions of interest only.</li>
+<li><strong>MATS (ML Alignment Theory Scholars)</strong> — deadline updated to Summer 2026 applications closed; collecting EOI</li>
+<li><strong>SPAR</strong> — deadline updated to Spring 2026 cycle closed; mentee decisions being sent out; Fall 2026 cycle dates unknown</li>
+<li><strong>Schmidt Sciences — Trustworthy AI RFP</strong> — deadline updated to May 17, 2026 11:59 PM AoE</li>
+<li><strong>Survival & Flourishing Fund (SFF)</strong> — deadline updated to Main Round: April 22, 2026 11:59:59 PM PT; Theme Rounds: Climate Change June 10, 2026, Animal Welfare June 24, 2026, HSEE July 8, 2026 (all at 11:59:59 PM PT)</li>
+<li><strong>WhiteBox Research Fellowship</strong> — deadline updated to Cohort 2 runs January 30 to May 18, 2025</li>
+<li><strong>GovAI Summer Fellowship</strong> — deadline updated to Applications now closed</li>
+<li><strong>IAPS AI Policy Fellowship</strong> — deadline updated to Fall 2026 applications open in April 2026</li>
+<li><strong>RAND CAST Fellows</strong> — deadline updated to Applications accepted continuously, reviewed at least quarterly</li>
+<li><strong>CHAI Internship (UC Berkeley)</strong> — deadline updated to 2026 applications are now closed</li>
+<li><strong>CLR Summer Research Fellowship</strong> — deadline updated to 23:59 PT Sunday 22nd March</li>
+<li><strong>DeepMind Student Researcher</strong> — deadline updated to Applications organized by 2025-2026 cycle — check Google Careers page for specific deadlines</li></ul></div>
+<div class="wn-group"><h4>Fetch Errors</h4><ul><li><strong>Coefficient Giving — Transition Grants</strong> — Connection error</li>
+<li><strong>Coefficient Giving — Technical AI Safety RFP</strong> — Connection error</li>
+<li><strong>Manifund Regranting</strong> — HTTP 429</li>
+<li><strong>SAIF (Safe AI Forum)</strong> — Connection error</li>
+<li><strong>Americans for Responsible Innovation</strong> — HTTP 403</li>
+<li><strong>OpenAI Emerging Talent</strong> — HTTP 403</li></ul></div>
+</div>
+</details>
 <!-- 1. Career Resources -->
 <section class="s-red" id="career-resources">
 <h2>1. Career Resources</h2>
@@ -276,7 +362,7 @@
 <div class="opp">
 <h3><a href="https://safe.ai/fellowship">CAIS AI &amp; Society Fellowship</a></h3>
 <div class="details">3 months in SF. <strong>$25K</strong> stipend + travel + meals. Social/policy focus.</div>
-<div class="deadline open">March 24, 11:59 PM PDT</div>
+<div class="deadline closed">March 24, 11:59 PM PDT</div>
 </div>
 <div class="opp">
 <h3><a href="https://erafellowship.org">ERA Fellowship (Cambridge)</a></h3>
@@ -346,7 +432,7 @@
 <div class="opp">
 <h3><a href="https://www.meridiancambridge.org/research-accelerator-week">Meridian Cambridge — Research Accelerator Week</a></h3>
 <div class="details">Intensive 6-day program in Cambridge, UK for AI safety researchers. Funding pathway via Coefficient Giving, fiscal sponsorship, workspace, travel support (up to <strong>£700</strong> international), accommodation, and meals. Previous cohort secured <strong>over $1M</strong> in funding.</div>
-<div class="deadline closed">April 5, 2025</div>
+<div class="deadline closed">April 5, 2025 (next cohort May 18–23, 2026)</div>
 </div>
 <div class="opp">
 <h3><a href="https://www.schmidtsciences.org/opportunity/2026-science-of-trustworthy-ai-rfp/">Schmidt Sciences — Trustworthy AI RFP</a></h3>
@@ -371,7 +457,7 @@
 <div class="opp">
 <h3><a href="https://fiftyyears.com/5050/ai-2">5050 AI (Fifty Years)</a></h3>
 <div class="details">13-week accelerator. No equity, no fees. 340+ alumni, 78 companies, <strong>95% seed raise rate</strong>. Mentors from OpenAI, Anthropic, FLI. SF and London (ARIA partnership) cohorts.</div>
-<div class="deadline open">Sep 14, 2025</div>
+<div class="deadline closed">Sep 14, 2025</div>
 </div>
 <div class="opp">
 <h3><a href="https://catalyze-impact.org/the-program">Catalyze Impact</a></h3>
@@ -588,7 +674,7 @@
 <div class="opp">
 <h3><a href="https://www.lasrlabs.org/">LASR Labs — Summer 2026</a></h3>
 <div class="details">13-week AI safety research program. <strong>£11K</strong> stipend + food, office, travel. Produce a paper + blog post. Alumni at UK AISI, Apollo, Leap Labs. London, in-person, full-time. July–October 2026.</div>
-<div class="deadline open">March 30, 2026 at 23:59 GMT</div>
+<div class="deadline closed">March 30, 2026 at 23:59 GMT</div>
 </div>
 <div class="opp">
 <h3><a href="https://openai.com/careers/emerging-talent/">OpenAI Emerging Talent</a></h3>
