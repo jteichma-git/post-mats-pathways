@@ -2,8 +2,8 @@ name: Scan for New AI Safety Opportunities
 
 on:
   schedule:
-    # 1st of each month at 9am UTC
-    - cron: '0 9 1 * *'
+    # Every Monday at 9am UTC
+    - cron: '0 9 * * 1'
   workflow_dispatch:
     # Allow manual triggering from GitHub Actions UI
 
