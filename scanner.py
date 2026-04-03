@@ -44,8 +44,17 @@ AGGREGATOR_URLS = [
     "https://www.aisafety.com/jobs",
     "https://www.aisafety.com/funding",
     "https://www.aisafety.com/events-and-training",
-    "https://jobs.80000hours.org/",
+    # 80K Hours job board is JS-rendered; scraped via Algolia API in scrape_80k_hours()
 ]
+
+# 80,000 Hours job board Algolia credentials (public search-only key)
+ALGOLIA_80K = {
+    "app_id": "W6KM1UDIB3",
+    "api_key": "d1d7f2c8696e7b36837d5ed337c4a319",
+    "index": "jobs_prod",
+    "queries": ["AI safety", "AI alignment", "AI governance", "AI policy"],
+    "hits_per_query": 50,
+}
 
 FORUM_URLS = [
     "https://forum.effectivealtruism.org/topics/ai-safety",
@@ -238,6 +247,60 @@ def extract_org_links(html: str, base_url: str) -> List[Dict[str, str]]:
     return candidates
 
 
+def scrape_80k_hours() -> List[Dict[str, str]]:
+    """Scrape the 80,000 Hours job board via its Algolia search API."""
+    logger.info("Fetching 80K Hours job board via Algolia API")
+    candidates = []
+    seen_urls = set()  # type: Set[str]
+
+    cfg = ALGOLIA_80K
+    endpoint = "https://{}-dsn.algolia.net/1/indexes/{}/query".format(
+        cfg["app_id"], cfg["index"]
+    )
+    headers = {
+        "X-Algolia-Application-Id": cfg["app_id"],
+        "X-Algolia-API-Key": cfg["api_key"],
+        "Content-Type": "application/json",
+    }
+
+    for query in cfg["queries"]:
+        try:
+            resp = requests.post(
+                endpoint,
+                headers=headers,
+                json={
+                    "query": query,
+                    "hitsPerPage": cfg["hits_per_query"],
+                    "attributesToRetrieve": [
+                        "title", "company_name", "url_external",
+                    ],
+                },
+                timeout=REQUEST_TIMEOUT,
+            )
+            resp.raise_for_status()
+            hits = resp.json().get("hits", [])
+            logger.info("  Query '%s': %d hits", query, len(hits))
+            for hit in hits:
+                url = hit.get("url_external", "")
+                if not url:
+                    continue
+                # Strip UTM params
+                url = url.split("?")[0]
+                if url in seen_urls:
+                    continue
+                seen_urls.add(url)
+                name = hit.get("title", "")
+                company = hit.get("company_name", "")
+                display = "{} @ {}".format(name, company) if company else name
+                candidates.append({"name": display, "url": url})
+        except Exception as e:
+            logger.warning("  Algolia query '%s' failed: %s", query, e)
+        time.sleep(RATE_LIMIT_DELAY)
+
+    logger.info("  80K Hours total: %d unique candidates", len(candidates))
+    return candidates
+
+
 def scrape_aggregators() -> List[Dict[str, str]]:
     """Phase 1: Scrape aggregator sites for org links."""
     logger.info("=== Phase 1: Scraping aggregator sites ===")
@@ -253,6 +316,9 @@ def scrape_aggregators() -> List[Dict[str, str]]:
         else:
             logger.warning("  Failed to fetch %s", url)
         time.sleep(RATE_LIMIT_DELAY)
+
+    # 80K Hours job board (JS-rendered, use Algolia API)
+    all_candidates.extend(scrape_80k_hours())
 
     logger.info("Phase 1 total: %d candidate links from aggregators", len(all_candidates))
     return all_candidates
