@@ -100,6 +100,16 @@
     "js_only": false
   },
   {
+    "name": "CBAI Summer Research Fellowship",
+    "url": "https://www.cbai.ai/summer-research-fellowship-26",
+    "category": "fellowships",
+    "current_status": "open",
+    "current_deadline": "April 12, 2026 (rolling)",
+    "current_details": "9 weeks in Cambridge, MA (Harvard Square). $10K stipend + housing + meals + up to $10K compute. 30 fellows. Tracks: Technical Safety, Governance, Technical Governance, Economics of TAI. Must have US work authorization.",
+    "last_checked": "2026-04-03T00:00:00.000000+00:00",
+    "js_only": false
+  },
+  {
     "name": "ERA Fellowship (Cambridge)",
     "url": "https://erafellowship.org",
     "category": "fellowships",
