@@ -530,6 +530,16 @@
     "js_only": false
   },
   {
+    "name": "80K Hours: Top US Policy Masters Programs",
+    "url": "https://airtable.com/appsS0BWirkg81ofP/shrC1Dswb9eIiTWzG/tbl2ljqBV2ztwdOSU",
+    "category": "phd",
+    "current_status": "open",
+    "current_deadline": null,
+    "current_details": "Curated list of top US masters programs relevant to AI policy and governance careers. Compiled by 80,000 Hours.",
+    "last_checked": "2026-04-03T00:00:00.000000+00:00",
+    "js_only": false
+  },
+  {
     "name": "aisafety.com/funding",
     "url": "https://www.aisafety.com/funding",
     "category": "phd",
