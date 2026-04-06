@@ -412,7 +412,7 @@
   {
     "name": "Apollo Research",
     "url": "https://www.apolloresearch.ai/careers/",
-    "category": "orgs-to-watch",
+    "category": "jobs",
     "current_status": "open",
     "current_deadline": "Rolling Applications",
     "current_details": "Deceptive AI detection. No internship — mentors through MATS & LASR. Expression of interest form available. London + DC.",
@@ -422,7 +422,7 @@
   {
     "name": "Beneficial AI Foundation",
     "url": "https://www.beneficialaifoundation.org/jobs",
-    "category": "orgs-to-watch",
+    "category": "jobs",
     "current_status": "open",
     "current_deadline": null,
     "current_details": "Max Tegmark's nonprofit. Research Scientist ($70K–$180K), Full Stack Engineer ($40/hr). Remote or MIT Cambridge.",
@@ -432,7 +432,7 @@
   {
     "name": "Forethought",
     "url": "https://www.forethought.org/careers",
-    "category": "orgs-to-watch",
+    "category": "jobs",
     "current_status": "expression_of_interest",
     "current_deadline": null,
     "current_details": "Expression of interest open (no deadline). Oxford or Berkeley, remote negotiable.",
@@ -442,7 +442,7 @@
   {
     "name": "Goodfire",
     "url": "https://www.goodfire.ai/careers",
-    "category": "orgs-to-watch",
+    "category": "jobs",
     "current_status": "unknown",
     "current_deadline": null,
     "current_details": "Interpretability startup. Full-time, in-person roles. No current internship. Backed by Juniper Ventures.",
@@ -452,7 +452,7 @@
   {
     "name": "Gray Swan AI",
     "url": "https://www.grayswan.ai/careers",
-    "category": "orgs-to-watch",
+    "category": "jobs",
     "current_status": "expression_of_interest",
     "current_deadline": null,
     "current_details": "AI safety evaluation & red-teaming. No current internship. Join their Talent Newsletter for future postings.",
@@ -462,7 +462,7 @@
   {
     "name": "LawZero",
     "url": "https://job-boards.greenhouse.io/lawzero",
-    "category": "orgs-to-watch",
+    "category": "jobs",
     "current_status": "open",
     "current_deadline": null,
     "current_details": "Nonprofit safety lab (Yoshua Bengio). Raised $30M. 8 full-time roles in Montreal. ML Research Scientists, Developers, Engineers.",
@@ -472,7 +472,7 @@
   {
     "name": "METR (formerly ARC Evals)",
     "url": "https://metr.org/careers",
-    "category": "orgs-to-watch",
+    "category": "jobs",
     "current_status": "open",
     "current_deadline": null,
     "current_details": "AI evaluation. Full-time roles only: MTS Research $250K–$450K. Berkeley, on-site.",
@@ -482,7 +482,7 @@
   {
     "name": "MIRI TGT Research Fellowship",
     "url": "https://techgov.intelligence.org/blog/announcing-miri-technical-governance-team-research-fellowship",
-    "category": "orgs-to-watch",
+    "category": "jobs",
     "current_status": "expression_of_interest",
     "current_deadline": "Feb 2 - Aug 31, 2026 (program dates; applications closed)",
     "current_details": "8 weeks, $1,200/wk. Remote + 1-week Berkeley kickoff. Register interest for future cohorts.",
@@ -492,7 +492,7 @@
   {
     "name": "Redwood Research",
     "url": "https://www.redwoodresearch.org/careers",
-    "category": "orgs-to-watch",
+    "category": "jobs",
     "current_status": "open",
     "current_deadline": null,
     "current_details": "Leading AI safety lab. No direct internship — mentors through MATS. Check careers page for full-time roles.",
@@ -502,7 +502,7 @@
   {
     "name": "SAIF (Safe AI Forum)",
     "url": "https://saif.org/opportunities/",
-    "category": "orgs-to-watch",
+    "category": "jobs",
     "current_status": "expression_of_interest",
     "current_deadline": "Listed roles closed — check for new postings",
     "current_details": "AI safety forum. Current listed roles (Events Associate, Operations) are closed. Check page for future openings.",
@@ -512,7 +512,7 @@
   {
     "name": "Simplex",
     "url": "https://www.simplexaisafety.com/",
-    "category": "orgs-to-watch",
+    "category": "jobs",
     "current_status": "open",
     "current_deadline": null,
     "current_details": "Computational Mechanics for interpretability. Hiring Research Scientists. Bay Area & London.",
@@ -522,7 +522,7 @@
   {
     "name": "Transluce",
     "url": "https://transluce.org/",
-    "category": "orgs-to-watch",
+    "category": "jobs",
     "current_status": "unknown",
     "current_deadline": null,
     "current_details": "AI transparency org. No current internship. May post periodically on AISafety.com.",
@@ -532,7 +532,7 @@
   {
     "name": "WhiteBox Research Fellowship",
     "url": "https://www.whiteboxresearch.org/",
-    "category": "orgs-to-watch",
+    "category": "jobs",
     "current_status": "open",
     "current_deadline": "Cohort 2 runs January 30 to May 18, 2025",
     "current_details": "Interpretability/safety upskilling. SE Asia focused. Virtual or in-person (Philippines). $200 completion reward.",

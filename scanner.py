@@ -97,7 +97,7 @@ Return ONLY a JSON object (no markdown, no explanation) with these fields:
 - "name": string — the organization or program name
 - "url": string — the best URL for this opportunity
 - "relevance_score": integer 1-5
-- "category": string — one of: "career-resources", "community", "fellowships", "grants", "startups", "orgs-to-watch", "phd", "policy-internships", "tech-internships", "jobs"
+- "category": string — one of: "career-resources", "community", "fellowships", "grants", "startups", "jobs", "phd", "policy-internships", "tech-internships"
 - "description": string — 1-2 sentence description of what this opportunity offers
 - "status": string — one of: "open", "closed", "upcoming", "expression_of_interest", "unknown"
 - "deadline": string or null — application deadline if mentioned"""
@@ -124,7 +124,7 @@ If there are new programs, return a JSON array of objects, each with:
 - "name": string
 - "url": string
 - "description": string
-- "category": string (one of: "fellowships", "grants", "tech-internships", "policy-internships", "jobs", "community", "orgs-to-watch", "phd", "startups")
+- "category": string (one of: "fellowships", "grants", "tech-internships", "policy-internships", "jobs", "community", "phd", "startups")
 
 If there is nothing new, return an empty JSON array: []
 
@@ -663,7 +663,7 @@ def generate_markdown_summary(results: List[Dict]) -> str:
         "policy-internships": "Policy Internships",
         "jobs": "Jobs",
         "community": "Community & Resources",
-        "orgs-to-watch": "Organizations to Watch",
+
         "phd": "PhD & Academic",
         "startups": "Startups & Incubators",
         "career-resources": "Career Resources",

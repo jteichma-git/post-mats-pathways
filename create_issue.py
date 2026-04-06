@@ -41,7 +41,7 @@ def build_issue_body(suggestions: List[Dict]) -> str:
         "policy-internships": "Policy Internships",
         "jobs": "Jobs",
         "community": "Community & Resources",
-        "orgs-to-watch": "Organizations to Watch",
+
         "phd": "PhD & Academic",
         "startups": "Startups & Incubators",
         "career-resources": "Career Resources",

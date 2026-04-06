@@ -35,11 +35,10 @@ CATEGORY_CONFIG = {
     "fellowships":      {"section_id": "fellowships"},
     "grants":           {"section_id": "grants"},
     "startups":         {"section_id": "startups"},
-    "orgs-to-watch":    {"section_id": "orgs-to-watch"},
+    "jobs":             {"section_id": "jobs"},
     "phd":              {"section_id": "phd"},
     "policy-internships": {"section_id": "policy-internships"},
     "tech-internships": {"section_id": "tech-internships"},
-    "jobs":             {"section_id": "jobs"},
 }
 
 
@@ -63,7 +62,6 @@ def display_suggestions(suggestions: List[Dict]) -> None:
         "policy-internships": "Policy Internships",
         "jobs": "Jobs",
         "community": "Community",
-        "orgs-to-watch": "Orgs to Watch",
         "phd": "PhD & Academic",
         "startups": "Startups",
         "career-resources": "Career Resources",
