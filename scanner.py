@@ -52,8 +52,8 @@ ALGOLIA_80K = {
     "app_id": "W6KM1UDIB3",
     "api_key": "d1d7f2c8696e7b36837d5ed337c4a319",
     "index": "jobs_prod",
-    "queries": ["AI safety", "AI alignment", "AI governance", "AI policy"],
-    "hits_per_query": 50,
+    "area_filter": "AI safety & policy",
+    "hits_per_page": 100,
 }
 
 FORUM_URLS = [
@@ -248,8 +248,14 @@ def extract_org_links(html: str, base_url: str) -> List[Dict[str, str]]:
 
 
 def scrape_80k_hours() -> List[Dict[str, str]]:
-    """Scrape the 80,000 Hours job board via its Algolia search API."""
-    logger.info("Fetching 80K Hours job board via Algolia API")
+    """Scrape the 80,000 Hours job board via its Algolia search API.
+
+    Uses the 'AI safety & policy' area tag to filter results instead of
+    keyword queries, which is more precise and matches the site's own
+    categorization.
+    """
+    logger.info("Fetching 80K Hours job board via Algolia API (area: '%s')",
+                ALGOLIA_80K["area_filter"])
     candidates = []
     seen_urls = set()  # type: Set[str]
 
@@ -263,14 +269,18 @@ def scrape_80k_hours() -> List[Dict[str, str]]:
         "Content-Type": "application/json",
     }
 
-    for query in cfg["queries"]:
+    page = 0
+    total_hits = None
+    while True:
         try:
             resp = requests.post(
                 endpoint,
                 headers=headers,
                 json={
-                    "query": query,
-                    "hitsPerPage": cfg["hits_per_query"],
+                    "query": "",
+                    "filters": 'tags_area:"{}"'.format(cfg["area_filter"]),
+                    "hitsPerPage": cfg["hits_per_page"],
+                    "page": page,
                     "attributesToRetrieve": [
                         "title", "company_name", "url_external",
                     ],
@@ -278,13 +288,19 @@ def scrape_80k_hours() -> List[Dict[str, str]]:
                 timeout=REQUEST_TIMEOUT,
             )
             resp.raise_for_status()
-            hits = resp.json().get("hits", [])
-            logger.info("  Query '%s': %d hits", query, len(hits))
+            data = resp.json()
+            hits = data.get("hits", [])
+            if total_hits is None:
+                total_hits = data.get("nbHits", 0)
+                logger.info("  Total listings tagged '%s': %d", cfg["area_filter"], total_hits)
+
+            if not hits:
+                break
+
             for hit in hits:
                 url = hit.get("url_external", "")
                 if not url:
                     continue
-                # Strip UTM params
                 url = url.split("?")[0]
                 if url in seen_urls:
                     continue
@@ -293,8 +309,13 @@ def scrape_80k_hours() -> List[Dict[str, str]]:
                 company = hit.get("company_name", "")
                 display = "{} @ {}".format(name, company) if company else name
                 candidates.append({"name": display, "url": url})
+
+            page += 1
+            if page >= data.get("nbPages", 1):
+                break
         except Exception as e:
-            logger.warning("  Algolia query '%s' failed: %s", query, e)
+            logger.warning("  Algolia page %d failed: %s", page, e)
+            break
         time.sleep(RATE_LIMIT_DELAY)
 
     logger.info("  80K Hours total: %d unique candidates", len(candidates))
