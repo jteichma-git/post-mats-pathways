@@ -9,7 +9,7 @@
     "old_deadline": null,
     "new_deadline": null,
     "new_stipend": null,
-    "key_changes": "No changes detected - this remains a curated resource list rather than an application-based opportunity. The page was last updated September 15th, 2025 and first published June 4th, 2025. The content lists 67 resources across multiple categories including overviews, courses, projects, fellowships, organizations, and staying up-to-date resources for technical AI safety upskilling."
+    "key_changes": "No changes detected - page remains a curated resource list for technical AI safety upskilling with 67 resources including courses, fellowships, organizations, articles, and project ideas. Last updated September 15th, 2025, first published June 4th, 2025."
   },
   {
     "name": "80K Hours AI Safety Career Review",
@@ -57,7 +57,7 @@
     "old_deadline": "Recurring events",
     "new_deadline": "Recurring events",
     "new_stipend": null,
-    "key_changes": "No changes detected - organization continues to offer recurring research sprints (hackathons) and now also explicitly mentions Fellowships as additional programs. The main focus remains on accelerating AI safety research through mentorship, collaborations, and research sprints."
+    "key_changes": "No changes detected - Apart Research continues to offer Sprints (hackathons), Fellowships, and Research programs as ongoing opportunities. The page emphasizes their mission to accelerate AI safety research through mentorship, collaborations, and research sprints. No specific upcoming deadlines or stipend information provided on this page."
   },
   {
     "name": "BlueDot Impact",
@@ -69,18 +69,19 @@
     "old_deadline": "Multiple cohorts per year",
     "new_deadline": "Multiple cohorts per year",
     "new_stipend": null,
-    "key_changes": "Alumni community has grown from 4,000+ to 8,000+. Organization has raised $35M to date (new information). Career outcomes data now shows 25% of graduates land impactful roles within six months. Expanded course structure now explicitly shows a three-step progression starting with 'The Future of AI' (2 hours, free, self-paced, no application). Organization now described as based in both London and San Francisco (previously just mentioned as organization). Since 2022, trained over 7,000 professionals worldwide."
+    "key_changes": "Alumni community has grown from 4,000+ to 8,000+ (page states '7,000 professionals worldwide' trained since 2022 and '8,000+ alumni'). The organization has raised $35M to date. The page now emphasizes '25% of graduates land impactful roles within six months' as a key metric. BlueDot Connect (mentor matching) is not mentioned on this page. The courses remain free with multiple tracks available."
   },
   {
     "name": "Outsider's Roadmap to AI Safety (LessWrong)",
     "url": "https://www.lesswrong.com/posts/bcuzjKmNZHWDuEwBz/an-outsider-s-roadmap-into-ai-safety-research-2025",
-    "action": "http_error",
-    "error": "HTTP 429",
+    "action": "unchanged",
+    "error": null,
     "old_status": "unknown",
-    "new_status": null,
+    "new_status": "unknown",
     "old_deadline": null,
     "new_deadline": null,
-    "key_changes": "Could not fetch: HTTP 429"
+    "new_stipend": null,
+    "key_changes": "No changes detected"
   },
   {
     "name": "Anthropic Fellows Program",
@@ -91,7 +92,7 @@
     "new_status": "open",
     "old_deadline": "Rolling applications for May 2026 and July 2026 cohorts",
     "new_deadline": "Rolling applications for May 2026 and July 2026 cohorts",
-    "new_stipend": "$3,850/week USD (or 2,310 GBP / 4,300 CAD) + ~$15k/month compute funding",
+    "new_stipend": "$3,850/week USD / £2,310 GBP / $4,300 CAD + ~$15k/month compute funding",
     "key_changes": "No changes detected"
   },
   {
@@ -103,8 +104,8 @@
     "new_status": "open",
     "old_deadline": "March 24, 11:59 PM PDT",
     "new_deadline": "March 24, 11:59 PM PDT",
-    "new_stipend": "$25,000 stipend plus covered expenses (travel to/from San Francisco, daily lunch and dinner at office)",
-    "key_changes": "MAJOR CHANGE: Program dates are now June 1 - August 21, 2026 (not 2025). Fellowship has expanded eligibility beyond initial description - now explicitly welcomes professors (Full, Associate, Assistant), PhD/JD holders, ongoing PhD/JD students, and researchers with PhD/JD-equivalent experience in economics, international relations, law, or adjacent disciplines. Additional details provided: application requires CV, writing sample, brief research proposal, and fellowship goals; select applicants will be invited for remote interviews; final decisions communicated by mid-April. Guest speakers announced include professors from Stanford, Johns Hopkins, UPenn, UVA, Alabama, and Minnesota."
+    "new_stipend": "$25,000 stipend plus covered travel to/from San Francisco and daily lunch and dinner",
+    "key_changes": "Program dates have changed to June 1 – August 21, 2026 (previously listed as 3 months in SF without specific dates). The page now specifies this is for scholars in economics, law, international relations, and adjacent disciplines rather than just 'social/policy focus'. Full details about eligibility criteria, application process, and expected outputs are now provided."
   },
   {
     "name": "CBAI Summer Research Fellowship",
@@ -115,8 +116,8 @@
     "new_status": "expression_of_interest",
     "old_deadline": "April 12th",
     "new_deadline": null,
-    "new_stipend": "$10,000 stipend over nine weeks, plus housing, meals, and up to $10,000 in compute support",
-    "key_changes": "Deadline change: The stored deadline of 'April 12th' is not mentioned on the current page. The page only mentions 'Fall 2026 Expression of Interest Form' without specifying a deadline. All other details remain consistent: 9 weeks (June 8 to August 10), Cambridge MA (Harvard Square), $10K stipend, housing, meals, up to $10K compute, 30 fellows implied, same research tracks (Technical Safety, Governance, Technical Governance, Economics of TAI), and US work authorization requirement confirmed."
+    "new_stipend": "$10,000 stipend + housing + meals + up to $10,000 compute support",
+    "key_changes": "The deadline information has changed - the stored deadline of 'April 12th' is not mentioned on the current page. The page only mentions 'Fall 2026 Expression of Interest Form' without specifying a deadline date. The program dates are confirmed as June 8 to August 10. All other details remain consistent: 9 weeks in Cambridge MA (Harvard Square), stipend amounts, housing, meals, compute support, 30 fellows not explicitly mentioned but mentor list is extensive, and the four research tracks are confirmed (Technical Safety, Governance, Technical Governance, Economics of TAI). US work authorization requirement is confirmed (OPT/CPT accepted, no visa sponsorship)."
   },
   {
     "name": "ERA Fellowship (Cambridge)",
@@ -127,8 +128,8 @@
     "new_status": "upcoming",
     "old_deadline": "April 12th, 2026",
     "new_deadline": null,
-    "new_stipend": "competitive stipend plus meals during working hours, transport, visas and lodging covered",
-    "key_changes": "Duration changed from 8 weeks to 10 weeks. Program dates are July 6 - September 11, 2026. No specific application deadline mentioned on page. Stipend details expanded to include meals, transport, visas and lodging coverage beyond just competitive stipend."
+    "new_stipend": "competitive stipend + meals during working hours + transport, visas and lodging covered",
+    "key_changes": "Duration changed from 8 weeks to 10 weeks. Dates specified as July 6 - September 11, 2026. No application deadline mentioned on page. Stipend details expanded to include meals during working hours, transport, visas, and lodging coverage beyond just competitive stipend + lodging."
   },
   {
     "name": "Global AI Safety Fellowship",
@@ -145,26 +146,26 @@
   {
     "name": "Iliad Intensive / Fellowship",
     "url": "https://www.iliad.ac/",
-    "action": "unchanged",
+    "action": "changed",
     "error": null,
     "old_status": "closed",
-    "new_status": "closed",
+    "new_status": "upcoming",
     "old_deadline": "March 10th, 2026",
-    "new_deadline": "March 10th, 2026",
-    "new_stipend": "Intensive: Travel and housing expenses fully covered. Fellowship: $6K–$15K stipend (June–Aug 2026)",
-    "key_changes": "No changes detected"
+    "new_deadline": null,
+    "new_stipend": "Fellowship: $6K–$15K stipend",
+    "key_changes": "The page mentions 'Apply to future iterations here' suggesting applications are not currently open but will be available for future iterations. The June 2026 Intensive (June 6–July 3) and Summer 2026 Fellowship (June 6–September 5) dates are confirmed. No specific application deadline is mentioned on the page. The stored deadline of March 10th, 2026 is not visible in the page content."
   },
   {
     "name": "MATS (ML Alignment Theory Scholars)",
     "url": "https://www.matsprogram.org/",
-    "action": "changed",
+    "action": "unchanged",
     "error": null,
-    "old_status": "expression_of_interest",
+    "old_status": "open",
     "new_status": "open",
-    "old_deadline": "Summer 2026 applications are closed, but still collecting EOI",
+    "old_deadline": "June 7th (for Autumn 2026 cohort)",
     "new_deadline": "June 7th (for Autumn 2026 cohort)",
-    "new_stipend": "Not specified on this page excerpt",
-    "key_changes": "Applications are now OPEN for Autumn 2026 cohort with deadline June 7th. Program duration changed from 12 weeks to 10 weeks. Status changed from 'expression_of_interest' to 'open'. Previous stored info indicated Summer 2026 applications were closed but collecting EOI; current page shows Autumn 2026 applications are actively open."
+    "new_stipend": "$15K stipend + $12K compute + private housing + catered meals",
+    "key_changes": "Program duration changed from 12 weeks to 10 weeks. Number of fellows/mentors not mentioned on current page (stored: 120 fellows, 100 mentors). 6-12 month extension still mentioned but percentage (~70%) not specified on current page."
   },
   {
     "name": "Pivotal Research Fellowship",
@@ -175,7 +176,7 @@
     "new_status": "open",
     "old_deadline": "May 3rd, 2026",
     "new_deadline": "May 3rd, 2026",
-    "new_stipend": "£6,000 – £8,000 stipend plus travel, housing (£2,000 for non-London fellows), meals & compute",
+    "new_stipend": "£6,000–£8,000 stipend plus travel, housing (£2,000 for non-London fellows), meals & compute",
     "key_changes": "No changes detected"
   },
   {
@@ -188,19 +189,19 @@
     "old_deadline": "Closed — deadline passed March 15",
     "new_deadline": null,
     "new_stipend": null,
-    "key_changes": "Cannot determine application status from page content. The page appears to be a project/organization homepage rather than a fellowship application page. The fellowship may still exist but no application information, deadlines, or status indicators are visible in the provided content. Previous deadline of March 15 cannot be confirmed or updated from current page content."
+    "key_changes": "Cannot determine current application status or deadline from page content. Page appears to be a general information/landing page for the replication project with navigation menu but no specific application timeline or fellowship details visible in the provided content."
   },
   {
     "name": "SPAR",
     "url": "https://sparai.org/",
     "action": "changed",
     "error": null,
-    "old_status": "expression_of_interest",
-    "new_status": "closed",
+    "old_status": "closed",
+    "new_status": "expression_of_interest",
     "old_deadline": "Spring 2026: Applications closed (mentee decisions sent out end of day today); Fall 2026 cycle dates unknown",
     "new_deadline": "Spring 2026: Applications closed (mentee decisions sent out end of day today); Fall 2026 cycle dates unknown",
-    "new_stipend": "$7,000 in Demo Day prizes; Compute covered",
-    "key_changes": "No changes detected"
+    "new_stipend": "$7,000 in Demo Day prizes; compute covered",
+    "key_changes": "No changes detected - Spring 2026 applications remain closed with decisions being sent out today as stated in stored info. The page shows 'Express Interest' buttons throughout but no open application cycle. Fall 2026 dates remain unknown. Stipend amount ($7K in prizes) and program details (3-month, remote, part-time 5-40 hrs/week, compute covered) match stored information."
   },
   {
     "name": "Coefficient Giving — Transition Grants",
@@ -211,7 +212,7 @@
     "new_status": "open",
     "old_deadline": "Applications are open until further notice and will be assessed on a rolling basis",
     "new_deadline": "Applications are open until further notice and will be assessed on a rolling basis",
-    "new_stipend": "No specific amount mentioned - case-by-case determination based on individual proposals",
+    "new_stipend": "No specific amount mentioned - case-by-case basis depending on the activity being funded (graduate study, internships, independent study, career transition periods, etc.)",
     "key_changes": "No changes detected"
   },
   {
@@ -223,20 +224,20 @@
     "new_status": "closed",
     "old_deadline": "July 15, 2025 (grace period for revise and resubmit and late submissions; original deadline April 15, 2025)",
     "new_deadline": "July 15, 2025 (grace period for revise and resubmit and late submissions; original deadline April 15, 2025)",
-    "new_stipend": "$50K–$5M per grant. ~$40M total across 21 research areas.",
+    "new_stipend": "$50K–$5M per grant. ~$40M total across 21 research areas",
     "key_changes": "No changes detected"
   },
   {
     "name": "Foresight Institute AI Nodes",
     "url": "https://foresight.org/grants/grants-ai-for-science-safety/",
-    "action": "changed",
+    "action": "unchanged",
     "error": null,
     "old_status": "open",
     "new_status": "open",
-    "old_deadline": "Last day of each month (rolling)",
+    "old_deadline": "Last day of every month (next deadline: May 31)",
     "new_deadline": "Last day of every month (next deadline: May 31)",
-    "new_stipend": "Grants typically range from $10,000 to $100,000, with higher amounts awarded to AI safety-oriented focus areas. Approximately $3M in total funding annually.",
-    "key_changes": "Berlin opening date has changed: stored info says 'April 1, 2026' but current page indicates Berlin is already operational and accepting applications. The rolling monthly deadline structure remains the same. Additional detail: compute resources are now explicitly mentioned as available for eligible projects."
+    "new_stipend": "Typically $10,000 to $100,000 per grant (around $3M total funding annually); higher amounts for AI safety-oriented focus areas, smaller amounts for longevity biotech and molecular nanotech projects",
+    "key_changes": "No changes detected"
   },
   {
     "name": "Long-Term Future Fund (LTFF)",
@@ -246,8 +247,8 @@
     "old_status": "open",
     "new_status": "open",
     "old_deadline": "Rolling applications (no fixed deadline)",
-    "new_deadline": "Rolling applications (no fixed deadline)",
-    "new_stipend": "Grant amounts vary widely, examples include $2,500 to $121,575+ for individual grants; recent payout reports show millions distributed across many grantees",
+    "new_deadline": null,
+    "new_stipend": "Grants ranging from $2,500 to $121,575+ (recent examples show $2,500-$121,575, historical range $5K-$120K+)",
     "key_changes": "No changes detected"
   },
   {
@@ -270,20 +271,19 @@
     "new_status": "open",
     "old_deadline": "April 12, 2025",
     "new_deadline": "April 12, 2025",
-    "new_stipend": "Over $1M in funding secured in previous cohort. Dedicated funding pathway via Coefficient Giving. Travel support up to £200 within UK, £400 within Europe, £700 internationally. Accommodation and meals covered during the 6-day program.",
-    "key_changes": "Program date updated to May 18-23, 2026 (previously not specified for this cohort). Application deadline noted as 'extended' to April 12th, suggesting it may have been moved from an earlier date. All other details remain consistent with stored information."
+    "new_stipend": "Dedicated funding pathway via Coefficient Giving. Previous cohort secured over $1M in funding. Travel reimbursement up to £200 UK, £400 Europe, £700 international. Accommodation and meals provided during program week.",
+    "key_changes": "Program date has changed to May 18-23, 2026 (from the stored info which did not specify the year). Application deadline remains April 12, 2025 with note that deadline has been extended. All other details remain consistent including funding pathway, fiscal sponsorship, travel support amounts, accommodation, and target audience."
   },
   {
     "name": "Schmidt Sciences — Trustworthy AI RFP",
     "url": "https://www.schmidtsciences.org/opportunity/2026-science-of-trustworthy-ai-rfp/",
-    "action": "unchanged",
-    "error": null,
+    "action": "http_error",
+    "error": "HTTP 404",
     "old_status": "open",
-    "new_status": "open",
+    "new_status": null,
     "old_deadline": "May 17, 2026 11:59 PM AoE",
-    "new_deadline": "May 17, 2026 11:59 PM AoE",
-    "new_stipend": "Tier 1: Up to $1M (1-3 years), Tier 2: $1M-$5M+ (1-3 years), plus compute resources",
-    "key_changes": "No changes detected"
+    "new_deadline": null,
+    "key_changes": "Could not fetch: HTTP 404"
   },
   {
     "name": "Survival & Flourishing Fund (SFF)",
@@ -294,7 +294,7 @@
     "new_status": "open",
     "old_deadline": "Main Round: April 22, 2026 11:59:59 PM PT; Theme Rounds: Climate Change June 10, 2026, Animal Welfare June 24, 2026, HSEE July 8, 2026 (all at 11:59:59 PM PT)",
     "new_deadline": "Main Round: April 22, 2026 11:59:59 PM PT; Theme Rounds: Climate Change June 10, 2026, Animal Welfare June 24, 2026, HSEE July 8, 2026 (all at 11:59:59 PM PT)",
-    "new_stipend": "$20–40MM+ total across all rounds and tracks ($14–28MM Main Round distributed across Main Track $10–20MM, Freedom Track $2–4MM, Fairness Track $2–4MM; $6–12MM Theme Rounds with $2–4MM each for Climate Change, Animal Welfare, and HSEE)",
+    "new_stipend": "$20–40M+ total across all rounds and tracks. Main Round: $14–28MM (Main Track $10–20MM, Freedom Track $2–4MM, Fairness Track $2–4MM); Theme Rounds: $6–12MM (Climate Change $2–4MM, Animal Welfare $2–4MM, HSEE $2–4MM)",
     "key_changes": "No changes detected"
   },
   {
@@ -306,7 +306,7 @@
     "new_status": "closed",
     "old_deadline": "Expected to reopen in summer 2026",
     "new_deadline": "Expected to reopen in summer 2026",
-    "new_stipend": "Up to £1 million per project, plus dedicated cloud computing and API credits",
+    "new_stipend": "Up to £1 million per project, plus dedicated cloud computing and API credits, potential venture capital investment, and support from AISI's Alignment team",
     "key_changes": "No changes detected"
   },
   {
@@ -319,7 +319,7 @@
     "old_deadline": "Sep 14, 2025",
     "new_deadline": "Sep 14, 2025",
     "new_stipend": null,
-    "key_changes": "No changes detected"
+    "key_changes": "Program now runs Sep-Dec 2025 instead of end of Sept-Dec 2025. There are now two separate cohorts: one in SF/Boston (US) and one in London (UK) in partnership with ARIA. The London cohort runs Oct-Dec 2025 while the US cohort runs Sep-Dec 2025. Program details remain: 13-week accelerator, no equity, no fees, 340+ alumni, 78 companies, 95% seed raise rate. Mentors include those from OpenAI, Anthropic, and others."
   },
   {
     "name": "Catalyze Impact",
@@ -330,8 +330,8 @@
     "new_status": "expression_of_interest",
     "old_deadline": "Rolling applications",
     "new_deadline": null,
-    "new_stipend": "Stipends provided to allow full-time focus on founding, plus access to seed funding network",
-    "key_changes": "No changes detected"
+    "new_stipend": "Stipend provided (amount not specified) plus access to seed funding network",
+    "key_changes": "No changes detected - still operating as expression of interest model with 'Get in touch' CTA. Confirms stipend availability and seed funding access. Organization count remains ~15 incubated orgs with majority raising 6-7 figures, matching stored details."
   },
   {
     "name": "Halcyon Futures",
@@ -342,7 +342,7 @@
     "new_status": "open",
     "old_deadline": "Rolling",
     "new_deadline": "Rolling",
-    "new_stipend": "Seed funding provided (Halcyon Ventures fund manages ~$20M, provides grant funding and VC investments)",
+    "new_stipend": "Grant funding and VC investments available; Halcyon Ventures fund ~$20M; $350M+ raised by member organizations in last 24 months",
     "key_changes": "No changes detected"
   },
   {
@@ -367,7 +367,7 @@
     "old_deadline": null,
     "new_deadline": null,
     "new_stipend": "Fees for new projects typically start at 14% and vary depending on the needs, complexity, and scale of each project",
-    "key_changes": "No changes detected - still accepting expressions of interest with no specific deadline. Additional detail found: fees typically start at 14% of project costs and vary by project needs. Program statistics updated showing 195 expressions of interest received and 15 projects supported with $19.7M total direct costs expended."
+    "key_changes": "Added fee structure information: fees typically start at 14% and vary by project needs. Page confirms they are currently accepting expressions of interest for new projects. Updated statistics through end of 2025 showing 195 expressions of interest received and 15 projects supported with $19.7M total direct costs expended."
   },
   {
     "name": "Seldon Lab",
@@ -378,7 +378,7 @@
     "new_status": "closed",
     "old_deadline": "Batch 2 applications closed; Batch 3 date not announced",
     "new_deadline": "Batch 2 applications closed; Batch 3 date not announced",
-    "new_stipend": "Non-dilutive funding via SFF (specific amount not mentioned on current page)",
+    "new_stipend": "Non-dilutive funding via SFF",
     "key_changes": "No changes detected"
   },
   {
@@ -391,7 +391,7 @@
     "old_deadline": null,
     "new_deadline": null,
     "new_stipend": null,
-    "key_changes": "The organization provides multiple services beyond just nonprofit incorporation support. Services include: 1) Operations Fundamentals (strategic assessment and reimagining), 2) Support and Implementation (embedded expertise), 3) Consulting (specific issues), and 4) Operations Accelerator (6-month cohort program for 6 growth-stage organizations). They offer free webinars on various topics (Financial Health, Compliance, Hiring, Workflow Optimization, Fundraising) with specific dates listed (May-September). The Operations Accelerator has an 'Apply Here' link indicating active applications. The scope is broader than just incorporation - they focus on operational efficiency, systems building, and leadership development for existing nonprofits."
+    "key_changes": "Significant changes detected. WorkStream is no longer focused on nonprofit incorporation support for new organizations. Instead, it offers operational consulting and efficiency services for existing nonprofits, including: (1) Operations Fundamentals - strategic assessment and reimagining of operations, (2) Support and Implementation - hands-on integration services, (3) Consulting for specific issues, and (4) Operations Accelerator - a 6-month cohort program for growth-stage organizations. The Operations Accelerator has an 'Apply Here' link indicating open applications. They also offer free webinars on various operational topics scheduled through September. The organization is a 501c3 (EIN 99-3881534) operating as High Impact Alliance DBA Workstream Nonprofits. The current stored details about 'nonprofit incorporation and operations support for new organizations' is outdated and inaccurate."
   },
   {
     "name": "80,000 Hours Job Board",
@@ -412,22 +412,22 @@
     "error": null,
     "old_status": "open",
     "new_status": "open",
-    "old_deadline": "Updated continuously (last updated: 11 May 2026)",
-    "new_deadline": "Updated continuously (last updated: 18 May 2026)",
+    "old_deadline": "Updated continuously (last updated: 18 May 2026)",
+    "new_deadline": "Updated continuously (last updated: 25 May 2026)",
     "new_stipend": null,
-    "key_changes": "Last updated date changed from 11 May 2026 to 18 May 2026. Job board now shows 408 jobs (no previous count stored for comparison). Multiple new job postings added including positions at LawZero, Oxford University, ERA, Center for AI Safety, BlueDot Impact, MATS Research, Beneficial AI Foundation, FAR AI, 80,000 Hours, and various other organizations with posting dates ranging from 11 May to 18 May 2026."
+    "key_changes": "Last updated date changed from 18 May 2026 to 25 May 2026. Job count increased from previous listing to 419 jobs shown on page. Page continues to show diverse role types including research, policy, operations, information security, software engineering, and finance positions at entry to senior levels, with full-time, volunteering, and fellowship opportunities."
   },
   {
     "name": "Center for AI Safety (CAIS)",
     "url": "https://safe.ai/careers",
-    "action": "unchanged",
+    "action": "changed",
     "error": null,
     "old_status": "open",
     "new_status": "open",
     "old_deadline": "Fall 2026 for Research Engineer Intern position; no specific deadlines mentioned for other positions",
-    "new_deadline": "Fall 2026 for Research Engineer Intern position; no specific deadlines mentioned for other positions",
+    "new_deadline": "Fall 2026 for Research Engineer Intern position; rolling for other positions",
     "new_stipend": null,
-    "key_changes": "No changes detected"
+    "key_changes": "Multiple new positions added including Chief of Staff, Chief of Staff (Public Engagement), Communications Lead (Research), Director of Development, Head of Social, Head of Video, Narrative Strategist, Newsletter Editor, Operations Manager, Principal Special Projects, Program Manager, Special Projects Manager. The page now lists 19 different positions total. An Expression of Interest option is also available for those interested in working with CAIS but not applying to a specific role."
   },
   {
     "name": "FAR AI Careers",
@@ -451,19 +451,19 @@
     "old_deadline": null,
     "new_deadline": null,
     "new_stipend": null,
-    "key_changes": "No changes detected. This is an account creation form for accessing the MATS Alumni Hiring Database, not an application with deadlines. It remains a resource/database for connecting MATS alumni with hiring organizations."
+    "key_changes": "No changes detected. This is a database/account creation form for MATS alumni to join a hiring network, not an application for a program or opportunity. The stored description accurately reflects this as an internal database connecting alumni with hiring organizations."
   },
   {
     "name": "MATS Careers (Staff Hiring)",
     "url": "https://www.matsprogram.org/careers",
-    "action": "changed",
+    "action": "unchanged",
     "error": null,
     "old_status": "open",
     "new_status": "open",
-    "old_deadline": "Multiple deadlines: Apr 8, 2026 (Recruiting Lead); Apr 14, 2026 (Community Manager London); Apr 17, 2026 (Senior Research Manager and Research Manager, rolling basis); Feb 13, 2026 (Compute Administrator)",
+    "old_deadline": "Multiple deadlines: Head of People and Recruiting Lead (updated May 13, 2026); Community Manager London (updated May 13, 2026, rolling basis); Research Manager and Senior Research Manager (updated May 13, 2026, rolling basis); Compute Administrator (updated May 13, 2026)",
     "new_deadline": "Multiple deadlines: Head of People and Recruiting Lead (updated May 13, 2026); Community Manager London (updated May 13, 2026, rolling basis); Research Manager and Senior Research Manager (updated May 13, 2026, rolling basis); Compute Administrator (updated May 13, 2026)",
     "new_stipend": null,
-    "key_changes": "Major changes detected: 1) Deadlines have been updated - all positions now show 'Updated: May 13, 2026' instead of the previously stored specific deadlines (Apr 8, Apr 14, Apr 17, Feb 13, 2026). 2) New position added: Head of People (not in previous stored data). 3) Positions are now listed as 'rolling basis' rather than specific deadline dates. 4) Page update date of May 13, 2026 is after all previously stored deadlines, suggesting the job postings have been refreshed with new timelines."
+    "key_changes": "No changes detected"
   },
   {
     "name": "What AI Safety Orgs Want in a Hire",
@@ -499,7 +499,7 @@
     "old_deadline": null,
     "new_deadline": null,
     "new_stipend": "AI Safety Research Scientist: $35-$75/hour; Research Engineer: $30-$70/hour; Full Stack Engineer: $35-$75/hour",
-    "key_changes": "Significant changes detected: 1) Compensation changed - Research Scientist now $35-$75/hour (was $70K-$180K annual), Full Stack Engineer now $35-$75/hour (was $40/hour). 2) New position added: Research Engineer at $30-$70/hour. 3) All positions now explicitly listed as 'remote from anywhere' (previously 'Remote or MIT Cambridge'). 4) All positions now show hourly rates instead of mix of hourly/annual."
+    "key_changes": "Significant changes detected: Previous listing showed Research Scientist at $70K-$180K salary and Full Stack Engineer at $40/hr. Current page shows hourly rates: Research Scientist $35-$75/hr, Research Engineer $30-$70/hr (new position), Full Stack Engineer $35-$75/hr. Compensation structure changed from annual salary to hourly rates, and a new Research Engineer position has been added."
   },
   {
     "name": "Forethought",
@@ -511,7 +511,7 @@
     "old_deadline": null,
     "new_deadline": null,
     "new_stipend": null,
-    "key_changes": "No changes detected - still accepting expressions of interest with no deadline. Two specific positions listed: general 'Expression of interest' and 'Expression of interest (extreme power concentration)', both with no application deadline. Location confirmed as Oxford or Berkeley offices preferred, with remote work negotiable. No stipend/salary information provided on the page."
+    "key_changes": "No changes detected"
   },
   {
     "name": "Goodfire",
@@ -523,19 +523,19 @@
     "old_deadline": null,
     "new_deadline": null,
     "new_stipend": null,
-    "key_changes": "No changes detected - page confirms full-time, in-person roles in San Francisco (Telegraph Hill office specifically), five days a week. No specific open positions are listed on the page content provided. Still appears to be an interpretability startup with career opportunities, consistent with stored information."
+    "key_changes": "No changes detected"
   },
   {
     "name": "Gray Swan AI",
     "url": "https://www.grayswan.ai/careers",
-    "action": "unchanged",
+    "action": "changed",
     "error": null,
     "old_status": "expression_of_interest",
-    "new_status": "expression_of_interest",
+    "new_status": "open",
     "old_deadline": null,
     "new_deadline": null,
     "new_stipend": null,
-    "key_changes": "No changes detected"
+    "key_changes": "Status has changed from expression_of_interest to open. The page now shows active job listings with 'View Open Positions' buttons and specific roles available. The careers page has been expanded with detailed information about the company, benefits (28 days PTO, 401k with 4% match, visa sponsorship, parental leave, etc.), and company culture. They are actively recruiting with calls to action like 'We're Hiring: ML Engineers Apply Now' and 'Do the Work That Matters' section encouraging applications."
   },
   {
     "name": "LawZero",
@@ -547,7 +547,7 @@
     "old_deadline": null,
     "new_deadline": null,
     "new_stipend": null,
-    "key_changes": "Job listings have expanded from 8 to 12 roles. New positions include: Coordinator Talent and Culture, Legal Counsel, ML Developer Intern (Applied Research), Senior Communications Advisor, Senior Distributed ML Engineer, Senior System Administrator, and Technical Recruiter. The original ML Research Scientists, Developers, and Engineers positions remain available."
+    "key_changes": "Significant expansion in roles. Now lists 15 positions instead of 8, including new roles: Coordinator Talent and Culture, Director Evaluations, Finance Manager, Legal Counsel, Mathematical Scientist for AI Safety Research, ML Developer Intern (Applied Research), ML Research Scientist (probabilistic inference), Senior Communications Advisor, Senior Distributed ML Engineer, Senior ML Developer (Applied Research), Senior System Administrator, and Technical Recruiter. All positions still in Montreal."
   },
   {
     "name": "METR (formerly ARC Evals)",
@@ -558,8 +558,8 @@
     "new_status": "open",
     "old_deadline": null,
     "new_deadline": null,
-    "new_stipend": "MTS Research $258K–341K, Cloud Evals Infrastructure Engineer $258K–341K, Director of Operations $296K–341K",
-    "key_changes": "Salary range updated from $250K–$450K to $258K–341K for MTS Research role. Additional roles now listed: Cloud Evals Infrastructure Engineer ($258K–341K) and Director of Operations ($296K–341K). General Expression of Interest position also available with flexible location."
+    "new_stipend": "$285K-428K",
+    "key_changes": "Salary range updated to $285K-428K (previously $250K-$450K). Now shows two specific full-time roles: Member of Technical Staff and Cloud Evals Infrastructure Engineer, both with same salary range. General Expression of Interest option also available with flexible location."
   },
   {
     "name": "MIRI TGT Research Fellowship",
@@ -583,7 +583,7 @@
     "old_deadline": null,
     "new_deadline": null,
     "new_stipend": "$180,000 to $207,000 per year for Member of technical staff roles",
-    "key_changes": "Page now shows specific compensation information ($180,000 to $207,000 per year for Member of technical staff roles). Page continues to reference MATS program and also mentions Constellation Astra Fellowship as fellowship opportunities. Full-time roles are actively accepting applications via an 'Apply Now' button."
+    "key_changes": "Updated compensation information now available: $180,000 to $207,000 per year for Member of technical staff roles, depending on experience. Page confirms they accept applications through an 'Apply Now' link for full-time roles, and continues to direct fellowship seekers to MATS program or Constellation Astra Fellowship."
   },
   {
     "name": "SAIF (Safe AI Forum)",
@@ -607,7 +607,7 @@
     "old_deadline": null,
     "new_deadline": null,
     "new_stipend": null,
-    "key_changes": "Position details expanded: Now hiring Research Scientists and Senior Research Scientists in Bay Area, and Research Scientists in London (previously only mentioned Research Scientists for Bay Area & London). Research focus on computational mechanics for interpretability remains consistent with stored details about transformers, belief representations, and in-context learning."
+    "key_changes": "Expanded job openings now include Senior Research Scientists in Bay Area in addition to Research Scientists. London location now only lists Research Scientists (Bay Area previously listed, now explicitly includes Senior Research Scientists). Details updated from 'Computational Mechanics for interpretability' to broader mission of 'building a science of intelligence' with focus on understanding latent internal structure in neural networks."
   },
   {
     "name": "Transluce",
@@ -619,19 +619,19 @@
     "old_deadline": null,
     "new_deadline": null,
     "new_stipend": null,
-    "key_changes": "No changes detected - page shows general organizational information with research updates but no specific job or internship postings. Confirms Transluce is an independent research lab working on AI interpretability and transparency, consistent with stored description as 'AI transparency org.' No current opportunities visible on this page."
+    "key_changes": "No changes detected. Page shows research organization website with general information about their work, research reports, and tools. No specific job postings or internship opportunities are mentioned on the page. The 'Join Us' navigation link is present but the actual content about positions is not included in the page excerpt. Status remains as an AI transparency research org with no current visible opportunities."
   },
   {
     "name": "WhiteBox Research Fellowship",
     "url": "https://www.whiteboxresearch.org/",
     "action": "changed",
     "error": null,
-    "old_status": "expression_of_interest",
-    "new_status": "open",
+    "old_status": "open",
+    "new_status": "expression_of_interest",
     "old_deadline": "Cohort 2: January 30 to May 18, 2025",
     "new_deadline": "Cohort 2: January 30 to May 18, 2025",
-    "new_stipend": "$200 USD completion reward. Fellowship is free (no cost). Originally $3,000 USD but now free.",
-    "key_changes": "Status should be updated from 'expression_of_interest' to 'open' - the page now has an 'Apply now!' call-to-action and is actively accepting applications for Cohort 2. The deadline stored appears to be the program duration dates (January 30 to May 18, 2025) rather than the application deadline, but the program is currently open for applications. Additional details confirmed: Virtual track open to South, Southeast, or East Asia; In-person track in Quezon City, Philippines; 15 hours/week minimum commitment; curriculum based on ARENA program."
+    "new_stipend": "$200 USD completion reward",
+    "key_changes": "Status appears to have changed - the page now prominently features 'Express interest in future programs' buttons and links rather than direct application for Cohort 2. The deadline shown (January 30 to May 18, 2025) appears to be the program running dates rather than application deadline. Program is now free (was $3,000 USD, now struck through). All other details remain the same: SE Asia focused, virtual or in-person (Philippines), $200 completion reward."
   },
   {
     "name": "80K Hours: Top US Policy Masters Programs",
@@ -643,7 +643,7 @@
     "old_deadline": null,
     "new_deadline": null,
     "new_stipend": null,
-    "key_changes": "No changes detected - this remains a curated directory/list of multiple programs rather than a single application opportunity. The page shows 12 different master's programs with various details, but does not contain unified deadline or application status information for accessing the list itself."
+    "key_changes": "No changes detected - this remains a curated directory/resource list of multiple masters programs rather than a single application opportunity. The page shows 12 different programs with various details but no specific application status or deadlines are visible in the content provided."
   },
   {
     "name": "aisafety.com/funding",
@@ -655,7 +655,7 @@
     "old_deadline": null,
     "new_deadline": null,
     "new_stipend": null,
-    "key_changes": "This is a directory page listing 30+ different funding opportunities with varying statuses and deadlines. Notable specific opportunities include: Schmidt Sciences grants closing May 18 & 26, 2026; multiple rolling application funds (LTFF, SFF, BlueDot grants, etc.); and several closed funds. Page was last updated May 14, 2026. This remains a comprehensive directory as described in stored details, but is not itself a single application opportunity."
+    "key_changes": "No changes detected - page remains a comprehensive directory listing multiple funding opportunities with varying statuses and deadlines. Last updated: 14 May 2026. Contains 49 funding resources including: Schmidt Sciences grants (closes 18 May 2026, 26 May 2026), BlueDot Impact grants (rolling), LTFF (rolling), and many others with mixed open/closed/rolling statuses."
   },
   {
     "name": "Cooperative AI PhD Fellowship",
@@ -666,8 +666,8 @@
     "new_status": "closed",
     "old_deadline": "Check website for next cycle",
     "new_deadline": null,
-    "new_stipend": "Up to $40,000 per year for living expenses, for up to three years (for CAIF Scholars). Fellows receive annual budgets for conferences, compute, wellbeing, and productivity.",
-    "key_changes": "This page announces the 2026 cohort fellows (14 selected from 240 applications). The stipend remains up to $40K/yr for up to 3 years for CAIF Scholars specifically. Additional benefits clarified: annual budgets for conferences, compute, wellbeing, and productivity; invitations and travel funding for CAIF events; collaboration opportunities. The application cycle for 2026 is closed as fellows have been announced. No information about next application cycle opening."
+    "new_stipend": "Up to $40,000 per year for up to three years",
+    "key_changes": "No changes detected"
   },
   {
     "name": "Cooperative AI Research Fellowship (Cape Town)",
@@ -678,8 +678,8 @@
     "new_status": "closed",
     "old_deadline": "1 October 2025",
     "new_deadline": "1 October 2025",
-    "new_stipend": "$3000/month (R53000/month) for living expenses, plus private accommodation, flights to/from Cape Town, office space, workday meals, and compute budget",
-    "key_changes": "Major change: The page states 'The 2026 fellowship has concluded' and 'APPLICATIONS CLOSED', indicating the fellowship has already finished (ran January-April 2026). The stored deadline of '1 October 2025' matches the page content, but the program is now complete rather than just closed for applications. The stipend and other details ($3K/mo, flights, housing, office, meals, compute) remain consistent with stored information."
+    "new_stipend": "$3000/month for living expenses, plus accommodation (private room in group house), flights to/from Cape Town, office space, workday meals, and compute budget based on project requirements",
+    "key_changes": "Major change: The page states 'The 2026 fellowship has concluded' and shows the program ran from January 31 - April 30, 2026. This indicates the fellowship has already finished, not just that applications are closed. The deadline (1 October 2025) and stipend ($3K/mo) remain the same as stored, but the current cohort has completed the program. The page says 'APPLICATIONS CLOSED' multiple times and directs visitors to view the completed cohort's research posters."
   },
   {
     "name": "FLI AI Safety PhD Advisor Directory",
@@ -687,7 +687,7 @@
     "action": "unchanged",
     "error": null,
     "old_status": "expression_of_interest",
-    "new_status": "unknown",
+    "new_status": "expression_of_interest",
     "old_deadline": null,
     "new_deadline": null,
     "new_stipend": null,
@@ -696,14 +696,14 @@
   {
     "name": "PIBBSS x Iliad Research Residency",
     "url": "https://princint.ai/programs/residency/",
-    "action": "unchanged",
+    "action": "changed",
     "error": null,
     "old_status": "open",
     "new_status": "open",
     "old_deadline": "Rolling",
-    "new_deadline": "Rolling",
-    "new_stipend": "$6,000–$15,000 depending on seniority",
-    "key_changes": "No changes detected"
+    "new_deadline": "April 22 EoD AoE for Summer 2026; Fall 2026 TBA (open now)",
+    "new_stipend": "$6,000 travel-and-housing allowance",
+    "key_changes": "Program has changed significantly: Now called 'Iliad Fellowship' (not residency), duration is 3 months (not 6 weeks), stipend is $6,000 travel-and-housing allowance (not $6K-$15K), target is PhD/postdoctoral researchers (not just math researchers), location is LISA London in-person with some remote flexibility (not 'London or remote'), no mention of post-residency funding support as a feature. Summer 2026 deadline is April 22; Fall 2026 is open with TBA deadline."
   },
   {
     "name": "Schmidt Sciences AI2050",
@@ -714,8 +714,8 @@
     "new_status": "closed",
     "old_deadline": "Nomination-based — no open application",
     "new_deadline": "Nomination-based — no open application",
-    "new_stipend": "Multi-year awards, $18M+ for 2025 cohort (28 scholars)",
-    "key_changes": "No changes detected — page confirms nomination-based program. 2025 cohort already awarded ($18M+ to 28 scholars per November 5, 2025 press release). Previous 2024 cohort had 25 fellows. Program structure remains the same: Early Career & Senior Fellows, nomination-based only."
+    "new_stipend": "$18M+ total for 2025 cohort (28 scholars); $10M for AI safety research announced Feb 2025",
+    "key_changes": "Updated funding information available: 2025 cohort awarded $18M+ to 28 scholars (announced Nov 5, 2025). Additional $10M for AI safety research announced Feb 18, 2025. Previous cohort (2024) had 25 fellows. Still nomination-based only with no direct application process."
   },
   {
     "name": "Vitalik Buterin PhD Fellowship (FLI)",
@@ -726,7 +726,7 @@
     "new_status": "closed",
     "old_deadline": "November 21, 2025",
     "new_deadline": "November 21, 2025",
-    "new_stipend": "$40,000 annual stipend (US/UK/Canada). Full tuition and fees for 5 years. $10,000 annual research fund.",
+    "new_stipend": "$40,000 annual stipend (US, UK, Canada). Full tuition and fees for 5 years. $10,000 annual research fund.",
     "key_changes": "No changes detected"
   },
   {
@@ -739,17 +739,17 @@
     "old_deadline": "Check ARI careers page for current openings",
     "new_deadline": null,
     "new_stipend": null,
-    "key_changes": "No changes detected"
+    "key_changes": "No changes detected - page still shows a careers board with no specific open positions listed. The page mentions 'Below is a list of open roles' but no actual positions are displayed in the content provided. This matches the stored instruction to 'Check ARI careers page for current openings'."
   },
   {
     "name": "CNAS Nye Internship",
     "url": "https://center-for-a-new-american-security.breezy.hr/p/5e0162b7f5ba-joseph-s-nye-jr--national-security-internship-and-mentoring-program",
-    "action": "unchanged",
+    "action": "changed",
     "error": null,
     "old_status": "upcoming",
     "new_status": "upcoming",
     "old_deadline": "Communications: November 2026, Design: June 2026, Defense: September 2026, Development: October 2026, Energy, Economics, and Security: September 2026, Indo-Pacific Security: not specified in visible content",
-    "new_deadline": "Communications: November 2026, Design: June 2026, Defense: September 2026, Development: October 2026, Energy, Economics, and Security: September 2026, Indo-Pacific Security: not specified in visible content",
+    "new_deadline": "Communications: November 2026, Design: June 2026, Defense: September 2026, Development: October 2026, Energy, Economics, and Security: September 2026, Indo-Pacific Security: not specified",
     "new_stipend": "$1,900 per month plus $75 per month transportation stipend",
     "key_changes": "No changes detected"
   },
@@ -763,7 +763,7 @@
     "old_deadline": "Check website for 2026 dates",
     "new_deadline": null,
     "new_stipend": "Competitive hourly wage and living stipends, plus housing and travel paid for",
-    "key_changes": "Stipend details now more specific: 'competitive hourly wage and living stipends' instead of just 'competitive wage'. Program confirmed as targeting students from HBCUs and MSIs. All other details (10 weeks, AI/cybersecurity/biotech policy, housing, travel, Washington DC) remain consistent. No current application deadline visible on page."
+    "key_changes": "Stipend details now more specific: 'competitive hourly wage and living stipends' (stored info said 'competitive wage + living stipend'). Program description adds it is 'designed specifically for students from Historically Black Colleges and Universities (HBCUs) and other Minority-Serving Institutions (MSIs)' which was not in stored details. No application deadline or status information found on page - users are directed to contact csetcareers@georgetown.edu for further information."
   },
   {
     "name": "GovAI Summer Fellowship",
@@ -774,7 +774,7 @@
     "new_status": "closed",
     "old_deadline": "Applications now closed",
     "new_deadline": "Applications now closed",
-    "new_stipend": "£12,000 stipend plus support for travelling to London, lunch on weekdays provided",
+    "new_stipend": "£12,000 stipend plus support for travelling to London, lunch on weekdays",
     "key_changes": "No changes detected"
   },
   {
@@ -786,7 +786,7 @@
     "new_status": "closed",
     "old_deadline": "Next cycle ~Sept 2026",
     "new_deadline": null,
-    "new_stipend": "$113,000/year for fellows, $75,000/year for junior fellows, plus $15,000 in health care support, $3,000 professional development stipend, and up to $3,000 for relocation to DC",
+    "new_stipend": "$113,000/year for fellows, $75,000/year for junior fellows, plus $15,000 health care support, $3,000 professional development stipend, and up to $3,000 relocation",
     "key_changes": "No changes detected"
   },
   {
@@ -811,7 +811,7 @@
     "old_deadline": "Applications reviewed quarterly: February 1st (response by March 1st), May 1st (response by June 1st), August 1st (response by September 1st), November 1st (response by December 1st)",
     "new_deadline": "Applications reviewed quarterly: February 1st (response by March 1st), May 1st (response by June 1st), August 1st (response by September 1st), November 1st (response by December 1st)",
     "new_stipend": "$40,000 to $200,000 annual stipend for full-time U.S. fellows plus monthly payment for health/dental insurance; U.K. fellows receive compensation based on experience",
-    "key_changes": "Important change detected: As of December 2025, applications are now limited to AI Security, Technology Policy and Governance, or Biosecurity areas only (not all RAND CAST research areas). The page also notes that the form is partly treated as an expression of interest (EOI) for future staff openings, and applicants are advised to apply for staff positions if available instead of the fellowship."
+    "key_changes": "Important change: As of December 2025, they are now only considering applicants for AI Security, Technology Policy and Governance, or Biosecurity areas (other research areas no longer accepting applications). The page also now treats the form partly as an expression of interest (EOI) for future staff openings and discourages applying if you've submitted another CAST application within the last six months."
   },
   {
     "name": "Tarbell AI Journalism Fellowship",
@@ -822,7 +822,7 @@
     "new_status": "closed",
     "old_deadline": "Jan. 7, 2026 (2026 cohort closed); 2027 cohort deadline not yet announced",
     "new_deadline": "Jan. 7, 2026 (2026 cohort closed); 2027 cohort deadline not yet announced",
-    "new_stipend": "$60,000 to $80,000 for standard Fellows; $90,000 to $110,000 for Senior Fellows (5+ years experience), depending on location",
+    "new_stipend": "$60,000 to $80,000 for regular Fellows; $90,000 to $110,000 for Senior Fellows (5+ years experience), depending on location",
     "key_changes": "No changes detected"
   },
   {
@@ -835,7 +835,7 @@
     "old_deadline": "Check YC jobs page for current listing",
     "new_deadline": null,
     "new_stipend": null,
-    "key_changes": "No changes detected - page confirms no jobs currently posted on YC platform, consistent with stored 'closed' status. Company remains active (Status: Active, Team Size: 10). No specific deadline or stipend information available on current page."
+    "key_changes": "Page shows no active job postings. The stored information about $5K-$6K/mo stipend and Summer 2026 role is not visible on the current page, which only states 'No jobs at Andon Labs are currently posted on the YC platform.' Company remains active (W24 batch, Team Size: 10, San Francisco location confirmed)."
   },
   {
     "name": "ARC Visiting Researcher",
@@ -859,7 +859,7 @@
     "old_deadline": "Currently posted — check Lever for deadline",
     "new_deadline": null,
     "new_stipend": null,
-    "key_changes": "The Research Engineer Intern (Fall 2026) position is listed on the careers page but no specific details are provided in the visible content - only the title and a brief introduction. The page appears to be a careers overview listing multiple positions. Cannot verify if the stored details (stipend $9K-$19.2K, research areas, San Francisco location) are still current as these specifics are not visible in the provided page content. Would need to click through to the specific job posting to confirm current status and details."
+    "key_changes": "The page is a general careers listing page showing multiple positions at CAIS. The Research Engineer Intern (Fall 2026) position is listed among many other roles, but no specific details about deadline or stipend are visible in the provided content. The page appears to be a job board directory rather than the specific internship posting page. To determine current status, deadline, and stipend details, would need to access the individual job posting page."
   },
   {
     "name": "CHAI Internship (UC Berkeley)",
@@ -894,8 +894,8 @@
     "new_status": "expression_of_interest",
     "old_deadline": "May 3rd, 11:59pm AoE",
     "new_deadline": null,
-    "new_stipend": "$8,400/month stipend + ~$15K/month compute budget for empirical fellows + visa support + meals",
-    "key_changes": "Stipend amount has changed from '$15K/mo' in stored data to '$8,400/month stipend' on current page. The $15K figure refers specifically to compute budget for empirical research fellows, not the stipend. Timeline shows applications for a cohort opened Aug 28 and closed Sep 26, with program running Jan 5 - Mar 31 (with extension to Jun 31), but currently only expression of interest is available for future cohorts. No specific deadline visible for expression of interest."
+    "new_stipend": "$8,400/month stipend + ~$15K/month compute budget for empirical research fellows",
+    "key_changes": "Stipend has decreased from $15K/month to $8,400/month. Compute budget remains ~$15K/month but only for empirical research fellows (not all fellows). The May 3rd deadline appears to be outdated - the page now shows a cohort timeline with applications opening Aug 28 and closing Sep 26, but the current call-to-action is still 'Complete this expression of interest form to be notified when our next cohort launches', suggesting the next formal application round hasn't opened yet. Program duration is specified as 5 months (not 3-6 months), with option for extension through June 31."
   },
   {
     "name": "DeepMind Student Researcher",
@@ -907,7 +907,7 @@
     "old_deadline": "Applications organized by 2025-2026 cycle — check Google Careers page for specific deadlines",
     "new_deadline": "Applications organized by 2025-2026 cycle — check Google Careers page for specific deadlines",
     "new_stipend": "Paid internships (specific amount not mentioned)",
-    "key_changes": "No significant changes detected. Page confirms this is for the 2025-2026 cycle with paid positions, 12-24 week duration, in-person at Google offices, for BSc/MSc/PhD students. The page now uses 'Student Researcher Program' as the primary name and mentions applications are processed through Google's careers page, considering candidates across Google DeepMind, Google Research, and other Google AI teams."
+    "key_changes": "No changes detected"
   },
   {
     "name": "LASR Labs — Summer 2026",
@@ -919,7 +919,7 @@
     "old_deadline": "March 30, 2026 at 23:59 GMT",
     "new_deadline": null,
     "new_stipend": "£11,000 stipend to cover living expenses in London, plus food, office space, and travel",
-    "key_changes": "Applications are now closed. The page states 'Applications are now closed' and refers to filling out an expression of interest form to be notified when the next application round opens. The stored deadline of March 30, 2026 at 23:59 GMT is no longer visible on the page. Stipend amount matches stored info (£11K). Program details remain the same: 13-week program, produces paper and blog post, alumni at UK AISI, Apollo, Leap Labs, London in-person full-time."
+    "key_changes": "Applications for Summer 2026 cohort (20th July - 16th October) are now closed. Only expression of interest form is available. The stipend amount has changed from £11K to £11,000 (same value, just more precise formatting). The program dates are now specified as 20th July - 16th October 2026 instead of July-October 2026. No specific deadline for expression of interest is mentioned on the page."
   },
   {
     "name": "OpenAI Emerging Talent",
@@ -931,7 +931,7 @@
     "old_deadline": "Program page — check for current openings",
     "new_deadline": null,
     "new_stipend": null,
-    "key_changes": "No changes detected. Page remains a general program landing page describing internships, residencies, and full-time roles for early-career talent (0-3 years experience). Users are directed to 'View open roles' to check current openings. No specific application status, deadlines, or stipend information provided on this page."
+    "key_changes": "No changes detected. Page continues to be a general program overview page directing users to 'View open roles' for current openings. The page describes three program types: full-time early-career opportunities (0-3 years experience), internships, and research residency. No specific application status, deadlines, or stipend information is provided on this page."
   },
   {
     "name": "Tilde Research",
@@ -943,18 +943,18 @@
     "old_deadline": "Link resolves (JS-only) — check Ashby page for current listings",
     "new_deadline": null,
     "new_stipend": null,
-    "key_changes": "Page now shows 3 specific open positions (ML Researcher, ML Engineer, Kernel Engineer) all posted in July 2025. All positions offer both Internship and Full-time options. Previous record indicated to check Ashby page for current listings - listings are now confirmed active and visible."
+    "key_changes": "Now shows 3 specific open positions (ML Researcher, ML Engineer, Kernel Engineer) all posted in July 2025. All positions are listed as both Internship and Full-time options, located in San Francisco. The stored info correctly indicates this is a mechanistic interpretability lab in San Francisco with on-site work."
   },
   {
     "name": "Virtue AI",
     "url": "https://jobs.ashbyhq.com/virtue-AI",
-    "action": "unchanged",
+    "action": "changed",
     "error": null,
     "old_status": "open",
     "new_status": "open",
     "old_deadline": "Rolling deadlines - most recent positions posted May 2026",
-    "new_deadline": "Rolling deadlines - most recent positions posted May 2026",
+    "new_deadline": "Rolling - most recent position posted May 1, 2026",
     "new_stipend": null,
-    "key_changes": "No changes detected"
+    "key_changes": "Updated position list: 8 open positions total (all full-time, no internships visible). Most recent posting is Account Executive from May 1, 2026. Positions include Research Scientist (Post-training, Inference, & Safety and Security), AI Infrastructure Engineering, Presentation Designer, Accounting Lead, AI Product Testing Engineer, HR Generalist, Forward Deployed Engineer, and Account Executive. All positions are San Francisco based. Note: Currently categorized as 'tech-internships' but page shows only full-time positions."
   }
 ]
