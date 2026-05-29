@@ -250,10 +250,18 @@ def detect_js_only(html: str) -> bool:
 
 def analyze_with_claude(resource, page_text, client):
     """
-    Send page content to Claude Sonnet for status analysis.
+    Send page content to Claude for structured analysis.
     Returns parsed JSON response or None on failure.
+
+    Output schema:
+      status:      one of open/closed/upcoming/expression_of_interest/unknown
+      deadline:    display-ready string (never null — use "Rolling", "TBD", etc.)
+      description: 2-3 sentence prose; may use <strong> for key facts; may be ""
+                   if no description should be shown
+      structured:  {stipend, duration, location, program_dates} — strings, "" if absent
+      key_changes: free text summarizing what's different from stored info
     """
-    prompt = f"""Analyze this web page content for an AI safety opportunity/resource tracker.
+    prompt = f"""Analyze this web page content for an AI safety opportunity tracker.
 
 RESOURCE INFO ON FILE:
 - Name: {resource['name']}
@@ -266,32 +274,53 @@ RESOURCE INFO ON FILE:
 PAGE CONTENT (first 8000 chars):
 {page_text[:8000]}
 
-Based on the page content, determine:
-1. Is this program/opportunity currently accepting applications?
-2. What are the current deadlines?
-3. What is the current stipend/funding amount?
-4. Has anything changed from what we have on file?
+Write a fresh description and extract structured facts from the page.
+Always return current information from the page — even if "no changes" from
+what we have on file. We re-render the site from your output each cycle.
 
-Respond with ONLY valid JSON (no markdown, no code fences) in this exact format:
+Respond with ONLY valid JSON (no markdown, no code fences):
 {{
-  "status": "open" or "closed" or "upcoming" or "expression_of_interest" or "unknown",
-  "deadline": "deadline string or null if none found",
-  "stipend": "stipend/funding info string or null if not mentioned",
-  "key_changes": "description of what's different from stored info, or 'No changes detected' if same"
+  "status": "open" | "closed" | "upcoming" | "expression_of_interest" | "unknown",
+  "deadline": "display-ready string, never null",
+  "description": "2-3 sentence summary or empty string",
+  "structured": {{
+    "stipend": "e.g. '$15K' or '£6K-8K' or ''",
+    "duration": "e.g. '12 weeks' or '3 months' or ''",
+    "location": "e.g. 'Berkeley & London' or ''",
+    "program_dates": "e.g. 'June 6 – Sep 5, 2026' or ''"
+  }},
+  "key_changes": "what's different from stored info, or 'No changes detected'"
 }}
 
-Rules for status:
+Rules:
+
+STATUS:
 - "open" = actively accepting applications now
-- "closed" = applications are closed, past deadline
+- "closed" = applications closed, past deadline, or program ended
 - "upcoming" = will open soon, or has a future deadline but not yet accepting
-- "expression_of_interest" = accepting expressions of interest but not formal applications
-- "unknown" = cannot determine from page content (e.g., resource pages, directories, career boards)
+- "expression_of_interest" = accepting EOI but not formal applications
+- "unknown" = cannot determine (e.g., resource page, directory, career board with no specific deadline)
+
+DEADLINE — never return null. Use the literal page text when there's a concrete
+date. Otherwise use one of: "Rolling", "TBD", "Not yet announced", "Updated continuously",
+"Recurring events", "Multiple cohorts per year", "Closed - check for next cycle".
+If the entry truly has no concept of a deadline (e.g., a permanent resource page),
+return "" (empty string) and the renderer will omit the deadline badge.
+
+DESCRIPTION — 2-3 sentences. Lead with what the program/opportunity is and the
+key facts (duration, stipend, location, eligibility). Use <strong> to emphasize
+dollar amounts, durations, and other critical numbers — e.g. "<strong>$15K</strong>
+stipend". Do NOT include the deadline in the description (it has its own field).
+Return "" only if the page is truly description-less.
+
+STRUCTURED — extract facts that appear on the page. Empty strings are fine
+when info isn't present. These are for downstream filtering, not display.
 """
 
     try:
         message = client.messages.create(
             model="claude-sonnet-4-5-20250929",
-            max_tokens=500,
+            max_tokens=1200,
             messages=[{"role": "user", "content": prompt}],
         )
         response_text = message.content[0].text.strip()
@@ -419,6 +448,8 @@ def run_crawler(dry_run: bool = False) -> list[dict]:
                 "new_status": None,
                 "old_deadline": resource.get("current_deadline"),
                 "new_deadline": None,
+                "old_details": resource.get("current_details"),
+                "new_details": None,
                 "key_changes": f"Could not fetch: {final_error}",
             })
             resource["last_checked"] = now
@@ -443,57 +474,90 @@ def run_crawler(dry_run: bool = False) -> list[dict]:
                 "new_status": None,
                 "old_deadline": resource.get("current_deadline"),
                 "new_deadline": None,
+                "old_details": resource.get("current_details"),
+                "new_details": None,
                 "key_changes": "Analysis failed",
             })
             resource["last_checked"] = now
             time.sleep(REQUEST_DELAY)
             continue
 
-        # Compare and detect changes
+        # Pull every field out of the analysis. Treat None as "field absent".
         old_status = resource["current_status"]
-        new_status = analysis.get("status", "unknown")
         old_deadline = resource.get("current_deadline")
+        old_details = resource.get("current_details")
+        old_structured = resource.get("structured") or {}
+
+        new_status = analysis.get("status", "unknown")
         new_deadline = analysis.get("deadline")
-        new_stipend = analysis.get("stipend")
+        new_description = analysis.get("description")
+        new_structured = analysis.get("structured") or {}
         key_changes = analysis.get("key_changes", "")
 
-        has_changes = False
-        if new_status != old_status and new_status != "unknown":
-            has_changes = True
-        if new_deadline and new_deadline != old_deadline and new_deadline != "null":
-            has_changes = True
+        # Normalize: deadline is always a string in the new schema (may be "").
+        if new_deadline is None or new_deadline == "null":
+            new_deadline = ""
 
-        if has_changes:
+        # Decide what to actually write back. Aggressive mode: overwrite
+        # everything Claude returned, with two safety valves:
+        #   - if status came back "unknown", keep the prior status
+        #   - if description came back empty AND we have a prior description,
+        #     keep the prior one (don't blank out hand-written copy on a
+        #     pathological cycle)
+        write_status = new_status if new_status != "unknown" else old_status
+        write_deadline = new_deadline
+        write_details = (
+            new_description
+            if (new_description is not None and new_description != "")
+            else old_details
+        )
+        write_structured = {
+            k: (v if v is not None else "") for k, v in new_structured.items()
+        }
+
+        # Detect whether content actually changed (drives last_content_change).
+        content_changed = (
+            write_status != old_status
+            or write_deadline != (old_deadline or "")
+            or (write_details or "") != (old_details or "")
+            or write_structured != old_structured
+        )
+
+        if content_changed:
             logger.info(f"  CHANGES DETECTED:")
-            if new_status != old_status:
-                logger.info(f"    Status: {old_status} -> {new_status}")
-            if new_deadline and new_deadline != old_deadline:
-                logger.info(f"    Deadline: {old_deadline} -> {new_deadline}")
-            logger.info(f"    Details: {key_changes}")
+            if write_status != old_status:
+                logger.info(f"    Status: {old_status} -> {write_status}")
+            if write_deadline != (old_deadline or ""):
+                logger.info(f"    Deadline: {old_deadline!r} -> {write_deadline!r}")
+            if (write_details or "") != (old_details or ""):
+                logger.info(f"    Details: changed")
+            if write_structured != old_structured:
+                logger.info(f"    Structured: {write_structured}")
+            logger.info(f"    Key changes: {key_changes}")
 
         report_entry = {
             "name": name,
             "url": url,
-            "action": "changed" if has_changes else "unchanged",
+            "action": "changed" if content_changed else "unchanged",
             "error": None,
             "old_status": old_status,
-            "new_status": new_status,
+            "new_status": write_status,
             "old_deadline": old_deadline,
-            "new_deadline": new_deadline,
-            "new_stipend": new_stipend,
+            "new_deadline": write_deadline,
+            "old_details": old_details,
+            "new_details": write_details,
+            "new_structured": write_structured,
             "key_changes": key_changes,
         }
         change_report.append(report_entry)
 
-        # Update resource if not dry run
-        if not dry_run and has_changes:
-            if new_status != "unknown":
-                resource["current_status"] = new_status
-            if new_deadline and new_deadline != "null":
-                resource["current_deadline"] = new_deadline
-            if new_stipend and new_stipend != "null":
-                # Store stipend info in details if it's new info
-                pass  # Keep existing details, stipend tracked in report
+        if not dry_run:
+            resource["current_status"] = write_status
+            resource["current_deadline"] = write_deadline
+            resource["current_details"] = write_details
+            resource["structured"] = write_structured
+            if content_changed:
+                resource["last_content_change"] = now
 
         resource["last_checked"] = now
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-run.py - Orchestrator that runs crawler.py then updater.py,
+run.py - Orchestrator that runs crawler.py then renderer.py,
 and optionally commits/pushes changes.
 """
 
@@ -99,7 +99,7 @@ def git_commit_and_push() -> bool:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Run the resource crawler and updater pipeline"
+        description="Run the resource crawler and renderer pipeline"
     )
     parser.add_argument(
         "--commit",
@@ -135,22 +135,22 @@ def main():
         logger.error(f"Crawler failed with exit code {code}")
         sys.exit(1)
 
-    # Step 2: Run updater
+    # Step 2: Run renderer (regenerates HTML cards from resources.json)
     logger.info("=" * 60)
-    logger.info("STEP 2: Running updater...")
+    logger.info("STEP 2: Running renderer...")
     logger.info("=" * 60)
 
-    updater_args = [sys.executable, str(BASE_DIR / "updater.py")]
     if args.dry_run:
-        updater_args.append("--dry-run")
-
-    code, stdout, stderr = run_command(updater_args)
-    print(stdout)
-    if stderr:
-        print(stderr, file=sys.stderr)
-    if code != 0:
-        logger.error(f"Updater failed with exit code {code}")
-        sys.exit(1)
+        logger.info("[DRY RUN] Skipping renderer — resources.json was not modified.")
+    else:
+        renderer_args = [sys.executable, str(BASE_DIR / "renderer.py")]
+        code, stdout, stderr = run_command(renderer_args)
+        print(stdout)
+        if stderr:
+            print(stderr, file=sys.stderr)
+        if code != 0:
+            logger.error(f"Renderer failed with exit code {code}")
+            sys.exit(1)
 
     # Step 3: Optionally run cross-check reviewer
     if args.review:
