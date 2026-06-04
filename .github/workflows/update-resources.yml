@@ -50,7 +50,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add resources.json index.html directory.html change_report.json
+          git add resources.json index.html directory.html change_report.json 80k_jobs.json
           TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
           git commit -m "Auto-update resource statuses ($TIMESTAMP)"
           git push
