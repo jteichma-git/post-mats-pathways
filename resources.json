@@ -102,6 +102,23 @@
     "last_content_change": "2026-06-04T21:56:27.515261+00:00"
   },
   {
+    "name": "Google DeepMind: AGI Safety Short Course",
+    "url": "https://deepmindsafetyresearch.medium.com/introducing-our-short-course-on-agi-safety-1072adb7912c",
+    "category": "community",
+    "current_status": "open",
+    "current_deadline": "Self-paced · free",
+    "current_details": "A free, ~75-minute introductory course on AGI safety from Google DeepMind's safety research team, aimed at students, researchers, and professionals with only an hour to spare. Consists of short recorded talks and exercises with an accompanying <strong>slide deck</strong> and <strong>exercise workbook</strong>. Covers the case for advanced AI capabilities, why misaligned goals can pose extreme risk (instrumental subgoals and deliberate planning), how misalignment arises through <strong>specification gaming</strong> and <strong>goal misgeneralization</strong>, and DeepMind's current technical and governance approaches.",
+    "last_checked": "2026-06-06T00:00:00+00:00",
+    "js_only": false,
+    "structured": {
+      "stipend": "",
+      "duration": "~75 minutes",
+      "location": "Online",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-06-06T00:00:00+00:00"
+  },
+  {
     "name": "MATS Slack #opportunities",
     "url": "https://mats-program.slack.com/archives/C05LWT1UG67",
     "category": "community",

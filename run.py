@@ -51,6 +51,7 @@ def git_commit_and_push() -> bool:
         "directory.html",
         "change_report.json",
         "80k_jobs.json",
+        "jobs_filter.py",
     ]
     for f in files_to_stage:
         filepath = BASE_DIR / f
@@ -168,6 +169,22 @@ def main():
             print(stderr, file=sys.stderr)
         if code != 0:
             logger.warning(f"80K Hours fetch finished with exit code {code} (non-fatal)")
+
+    # Step 2c: Gate the static Jobs-section org cards on current 80K listings
+    logger.info("=" * 60)
+    logger.info("STEP 2c: Filtering Jobs-section org cards by current 80K roles...")
+    logger.info("=" * 60)
+
+    if args.dry_run:
+        logger.info("[DRY RUN] Skipping jobs filter.")
+    else:
+        filter_args = [sys.executable, str(BASE_DIR / "jobs_filter.py")]
+        code, stdout, stderr = run_command(filter_args)
+        print(stdout)
+        if stderr:
+            print(stderr, file=sys.stderr)
+        if code != 0:
+            logger.warning(f"Jobs filter finished with exit code {code} (non-fatal)")
 
     # Step 3: Optionally run cross-check reviewer
     if args.review:
