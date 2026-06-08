@@ -1,8 +1,425 @@
 {
-  "fetched_at": "2026-06-04T22:05:42.766304+00:00",
+  "fetched_at": "2026-06-08T13:20:21.871354+00:00",
   "filter": "AI safety & policy",
-  "count": 449,
+  "count": 453,
   "jobs": [
+    {
+      "title": "AI Policy Research Resident, Associate / Specialist, Center on AI, Security, and Technology",
+      "company": "RAND Corporation",
+      "url": "https://rand.wd5.myworkdayjobs.com/en-US/External_Career_Site/job/Washington-DC-DC-Metro-Area/AI-Policy-Research-Resident--Associate---Specialist_R3554",
+      "location": [
+        "Various, USA",
+        "Remote, USA"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Research",
+        "Policy"
+      ],
+      "experience": [
+        "Multiple experience levels"
+      ],
+      "posted_at": 1780877100,
+      "closes_at": null
+    },
+    {
+      "title": "Research Project Manager",
+      "company": "Apart Research",
+      "url": "https://apartresearch.notion.site/Research-Project-Manager-288fcfd1de9d805fbbc2cab9e5544c4e",
+      "location": [
+        "Remote, Global"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Operations"
+      ],
+      "experience": [
+        "Junior (1-4 years experience)",
+        "Mid (5-9 years experience)"
+      ],
+      "posted_at": 1780877088,
+      "closes_at": null
+    },
+    {
+      "title": "Course, The Future of AI",
+      "company": "BlueDot Impact",
+      "url": "https://bluedot.org/courses/future-of-ai",
+      "location": [
+        "Remote, Global"
+      ],
+      "role_type": [
+        "Course"
+      ],
+      "skill": [
+        "Other"
+      ],
+      "experience": [
+        "Entry-level"
+      ],
+      "posted_at": 1780876980,
+      "closes_at": null
+    },
+    {
+      "title": "GovAI U.S. AI Policy Program",
+      "company": "Centre for the Governance of AI",
+      "url": "https://www.governance.ai/post/govai-u-s-ai-policy-program",
+      "location": [
+        "Remote, USA",
+        "Washington, DC metro area"
+      ],
+      "role_type": [
+        "Course"
+      ],
+      "skill": [
+        "Policy"
+      ],
+      "experience": [
+        "Multiple experience levels"
+      ],
+      "posted_at": 1780876980,
+      "closes_at": 1782604800
+    },
+    {
+      "title": "AI Security Bootcamp, Vegas",
+      "company": "AI Security Bootcamp",
+      "url": "https://aisb.dev/vegas26",
+      "location": [
+        "Las Vegas, NV"
+      ],
+      "role_type": [
+        "Course"
+      ],
+      "skill": [
+        "Information security"
+      ],
+      "experience": [
+        "Mid (5-9 years experience)"
+      ],
+      "posted_at": 1780876920,
+      "closes_at": 1782000000
+    },
+    {
+      "title": "Program Manager, Alignment Team",
+      "company": "Arcadia Impact",
+      "url": "https://www.arcadiaimpact.org/alignment-programme-manager",
+      "location": [
+        "London, UK"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Outreach",
+        "Management",
+        "Strategy"
+      ],
+      "experience": [
+        "Junior (1-4 years experience)",
+        "Mid (5-9 years experience)"
+      ],
+      "posted_at": 1780876920,
+      "closes_at": 1782172800
+    },
+    {
+      "title": "Operations and Communications Associate, Alignment Team",
+      "company": "Arcadia Impact",
+      "url": "https://www.arcadiaimpact.org/ops-and-comms-associate",
+      "location": [
+        "London, UK"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Outreach",
+        "Operations"
+      ],
+      "experience": [
+        "Junior (1-4 years experience)"
+      ],
+      "posted_at": 1780876920,
+      "closes_at": 1782172800
+    },
+    {
+      "title": "Head of Communications",
+      "company": "Evitable",
+      "url": "https://evitable.com/head-of-communications",
+      "location": [
+        "San Francisco Bay Area"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Outreach"
+      ],
+      "experience": [
+        "Mid (5-9 years experience)",
+        "Senior (10+ years experience)"
+      ],
+      "posted_at": 1780876860,
+      "closes_at": null
+    },
+    {
+      "title": "Request for Proposals, AI Safety Grant",
+      "company": "Foresight Institute",
+      "url": "https://foresight.org/request-for-proposals/",
+      "location": [
+        "Remote, Global"
+      ],
+      "role_type": [
+        "Funding"
+      ],
+      "skill": [
+        "Research"
+      ],
+      "experience": [
+        "Multiple experience levels"
+      ],
+      "posted_at": 1780876800,
+      "closes_at": null
+    },
+    {
+      "title": "Deputy Head of Programme, Security and Technology",
+      "company": "United Nations, Institute for Disarmament Research",
+      "url": "https://unidir.org/job/deputy-head-of-programme-security-and-technology/",
+      "location": [
+        "Geneva, Switzerland"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Policy",
+        "Management"
+      ],
+      "experience": [
+        "Mid (5-9 years experience)"
+      ],
+      "posted_at": 1780876800,
+      "closes_at": 1782345600
+    },
+    {
+      "title": "Course, The Economics of AI",
+      "company": "University of Virginia",
+      "url": "https://www.coursera.org/learn/economics-of-ai",
+      "location": [
+        "Remote, Global"
+      ],
+      "role_type": [
+        "Course"
+      ],
+      "skill": [
+        "Operations"
+      ],
+      "experience": [
+        "Entry-level"
+      ],
+      "posted_at": 1780876800,
+      "closes_at": null
+    },
+    {
+      "title": "Facilities Coordinator / Facilities Specialist",
+      "company": "Constellation",
+      "url": "https://jobs.gem.com/constellation-institute/am9icG9zdDpITbUcvuXF8QtJEb6eS_hp",
+      "location": [
+        "San Francisco Bay Area"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Operations"
+      ],
+      "experience": [
+        "Junior (1-4 years experience)",
+        "Mid (5-9 years experience)"
+      ],
+      "posted_at": 1780617885,
+      "closes_at": null
+    },
+    {
+      "title": "IT Coordinator / IT Specialist",
+      "company": "Constellation",
+      "url": "https://jobs.gem.com/constellation-institute/am9icG9zdDoeeCG0xVg_BD92R8ev_Smg",
+      "location": [
+        "San Francisco Bay Area"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Operations"
+      ],
+      "experience": [
+        "Junior (1-4 years experience)",
+        "Mid (5-9 years experience)"
+      ],
+      "posted_at": 1780617884,
+      "closes_at": null
+    },
+    {
+      "title": "Head of AI Safety Laboratory",
+      "company": "Canadian Government, National Research Council Canada",
+      "url": "https://www.linkedin.com/jobs/view/4418436620/",
+      "location": [
+        "Ottawa, Canada"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Research",
+        "Policy",
+        "Management"
+      ],
+      "experience": [
+        "Mid (5-9 years experience)"
+      ],
+      "posted_at": 1780617780,
+      "closes_at": 1780876800
+    },
+    {
+      "title": "Fellowship (Fall 2026)",
+      "company": "Black in AI Safety & Ethics",
+      "url": "https://www.baseresearch.org/base-fellowship-f26",
+      "location": [
+        "Remote, Global"
+      ],
+      "role_type": [
+        "Fellowship"
+      ],
+      "skill": [
+        "Research"
+      ],
+      "experience": [
+        "Entry-level"
+      ],
+      "posted_at": 1780617720,
+      "closes_at": 1781568000
+    },
+    {
+      "title": "Hub Builder",
+      "company": "London Initiative for Safe AI",
+      "url": "https://www.safeai.org.uk/hub-builder",
+      "location": [
+        "London, UK"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Operations"
+      ],
+      "experience": [
+        "Junior (1-4 years experience)"
+      ],
+      "posted_at": 1780617720,
+      "closes_at": 1782000000
+    },
+    {
+      "title": "Research Fellowship, Cryptographic Verification Mechanisms for Training AI Models",
+      "company": "General-Purpose AI Policy Lab",
+      "url": "https://docs.google.com/document/d/1ldKRXFCobA6S9jqGD0hf1I4fTFtPbHjJ6vYRbJpluZ0/edit",
+      "location": [
+        "Paris, France"
+      ],
+      "role_type": [
+        "Fellowship"
+      ],
+      "skill": [
+        "Research",
+        "Information security"
+      ],
+      "experience": [
+        "Entry-level"
+      ],
+      "posted_at": 1780617660,
+      "closes_at": null
+    },
+    {
+      "title": "Research Fellowship, Geopolitical and Industrial Interests in the Production Chain of Computing Power",
+      "company": "General-Purpose AI Policy Lab",
+      "url": "https://docs.google.com/document/d/1n-UNaqDQUbEiIK8I6AgyXJ0Uc7s6bIST1sQs1x3hZT0/edit",
+      "location": [
+        "Paris, France"
+      ],
+      "role_type": [
+        "Fellowship"
+      ],
+      "skill": [
+        "Research",
+        "Policy"
+      ],
+      "experience": [
+        "Entry-level"
+      ],
+      "posted_at": 1780617660,
+      "closes_at": null
+    },
+    {
+      "title": "Red Teaming Fellowship",
+      "company": "10a Labs",
+      "url": "https://job-boards.greenhouse.io/10alabs/jobs/4273684009",
+      "location": [
+        "Washington, DC metro area"
+      ],
+      "role_type": [
+        "Fellowship"
+      ],
+      "skill": [
+        "Research",
+        "Information security"
+      ],
+      "experience": [
+        "Entry-level"
+      ],
+      "posted_at": 1780617600,
+      "closes_at": null
+    },
+    {
+      "title": "Short Course, AGI Safety",
+      "company": "Google DeepMind",
+      "url": "https://deepmindsafetyresearch.medium.com/introducing-our-short-course-on-agi-safety-1072adb7912c",
+      "location": [
+        "Remote, Global"
+      ],
+      "role_type": [
+        "Course"
+      ],
+      "skill": [
+        "Other"
+      ],
+      "experience": [
+        "Entry-level"
+      ],
+      "posted_at": 1780617600,
+      "closes_at": null
+    },
+    {
+      "title": "Fellowship Manager",
+      "company": "Singapore AI Safety Hub",
+      "url": "https://docs.google.com/document/d/1BIV1vGRUs3xn8CfL6M5f4mFKsIB4sVdRpzgTRjAwiZA/edit",
+      "location": [
+        "Singapore, Singapore"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Operations"
+      ],
+      "experience": [
+        "Junior (1-4 years experience)",
+        "Mid (5-9 years experience)"
+      ],
+      "posted_at": 1780617600,
+      "closes_at": null
+    },
     {
       "title": "Strategic Partnerships and Philanthropy Manager",
       "company": "Centre for Long-Term Resilience",
@@ -44,7 +461,7 @@
     {
       "title": "Generalist, Strategy and Operations",
       "company": "CivAI",
-      "url": "https://civai.org/jobs/generalist-strategy-operations",
+      "url": "https://civai.org/jobs/generalist",
       "location": [
         "San Francisco Bay Area"
       ],
@@ -56,8 +473,8 @@
         "Outreach"
       ],
       "experience": [
-        "Entry-level",
-        "Junior (1-4 years experience)"
+        "Junior (1-4 years experience)",
+        "Mid (5-9 years experience)"
       ],
       "posted_at": 1780531500,
       "closes_at": null
@@ -103,26 +520,6 @@
         "Mid (5-9 years experience)"
       ],
       "posted_at": 1780531380,
-      "closes_at": null
-    },
-    {
-      "title": "Kitchen Support, Dishwasher and Prep",
-      "company": "Constellation",
-      "url": "https://jobs.gem.com/constellation-institute/am9icG9zdDqDb0JHSbCpnj2EWguHuJxF",
-      "location": [
-        "San Francisco Bay Area"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Other"
-      ],
-      "experience": [
-        "Junior (1-4 years experience)",
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1780531320,
       "closes_at": null
     },
     {
@@ -186,25 +583,24 @@
       "closes_at": 1781395200
     },
     {
-      "title": "Hardware Assurance Programme",
-      "company": "Cambridge AI Safety Hub",
-      "url": "https://caish.org/hardware",
+      "title": "Kitchen Support, Dishwasher and Prep",
+      "company": "Constellation",
+      "url": "https://jobs.gem.com/constellation-institute/am9icG9zdDqDb0JHSbCpnj2EWguHuJxF",
       "location": [
-        "Cambridge, UK"
+        "San Francisco Bay Area"
       ],
       "role_type": [
-        "Course"
+        "Full-time"
       ],
       "skill": [
-        "Engineering",
-        "Research",
-        "Information security"
+        "Other"
       ],
       "experience": [
-        "Multiple experience levels"
+        "Junior (1-4 years experience)",
+        "Mid (5-9 years experience)"
       ],
       "posted_at": 1780531200,
-      "closes_at": 1780790400
+      "closes_at": null
     },
     {
       "title": "Security Engineer",
@@ -345,27 +741,6 @@
       ],
       "posted_at": 1780358700,
       "closes_at": 1782000000
-    },
-    {
-      "title": "AI Safety Lab Lead, Responsible Compute Oversight",
-      "company": "Canadian Government, National Research Council Canada",
-      "url": "https://www.linkedin.com/jobs/view/4418436620/",
-      "location": [
-        "Ottawa, Canada"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Software engineering",
-        "Management",
-        "Strategy"
-      ],
-      "experience": [
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1780358580,
-      "closes_at": 1780876800
     },
     {
       "title": "AI Red Teamer, Cyber",
@@ -581,7 +956,7 @@
         "Entry-level"
       ],
       "posted_at": 1780272180,
-      "closes_at": 1780790400
+      "closes_at": 1783209600
     },
     {
       "title": "Field Specialist, AI Hardware Security and Verification",
@@ -1285,46 +1660,6 @@
       "closes_at": 1782000000
     },
     {
-      "title": "General Engineer, Artificial Intelligence Systems",
-      "company": "US Government, Bureau of Industry and Security",
-      "url": "https://www.usajobs.gov/job/870487700",
-      "location": [
-        "Washington, DC metro area"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Engineering",
-        "Policy"
-      ],
-      "experience": [
-        "Senior (10+ years experience)"
-      ],
-      "posted_at": 1779667260,
-      "closes_at": 1780531200
-    },
-    {
-      "title": "General Engineer, Machine Learning Systems",
-      "company": "US Government, Bureau of Industry and Security",
-      "url": "https://www.usajobs.gov/job/870487200",
-      "location": [
-        "Washington, DC metro area"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Engineering",
-        "Policy"
-      ],
-      "experience": [
-        "Senior (10+ years experience)"
-      ],
-      "posted_at": 1779667260,
-      "closes_at": 1780531200
-    },
-    {
       "title": "AI Science Advisor, California Department of Technology",
       "company": "California Council on Science and Technology",
       "url": "https://ccst.us/ai-advisor-cdt/",
@@ -1913,49 +2248,6 @@
       "closes_at": 1781049600
     },
     {
-      "title": "Postdoctoral Researcher, AI and Geopolitics, AI Governance Initiative",
-      "company": "Oxford University, Oxford Martin School",
-      "url": "https://my.corehr.com/pls/uoxrecruit/erq_jobspec_version_4.display_form",
-      "location": [
-        "Oxford, UK"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Research",
-        "Policy"
-      ],
-      "experience": [
-        "Entry-level",
-        "Junior (1-4 years experience)"
-      ],
-      "posted_at": 1779062520,
-      "closes_at": 1780617600
-    },
-    {
-      "title": "MATS Programme (Autumn 2026)",
-      "company": "MATS Research",
-      "url": "https://www.matsprogram.org/apply",
-      "location": [
-        "San Francisco Bay Area",
-        "London, UK"
-      ],
-      "role_type": [
-        "Fellowship"
-      ],
-      "skill": [
-        "Research",
-        "Policy"
-      ],
-      "experience": [
-        "Entry-level",
-        "Junior (1-4 years experience)"
-      ],
-      "posted_at": 1778803500,
-      "closes_at": 1780790400
-    },
-    {
       "title": "Head of People",
       "company": "MATS Research",
       "url": "https://www.matsprogram.org/careers/head-of-people",
@@ -2404,6 +2696,25 @@
       "closes_at": null
     },
     {
+      "title": "Teacher, Law Programme",
+      "company": "ML4Good",
+      "url": "https://ml4good.org/jobs/law-programme-teacher/",
+      "location": [
+        "Prague, Czech Republic"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Other"
+      ],
+      "experience": [
+        "Junior (1-4 years experience)"
+      ],
+      "posted_at": 1778544180,
+      "closes_at": 1782864000
+    },
+    {
       "title": "Director, Digital Organizing",
       "company": "The AI Policy Network",
       "url": "https://theaipn.org/careers/director-digital-organizing/",
@@ -2546,27 +2857,6 @@
       "closes_at": null
     },
     {
-      "title": "Sub Team Lead, Red Team, Control",
-      "company": "UK Government, AI Security Institute",
-      "url": "https://job-boards.eu.greenhouse.io/aisi/jobs/4784442101",
-      "location": [
-        "London, UK"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Research",
-        "Information security",
-        "Management"
-      ],
-      "experience": [
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1778457600,
-      "closes_at": null
-    },
-    {
       "title": "Visiting Fellowship",
       "company": "Constellation",
       "url": "https://www.constellation.org/programs/researcher-program",
@@ -2684,66 +2974,6 @@
       ],
       "posted_at": 1778025780,
       "closes_at": 1781222400
-    },
-    {
-      "title": "Recruiting Associate / Specialist",
-      "company": "80,000 Hours",
-      "url": "https://80000hours.org/2026/05/recruiting-associate-specialist-2/",
-      "location": [
-        "London, UK"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Operations"
-      ],
-      "experience": [
-        "Entry-level",
-        "Junior (1-4 years experience)"
-      ],
-      "posted_at": 1778025780,
-      "closes_at": 1780790400
-    },
-    {
-      "title": "Business Operations Associate / Specialist",
-      "company": "80,000 Hours",
-      "url": "https://80000hours.org/2026/05/business-operations-associate-specialist/",
-      "location": [
-        "London, UK"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Operations"
-      ],
-      "experience": [
-        "Entry-level",
-        "Junior (1-4 years experience)"
-      ],
-      "posted_at": 1778025780,
-      "closes_at": 1780790400
-    },
-    {
-      "title": "People Operations Associate / Specialist",
-      "company": "80,000 Hours",
-      "url": "https://80000hours.org/2026/05/people-operations-associate-specialist-2/",
-      "location": [
-        "London, UK"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Operations"
-      ],
-      "experience": [
-        "Entry-level",
-        "Junior (1-4 years experience)"
-      ],
-      "posted_at": 1778025780,
-      "closes_at": 1780790400
     },
     {
       "title": "Designer",
@@ -3053,26 +3283,6 @@
       "closes_at": null
     },
     {
-      "title": "Research Engineer / Research Scientist, Model Transparency",
-      "company": "UK Government, AI Security Institute",
-      "url": "https://job-boards.eu.greenhouse.io/aisi/jobs/4848454101",
-      "location": [
-        "London, UK"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Research",
-        "Software engineering"
-      ],
-      "experience": [
-        "Multiple experience levels"
-      ],
-      "posted_at": 1777248300,
-      "closes_at": 1780790400
-    },
-    {
       "title": "Data and Operations Specialist",
       "company": "Constellation",
       "url": "https://jobs.gem.com/constellation-institute/cf2e47d7-9ac5-4385-a664-9cea9f7c4172",
@@ -3089,45 +3299,6 @@
         "Junior (1-4 years experience)"
       ],
       "posted_at": 1777248274,
-      "closes_at": null
-    },
-    {
-      "title": "Technical Program Manager, AI Safety",
-      "company": "Lila Sciences",
-      "url": "https://job-boards.greenhouse.io/lilasciences/jobs/4229239009",
-      "location": [
-        "San Francisco Bay Area",
-        "Boston metro area"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Operations"
-      ],
-      "experience": [
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1777248060,
-      "closes_at": null
-    },
-    {
-      "title": "Request for Proposals, AI Safety Grant",
-      "company": "Foresight Institute",
-      "url": "https://foresight.org/request-for-proposals/",
-      "location": [
-        "Remote, Global"
-      ],
-      "role_type": [
-        "Funding"
-      ],
-      "skill": [
-        "Research"
-      ],
-      "experience": [
-        "Multiple experience levels"
-      ],
-      "posted_at": 1777248000,
       "closes_at": null
     },
     {
@@ -3232,26 +3403,6 @@
         "Multiple experience levels"
       ],
       "posted_at": 1776988800,
-      "closes_at": null
-    },
-    {
-      "title": "Fellowship Manager",
-      "company": "Singapore AI Safety Hub",
-      "url": "https://docs.google.com/document/d/1BIV1vGRUs3xn8CfL6M5f4mFKsIB4sVdRpzgTRjAwiZA/edit",
-      "location": [
-        "Singapore, Singapore"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Operations"
-      ],
-      "experience": [
-        "Junior (1-4 years experience)",
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1776902580,
       "closes_at": null
     },
     {
@@ -3923,25 +4074,6 @@
       "closes_at": null
     },
     {
-      "title": "Analyst, The Anthropic Institute",
-      "company": "Anthropic",
-      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5123742008",
-      "location": [
-        "San Francisco Bay Area"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Research"
-      ],
-      "experience": [
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1775606400,
-      "closes_at": null
-    },
-    {
       "title": "Research Scientist",
       "company": "FAR AI",
       "url": "https://jobs.ashbyhq.com/far.ai/1bda4204-bfef-4a47-b72b-3562ec0bb3f9",
@@ -3998,7 +4130,8 @@
         "Other"
       ],
       "experience": [
-        "Junior (1-4 years experience)"
+        "Junior (1-4 years experience)",
+        "Mid (5-9 years experience)"
       ],
       "posted_at": 1775520300,
       "closes_at": null
@@ -4038,7 +4171,8 @@
         "Software engineering"
       ],
       "experience": [
-        "Junior (1-4 years experience)"
+        "Junior (1-4 years experience)",
+        "Mid (5-9 years experience)"
       ],
       "posted_at": 1775433900,
       "closes_at": null
@@ -4470,205 +4604,6 @@
       "closes_at": null
     },
     {
-      "title": "Principal, Special Projects",
-      "company": "Center for AI Safety",
-      "url": "https://jobs.lever.co/aisafety/1d294768-31cd-4d00-a238-a3eded93c695",
-      "location": [
-        "San Francisco Bay Area"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Strategy"
-      ],
-      "experience": [
-        "Mid (5-9 years experience)",
-        "Senior (10+ years experience)"
-      ],
-      "posted_at": 1773878700,
-      "closes_at": null
-    },
-    {
-      "title": "Technical Director, AI Safety",
-      "company": "Faculty",
-      "url": "https://jobs.ashbyhq.com/faculty/7e726de6-6327-40cd-a00d-0e9be34e1cb4",
-      "location": [
-        "London, UK"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Management",
-        "Strategy"
-      ],
-      "experience": [
-        "Senior (10+ years experience)"
-      ],
-      "posted_at": 1773878520,
-      "closes_at": null
-    },
-    {
-      "title": "Data Engineer, Safeguards",
-      "company": "Anthropic",
-      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5156057008",
-      "location": [
-        "London, UK"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Software engineering"
-      ],
-      "experience": [
-        "Junior (1-4 years experience)"
-      ],
-      "posted_at": 1773878400,
-      "closes_at": null
-    },
-    {
-      "title": "Director, Government Affairs",
-      "company": "The AI Policy Network",
-      "url": "https://theaipn.org/careers/director-of-government-affairs/",
-      "location": [
-        "Washington, DC metro area"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Policy"
-      ],
-      "experience": [
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1773792180,
-      "closes_at": null
-    },
-    {
-      "title": "Anthology Fund",
-      "company": "Menlo Ventures",
-      "url": "https://menlovc.com/anthology-fund/",
-      "location": [
-        "USA"
-      ],
-      "role_type": [
-        "Funding"
-      ],
-      "skill": [
-        "Strategy"
-      ],
-      "experience": [
-        "Multiple experience levels"
-      ],
-      "posted_at": 1773792000,
-      "closes_at": null
-    },
-    {
-      "title": "Member of Technical Staff, Synthetic Data",
-      "company": "Trajectory Labs",
-      "url": "https://www.trajectorylabs.com/careers/member-of-technical-staff",
-      "location": [
-        "San Francisco Bay Area"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Software engineering",
-        "Management"
-      ],
-      "experience": [
-        "Junior (1-4 years experience)",
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1773705780,
-      "closes_at": null
-    },
-    {
-      "title": "Security Labs Engineer",
-      "company": "Anthropic",
-      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5153564008",
-      "location": [
-        "San Francisco Bay Area"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Software engineering",
-        "Information security"
-      ],
-      "experience": [
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1773705600,
-      "closes_at": null
-    },
-    {
-      "title": "Senior Analyst / Counsel, AI Governance",
-      "company": "Future of Privacy Forum",
-      "url": "https://fpf.org/analyst-counsel-ai-governance/",
-      "location": [
-        "Washington, DC metro area"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Research",
-        "Policy",
-        "Legal"
-      ],
-      "experience": [
-        "Junior (1-4 years experience)",
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1773705600,
-      "closes_at": null
-    },
-    {
-      "title": "Product Manager, Biosafety",
-      "company": "OpenAI",
-      "url": "https://openai.com/careers/product-manager-bio-safety-san-francisco/",
-      "location": [
-        "San Francisco Bay Area"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Strategy"
-      ],
-      "experience": [
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1773705600,
-      "closes_at": null
-    },
-    {
-      "title": "Member of Technical Staff, Research",
-      "company": "Model Evaluation and Threat Research",
-      "url": "https://jobs.lever.co/metr/1c044574-181d-4b3d-98de-27f12eb76c6f",
-      "location": [
-        "San Francisco Bay Area"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Research",
-        "Software engineering"
-      ],
-      "experience": [
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1773619500,
-      "closes_at": null
-    },
-    {
       "title": "Technical Threat Investigator, Chemical, Biological, Radiological, Nuclear, and Explosives",
       "company": "Anthropic",
       "url": "https://job-boards.greenhouse.io/anthropic/jobs/5066997008",
@@ -4747,6 +4682,25 @@
         "Multiple experience levels"
       ],
       "posted_at": 1642032000,
+      "closes_at": null
+    },
+    {
+      "title": "Data Engineer, Safeguards",
+      "company": "Anthropic",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5156057008",
+      "location": [
+        "London, UK"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Software engineering"
+      ],
+      "experience": [
+        "Junior (1-4 years experience)"
+      ],
+      "posted_at": 1641945600,
       "closes_at": null
     },
     {
@@ -5132,6 +5086,26 @@
       "closes_at": null
     },
     {
+      "title": "Security Labs Engineer",
+      "company": "Anthropic",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5153564008",
+      "location": [
+        "San Francisco Bay Area"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Software engineering",
+        "Information security"
+      ],
+      "experience": [
+        "Mid (5-9 years experience)"
+      ],
+      "posted_at": 1641859200,
+      "closes_at": null
+    },
+    {
       "title": "Safeguards Enforcement Analyst, Safety Evaluations",
       "company": "Anthropic",
       "url": "https://job-boards.greenhouse.io/anthropic/jobs/5137183008",
@@ -5469,6 +5443,26 @@
       "closes_at": null
     },
     {
+      "title": "Principal, Special Projects",
+      "company": "Center for AI Safety",
+      "url": "https://jobs.lever.co/aisafety/1d294768-31cd-4d00-a238-a3eded93c695",
+      "location": [
+        "San Francisco Bay Area"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Strategy"
+      ],
+      "experience": [
+        "Mid (5-9 years experience)",
+        "Senior (10+ years experience)"
+      ],
+      "posted_at": 1641859200,
+      "closes_at": null
+    },
+    {
       "title": "Director of Development",
       "company": "Center for AI Safety",
       "url": "https://jobs.lever.co/aisafety/6c01e3ac-e43a-4186-9a35-a344c1ce1774",
@@ -5734,6 +5728,26 @@
       "closes_at": null
     },
     {
+      "title": "Member of Technical Staff, Research",
+      "company": "Model Evaluation and Threat Research",
+      "url": "https://jobs.lever.co/metr/1c044574-181d-4b3d-98de-27f12eb76c6f",
+      "location": [
+        "San Francisco Bay Area"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Research",
+        "Software engineering"
+      ],
+      "experience": [
+        "Mid (5-9 years experience)"
+      ],
+      "posted_at": 1641859200,
+      "closes_at": null
+    },
+    {
       "title": "General Expression of Interest",
       "company": "Model Evaluation and Threat Research",
       "url": "https://jobs.lever.co/metr/f3a6db11-7fd1-48e4-af42-20aad1ded72d",
@@ -5751,6 +5765,25 @@
       ],
       "experience": [
         "Multiple experience levels"
+      ],
+      "posted_at": 1641859200,
+      "closes_at": null
+    },
+    {
+      "title": "Product Manager, Biosafety",
+      "company": "OpenAI",
+      "url": "https://openai.com/careers/product-manager-bio-safety-san-francisco/",
+      "location": [
+        "San Francisco Bay Area"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Strategy"
+      ],
+      "experience": [
+        "Mid (5-9 years experience)"
       ],
       "posted_at": 1641859200,
       "closes_at": null
@@ -6839,38 +6872,19 @@
       "closes_at": null
     },
     {
-      "title": "Expression of Interest, Movement Building",
-      "company": "Evitable",
-      "url": "https://form.jotform.com/252827895601163",
+      "title": "Senior Analyst / Counsel, AI Governance",
+      "company": "Future of Privacy Forum",
+      "url": "https://fpf.org/analyst-counsel-ai-governance/",
       "location": [
-        "San Francisco Bay Area"
+        "Washington, DC metro area"
       ],
       "role_type": [
         "Full-time"
       ],
       "skill": [
-        "Outreach",
-        "Operations"
-      ],
-      "experience": [
-        "Junior (1-4 years experience)"
-      ],
-      "posted_at": 1641427200,
-      "closes_at": null
-    },
-    {
-      "title": "Communications Associate / Head of Communications",
-      "company": "Evitable",
-      "url": "https://evitable.com/communications-associate-head",
-      "location": [
-        "San Francisco Bay Area"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Outreach",
-        "Strategy"
+        "Research",
+        "Policy",
+        "Legal"
       ],
       "experience": [
         "Junior (1-4 years experience)",
@@ -7604,6 +7618,27 @@
       "closes_at": null
     },
     {
+      "title": "Member of Technical Staff, Synthetic Data",
+      "company": "Trajectory Labs",
+      "url": "https://www.trajectorylabs.com/careers/member-of-technical-staff",
+      "location": [
+        "San Francisco Bay Area"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Software engineering",
+        "Management"
+      ],
+      "experience": [
+        "Junior (1-4 years experience)",
+        "Mid (5-9 years experience)"
+      ],
+      "posted_at": 1641427200,
+      "closes_at": null
+    },
+    {
       "title": "AI Red Teamer",
       "company": "Trajectory Labs",
       "url": "https://trajectorylabs.net/careers/ai-red-teamer",
@@ -8268,25 +8303,6 @@
       "closes_at": null
     },
     {
-      "title": "General Interest",
-      "company": "CivAI",
-      "url": "https://airtable.com/appF2jFyZ4WQn5rd6/pagtXCfyyBEU57tXd/form",
-      "location": [
-        "San Francisco Bay Area"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Policy"
-      ],
-      "experience": [
-        "Multiple experience levels"
-      ],
-      "posted_at": 1641340800,
-      "closes_at": null
-    },
-    {
       "title": "Director of Site Services",
       "company": "Constellation",
       "url": "https://jobs.gem.com/constellation-institute/33309945-c904-4ae0-b169-a1797c925fdd",
@@ -8361,6 +8377,26 @@
       ],
       "experience": [
         "Multiple experience levels"
+      ],
+      "posted_at": 1641340800,
+      "closes_at": null
+    },
+    {
+      "title": "Technical Director, AI Safety",
+      "company": "Faculty",
+      "url": "https://jobs.ashbyhq.com/faculty/7e726de6-6327-40cd-a00d-0e9be34e1cb4",
+      "location": [
+        "London, UK"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Management",
+        "Strategy"
+      ],
+      "experience": [
+        "Senior (10+ years experience)"
       ],
       "posted_at": 1641340800,
       "closes_at": null
@@ -8688,7 +8724,7 @@
     {
       "title": "Expression of Interest",
       "company": "Harmony Intelligence",
-      "url": "https://www.harmonyintelligence.com/careers",
+      "url": "https://harmonyintelligence.com/contact",
       "location": [
         "Remote, Global"
       ],
@@ -8846,6 +8882,25 @@
       "closes_at": null
     },
     {
+      "title": "Anthology Fund",
+      "company": "Menlo Ventures",
+      "url": "https://menlovc.com/anthology-fund/",
+      "location": [
+        "USA"
+      ],
+      "role_type": [
+        "Funding"
+      ],
+      "skill": [
+        "Strategy"
+      ],
+      "experience": [
+        "Multiple experience levels"
+      ],
+      "posted_at": 1641340800,
+      "closes_at": null
+    },
+    {
       "title": "Principal Research Software Engineer",
       "company": "Northeastern University, National Deep Inference Fabric",
       "url": "https://ndif.us/start.html",
@@ -8939,6 +8994,25 @@
       "url": "https://www.shlab.org.cn/joinus/detail/7599507253209090346",
       "location": [
         "Shanghai, China"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Policy"
+      ],
+      "experience": [
+        "Mid (5-9 years experience)"
+      ],
+      "posted_at": 1641340800,
+      "closes_at": null
+    },
+    {
+      "title": "Director, Government Affairs",
+      "company": "The AI Policy Network",
+      "url": "https://theaipn.org/careers/director-of-government-affairs/",
+      "location": [
+        "Washington, DC metro area"
       ],
       "role_type": [
         "Full-time"
