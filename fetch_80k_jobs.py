@@ -41,6 +41,10 @@ ALGOLIA = {
 
 MAX_JOBS = 40
 
+# Only list jobs posted within this many days. The refresh runs weekly, so a
+# 7-day window keeps the listing to roles that are new since the last refresh.
+NEW_WINDOW_DAYS = 7
+
 START_MARKER = "<!-- 80k-jobs:start -->"
 END_MARKER = "<!-- 80k-jobs:end -->"
 
@@ -147,6 +151,24 @@ def fetch_jobs():
     return all_jobs
 
 
+def filter_recent(jobs, window_days=NEW_WINDOW_DAYS):
+    """Keep only jobs posted within the last `window_days` days.
+
+    Jobs without a usable posted_at timestamp are dropped, since we can't
+    confirm they're new.
+    """
+    cutoff = datetime.now(timezone.utc).timestamp() - window_days * 86400
+    recent = []
+    for j in jobs:
+        ts = j.get("posted_at")
+        try:
+            if ts is not None and int(ts) >= cutoff:
+                recent.append(j)
+        except (ValueError, TypeError):
+            continue
+    return recent
+
+
 def format_meta(job):
     bits = []
     # Deduplicate location parts while preserving order
@@ -182,26 +204,39 @@ def format_meta(job):
     return " · ".join(bits)
 
 
-def render_jobs_html(jobs, variant):
+def render_jobs_html(jobs, variant, total_fetched=None):
     today = datetime.now(timezone.utc).strftime("%B %d, %Y")
 
     if not jobs:
+        if total_fetched:
+            # Fetch succeeded, but nothing was posted within the window.
+            msg = (
+                "No new AI safety &amp; policy listings posted in the past "
+                "{days} days (last checked {today}). ".format(
+                    days=NEW_WINDOW_DAYS, today=today
+                )
+            )
+        else:
+            msg = (
+                "No live 80,000 Hours listings could be fetched "
+                "(last attempted {today}). ".format(today=today)
+            )
         return (
             "{start}\n"
-            "<p class=\"live-jobs-empty\">No live 80,000 Hours listings could be fetched "
-            "(last attempted {today}). See "
+            "<p class=\"live-jobs-empty\">{msg}See "
             "<a href=\"{full}\" target=\"_blank\">the 80,000 Hours job board</a> directly.</p>\n"
             "{end}"
-        ).format(start=START_MARKER, end=END_MARKER, today=today, full=PUBLIC_FILTER_URL)
+        ).format(start=START_MARKER, end=END_MARKER, msg=msg, full=PUBLIC_FILTER_URL)
 
     rendered = jobs[:MAX_JOBS]
     lines = [START_MARKER]
     lines.append(
         '<div class="live-jobs-header"><strong>Live from 80,000 Hours</strong> — '
-        'showing latest <strong>{n}</strong> of {total} AI safety &amp; policy '
-        'listings · last fetched {today} · '
+        'showing <strong>{n}</strong> AI safety &amp; policy '
+        'listing{s} posted in the past {days} days · last fetched {today} · '
         '<a href="{full}" target="_blank">see all on 80,000 Hours →</a></div>'.format(
-            n=len(rendered), total=len(jobs), today=today, full=PUBLIC_FILTER_URL
+            n=len(rendered), s="" if len(rendered) == 1 else "s",
+            days=NEW_WINDOW_DAYS, today=today, full=PUBLIC_FILTER_URL
         )
     )
 
@@ -265,13 +300,21 @@ def main():
     jobs = fetch_jobs()
     logger.info("Got %d unique jobs", len(jobs))
 
+    recent = filter_recent(jobs)
+    logger.info(
+        "%d of %d jobs posted in the past %d days",
+        len(recent), len(jobs), NEW_WINDOW_DAYS,
+    )
+
     OUTPUT_JSON.write_text(
         json.dumps(
             {
                 "fetched_at": datetime.now(timezone.utc).isoformat(),
                 "filter": ALGOLIA["area_filter"],
-                "count": len(jobs),
-                "jobs": jobs,
+                "window_days": NEW_WINDOW_DAYS,
+                "total_fetched": len(jobs),
+                "count": len(recent),
+                "jobs": recent,
             },
             indent=2,
         ),
@@ -279,8 +322,8 @@ def main():
     )
     logger.info("Wrote %s", OUTPUT_JSON.name)
 
-    patch_file(INDEX_FILE, render_jobs_html(jobs, "index"))
-    patch_file(DIRECTORY_FILE, render_jobs_html(jobs, "directory"))
+    patch_file(INDEX_FILE, render_jobs_html(recent, "index", len(jobs)))
+    patch_file(DIRECTORY_FILE, render_jobs_html(recent, "directory", len(jobs)))
 
 
 if __name__ == "__main__":
