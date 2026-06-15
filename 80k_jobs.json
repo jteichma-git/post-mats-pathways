@@ -1,10 +1,90 @@
 {
-  "fetched_at": "2026-06-13T23:01:30.135365+00:00",
+  "fetched_at": "2026-06-15T15:28:55.778935+00:00",
   "filter": "AI safety & policy",
   "window_days": 7,
-  "total_fetched": 465,
-  "count": 56,
+  "total_fetched": 459,
+  "count": 48,
   "jobs": [
+    {
+      "title": "Software Engineer, Core Technology",
+      "company": "UK Government, AI Security Institute",
+      "url": "https://job-boards.eu.greenhouse.io/aisi/jobs/4386112101",
+      "location": [
+        "London, UK"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Software engineering"
+      ],
+      "experience": [
+        "Junior (1-4 years experience)",
+        "Mid (5-9 years experience)"
+      ],
+      "posted_at": 1781481900,
+      "closes_at": null
+    },
+    {
+      "title": "Visiting Fellowship",
+      "company": "Constellation",
+      "url": "https://www.constellation.org/programs/researcher-program",
+      "location": [
+        "San Francisco Bay Area"
+      ],
+      "role_type": [
+        "Fellowship"
+      ],
+      "skill": [
+        "Research"
+      ],
+      "experience": [
+        "Multiple experience levels"
+      ],
+      "posted_at": 1781481840,
+      "closes_at": null
+    },
+    {
+      "title": "Funding, Scaling AI Safety for a Multi-Agent World",
+      "company": "Schmidt Sciences",
+      "url": "https://schmidtsciences.smapply.io/prog/scaling_ai_safety_for_a_multi_agent_world/",
+      "location": [
+        "Remote, Global"
+      ],
+      "role_type": [
+        "Funding"
+      ],
+      "skill": [
+        "Research"
+      ],
+      "experience": [
+        "Multiple experience levels"
+      ],
+      "posted_at": 1781481720,
+      "closes_at": 1786233600
+    },
+    {
+      "title": "Technical AI Safety Upskilling Resources",
+      "company": "80,000 Hours",
+      "url": "https://80000hours.org/2025/06/technical-ai-safety-upskilling-resources/",
+      "location": [
+        "Remote, Global"
+      ],
+      "role_type": [
+        "Other"
+      ],
+      "skill": [
+        "Engineering",
+        "Research",
+        "Software engineering",
+        "Information security"
+      ],
+      "experience": [
+        "Multiple experience levels"
+      ],
+      "posted_at": 1781481600,
+      "closes_at": null
+    },
     {
       "title": "Technical Project Manager",
       "company": "Apart Research",
@@ -39,7 +119,6 @@
         "Policy"
       ],
       "experience": [
-        "Junior (1-4 years experience)",
         "Mid (5-9 years experience)"
       ],
       "posted_at": 1781222651,
@@ -267,7 +346,8 @@
         "Policy"
       ],
       "experience": [
-        "Multiple experience levels"
+        "Mid (5-9 years experience)",
+        "Senior (10+ years experience)"
       ],
       "posted_at": 1781136300,
       "closes_at": null
@@ -890,29 +970,9 @@
       "closes_at": null
     },
     {
-      "title": "AI Policy Leaders Programme",
-      "company": "Talos Network",
-      "url": "https://www.talosnetwork.org/policy-leaders-programme",
-      "location": [
-        "Brussels, Belgium"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Policy"
-      ],
-      "experience": [
-        "Mid (5-9 years experience)",
-        "Senior (10+ years experience)"
-      ],
-      "posted_at": 1780963200,
-      "closes_at": 1781395200
-    },
-    {
       "title": "Researcher, AI Security and Privacy",
       "company": "University of South-Eastern Norway",
-      "url": "https://www.jobbnorge.no/en/available-jobs/job/302803/researcher-in-ai-security-and-privacy",
+      "url": "https://ellis.eu/research/jobs/2026-06-26-researcher-in-ai-security-and-privacy",
       "location": [
         "Kongsberg, Norway"
       ],
@@ -928,225 +988,6 @@
       ],
       "posted_at": 1780963200,
       "closes_at": 1782432000
-    },
-    {
-      "title": "AI Policy Research Resident, Associate / Specialist, Center on AI, Security, and Technology",
-      "company": "RAND Corporation",
-      "url": "https://rand.wd5.myworkdayjobs.com/en-US/External_Career_Site/job/Washington-DC-DC-Metro-Area/AI-Policy-Research-Resident--Associate---Specialist_R3554",
-      "location": [
-        "Various, USA",
-        "Remote, USA"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Research",
-        "Policy"
-      ],
-      "experience": [
-        "Multiple experience levels"
-      ],
-      "posted_at": 1780877100,
-      "closes_at": null
-    },
-    {
-      "title": "Research Project Manager",
-      "company": "Apart Research",
-      "url": "https://apartresearch.notion.site/Research-Project-Manager-288fcfd1de9d805fbbc2cab9e5544c4e",
-      "location": [
-        "Remote, Global"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Operations"
-      ],
-      "experience": [
-        "Junior (1-4 years experience)",
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1780877088,
-      "closes_at": null
-    },
-    {
-      "title": "Course, The Future of AI",
-      "company": "BlueDot Impact",
-      "url": "https://bluedot.org/courses/future-of-ai",
-      "location": [
-        "Remote, Global"
-      ],
-      "role_type": [
-        "Course"
-      ],
-      "skill": [
-        "Other"
-      ],
-      "experience": [
-        "Entry-level"
-      ],
-      "posted_at": 1780876980,
-      "closes_at": null
-    },
-    {
-      "title": "GovAI U.S. AI Policy Program",
-      "company": "GovAI",
-      "url": "https://www.governance.ai/post/govai-u-s-ai-policy-program",
-      "location": [
-        "Remote, USA",
-        "Washington, DC metro area"
-      ],
-      "role_type": [
-        "Course"
-      ],
-      "skill": [
-        "Policy"
-      ],
-      "experience": [
-        "Multiple experience levels"
-      ],
-      "posted_at": 1780876980,
-      "closes_at": 1782604800
-    },
-    {
-      "title": "AI Security Bootcamp, Vegas",
-      "company": "AI Security Bootcamp",
-      "url": "https://aisb.dev/vegas26",
-      "location": [
-        "Las Vegas, NV"
-      ],
-      "role_type": [
-        "Course"
-      ],
-      "skill": [
-        "Information security"
-      ],
-      "experience": [
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1780876920,
-      "closes_at": 1782000000
-    },
-    {
-      "title": "Program Manager, Alignment Team",
-      "company": "Arcadia Impact",
-      "url": "https://www.arcadiaimpact.org/alignment-programme-manager",
-      "location": [
-        "London, UK"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Outreach",
-        "Management",
-        "Strategy"
-      ],
-      "experience": [
-        "Junior (1-4 years experience)",
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1780876920,
-      "closes_at": 1782172800
-    },
-    {
-      "title": "Operations and Communications Associate, Alignment Team",
-      "company": "Arcadia Impact",
-      "url": "https://www.arcadiaimpact.org/ops-and-comms-associate",
-      "location": [
-        "London, UK"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Outreach",
-        "Operations"
-      ],
-      "experience": [
-        "Junior (1-4 years experience)"
-      ],
-      "posted_at": 1780876920,
-      "closes_at": 1782172800
-    },
-    {
-      "title": "Head of Communications",
-      "company": "Evitable",
-      "url": "https://evitable.com/head-of-communications",
-      "location": [
-        "San Francisco Bay Area"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Outreach"
-      ],
-      "experience": [
-        "Mid (5-9 years experience)",
-        "Senior (10+ years experience)"
-      ],
-      "posted_at": 1780876860,
-      "closes_at": null
-    },
-    {
-      "title": "Request for Proposals, AI Safety Grant",
-      "company": "Foresight Institute",
-      "url": "https://foresight.org/request-for-proposals/",
-      "location": [
-        "Remote, Global"
-      ],
-      "role_type": [
-        "Funding"
-      ],
-      "skill": [
-        "Research"
-      ],
-      "experience": [
-        "Multiple experience levels"
-      ],
-      "posted_at": 1780876800,
-      "closes_at": null
-    },
-    {
-      "title": "Deputy Head of Programme, Security and Technology",
-      "company": "United Nations, Institute for Disarmament Research",
-      "url": "https://unidir.org/job/deputy-head-of-programme-security-and-technology/",
-      "location": [
-        "Geneva, Switzerland"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Policy",
-        "Management"
-      ],
-      "experience": [
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1780876800,
-      "closes_at": 1782345600
-    },
-    {
-      "title": "Course, The Economics of AI",
-      "company": "University of Virginia",
-      "url": "https://www.coursera.org/learn/economics-of-ai",
-      "location": [
-        "Remote, Global"
-      ],
-      "role_type": [
-        "Course"
-      ],
-      "skill": [
-        "Operations"
-      ],
-      "experience": [
-        "Entry-level"
-      ],
-      "posted_at": 1780876800,
-      "closes_at": null
     }
   ]
 }
