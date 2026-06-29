@@ -1,37 +1,16 @@
 {
-  "fetched_at": "2026-06-22T14:55:10.095927+00:00",
+  "fetched_at": "2026-06-29T13:20:29.052321+00:00",
   "filter": "AI safety & policy",
   "window_days": 7,
-  "total_fetched": 478,
-  "count": 43,
+  "total_fetched": 472,
+  "count": 23,
   "jobs": [
     {
-      "title": "AI Security and Control Engineer",
-      "company": "Apollo Research",
-      "url": "https://jobs.lever.co/apolloresearch/dacbf91a-7944-4283-9bce-492e22f15498",
+      "title": "People Operations Manager",
+      "company": "Safe AI Forum",
+      "url": "https://saif.org/opportunities/people-operations-manager-2/",
       "location": [
-        "San Francisco Bay Area",
-        "London, UK"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Information security"
-      ],
-      "experience": [
-        "Junior (1-4 years experience)",
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1782086700,
-      "closes_at": null
-    },
-    {
-      "title": "Operations Associate",
-      "company": "Centre for Long-Term Resilience",
-      "url": "https://www.longtermresilience.org/were-hiring-operations-associate-ai-or-biosecurity-unit/",
-      "location": [
-        "London, UK"
+        "Remote, UK"
       ],
       "role_type": [
         "Full-time"
@@ -42,179 +21,16 @@
       "experience": [
         "Junior (1-4 years experience)"
       ],
-      "posted_at": 1782086700,
-      "closes_at": 1782864000
+      "posted_at": 1782691500,
+      "closes_at": 1784419200
     },
     {
-      "title": "Assistant General Counsel, AI, Emerging Technologies, and Strategic Agreements",
-      "company": "RAND Corporation",
-      "url": "https://rand.wd5.myworkdayjobs.com/en-US/External_Career_Site/job/Washington-DC-DC-Metro-Area/Assistant-General-Counsel--AI--Emerging-Technologies----Strategic-Agreements-_R3563",
-      "location": [
-        "Washington, DC metro area",
-        "Los Angeles, CA"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Legal"
-      ],
-      "experience": [
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1782086700,
-      "closes_at": null
-    },
-    {
-      "title": "Investigative Technologist, Consumer Protection Section",
-      "company": "California Department of Justice",
-      "url": "https://calcareers.ca.gov/CalHrPublic/Jobs/JobPosting.aspx",
-      "location": [
-        "Los Angeles, CA",
-        "San Francisco Bay Area",
-        "San Diego, CA"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Policy",
-        "Information security"
-      ],
-      "experience": [
-        "Junior (1-4 years experience)"
-      ],
-      "posted_at": 1782086640,
-      "closes_at": 1782950400
-    },
-    {
-      "title": "Senior Machine Learning Data Platform Developer",
-      "company": "LawZero",
-      "url": "https://job-boards.greenhouse.io/lawzero/jobs/4290183009",
-      "location": [
-        "Montreal, Canada"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Software engineering"
-      ],
-      "experience": [
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1782086460,
-      "closes_at": null
-    },
-    {
-      "title": "Assistant AI Security Researcher",
-      "company": "Carnegie Mellon University, Software Engineering Institute",
-      "url": "https://cmu.wd5.myworkdayjobs.com/en-US/SEI/job/Pittsburgh-PA/Assistant-AI-Security-Researcher_2024552-1",
-      "location": [
-        "Pittsburgh, PA"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Research",
-        "Information security"
-      ],
-      "experience": [
-        "Entry-level"
-      ],
-      "posted_at": 1782086400,
-      "closes_at": null
-    },
-    {
-      "title": "Senior Research Engineer",
+      "title": "Senior Project Manager, Events",
       "company": "FAR AI",
-      "url": "https://jobs.ashbyhq.com/far.ai/4f6fece8-5ed9-41f4-aed8-902d52dc42ef",
-      "location": [
-        "San Francisco Bay Area",
-        "Remote, Global",
-        "Remote, USA"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Research",
-        "Software engineering"
-      ],
-      "experience": [
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1782086400,
-      "closes_at": null
-    },
-    {
-      "title": "Fellows, Center on AI, Security, and Technology",
-      "company": "RAND Corporation",
-      "url": "https://www.rand.org/global-and-emerging-risks/centers/ai-security-and-technology/fellows.html",
-      "location": [
-        "Washington, DC metro area",
-        "San Francisco Bay Area"
-      ],
-      "role_type": [
-        "Fellowship"
-      ],
-      "skill": [
-        "Research",
-        "Policy"
-      ],
-      "experience": [
-        "Multiple experience levels"
-      ],
-      "posted_at": 1782086400,
-      "closes_at": null
-    },
-    {
-      "title": "Associate Researcher, Artificial Intelligence",
-      "company": "United Nations, Institute for Disarmament Research",
-      "url": "https://unidir.org/job/associate-researcher-artificial-intelligence/",
-      "location": [
-        "Geneva, Switzerland"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Research",
-        "Policy"
-      ],
-      "experience": [
-        "Junior (1-4 years experience)"
-      ],
-      "posted_at": 1782086400,
-      "closes_at": 1783209600
-    },
-    {
-      "title": "Senior Engagement Manager, Scenarios Advisory",
-      "company": "Windfall Trust",
-      "url": "https://jobs.ashbyhq.com/windfall/6ee76fd2-df83-482d-af1f-9f0d81313b18",
-      "location": [
-        "Remote, USA"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Strategy"
-      ],
-      "experience": [
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1782086400,
-      "closes_at": null
-    },
-    {
-      "title": "Events Producer",
-      "company": "Windfall Trust",
-      "url": "https://jobs.ashbyhq.com/windfall/f77efc24-0d57-4efa-be19-77d472e967d8",
+      "url": "https://jobs.ashbyhq.com/far.ai/567d0952-41fa-45a5-a872-42df353a64bf",
       "location": [
         "Remote, USA",
-        "Remote, Europe"
+        "San Francisco Bay Area"
       ],
       "role_type": [
         "Full-time"
@@ -225,523 +41,136 @@
       "experience": [
         "Mid (5-9 years experience)"
       ],
-      "posted_at": 1782086400,
+      "posted_at": 1782691456,
       "closes_at": null
     },
     {
-      "title": "Surplus Incubator",
-      "company": "Surplus",
-      "url": "https://surplus.dev/",
+      "title": "Senior Programs and Strategy Manager",
+      "company": "FAR AI",
+      "url": "https://jobs.ashbyhq.com/far.ai/50a65dc0-eaa2-4a33-856f-316cf7fe4fb6",
       "location": [
+        "Remote, USA",
         "San Francisco Bay Area"
       ],
       "role_type": [
-        "Funding"
-      ],
-      "skill": [
-        "Software engineering",
-        "Strategy"
-      ],
-      "experience": [
-        "Multiple experience levels"
-      ],
-      "posted_at": 1781827500,
-      "closes_at": 1782259200
-    },
-    {
-      "title": "Request for Proposals, The Launch Sequence",
-      "company": "Institute for Progress",
-      "url": "https://ifp.org/rfp-launch/",
-      "location": [
-        "Remote, Global"
-      ],
-      "role_type": [
-        "Funding"
-      ],
-      "skill": [
-        "Research",
-        "Policy",
-        "Strategy"
-      ],
-      "experience": [
-        "Multiple experience levels"
-      ],
-      "posted_at": 1781827200,
-      "closes_at": null
-    },
-    {
-      "title": "Researcher, Artificial Intelligence (x2)",
-      "company": "United Nations, Institute for Disarmament Research",
-      "url": "https://unidir.org/job/researcher-artificial-intelligence-2-positions/",
-      "location": [
-        "Geneva, Switzerland"
-      ],
-      "role_type": [
         "Full-time"
       ],
       "skill": [
-        "Research",
-        "Policy"
-      ],
-      "experience": [
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1781827200,
-      "closes_at": 1783209600
-    },
-    {
-      "title": "Senior Researcher, Artificial Intelligence",
-      "company": "United Nations, Institute for Disarmament Research",
-      "url": "https://unidir.org/job/senior-researcher-artificial-intelligence/",
-      "location": [
-        "Geneva, Switzerland"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Research",
-        "Policy",
-        "Management"
-      ],
-      "experience": [
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1781827200,
-      "closes_at": 1783209600
-    },
-    {
-      "title": "Chief Data Scientist, AI Safety",
-      "company": "US Government, Pacific Northwest National Laboratory",
-      "url": "https://careers.pnnl.gov/jobs/11779",
-      "location": [
-        "Seattle metro area"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Management",
-        "Strategy"
-      ],
-      "experience": [
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1781827200,
-      "closes_at": 1782345600
-    },
-    {
-      "title": "Finance Associate",
-      "company": "Apollo Research",
-      "url": "https://jobs.lever.co/apolloresearch/d2bad2ec-3d00-4d1a-89b8-f93df491f3f4",
-      "location": [
-        "London, UK"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Finance"
-      ],
-      "experience": [
-        "Junior (1-4 years experience)"
-      ],
-      "posted_at": 1781741100,
-      "closes_at": null
-    },
-    {
-      "title": "Senior Machine Learning Engineer, Secure AI Lab",
-      "company": "Carnegie Mellon University, Software Engineering Institute",
-      "url": "https://cmu.wd5.myworkdayjobs.com/CMU/job/Pittsburgh-PA/Senior-Machine-Learning-Engineer---SAIL_2024054",
-      "location": [
-        "Pittsburgh, PA",
-        "Washington, DC metro area"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Research",
-        "Information security"
-      ],
-      "experience": [
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1781740800,
-      "closes_at": null
-    },
-    {
-      "title": "Head of AI Assurance",
-      "company": "Faculty",
-      "url": "https://jobs.ashbyhq.com/faculty/d2d0ef45-de48-4c48-9781-5c85c9d49f42",
-      "location": [
-        "London, UK"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
+        "Outreach",
         "Strategy"
       ],
       "experience": [
         "Mid (5-9 years experience)",
         "Senior (10+ years experience)"
       ],
-      "posted_at": 1781740800,
+      "posted_at": 1782691453,
       "closes_at": null
     },
     {
-      "title": "Research Assistant",
-      "company": "Vanderbilt University, Institute of National Security",
-      "url": "https://ecsr.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/10008353",
+      "title": "Senior Communications Associate",
+      "company": "Principles of Intelligence",
+      "url": "https://princint.ai/now-hiring-senior-communications-associate-at-principles-of-intelligence/",
       "location": [
-        "Nashville, TN"
+        "Remote, Global",
+        "Belgrade, Serbia"
       ],
       "role_type": [
         "Full-time"
       ],
       "skill": [
-        "Research",
-        "Policy"
-      ],
-      "experience": [
-        "Entry-level"
-      ],
-      "posted_at": 1781740800,
-      "closes_at": null
-    },
-    {
-      "title": "Technical Programme Manager, Chem-Bio",
-      "company": "UK Government, AI Security Institute",
-      "url": "https://job-boards.eu.greenhouse.io/aisi/jobs/4899102101",
-      "location": [
-        "London, UK"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Operations"
-      ],
-      "experience": [
-        "Junior (1-4 years experience)",
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1781654700,
-      "closes_at": 1784419200
-    },
-    {
-      "title": "Head of Operations",
-      "company": "Eleos AI Research",
-      "url": "https://jobs.ashbyhq.com/eleos/d2ebbd53-6d8e-4ec9-8040-77bb4db25af7",
-      "location": [
-        "San Francisco Bay Area"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Operations",
-        "Management",
-        "Finance"
-      ],
-      "experience": [
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1781654580,
-      "closes_at": null
-    },
-    {
-      "title": "Fellowship, Emerging Voices in AI and Society (x3)",
-      "company": "Center for Humane Technology",
-      "url": "https://jobs.pcdn.global/jobs/cht-s-emerging-voices-in-ai-and-society-fellowship-81da49a0",
-      "location": [
-        "Remote, Global"
-      ],
-      "role_type": [
-        "Fellowship"
-      ],
-      "skill": [
-        "Research",
         "Outreach"
       ],
       "experience": [
         "Mid (5-9 years experience)"
       ],
-      "posted_at": 1781654400,
-      "closes_at": 1783814400
+      "posted_at": 1782691260,
+      "closes_at": 1785369600
     },
     {
-      "title": "Technical AI Governance Researcher",
-      "company": "Centre for AI Security and Access",
-      "url": "https://www.casa-ai.org/careers",
+      "title": "Events Coordinator",
+      "company": "Principles of Intelligence",
+      "url": "https://princint.ai/now-hiring-events-coordinators-at-principles-of-intelligence/",
       "location": [
-        "Remote, Global"
-      ],
-      "role_type": [
-        "Part-time"
-      ],
-      "skill": [
-        "Research"
-      ],
-      "experience": [
-        "Junior (1-4 years experience)"
-      ],
-      "posted_at": 1781654400,
-      "closes_at": null
-    },
-    {
-      "title": "Iliad Intensive and Iliad Fellowship",
-      "company": "Iliad",
-      "url": "https://www.iliad.ac/programs.html",
-      "location": [
-        "London, UK",
-        "San Francisco Bay Area"
-      ],
-      "role_type": [
-        "Fellowship",
-        "Course"
-      ],
-      "skill": [
-        "Research",
-        "Software engineering"
-      ],
-      "experience": [
-        "Entry-level",
-        "Junior (1-4 years experience)"
-      ],
-      "posted_at": 1781654400,
-      "closes_at": 1785110400
-    },
-    {
-      "title": "Expression of Interest, Project Incubator Mentor",
-      "company": "Sentient Futures",
-      "url": "https://airtable.com/appme7HmPhyhBTODD/pagRcjQtZaQTbuMaC/form",
-      "location": [
-        "Remote, Global"
+        "Remote, Global",
+        "Belgrade, Serbia"
       ],
       "role_type": [
         "Full-time"
       ],
       "skill": [
-        "Other",
-        "Management"
-      ],
-      "experience": [
-        "Junior (1-4 years experience)",
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1781654400,
-      "closes_at": 1783468800
-    },
-    {
-      "title": "Hardware / Kernel Engineer",
-      "company": "Tilde Research",
-      "url": "https://jobs.ashbyhq.com/tilderesearch/bc4e4071-cf64-4460-8265-b1e5a603d6b8",
-      "location": [
-        "San Francisco Bay Area"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Engineering",
-        "Software engineering"
-      ],
-      "experience": [
-        "Junior (1-4 years experience)"
-      ],
-      "posted_at": 1781654400,
-      "closes_at": null
-    },
-    {
-      "title": "ML Researcher",
-      "company": "Tilde Research",
-      "url": "https://jobs.ashbyhq.com/tilderesearch/e850d5b0-a5d6-4b9c-9898-f7addb441508",
-      "location": [
-        "San Francisco Bay Area"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Research",
-        "Software engineering"
-      ],
-      "experience": [
-        "Junior (1-4 years experience)"
-      ],
-      "posted_at": 1781654400,
-      "closes_at": null
-    },
-    {
-      "title": "ML Engineer",
-      "company": "Tilde Research",
-      "url": "https://jobs.ashbyhq.com/tilderesearch/b2e145db-0111-47c1-9d9f-e856a057d8ef",
-      "location": [
-        "San Francisco Bay Area"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Software engineering"
-      ],
-      "experience": [
-        "Junior (1-4 years experience)"
-      ],
-      "posted_at": 1781654400,
-      "closes_at": null
-    },
-    {
-      "title": "Winter Fellowship, Applied Track, UK (2027)",
-      "company": "GovAI",
-      "url": "https://www.governance.ai/post/winter-fellowship-2027-applied-track",
-      "location": [
-        "London, UK"
-      ],
-      "role_type": [
-        "Fellowship"
-      ],
-      "skill": [
-        "Policy",
-        "Outreach",
         "Operations"
       ],
       "experience": [
         "Junior (1-4 years experience)"
       ],
-      "posted_at": 1781568300,
-      "closes_at": 1783814400
+      "posted_at": 1782691260,
+      "closes_at": 1785024000
     },
     {
-      "title": "Winter Fellowship, Research Track, UK (2027)",
-      "company": "GovAI",
-      "url": "https://www.governance.ai/post/winter-fellowship-2027-research-track",
+      "title": "Compliance and Operations Manager",
+      "company": "Principles of Intelligence",
+      "url": "https://princint.ai/now-hiring-compliance-operations-manager-at-principles-of-intelligence/",
       "location": [
-        "London, UK"
-      ],
-      "role_type": [
-        "Fellowship"
-      ],
-      "skill": [
-        "Research",
-        "Policy"
-      ],
-      "experience": [
-        "Multiple experience levels"
-      ],
-      "posted_at": 1781568300,
-      "closes_at": 1783814400
-    },
-    {
-      "title": "Winter Fellowship, DC (2027)",
-      "company": "GovAI",
-      "url": "https://www.governance.ai/post/dc-winter-fellowship-2027",
-      "location": [
-        "Washington, DC metro area"
-      ],
-      "role_type": [
-        "Fellowship"
-      ],
-      "skill": [
-        "Research",
-        "Policy"
-      ],
-      "experience": [
-        "Multiple experience levels"
-      ],
-      "posted_at": 1781568300,
-      "closes_at": 1783814400
-    },
-    {
-      "title": "Senior Product Designer",
-      "company": "Epoch AI",
-      "url": "https://jobs.lever.co/epoch-ai/b71cd010-d3cf-446c-80fa-fa5737573e82",
-      "location": [
-        "Remote, Global"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Other",
-        "Strategy"
-      ],
-      "experience": [
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1781568249,
-      "closes_at": null
-    },
-    {
-      "title": "Frame Fellowship",
-      "company": "Frame",
-      "url": "https://framefellowship.com",
-      "location": [
-        "San Francisco Bay Area"
-      ],
-      "role_type": [
-        "Fellowship"
-      ],
-      "skill": [
-        "Outreach",
-        "Other"
-      ],
-      "experience": [
-        "Entry-level"
-      ],
-      "posted_at": 1781568240,
-      "closes_at": 1783641600
-    },
-    {
-      "title": "Director of Talent Discovery",
-      "company": "SteadRise",
-      "url": "https://steadrise.notion.site/Director-of-Talent-Discovery-36d20e14e1b780a7864bfa5ae04ace93",
-      "location": [
-        "London, UK",
-        "Remote, Global"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Outreach",
-        "Management",
-        "Strategy"
-      ],
-      "experience": [
-        "Mid (5-9 years experience)"
-      ],
-      "posted_at": 1781568060,
-      "closes_at": null
-    },
-    {
-      "title": "Director of Programs",
-      "company": "SteadRise",
-      "url": "https://steadrise.notion.site/Director-of-Programs-36d20e14e1b780a5baf5d84bc65d1571",
-      "location": [
-        "London, UK",
-        "Remote, Global"
+        "Remote, Global",
+        "Belgrade, Serbia"
       ],
       "role_type": [
         "Full-time"
       ],
       "skill": [
         "Operations",
-        "Management",
-        "Strategy"
+        "Legal"
       ],
       "experience": [
         "Mid (5-9 years experience)"
       ],
-      "posted_at": 1781568060,
-      "closes_at": null
+      "posted_at": 1782691260,
+      "closes_at": 1785024000
     },
     {
-      "title": "Platform Hardware Security",
+      "title": "Finance Specialist",
+      "company": "Principles of Intelligence",
+      "url": "https://princint.ai/now-hiring-finance-specialist-at-principles-of-intelligence/",
+      "location": [
+        "Remote, Global",
+        "Belgrade, Serbia"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Finance"
+      ],
+      "experience": [
+        "Junior (1-4 years experience)"
+      ],
+      "posted_at": 1782691260,
+      "closes_at": 1784419200
+    },
+    {
+      "title": "Personal Assistant, AIXI Labs and Principles of Intelligence",
+      "company": "AIXI Labs",
+      "url": "https://princint.ai/now-hiring-personal-assistant-at-aixi-labs-and-princint/",
+      "location": [
+        "Remote, Global"
+      ],
+      "role_type": [
+        "Full-time",
+        "Part-time"
+      ],
+      "skill": [
+        "Operations"
+      ],
+      "experience": [
+        "Junior (1-4 years experience)"
+      ],
+      "posted_at": 1782691200,
+      "closes_at": 1784419200
+    },
+    {
+      "title": "Senior Software Security Engineer",
       "company": "Anthropic",
-      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5257689008",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/4887959008",
       "location": [
         "San Francisco Bay Area",
         "New York, NY",
@@ -751,38 +180,162 @@
         "Full-time"
       ],
       "skill": [
+        "Software engineering",
         "Information security"
       ],
       "experience": [
         "Mid (5-9 years experience)"
       ],
-      "posted_at": 1781568000,
+      "posted_at": 1782691200,
       "closes_at": null
     },
     {
-      "title": "Product Engineer",
-      "company": "Goodfire",
-      "url": "https://job-boards.greenhouse.io/goodfire/jobs/5253335008",
+      "title": "Participant, Arena 9.0",
+      "company": "ARENA",
+      "url": "https://airtable.com/appZIMMH3ywSxS0A9/pagnvd5oNoOjApQQN/form",
       "location": [
-        "San Francisco Bay Area"
+        "London, UK"
+      ],
+      "role_type": [
+        "Course"
+      ],
+      "skill": [
+        "Research",
+        "Software engineering"
+      ],
+      "experience": [
+        "Entry-level"
+      ],
+      "posted_at": 1782432269,
+      "closes_at": 1783814400
+    },
+    {
+      "title": "Singapore AI Safety Fellowship",
+      "company": "SASH",
+      "url": "https://www.aisafety.sg/programs/singapore-ai-safety-fellowship",
+      "location": [
+        "Singapore, Singapore"
+      ],
+      "role_type": [
+        "Fellowship"
+      ],
+      "skill": [
+        "Research",
+        "Policy"
+      ],
+      "experience": [
+        "Junior (1-4 years experience)"
+      ],
+      "posted_at": 1782432180,
+      "closes_at": 1783641600
+    },
+    {
+      "title": "Research Fellowship",
+      "company": "Heron AI Security",
+      "url": "https://www.heronsec.ai/researchfellowship",
+      "location": [
+        "Remote, Global",
+        "London, UK",
+        "San Francisco Bay Area",
+        "Tel Aviv, Israel"
+      ],
+      "role_type": [
+        "Fellowship"
+      ],
+      "skill": [
+        "Research",
+        "Information security"
+      ],
+      "experience": [
+        "Mid (5-9 years experience)",
+        "Senior (10+ years experience)"
+      ],
+      "posted_at": 1782432120,
+      "closes_at": null
+    },
+    {
+      "title": "Cosmos Grants, AI and Human Autonomy",
+      "company": "Cosmos Institute",
+      "url": "https://www.cosmos-institute.org/grants",
+      "location": [
+        "Remote, Global"
+      ],
+      "role_type": [
+        "Funding"
+      ],
+      "skill": [
+        "Strategy"
+      ],
+      "experience": [
+        "Multiple experience levels"
+      ],
+      "posted_at": 1782432000,
+      "closes_at": 1785024000
+    },
+    {
+      "title": "Senior Researcher Communications Specialist",
+      "company": "LawZero",
+      "url": "https://job-boards.greenhouse.io/lawzero/jobs/4297736009",
+      "location": [
+        "Montreal, Canada"
       ],
       "role_type": [
         "Full-time"
       ],
       "skill": [
-        "Software engineering",
-        "Strategy"
+        "Outreach"
       ],
       "experience": [
-        "Junior (1-4 years experience)"
+        "Mid (5-9 years experience)"
       ],
-      "posted_at": 1781568000,
+      "posted_at": 1782432000,
       "closes_at": null
     },
     {
-      "title": "Researcher, Recursive Self-Improvement Safety",
+      "title": "Founding Video and Social Lead",
+      "company": "Humans in Control",
+      "url": "https://humansincontrol.org/careers/social-media-content-producer/",
+      "location": [
+        "Remote, USA"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Other"
+      ],
+      "experience": [
+        "Junior (1-4 years experience)",
+        "Mid (5-9 years experience)"
+      ],
+      "posted_at": 1782345780,
+      "closes_at": null
+    },
+    {
+      "title": "Research Engineer, Rule of Law",
+      "company": "Anthropic",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5278065008",
+      "location": [
+        "San Francisco Bay Area",
+        "New York, NY"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Research",
+        "Policy"
+      ],
+      "experience": [
+        "Mid (5-9 years experience)"
+      ],
+      "posted_at": 1782345600,
+      "closes_at": null
+    },
+    {
+      "title": "Threat Modeler, Preparedness",
       "company": "OpenAI",
-      "url": "https://openai.com/careers/researcher-recursive-self-improvement-safety-san-francisco/",
+      "url": "https://openai.com/careers/threat-modeler-preparedness-san-francisco/",
       "location": [
         "San Francisco Bay Area"
       ],
@@ -793,40 +346,96 @@
         "Research"
       ],
       "experience": [
-        "Mid (5-9 years experience)"
+        "Mid (5-9 years experience)",
+        "Senior (10+ years experience)"
       ],
-      "posted_at": 1781568000,
+      "posted_at": 1782345600,
       "closes_at": null
     },
     {
-      "title": "Biosafety Red Teaming Specialist",
-      "company": "OpenAI",
-      "url": "https://openai.com/careers/biosafety-red-teaming-specialist-san-francisco/",
+      "title": "Business Operations Associate",
+      "company": "FAR AI",
+      "url": "https://jobs.ashbyhq.com/far.ai/64c0e905-ac58-4584-b89d-94706dd4cc36",
       "location": [
-        "San Francisco Bay Area",
-        "Seattle metro area",
-        "Remote, USA"
+        "San Francisco Bay Area"
       ],
       "role_type": [
         "Full-time"
       ],
       "skill": [
-        "Research",
-        "Strategy"
+        "Operations",
+        "Finance"
       ],
       "experience": [
-        "Mid (5-9 years experience)",
-        "Senior (10+ years experience)"
+        "Junior (1-4 years experience)"
       ],
-      "posted_at": 1781568000,
+      "posted_at": 1782259457,
       "closes_at": null
     },
     {
-      "title": "Research Engineer",
-      "company": "Principia",
-      "url": "https://principia-ai.org/opportunities/research-engineer",
+      "title": "AGI Governance Fellowship",
+      "company": "Johns Hopkins University, School of Government and Policy",
+      "url": "https://sogp.jh.edu/agi-governance-fellowship/",
       "location": [
-        "London, UK"
+        "Washington, DC metro area"
+      ],
+      "role_type": [
+        "Fellowship"
+      ],
+      "skill": [
+        "Policy"
+      ],
+      "experience": [
+        "Multiple experience levels"
+      ],
+      "posted_at": 1782259380,
+      "closes_at": null
+    },
+    {
+      "title": "Communications Coordinator",
+      "company": "The Future Society",
+      "url": "https://thefuturesociety.org/work-with-us/",
+      "location": [
+        "Remote, Global"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Outreach"
+      ],
+      "experience": [
+        "Junior (1-4 years experience)"
+      ],
+      "posted_at": 1782173079,
+      "closes_at": null
+    },
+    {
+      "title": "Supervisory Program Analyst, Artificial Intelligence",
+      "company": "US Government, Office of Management and Budget",
+      "url": "https://www.usajobs.gov/job/873842400",
+      "location": [
+        "Washington, DC metro area"
+      ],
+      "role_type": [
+        "Full-time"
+      ],
+      "skill": [
+        "Policy",
+        "Management"
+      ],
+      "experience": [
+        "Senior (10+ years experience)"
+      ],
+      "posted_at": 1782172980,
+      "closes_at": 1782777600
+    },
+    {
+      "title": "Postdoctoral Researcher, Foundations for Emergent Deception in Human-AI Interaction",
+      "company": "University of Copenhagen",
+      "url": "https://candidate.hr-manager.net/ApplicationInit.aspx/",
+      "location": [
+        "Copenhagen, Denmark"
       ],
       "role_type": [
         "Full-time"
@@ -836,48 +445,29 @@
         "Software engineering"
       ],
       "experience": [
-        "Junior (1-4 years experience)",
-        "Mid (5-9 years experience)"
+        "Entry-level"
       ],
-      "posted_at": 1781568000,
-      "closes_at": null
+      "posted_at": 1782172920,
+      "closes_at": 1783209600
     },
     {
-      "title": "Senior Research Scientists",
-      "company": "Principia",
-      "url": "https://principia-ai.org/opportunities/senior-research-scientist",
+      "title": "Chief Technology Officer",
+      "company": "Fathom",
+      "url": "https://jobs.gem.com/fathom-org/am9icG9zdDr5Y7b5Q97jO3K3RimbAbNk",
       "location": [
-        "London, UK"
+        "San Francisco Bay Area"
       ],
       "role_type": [
         "Full-time"
       ],
       "skill": [
-        "Research"
+        "Management",
+        "Strategy"
       ],
       "experience": [
-        "Mid (5-9 years experience)"
+        "Senior (10+ years experience)"
       ],
-      "posted_at": 1781568000,
-      "closes_at": null
-    },
-    {
-      "title": "Research Scientists",
-      "company": "Principia",
-      "url": "https://principia-ai.org/opportunities/research-scientist",
-      "location": [
-        "London, UK"
-      ],
-      "role_type": [
-        "Full-time"
-      ],
-      "skill": [
-        "Research"
-      ],
-      "experience": [
-        "Junior (1-4 years experience)"
-      ],
-      "posted_at": 1781568000,
+      "posted_at": 1782172860,
       "closes_at": null
     }
   ]
