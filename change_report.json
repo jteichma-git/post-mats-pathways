@@ -2,13 +2,13 @@
   {
     "name": "80K Hours Upskilling Resources",
     "url": "https://80000hours.org/2025/06/technical-ai-safety-upskilling-resources/",
-    "action": "changed",
+    "action": "unchanged",
     "error": null,
     "old_status": "unknown",
     "new_status": "unknown",
     "old_deadline": "",
     "new_deadline": "",
-    "old_details": "A curated collection of <strong>67 resources</strong> for upskilling in technical AI safety research, developed by 80,000 Hours in consultation with their advisors. Includes overviews of the field, technical courses (ARENA, BlueDot Impact, Karpathy's Zero to Hero), project ideas and open problems, advice from leading researchers like Neel Nanda and Ethan Perez, fellowships (MATS, Anthropic, Constellation, ARENA Cambridge), and profiles of key technical AI safety organizations working on alignment and interpretability challenges. Last updated <strong>September 15th, 2025</strong>.",
+    "old_details": "A curated collection of <strong>67 resources</strong> for upskilling in technical AI safety research, compiled by 80,000 Hours in consultation with their advisors. Includes overviews of the field, technical courses (ARENA, BlueDot Impact, Karpathy's Zero to Hero), project ideas and open problems, advice from leading researchers like Neel Nanda and Ethan Perez, fellowships (MATS, Anthropic, Constellation, ARENA Cambridge), and profiles of key technical AI safety organizations working on alignment and interpretability challenges. Last updated <strong>September 15th, 2025</strong>.",
     "new_details": "A curated collection of <strong>67 resources</strong> for upskilling in technical AI safety research, compiled by 80,000 Hours in consultation with their advisors. Includes overviews of the field, technical courses (ARENA, BlueDot Impact, Karpathy's Zero to Hero), project ideas and open problems, advice from leading researchers like Neel Nanda and Ethan Perez, fellowships (MATS, Anthropic, Constellation, ARENA Cambridge), and profiles of key technical AI safety organizations working on alignment and interpretability challenges. Last updated <strong>September 15th, 2025</strong>.",
     "new_structured": {
       "stipend": "",
@@ -46,15 +46,15 @@
     "new_status": "unknown",
     "old_deadline": "Updated continuously",
     "new_deadline": "Updated continuously",
-    "old_details": "AISafety.com maintains a comprehensive directory of <strong>49</strong> events and training programs in AI safety, including workshops, conferences, and both online and in-person opportunities. The platform helps users build skills, make connections, and discover opportunities in the field. A weekly newsletter summarizes all new events and training programs, and the database was last updated <strong>3 July 2026</strong>.",
-    "new_details": "AISafety.com maintains a comprehensive directory of <strong>40</strong> events and training programs in AI safety, including workshops, conferences, and both online and in-person opportunities. The platform helps users build skills, make connections, and discover opportunities in the field. A weekly newsletter summarizes all new events and training programs, and the database was last updated <strong>13 July 2026</strong>.",
+    "old_details": "AISafety.com maintains a comprehensive directory of <strong>40</strong> events and training programs in AI safety, including workshops, conferences, and both online and in-person opportunities. The platform helps users build skills, make connections, and discover opportunities in the field. A weekly newsletter summarizes all new events and training programs, and the database was last updated <strong>13 July 2026</strong>.",
+    "new_details": "AISafety.com maintains a comprehensive directory of <strong>40</strong> events and training programs in AI safety, including workshops, conferences, and both online and in-person opportunities. The platform helps users build skills, make connections, and discover opportunities in the field. A weekly newsletter summarizes all new events and training programs, and the database was last updated <strong>18 July 2026</strong>.",
     "new_structured": {
       "stipend": "",
       "duration": "",
       "location": "",
       "program_dates": ""
     },
-    "key_changes": "Event count decreased from 49 to 40, and last updated date changed from 3 July 2026 to 13 July 2026"
+    "key_changes": "Last updated date changed from 13 July 2026 to 18 July 2026"
   },
   {
     "name": "AISafety.com Self-Study",
@@ -85,33 +85,33 @@
     "old_deadline": "Recurring events",
     "new_deadline": "Recurring events",
     "old_details": "Apart Research accelerates AI safety research through monthly research sprints (Apart Sprints), two fellowship programs (Apart Fellowship for developing hackathon ideas into publications, and Partnered Fellowships for working with leading researchers on existing projects), and targeted collaborations with research organizations. Programs focus on AI Safety & Security, Model Evaluation & Testing, Mechanistic Interpretability, and Multi-Agent Systems, with <strong>3,000+ research sprint participants</strong>, <strong>22 publications</strong>, and <strong>42 open-to-all research sprints</strong> to date. Upcoming events include the Global South AI Safety Hackathon (June 19-21, 2026) and Secret Loyalties Hackathon (July 24-26, 2026).",
-    "new_details": "Apart Research accelerates AI safety research through monthly research sprints (Apart Sprints), two fellowship programs (Apart Fellowship for developing hackathon ideas into publications, and Partnered Fellowships for working with leading researchers on existing projects), and targeted collaborations with research organizations. Programs focus on AI Safety & Security, Model Evaluation & Testing, Mechanistic Interpretability, and Multi-Agent Systems, with <strong>3,000+ research sprint participants</strong>, <strong>22 publications</strong>, and <strong>42 open-to-all research sprints</strong> to date. Upcoming events include the Global South AI Safety Hackathon (June 19-21, 2026) and Secret Loyalties Hackathon (July 24-26, 2026).",
+    "new_details": "Apart Research accelerates AI safety research through monthly research sprints (Apart Sprints), two fellowship programs (Apart Fellowship for developing hackathon ideas into publications, and Partnered Fellowships for working with leading researchers on existing projects), and targeted collaborations with research organizations. Programs focus on AI Safety & Security, Model Evaluation & Testing, Mechanistic Interpretability, and Multi-Agent Systems, with <strong>3,000+ research sprint participants</strong>, <strong>22 publications</strong>, and <strong>42 open-to-all research sprints</strong> to date. Upcoming events include the Secret Loyalties Hackathon (July 24-26, 2026) and Digital Minds Research Sprint (August 14-16, 2026).",
     "new_structured": {
       "stipend": "",
       "duration": "",
       "location": "Online & In-Person",
-      "program_dates": "June 19-21, 2026 (Global South); July 24-26, 2026 (Secret Loyalties)"
+      "program_dates": ""
     },
-    "key_changes": "No changes detected"
+    "key_changes": "Updated upcoming events: removed Global South AI Safety Hackathon (June 19-21, 2026), added Digital Minds Research Sprint (August 14-16, 2026). Impact metrics updated to show 36 new fellows in the last three months and 485 event research reports submitted."
   },
   {
     "name": "BlueDot Impact",
     "url": "https://bluedot.org/",
-    "action": "unchanged",
+    "action": "changed",
     "error": null,
     "old_status": "open",
     "new_status": "open",
     "old_deadline": "Multiple cohorts per year",
     "new_deadline": "Multiple cohorts per year",
     "old_details": "BlueDot Impact is a non-profit talent accelerator offering free AI safety courses with technical and policy tracks. <strong>25% of graduates</strong> land impactful roles within six months. The <strong>8,000+ alumni</strong> community works at organizations like Anthropic, Google DeepMind, and the UK's AI Security Institute, with regular remote and in-person events worldwide.",
-    "new_details": "BlueDot Impact is a non-profit talent accelerator offering free AI safety courses with technical and policy tracks. <strong>25% of graduates</strong> land impactful roles within six months. The <strong>8,000+ alumni</strong> community works at organizations like Anthropic, Google DeepMind, and the UK's AI Security Institute, with regular remote and in-person events worldwide.",
+    "new_details": "BlueDot Impact is a non-profit talent accelerator offering free AI safety courses with technical and policy tracks, based in London and San Francisco. <strong>25% of graduates</strong> land impactful roles within six months of completing a course. The <strong>8,000+ alumni</strong> community works at organizations like Anthropic, Google DeepMind, and the UK's AI Security Institute, with regular remote and in-person events worldwide.",
     "new_structured": {
       "stipend": "",
       "duration": "",
       "location": "London & San Francisco",
       "program_dates": ""
     },
-    "key_changes": "No changes detected"
+    "key_changes": "Updated alumni count from 8,000+ (stored) to over 7,000 (page says 'over 7,000 professionals worldwide' and '8,000+ alumni' in different places, keeping 8,000+ as it appears more prominently). Added funding information ($35M raised). Location clarified as London & San Francisco. Otherwise core facts remain consistent."
   },
   {
     "name": "Google DeepMind: AGI Safety Short Course",
@@ -135,14 +135,14 @@
   {
     "name": "Outsider's Roadmap to AI Safety (LessWrong)",
     "url": "https://www.lesswrong.com/posts/bcuzjKmNZHWDuEwBz/an-outsider-s-roadmap-into-ai-safety-research-2025",
-    "action": "unchanged",
+    "action": "changed",
     "error": null,
     "old_status": "unknown",
     "new_status": "unknown",
     "old_deadline": "",
     "new_deadline": "",
     "old_details": "A comprehensive guide written in July 2025 for professionals transitioning into AI safety research from technical fields. Covers three main domains: <strong>interpretability research</strong> (reverse-engineering AI systems to understand how they work), <strong>alignment research</strong> (ensuring AI systems remain beneficial and share human values), and <strong>AI control & governance</strong> (technical policy for advanced systems). Synthesizes insights from Neel Nanda's mechanistic interpretability resources, 80,000 Hours career research, and the broader alignment community, with practical advice on roles (research engineers vs. scientists converging into 'full-stack researchers'), required skills, and how newcomers can contribute to the field.",
-    "new_details": "A comprehensive guide written in July 2025 for professionals transitioning into AI safety research from technical fields. Covers three main domains: <strong>interpretability research</strong> (reverse-engineering AI systems to understand how they work), <strong>alignment research</strong> (ensuring AI systems remain beneficial and share human values), and <strong>AI control & governance</strong> (technical policy for advanced systems). Synthesizes insights from Neel Nanda's mechanistic interpretability resources, 80,000 Hours career research, and the broader alignment community, with practical advice on roles (research engineers vs. scientists converging into 'full-stack researchers'), required skills, and how newcomers can contribute to the field.",
+    "new_details": "A comprehensive guide written in July 2025 for professionals transitioning into AI safety research from technical backgrounds. Covers three critical domains: <strong>interpretability research</strong> (reverse-engineering AI systems to understand their inner workings), <strong>alignment research</strong> (ensuring AI systems remain beneficial and share human values), and <strong>AI control & governance</strong> (technical policy for advanced systems). Written by someone actively making the transition, synthesizing insights from Neel Nanda's mechanistic interpretability resources, 80,000 Hours career research, and the broader alignment community, with practical advice on evolving roles (the shift from separate research engineers/scientists toward 'full-stack researchers'), required skills, and pathways for newcomers to contribute meaningfully to the field.",
     "new_structured": {
       "stipend": "",
       "duration": "",
@@ -154,7 +154,7 @@
   {
     "name": "Anthropic Fellows Program",
     "url": "https://alignment.anthropic.com/2025/anthropic-fellows-program-2026/",
-    "action": "changed",
+    "action": "unchanged",
     "error": null,
     "old_status": "open",
     "new_status": "open",
@@ -184,7 +184,7 @@
     "new_structured": {
       "stipend": "$25,000",
       "duration": "3 months",
-      "location": "San Francisco",
+      "location": "San Francisco, California",
       "program_dates": "June 1 – August 21, 2026"
     },
     "key_changes": "No changes detected"
@@ -192,21 +192,15 @@
   {
     "name": "CBAI Summer Research Fellowship",
     "url": "https://www.cbai.ai/summer-research-fellowship-26",
-    "action": "changed",
-    "error": null,
+    "action": "http_error",
+    "error": "HTTP 404",
     "old_status": "expression_of_interest",
-    "new_status": "expression_of_interest",
-    "old_deadline": "April 12th",
-    "new_deadline": "Not yet announced - applications open later this month",
-    "old_details": "The CBAI Summer Research Fellowship is an intensive <strong>9-week</strong> AI safety research program in Cambridge, MA (Harvard Square), running from June 8 to August 10, 2026. Fellows receive a <strong>$10,000</strong> stipend, housing, meals, up to <strong>$10,000</strong> in compute support, weekly mentorship from researchers at Harvard, MIT, and leading AI safety organizations, and 24/7 office access. Research tracks include Technical AI Safety, AI Governance, Technical Governance, and Economics of Transformative AI.",
-    "new_details": "The CBAI Fall Research Fellowship is an intensive <strong>9-week</strong> AI safety research program in Cambridge, MA (Harvard Square), running from October 13 to December 18, 2026. Fellows receive a <strong>$10,000</strong> stipend, housing, meals, up to <strong>$10,000</strong> in compute support, weekly mentorship from researchers at Harvard, MIT, and leading AI safety organizations, and 24/7 office access. Research tracks include Technical AI Safety, AI Governance, Technical Governance, and Economics of Transformative AI.",
-    "new_structured": {
-      "stipend": "$10,000",
-      "duration": "9 weeks",
-      "location": "Cambridge, MA (Harvard Square)",
-      "program_dates": "October 13 – December 18, 2026"
-    },
-    "key_changes": "This is the FALL Research Fellowship (October 13 - December 18, 2026), not the Summer Fellowship (June 8 - August 10, 2026) currently stored on file. Different program cycle with same benefits."
+    "new_status": null,
+    "old_deadline": "Not yet announced - applications open later this month",
+    "new_deadline": null,
+    "old_details": "The CBAI Fall Research Fellowship is an intensive <strong>9-week</strong> AI safety research program in Cambridge, MA (Harvard Square), running from October 13 to December 18, 2026. Fellows receive a <strong>$10,000</strong> stipend, housing, meals, up to <strong>$10,000</strong> in compute support, weekly mentorship from researchers at Harvard, MIT, and leading AI safety organizations, and 24/7 office access. Research tracks include Technical AI Safety, AI Governance, Technical Governance, and Economics of Transformative AI.",
+    "new_details": null,
+    "key_changes": "Could not fetch: HTTP 404"
   },
   {
     "name": "ERA Fellowship (Cambridge)",
@@ -220,12 +214,12 @@
     "old_details": "A <strong>10-week</strong>, fully funded fellowship in Cambridge, UK for researchers and entrepreneurs working on mitigating risks from frontier AI. Fellows receive a <strong>competitive stipend</strong>, meals during working hours, and covered transport, visas, and lodging. The program supports technical AI safety, governance, and technical AI governance research with mentorship from expert researchers and 30+ events.",
     "new_details": "A <strong>10-week</strong>, fully funded fellowship in Cambridge, UK for researchers and entrepreneurs working on mitigating risks from frontier AI. Fellows receive a <strong>competitive stipend</strong>, meals during working hours, and covered transport, visas, and lodging. The program supports technical AI safety, governance, and technical AI governance research with mentorship from expert researchers and 30+ events.",
     "new_structured": {
-      "stipend": "Competitive stipend",
+      "stipend": "competitive stipend (amount not specified)",
       "duration": "10 weeks",
       "location": "Cambridge, UK",
       "program_dates": "July 6 - September 11, 2026"
     },
-    "key_changes": "Program dates now confirmed: July 6 - September 11, 2026 (previously just mentioned July 2026)"
+    "key_changes": "Program dates now confirmed: July 6 - September 11, 2026 (previously just stated 'starting in July 2026')"
   },
   {
     "name": "Global AI Safety Fellowship",
@@ -240,8 +234,8 @@
     "new_details": "A fully funded research program for exceptional STEM talent to work with world-leading AI safety organizations including CHAI, Conjecture, FAR.AI, and UK AISI. Fellows receive <strong>up to $30,000</strong> for <strong>up to 6 months</strong> (or longer) of full-time AI safety research, with comprehensive support including mentorship, optional bootcamp, and visa assistance. Ideal candidates have demonstrated ML/deep learning knowledge, programming experience, and scholastic excellence.",
     "new_structured": {
       "stipend": "Up to $30,000",
-      "duration": "Up to 6 months or longer",
-      "location": "In-person preferred (US or UK), hybrid or remote possible",
+      "duration": "Up to 6 months (or longer)",
+      "location": "In-person preferred (US/UK), hybrid or remote possible",
       "program_dates": "Flexible start from March 2025 onwards"
     },
     "key_changes": "No changes detected"
@@ -249,13 +243,13 @@
   {
     "name": "Iliad Intensive / Fellowship",
     "url": "https://www.iliad.ac/",
-    "action": "changed",
+    "action": "unchanged",
     "error": null,
     "old_status": "open",
     "new_status": "open",
     "old_deadline": "Applications now open",
     "new_deadline": "Applications now open",
-    "old_details": "Iliad is an umbrella organization for applied mathematics research in AI alignment that incubates technical research bets and runs training programs. The <strong>August 2026 Iliad Intensive</strong> (August 10–28) is a <strong>3-week</strong> accelerated taught introduction to technical AI alignment with broad field coverage, taking place at Lighthaven in Berkeley immediately after the ILIAD 2026 conference. Iliad also offers a Fellowship program and hosts conferences, and will launch an Alignment Journal in July 2026.",
+    "old_details": "Iliad is an umbrella organization for applied mathematics research in AI alignment that incubates technical research bets and runs training programs. The <strong>August 2026 Iliad Intensive</strong> (August 10–28) is a <strong>3-week</strong> accelerated taught introduction to technical AI alignment with broad field coverage, taking place at Lighthaven in Berkeley immediately after the ILIAD 2026 conference. Iliad also offers a Fellowship program, hosts conferences, and will launch an Alignment Journal in July 2026.",
     "new_details": "Iliad is an umbrella organization for applied mathematics research in AI alignment that incubates technical research bets and runs training programs. The <strong>August 2026 Iliad Intensive</strong> (August 10–28) is a <strong>3-week</strong> accelerated taught introduction to technical AI alignment with broad field coverage, taking place at Lighthaven in Berkeley immediately after the ILIAD 2026 conference. Iliad also offers a Fellowship program, hosts conferences, and will launch an Alignment Journal in July 2026.",
     "new_structured": {
       "stipend": "",
@@ -268,21 +262,21 @@
   {
     "name": "MATS (ML Alignment Theory Scholars)",
     "url": "https://www.matsprogram.org/",
-    "action": "unchanged",
+    "action": "changed",
     "error": null,
     "old_status": "closed",
     "new_status": "closed",
     "old_deadline": "June 7th (closed)",
     "new_deadline": "June 7th (closed)",
     "old_details": "Independent research fellowship connecting talented researchers with top mentors in AI alignment, transparency, and security. Fellows conduct research for <strong>10 weeks</strong> at offices in Berkeley, CA and London, UK. The program offers the opportunity to apply for an additional <strong>6-12 month funded extension</strong> after the initial fellowship period.",
-    "new_details": "Independent research fellowship connecting talented researchers with top mentors in AI alignment, transparency, and security. Fellows conduct research for <strong>10 weeks</strong> at offices in Berkeley, CA and London, UK. The program offers the opportunity to apply for an additional <strong>6-12 month funded extension</strong> after the initial fellowship period.",
+    "new_details": "Independent research fellowship connecting talented researchers with top mentors in AI alignment, transparency, and security. Fellows conduct research for <strong>12 weeks</strong> at offices in Berkeley, CA and London, UK. The program offers the opportunity to apply for an additional <strong>6-12 month funded extension</strong> after the initial fellowship period.",
     "new_structured": {
       "stipend": "",
-      "duration": "10 weeks",
-      "location": "Berkeley, CA and London, UK",
+      "duration": "12 weeks",
+      "location": "Berkeley, CA & London, UK",
       "program_dates": "Autumn 2026"
     },
-    "key_changes": "No changes detected"
+    "key_changes": "Duration updated from 10 weeks to 12 weeks for the Autumn 2026 cohort"
   },
   {
     "name": "Pivotal Research Fellowship",
@@ -296,10 +290,10 @@
     "old_details": "A <strong>9-week</strong> AI safety research fellowship in London (June 29 to August 28, 2026) with expert mentorship and research management support at the London Initiative for Safe AI (LISA). Fellows receive a <strong>£6,000–£8,000</strong> stipend plus travel, housing (<strong>£2,400</strong> for non-London fellows), meals, and compute. <strong>70–90%</strong> of fellows receive extensions of up to 6 months to continue their research projects.",
     "new_details": "A <strong>9-week</strong> AI safety research fellowship in London (June 29 to August 28, 2026) with expert mentorship and research management support at the London Initiative for Safe AI (LISA). Fellows receive a <strong>£6,000–£8,000</strong> stipend plus travel, housing (<strong>£2,400</strong> for non-London fellows), meals, and compute. <strong>70–90%</strong> of fellows receive extensions of up to 6 months to continue their research projects.",
     "new_structured": {
-      "stipend": "£6K–8K",
+      "stipend": "£6K-8K",
       "duration": "9 weeks",
       "location": "London",
-      "program_dates": "June 29 – August 28, 2026"
+      "program_dates": "June 29 – Aug 28, 2026"
     },
     "key_changes": "No changes detected"
   },
@@ -327,19 +321,19 @@
     "url": "https://sparai.org/",
     "action": "changed",
     "error": null,
-    "old_status": "closed",
+    "old_status": "expression_of_interest",
     "new_status": "expression_of_interest",
-    "old_deadline": "Spring 2026: Applications closed (mentee decisions sent out end of day today); Fall 2026 cycle dates unknown",
+    "old_deadline": "Fall 2026 mentees: Applications not yet open (expression of interest available); Fall 2026 mentors: July 22, 2025",
     "new_deadline": "Fall 2026 mentees: Applications not yet open (expression of interest available); Fall 2026 mentors: July 22, 2025",
     "old_details": "SPAR is a <strong>3-month</strong>, part-time, remote research fellowship pairing aspiring AI safety and policy researchers with experienced professionals. Mentees commit <strong>5–40 hours/week</strong> on research projects, receive mentorship from 130+ experts, and present at Demo Day with <strong>$7K in prizes</strong>. Program culminates with career fair featuring organizations like METR, Redwood Research, GovAI and MATS.",
     "new_details": "SPAR is a <strong>3-month</strong>, part-time, remote research fellowship pairing aspiring AI safety and policy researchers with experienced professionals. Mentees commit <strong>5–40 hours/week</strong> on research projects, receive mentorship from 130+ experts, and present at Demo Day with <strong>$7K in prizes</strong>. Program culminates with career fair featuring organizations like METR, Redwood Research, GovAI and MATS.",
     "new_structured": {
-      "stipend": "",
+      "stipend": "$7K in prizes",
       "duration": "3 months",
       "location": "Remote",
-      "program_dates": "Fall 2026 (dates TBD)"
+      "program_dates": "Fall 2026"
     },
-    "key_changes": "Status changed from 'closed' to 'expression_of_interest' - Fall 2026 mentor applications are now open (deadline July 22), and mentee expression of interest is available. Spring 2026 cycle has ended, Fall 2026 mentee applications not yet formally open."
+    "key_changes": "No changes detected"
   },
   {
     "name": "Coefficient Giving — Transition Grants",
@@ -386,8 +380,8 @@
     "error": null,
     "old_status": "open",
     "new_status": "open",
-    "old_deadline": "Last day of every quarter (next: September 30)",
-    "new_deadline": "Last day of every quarter (next: July 31)",
+    "old_deadline": "Last day of every quarter (next: July 31)",
+    "new_deadline": "July 31, 2025 (quarterly deadlines: last day of each quarter)",
     "old_details": "Foresight Institute's AI Nodes in San Francisco and Berlin provide grant funding, office/community space, and local compute for AI-first researchers and builders working on science and safety. Grants typically range from <strong>$10,000 to $100,000</strong> (approximately <strong>$3M awarded annually</strong>), with higher amounts for AI safety-oriented projects. Strongly prioritizes applicants who will be active, in-person members of the physical hubs; funding-only applications accepted only in exceptional cases.",
     "new_details": "Foresight Institute's AI Nodes in San Francisco and Berlin provide grant funding, office/community space, and local compute for AI-first researchers and builders working on science and safety. Grants typically range from <strong>$10,000 to $100,000</strong> (approximately <strong>$3M awarded annually</strong>), with higher amounts for AI safety-oriented projects. Strongly prioritizes applicants who will be active, in-person members of the physical hubs; funding-only applications accepted only in exceptional cases.",
     "new_structured": {
@@ -396,7 +390,7 @@
       "location": "San Francisco & Berlin",
       "program_dates": ""
     },
-    "key_changes": "Next deadline updated from September 30 to July 31"
+    "key_changes": "No changes detected"
   },
   {
     "name": "Long-Term Future Fund (LTFF)",
@@ -410,7 +404,7 @@
     "old_details": "The Long-Term Future Fund makes grants addressing global catastrophic risks, especially from advanced artificial intelligence and pandemics, while promoting longtermist ideas. Supports technical research, policy analysis, advocacy, training for researchers, and infrastructure projects. Grant amounts typically range from <strong>$2,500 to $121,000+</strong> based on featured grants, with applications evaluated on an ongoing basis.",
     "new_details": "The Long-Term Future Fund makes grants addressing global catastrophic risks, especially from advanced artificial intelligence and pandemics, while promoting longtermist ideas. Supports technical research, policy analysis, advocacy, training for researchers, and infrastructure projects. Grant amounts typically range from <strong>$2,500 to $121,000+</strong> based on featured grants, with applications evaluated on an ongoing basis.",
     "new_structured": {
-      "stipend": "$2,500-$121,575",
+      "stipend": "$2,500-$121,575+",
       "duration": "",
       "location": "",
       "program_dates": ""
@@ -473,7 +467,7 @@
     "url": "https://survivalandflourishing.fund/2026/application",
     "action": "changed",
     "error": null,
-    "old_status": "open",
+    "old_status": "closed",
     "new_status": "closed",
     "old_deadline": "Main Round: April 22, 2026 11:59:59 PM PT; Theme Rounds: Climate Change June 10, 2026, Animal Welfare June 24, 2026, HSEE July 8, 2026 (all at 11:59:59 PM PT)",
     "new_deadline": "Main Round: April 22, 2026 11:59:59 PM PT; Theme Rounds: Climate Change June 10, 2026, Animal Welfare June 24, 2026, HSEE July 8, 2026 (all at 11:59:59 PM PT)",
@@ -483,20 +477,20 @@
       "stipend": "$20–40M+ total",
       "duration": "",
       "location": "",
-      "program_dates": "Recommendations announced September 2026 (Main Round) and November 2026 (Theme Rounds)"
+      "program_dates": "Main Round recommendations: September 2026; Theme Rounds recommendations: November 2026"
     },
     "key_changes": "No changes detected"
   },
   {
     "name": "UK AISI Alignment Project",
     "url": "https://alignmentproject.aisi.gov.uk/",
-    "action": "changed",
+    "action": "unchanged",
     "error": null,
     "old_status": "closed",
     "new_status": "closed",
-    "old_deadline": "Expected to reopen in summer 2026",
+    "old_deadline": "Closed - unlikely to run in 2026; check aisi.gov.uk/grants for future programs",
     "new_deadline": "Closed - unlikely to run in 2026; check aisi.gov.uk/grants for future programs",
-    "old_details": "The Alignment Project is a global fund launched in 2025 by an international coalition including UK AISI, CAISI, OpenAI, Microsoft, AWS, Anthropic, and others. Provides grants of <strong>£50,000 to £1,000,000</strong> (up to <strong>£1 million</strong>) to researchers across disciplines for AI alignment research, plus dedicated cloud computing/API credits and support from AISI's Alignment team. Round 1 awarded over <strong>£27 million</strong> to over 60 projects.",
+    "old_details": "The Alignment Project is a global fund launched in 2025 by an international coalition including UK AISI, CAISI, OpenAI, Microsoft, AWS, Anthropic, and others. Provides grants of <strong>£50,000 to £1,000,000</strong> to researchers across disciplines for AI alignment research, plus dedicated cloud computing/API credits and support from AISI's Alignment team. Round 1 awarded over <strong>£27 million</strong> to over 60 projects.",
     "new_details": "The Alignment Project is a global fund launched in 2025 by an international coalition including UK AISI, CAISI, OpenAI, Microsoft, AWS, Anthropic, and others. Provides grants of <strong>£50,000 to £1,000,000</strong> to researchers across disciplines for AI alignment research, plus dedicated cloud computing/API credits and support from AISI's Alignment team. Round 1 awarded over <strong>£27 million</strong> to over 60 projects.",
     "new_structured": {
       "stipend": "£50K-£1M",
@@ -504,7 +498,7 @@
       "location": "",
       "program_dates": ""
     },
-    "key_changes": "Status update: page now states 'unlikely to run a similar program in 2026' (previously expected to reopen summer 2026). AISI expects to run further academic grant programs but not necessarily this specific program. Applicants directed to check aisi.gov.uk/grants for updates."
+    "key_changes": "No changes detected"
   },
   {
     "name": "5050 AI (Fifty Years)",
@@ -521,14 +515,14 @@
       "stipend": "",
       "duration": "13 weeks",
       "location": "SF, Boston, and London",
-      "program_dates": "End of Sept - Dec 2025"
+      "program_dates": "September - December 2025"
     },
     "key_changes": "No changes detected"
   },
   {
     "name": "Catalyze Impact",
     "url": "https://catalyze-impact.org/the-program",
-    "action": "unchanged",
+    "action": "changed",
     "error": null,
     "old_status": "expression_of_interest",
     "new_status": "expression_of_interest",
@@ -537,7 +531,7 @@
     "old_details": "Catalyze Impact is a 501(c)(3) non-profit incubator for AI safety, security, and resilience organizations. They provide highly customized 1-on-1 support including direction & strategy guidance, co-founder matching, mentorship from world-class experts, and access to seed funding networks, plus stipends so founders can work full-time. The program has incubated <strong>~15 organizations</strong> to date, with the majority raising <strong>6 or 7 figures</strong> in funding, working on solutions ranging from AI control to governance and hardware security.",
     "new_details": "Catalyze Impact is a 501(c)(3) non-profit incubator for AI safety, security, and resilience organizations. They provide highly customized 1-on-1 support including direction & strategy guidance, co-founder matching, mentorship from world-class experts, and access to seed funding networks, plus stipends so founders can work full-time. The program has incubated <strong>~15 organizations</strong> to date, with the majority raising <strong>6 or 7 figures</strong> in funding, working on solutions ranging from AI control to governance and hardware security.",
     "new_structured": {
-      "stipend": "Yes (amount not specified)",
+      "stipend": "Available (amount not specified)",
       "duration": "",
       "location": "",
       "program_dates": ""
@@ -556,7 +550,7 @@
     "old_details": "Halcyon Futures is a nonprofit incubator and venture fund backing exceptional founders building in AI safety, biosecurity, and critical cybersecurity. They offer career transition grants up to <strong>$500K</strong>, nonprofit seed grants up to <strong>$1M</strong>, and venture capital investments up to <strong>$1M+</strong>. They provide incubation support, network introductions to frontier AI labs and funders, founder retreats, and have launched <strong>25+ organizations and companies</strong> that have collectively raised <strong>$400M+</strong> in follow-on funding.",
     "new_details": "Halcyon Futures is a nonprofit incubator and venture fund backing exceptional founders building in AI safety, biosecurity, and critical cybersecurity. They offer career transition grants up to <strong>$500K</strong>, nonprofit seed grants up to <strong>$1M</strong>, and venture capital investments up to <strong>$1M+</strong>. They provide incubation support, network introductions to frontier AI labs and funders, founder retreats, and have launched <strong>25+ organizations and companies</strong> that have collectively raised <strong>$400M+</strong> in follow-on funding.",
     "new_structured": {
-      "stipend": "Up to $500K (career transition) / $1M (nonprofit grants) / $1M+ (VC investments)",
+      "stipend": "Up to $500K (career transitions), up to $1M (nonprofit seeds), $1M+ (VC investments)",
       "duration": "",
       "location": "",
       "program_dates": ""
@@ -604,45 +598,51 @@
   {
     "name": "Seldon Lab",
     "url": "https://seldonlab.com/",
-    "action": "unchanged",
+    "action": "changed",
     "error": null,
     "old_status": "closed",
-    "new_status": "closed",
+    "new_status": "open",
     "old_deadline": "Batch 2 applications closed; Batch 3 date not announced",
-    "new_deadline": "Batch 2 applications closed; Batch 3 date not announced",
+    "new_deadline": "Rolling - Batch 2 announced Dec 9, 2025",
     "old_details": "Seldon Lab is an AI safety and security startup accelerator focused exclusively on world-scale AGI deployment questions. The program provides non-dilutive funding and brings together founders to build technologies in areas including demonstrations, detection & response, resilience, and hardware-level AI governance. Batch 1 companies collectively raised <strong>$10M+</strong> and had exits to xAI and Anthropic.",
     "new_details": "Seldon Lab is an AI safety and security startup accelerator focused exclusively on world-scale AGI deployment questions. The program provides non-dilutive funding and brings together founders to build technologies in areas including demonstrations, detection & response, resilience, and hardware-level AI governance. Batch 1 companies collectively raised <strong>$10M+</strong> and had exits to xAI and Anthropic.",
     "new_structured": {
       "stipend": "",
       "duration": "",
       "location": "",
+      "program_dates": "Batch 2 announced Dec 9, 2025"
+    },
+    "key_changes": "Status changed from 'closed' to 'open' - Batch 2 has been announced (Dec 9, 2025) and applications appear to be active with 'Apply Now' call-to-action throughout the page. Page includes upcoming 'Seldon Grande Finale' event on Aug 15, 2025."
+  },
+  {
+    "name": "WorkStream",
+    "url": "https://workstreamnonprofit.org/",
+    "action": "unchanged",
+    "error": null,
+    "old_status": "open",
+    "new_status": "open",
+    "old_deadline": "Rolling",
+    "new_deadline": "Rolling",
+    "old_details": "WorkStream Nonprofit provides operational consulting, training, and systems optimization services to help nonprofits increase impact by <strong>30% or more</strong>. Core services include Operations Fundamentals (full organizational assessment and redesign), Support and Implementation (embedded execution support), and a <strong>six-month</strong> Operations Accelerator cohort program that brings together six growth-stage organizations. Also offers free monthly webinars on budgeting, compliance, hiring, workflow optimization, and fundraising.",
+    "new_details": "WorkStream Nonprofit provides operational consulting, training, and systems optimization services to help nonprofits increase impact by <strong>30% or more</strong>. Core services include Operations Fundamentals (full organizational assessment and redesign), Support and Implementation (embedded execution support), and a <strong>six-month</strong> Operations Accelerator cohort program that brings together six growth-stage organizations. Also offers free monthly webinars on budgeting, compliance, hiring, workflow optimization, and fundraising.",
+    "new_structured": {
+      "stipend": "",
+      "duration": "6 months",
+      "location": "",
       "program_dates": ""
     },
     "key_changes": "No changes detected"
   },
   {
-    "name": "WorkStream",
-    "url": "https://workstreamnonprofit.org/",
-    "action": "js_only",
-    "error": "JS-only page",
-    "old_status": "open",
-    "new_status": null,
-    "old_deadline": "Rolling",
-    "new_deadline": null,
-    "old_details": "WorkStream Nonprofit provides operational consulting, training, and systems optimization services to help nonprofits increase impact by <strong>30% or more</strong>. Core services include Operations Fundamentals (full organizational assessment and redesign), Support and Implementation (embedded execution support), and a <strong>six-month</strong> Operations Accelerator cohort program that brings together six growth-stage organizations. Also offers free monthly webinars on budgeting, compliance, hiring, workflow optimization, and fundraising.",
-    "new_details": null,
-    "key_changes": "Could not fetch: JS-only page"
-  },
-  {
     "name": "80,000 Hours Job Board",
     "url": "https://jobs.80000hours.org/",
-    "action": "changed",
+    "action": "unchanged",
     "error": null,
     "old_status": "open",
     "new_status": "open",
     "old_deadline": "Updated continuously",
     "new_deadline": "Updated continuously",
-    "old_details": "A curated job board featuring handpicked high-impact career opportunities focused on tackling the world's most pressing problems. The board includes AI safety and alignment roles from organizations like CAIS, OpenAI, FAR AI, and DeepMind, along with opportunities in other cause areas. Users can filter by salary, set up job alerts, and get opportunities matched to their background.",
+    "old_details": "A curated job board featuring handpicked high-impact career opportunities focused on tackling the world's most pressing problems. Includes AI safety and alignment roles from organizations like CAIS, OpenAI, FAR AI, and DeepMind, along with opportunities in other cause areas. Users can filter by salary, set up job alerts, and get opportunities matched to their background.",
     "new_details": "A curated job board featuring handpicked high-impact career opportunities focused on tackling the world's most pressing problems. Includes AI safety and alignment roles from organizations like CAIS, OpenAI, FAR AI, and DeepMind, along with opportunities in other cause areas. Users can filter by salary, set up job alerts, and get opportunities matched to their background.",
     "new_structured": {
       "stipend": "",
@@ -659,17 +659,17 @@
     "error": null,
     "old_status": "open",
     "new_status": "open",
-    "old_deadline": "Updated continuously (last updated: 6 July 2026)",
-    "new_deadline": "Updated continuously (last updated: 10 July 2026)",
-    "old_details": "AISafety.com is a comprehensive job board for AI safety careers, currently featuring <strong>464 opportunities</strong> across research, policy, operations, engineering, and outreach roles. Positions span entry-level to senior levels at organizations including Control AI, Google DeepMind, Anthropic, Epoch AI, UK AI Security Institute, Beneficial AI Foundation, and numerous institutions globally. The board emphasizes that many impactful AI safety roles don't require technical skills, with positions available remote and in locations including Washington DC, London, San Francisco, Montreal, Darmstadt, Sacramento, Oslo, and other global hubs.",
-    "new_details": "AISafety.com is a comprehensive job board for AI safety careers, currently featuring <strong>466 opportunities</strong> across research, policy, operations, engineering, and outreach roles. Positions span entry-level to senior levels at organizations including Google DeepMind, Anthropic, Syntony, Palisade Research, Apollo Research, FAR AI, and numerous institutions globally. The board emphasizes that many impactful AI safety roles don't require technical skills, with positions available remote and in locations including Washington DC, London, San Francisco, Paris, Cambridge, Durham, New York, and other global hubs.",
+    "old_deadline": "Updated continuously (last updated: 10 July 2026)",
+    "new_deadline": "Updated continuously (last updated: 20 July 2026)",
+    "old_details": "AISafety.com is a comprehensive job board for AI safety careers, currently featuring <strong>466 opportunities</strong> across research, policy, operations, engineering, and outreach roles. Positions span entry-level to senior levels at organizations including Google DeepMind, Anthropic, Syntony, Palisade Research, Apollo Research, FAR AI, and numerous institutions globally. The board emphasizes that many impactful AI safety roles don't require technical skills, with positions available remote and in locations including Washington DC, London, San Francisco, Paris, Cambridge, Durham, New York, and other global hubs.",
+    "new_details": "AISafety.com is a comprehensive job board for AI safety careers, currently featuring <strong>481 opportunities</strong> across research, policy, operations, engineering, and outreach roles. Positions span entry-level to senior levels at organizations including Anthropic, Google DeepMind, FAR AI, Institute for AI Policy and Strategy, and numerous institutions globally. The board emphasizes that many impactful AI safety roles don't require technical skills, with positions available remote and in locations including Washington DC, London, San Francisco, Sacramento, New York, Singapore, and other global hubs.",
     "new_structured": {
       "stipend": "",
       "duration": "",
-      "location": "Global (Remote, Washington DC, London, San Francisco, Paris, Cambridge, New York, Durham, and others)",
+      "location": "Global (Washington DC, London, San Francisco, Sacramento, New York, Singapore, Montreal, Philippines, Indonesia, Manchester, and remote options)",
       "program_dates": ""
     },
-    "key_changes": "Job count increased from 464 to 466 opportunities; last updated date changed from 6 July 2026 to 10 July 2026"
+    "key_changes": "Job count updated from 466 to 481 opportunities. Last updated date changed from 10 July 2026 to 20 July 2026. Location examples expanded to include Sacramento, Montreal, Singapore, Philippines, Indonesia, and Manchester."
   },
   {
     "name": "Center for AI Safety (CAIS)",
@@ -735,29 +735,29 @@
     "error": null,
     "old_status": "open",
     "new_status": "open",
-    "old_deadline": "Rolling basis for most roles; Extension Program Manager deadline July 30, 2026",
+    "old_deadline": "Rolling basis for most roles; Program Manager - Extension Program (London) deadline July 30, 2026",
     "new_deadline": "Rolling basis for most roles; Program Manager - Extension Program (London) deadline July 30, 2026",
-    "old_details": "MATS is hiring for multiple staff positions to support its AI safety research program. Current open roles include <strong>Recruiting Lead</strong>, <strong>Program Manager - Extension Program (London)</strong> (deadline July 30, 2026), <strong>Executive Business Partner (London)</strong>, <strong>Office Manager (London)</strong>, <strong>Compute Administrator (Berkeley)</strong>, and <strong>Research Manager</strong> (expressions of interest only, rolling applications resume early 2027). Most positions are in Berkeley, California or London, UK.",
-    "new_details": "MATS is hiring for multiple staff positions to support its AI safety research program. Current open roles include <strong>Recruiting Lead</strong>, <strong>Program Manager - Extension Program (London)</strong> (deadline July 30, 2026), <strong>Executive Business Partner (London)</strong>, <strong>Office Manager (London)</strong>, <strong>Compute Administrator (Berkeley)</strong>, and <strong>Research Manager</strong> (expressions of interest only, rolling applications resume early 2027). Most positions are located in Berkeley, California or London, UK.",
+    "old_details": "MATS is hiring for multiple staff positions to support its AI safety research program. Current open roles include <strong>Recruiting Lead</strong>, <strong>Program Manager - Extension Program (London)</strong> (deadline July 30, 2026), <strong>Executive Business Partner (London)</strong>, <strong>Office Manager (London)</strong>, <strong>Compute Administrator (Berkeley)</strong>, and <strong>Research Manager</strong> (expressions of interest only, rolling applications resume early 2027). Most positions are located in Berkeley, California or London, UK.",
+    "new_details": "MATS is hiring for multiple staff positions to support its AI safety research program. Current open roles include <strong>Recruiting Lead</strong>, <strong>Program Manager - Extension Program (London)</strong> (deadline July 30, 2026), <strong>Executive Business Partner (London)</strong>, <strong>Office Manager (London)</strong>, <strong>Head of Finance</strong> (Berkeley), and <strong>Research Manager</strong> (expressions of interest only, rolling applications resume early 2027). Most positions are located in Berkeley, California or London, UK.",
     "new_structured": {
       "stipend": "",
       "duration": "",
       "location": "Berkeley, California & London, UK",
       "program_dates": ""
     },
-    "key_changes": "No changes detected"
+    "key_changes": "Added new role: Head of Finance (Berkeley). Removed Compute Administrator (Berkeley) from open positions."
   },
   {
     "name": "What AI Safety Orgs Want in a Hire",
     "url": "https://80000hours.org/2025/09/survey-results-what-ai-safety-orgs-want-in-a-hire/",
-    "action": "unchanged",
+    "action": "changed",
     "error": null,
     "old_status": "unknown",
     "new_status": "unknown",
     "old_deadline": "",
     "new_deadline": "",
     "old_details": "Survey results from <strong>38 AI safety organization leaders</strong> published September 2025 about their hiring needs and what they look for in candidates. Top recommended upskilling programs include BlueDot courses, Talos Fellowship, and MATS, with <strong>1-3 years</strong> of relevant experience often sufficient for many roles (excluding technical AI research positions). Identifies hard-to-fill profiles including chiefs of staff, those with policy experience, Mandarin speakers, and European citizens with AI context; emphasizes publishing work publicly and attending events to build connections.",
-    "new_details": "Survey results from <strong>38 AI safety organization leaders</strong> published September 2025 about their hiring needs and what they look for in candidates. Top recommended upskilling programs include BlueDot courses, Talos Fellowship, and MATS, with <strong>1-3 years</strong> of relevant experience often sufficient for many roles (excluding technical AI research positions). Identifies hard-to-fill profiles including chiefs of staff, those with policy experience, Mandarin speakers, and European citizens with AI context; emphasizes publishing work publicly and attending events to build connections.",
+    "new_details": "Survey results from <strong>38 AI safety organization leaders</strong> published September 2025 about their hiring needs and what they look for in candidates. Top recommended upskilling programs include BlueDot courses, Talos Fellowship, and MATS, with <strong>1-3 years</strong> of relevant experience often sufficient for many roles (excluding technical AI research positions). Hard-to-fill profiles include chiefs of staff, those with policy experience, Mandarin speakers, and European citizens with AI context; emphasizes publishing work publicly and attending events to build connections.",
     "new_structured": {
       "stipend": "",
       "duration": "",
@@ -774,13 +774,13 @@
     "old_status": "open",
     "new_status": "open",
     "old_deadline": "Rolling Applications",
-    "new_deadline": "Rolling Applications",
-    "old_details": "Apollo Research is hiring across multiple teams to advance AI safety work. Open positions span technical research (evaluations, scheming/deceptive AI detection, control), governance, product engineering, operations, and security roles. All positions are located <strong>on-site in London and/or San Francisco</strong>, with competitive salary and equity packages, unlimited PTO, visa sponsorship, and relocation support available.",
-    "new_details": "Apollo Research is hiring across multiple teams to advance AI safety work. Open positions include technical research roles (evaluations, scheming/deceptive AI detection, control), governance researchers, full-stack and backend software engineers, AI security engineers, and operations staff (office manager, finance associate). All positions are located <strong>on-site in London and/or San Francisco</strong>, offering competitive salary and equity packages, unlimited PTO, visa sponsorship, and relocation support.",
+    "new_deadline": "Rolling",
+    "old_details": "Apollo Research is hiring across multiple teams to advance AI safety work. Open positions include technical research roles (evaluations, scheming/deceptive AI detection, control), governance researchers, full-stack and backend software engineers, AI security engineers, and operations staff (office manager, finance associate). All positions are located <strong>on-site in London and/or San Francisco</strong>, offering competitive salary and equity packages, unlimited PTO, visa sponsorship, and relocation support.",
+    "new_details": "Apollo Research is hiring across multiple teams to advance AI safety work. Open positions include research scientists/engineers (evaluations, scheming, control), governance researchers, software engineers (full-stack, backend), AI security & control engineer, senior security engineer, and operations roles (office manager, finance associate). All positions are <strong>on-site in London and/or San Francisco</strong>, offering competitive salary and equity packages, unlimited PTO, visa sponsorship, and relocation support.",
     "new_structured": {
       "stipend": "",
       "duration": "",
-      "location": "London & San Francisco",
+      "location": "London and/or San Francisco",
       "program_dates": ""
     },
     "key_changes": "No changes detected"
@@ -851,12 +851,12 @@
     "new_status": "open",
     "old_deadline": "Rolling",
     "new_deadline": "Rolling",
-    "old_details": "Gray Swan AI is hiring for roles in AI safety evaluation, red-teaming, and adversarial testing. The company works on stress-testing frontier AI models and has directly informed safety evaluations for models like Claude, GPT, and o1. Benefits include <strong>28 days PTO</strong>, <strong>401(k) with 4% matching</strong>, flexible work arrangements, visa sponsorship, and <strong>100% paid parental leave with up to 14 weeks for birthing parents</strong>.",
+    "old_details": "Gray Swan AI is hiring for roles in AI safety evaluation, red-teaming, and adversarial testing. The company specializes in stress-testing frontier AI models and has directly informed safety evaluations for models like Claude, GPT, and o1. Benefits include <strong>28 days PTO</strong>, <strong>401(k) with 4% matching</strong>, flexible work arrangements, visa sponsorship, and <strong>100% paid parental leave with up to 14 weeks for birthing parents</strong>.",
     "new_details": "Gray Swan AI is hiring for roles in AI safety evaluation, red-teaming, and adversarial testing. The company specializes in stress-testing frontier AI models and has directly informed safety evaluations for models like Claude, GPT, and o1. Benefits include <strong>28 days PTO</strong>, <strong>401(k) with 4% matching</strong>, flexible work arrangements, visa sponsorship, and <strong>100% paid parental leave with up to 14 weeks for birthing parents</strong>.",
     "new_structured": {
       "stipend": "",
       "duration": "",
-      "location": "Pittsburgh office (with flexible work arrangements)",
+      "location": "Pittsburgh office (flexible work arrangements available)",
       "program_dates": ""
     },
     "key_changes": "No changes detected"
@@ -870,15 +870,15 @@
     "new_status": "open",
     "old_deadline": "Rolling",
     "new_deadline": "Rolling",
-    "old_details": "LawZero is a non-profit AI safety lab based in Montreal, led by Yoshua Bengio, focused on building non-agentic AI systems that are safe-by-design to accelerate scientific discovery and provide oversight for agentic AI. The organization is currently hiring for <strong>18 positions</strong> across research, engineering, operations, and leadership roles, including ML Research Scientists, Engineers, Developers, and specialized positions in evaluations, development, legal, communications, and system administration.",
-    "new_details": "LawZero is a non-profit AI safety lab based in Montreal, led by Yoshua Bengio, focused on building non-agentic AI systems that are safe-by-design to accelerate scientific discovery and provide oversight for agentic AI. The organization is currently hiring for <strong>17 positions</strong> across research, engineering, operations, and leadership roles, including ML Research Scientists, Engineers, Developers, and specialized positions in evaluations, communications, data governance, and system administration.",
+    "old_details": "LawZero is a non-profit AI safety lab based in Montreal, led by Yoshua Bengio, focused on building non-agentic AI systems that are safe-by-design to accelerate scientific discovery and provide oversight for agentic AI. The organization is currently hiring for <strong>17 positions</strong> across research, engineering, operations, and leadership roles, including ML Research Scientists, Engineers, Developers, and specialized positions in evaluations, communications, data governance, and system administration.",
+    "new_details": "LawZero is a non-profit AI safety lab based in Montreal, led by Yoshua Bengio, focused on building non-agentic AI systems that are safe-by-design to accelerate scientific discovery and provide oversight for agentic AI. The organization is currently hiring for <strong>18 positions</strong> across research, engineering, operations, and leadership roles, including ML Research Scientists, Engineers, Developers, and specialized positions in evaluations, communications, data governance, and system administration.",
     "new_structured": {
       "stipend": "",
       "duration": "",
       "location": "Montreal",
       "program_dates": ""
     },
-    "key_changes": "Number of open positions decreased from 18 to 17"
+    "key_changes": "Number of open positions increased from 17 to 18"
   },
   {
     "name": "METR (formerly ARC Evals)",
@@ -930,7 +930,7 @@
     "old_details": "Redwood Research is hiring for full-time Member of Technical Staff roles based in Berkeley, California to work on AI safety research including AI control, alignment faking, and safety cases. The role requires machine learning and software engineering skills along with strong communication abilities and a deep interest in AI safety. Compensation ranges from <strong>$180,000 to $207,000 per year</strong> depending on experience.",
     "new_details": "Redwood Research is hiring for full-time Member of Technical Staff roles based in Berkeley, California to work on AI safety research including AI control, alignment faking, and safety cases. The role requires machine learning and software engineering skills along with strong communication abilities and a deep interest in AI safety. Compensation ranges from <strong>$180,000 to $207,000 per year</strong> depending on experience.",
     "new_structured": {
-      "stipend": "$180K-207K",
+      "stipend": "$180K-$207K",
       "duration": "",
       "location": "Berkeley, California",
       "program_dates": ""
@@ -978,13 +978,13 @@
   {
     "name": "Transluce",
     "url": "https://transluce.org/",
-    "action": "changed",
+    "action": "unchanged",
     "error": null,
     "old_status": "unknown",
     "new_status": "unknown",
     "old_deadline": "",
     "new_deadline": "",
-    "old_details": "Transluce is an independent 501(c)(3) nonprofit research lab based in San Francisco developing open and scalable technology for understanding AI systems. They focus on AI transparency and interpretability research toward responsible development and deployment in the public interest. The site includes a 'Join Us' navigation link but does not display specific job openings, application details, or hiring information on the main page.",
+    "old_details": "Transluce is an independent 501(c)(3) nonprofit research lab based in San Francisco developing open and scalable technology for understanding AI systems. They focus on AI transparency and interpretability research toward responsible development and deployment in the public interest. The site features a 'Join Us' navigation link but does not display specific job openings, application details, or hiring information on the current page.",
     "new_details": "Transluce is an independent 501(c)(3) nonprofit research lab based in San Francisco developing open and scalable technology for understanding AI systems. They focus on AI transparency and interpretability research toward responsible development and deployment in the public interest. The site features a 'Join Us' navigation link but does not display specific job openings, application details, or hiring information on the current page.",
     "new_structured": {
       "stipend": "",
@@ -997,7 +997,7 @@
   {
     "name": "WhiteBox Research Fellowship",
     "url": "https://www.whiteboxresearch.org/",
-    "action": "changed",
+    "action": "unchanged",
     "error": null,
     "old_status": "open",
     "new_status": "open",
@@ -1016,7 +1016,7 @@
   {
     "name": "80K Hours: Top US Policy Masters Programs",
     "url": "https://airtable.com/appsS0BWirkg81ofP/shrC1Dswb9eIiTWzG/tbl2ljqBV2ztwdOSU",
-    "action": "changed",
+    "action": "unchanged",
     "error": null,
     "old_status": "open",
     "new_status": "open",
@@ -1041,15 +1041,15 @@
     "new_status": "unknown",
     "old_deadline": "Updated continuously",
     "new_deadline": "Updated continuously",
-    "old_details": "Comprehensive directory of <strong>50</strong> AI safety funding organizations and programs, including grants, fellowships, and fiscal sponsorship opportunities. Covers funders ranging from large-scale philanthropic organizations like Coefficient Giving (formerly Open Philanthropy) to specialized programs supporting technical research, governance, journalism, and career transitions. Funding amounts range from <strong>$1K to $1M+</strong> with both rolling and deadline-based opportunities across multiple tracks including research grants, rapid grants, and career transition funding.",
-    "new_details": "Comprehensive directory of <strong>51</strong> AI safety funding organizations and programs, including grants, fellowships, and fiscal sponsorship opportunities. Covers funders ranging from large-scale philanthropic organizations like Coefficient Giving to specialized programs supporting technical research, governance, journalism, and career transitions. Funding amounts range from <strong>$1K to $1M+</strong> with both rolling and deadline-based opportunities across multiple tracks including research grants, rapid grants, and career transition funding.",
+    "old_details": "Comprehensive directory of <strong>51</strong> AI safety funding organizations and programs, including grants, fellowships, and fiscal sponsorship opportunities. Covers funders ranging from large-scale philanthropic organizations like Coefficient Giving to specialized programs supporting technical research, governance, journalism, and career transitions. Funding amounts range from <strong>$1K to $1M+</strong> with both rolling and deadline-based opportunities across multiple tracks including research grants, rapid grants, and career transition funding.",
+    "new_details": "Comprehensive directory of <strong>49+</strong> AI safety funding organizations and programs, including grants, fellowships, and fiscal sponsorship opportunities. Covers funders ranging from large-scale philanthropic organizations like Coefficient Giving to specialized programs supporting technical research, governance, journalism, and career transitions. Funding amounts range from <strong>$1K to $1M+</strong> with both rolling and deadline-based opportunities across multiple tracks including research grants, rapid grants, and career transition funding.",
     "new_structured": {
-      "stipend": "$1K to $1M+",
+      "stipend": "$1K-$1M+",
       "duration": "",
       "location": "",
       "program_dates": ""
     },
-    "key_changes": "Number of funding organizations updated from 50 to 51. Page last updated date changed to 13 July 2026. Some specific program deadlines have been updated (e.g., grantmaking.ai closes 13 July 2026, Schmidt Sciences closes 8 August 2026, Tarbell closes 12 July). Otherwise no substantive changes to the overall directory structure or description."
+    "key_changes": "Updated funding count from 51 to 49+ programs. Page last updated July 19, 2026. Multiple active deadlines visible: grantmaking.ai closes July 27, 2026; Schmidt Sciences closes August 8, 2026; ARIA closes July 31; CAIF closes August 8, 2026. All other core information remains consistent with stored details."
   },
   {
     "name": "Cooperative AI PhD Fellowship",
@@ -1063,8 +1063,8 @@
     "old_details": "The Cooperative AI PhD Fellowship supports PhD students working on multi-agent cooperation and AI safety. Fellows receive annual budgets for conferences, compute, wellbeing, and productivity, plus invitations to CAIF events and collaboration opportunities. CAIF Scholars (top 1% of applicants) receive additional top-up funding of <strong>up to $40,000 per year</strong> for living expenses, for <strong>up to 3 years</strong>.",
     "new_details": "The Cooperative AI PhD Fellowship supports PhD students working on multi-agent cooperation and AI safety. Fellows receive annual budgets for conferences, compute, wellbeing, and productivity, plus invitations to CAIF events and collaboration opportunities. CAIF Scholars (top 1% of applicants) receive additional top-up funding of <strong>up to $40,000 per year</strong> for living expenses, for <strong>up to 3 years</strong>.",
     "new_structured": {
-      "stipend": "up to $40K/year (Scholars only)",
-      "duration": "up to 3 years",
+      "stipend": "Up to $40,000/year (Scholars only)",
+      "duration": "Up to 3 years",
       "location": "",
       "program_dates": ""
     },
@@ -1098,12 +1098,12 @@
     "new_status": "expression_of_interest",
     "old_deadline": "",
     "new_deadline": "",
-    "old_details": "A directory of faculty members and AI researchers working on AI existential safety at universities worldwide. Lists professors across institutions like Oxford, UC Berkeley, Stanford, Cambridge, and CMU who are willing to advise students on AI safety research. Also serves as a resource for finding faculty mentors for the Vitalik Buterin postdoctoral and PhD fellowships offered by FLI.",
+    "old_details": "A directory of faculty members and AI researchers working on AI existential safety at universities worldwide. Lists professors at institutions like Oxford, UC Berkeley, Stanford, Cambridge, and CMU who are willing to advise students on AI safety research. Also serves as a resource for finding faculty mentors for the Vitalik Buterin postdoctoral and PhD fellowships offered by FLI.",
     "new_details": "A directory of faculty members and AI researchers working on AI existential safety at universities worldwide. Lists professors at institutions like Oxford, UC Berkeley, Stanford, Cambridge, and CMU who are willing to advise students on AI safety research. Also serves as a resource for finding faculty mentors for the Vitalik Buterin postdoctoral and PhD fellowships offered by FLI.",
     "new_structured": {
       "stipend": "",
       "duration": "",
-      "location": "",
+      "location": "Worldwide",
       "program_dates": ""
     },
     "key_changes": "No changes detected"
@@ -1111,15 +1111,21 @@
   {
     "name": "PIBBSS x Iliad Research Residency",
     "url": "https://princint.ai/programs/residency/",
-    "action": "js_only",
-    "error": "JS-only page",
+    "action": "unchanged",
+    "error": null,
     "old_status": "open",
-    "new_status": null,
+    "new_status": "open",
     "old_deadline": "July 27 EoD AoE (Fall 2026)",
-    "new_deadline": null,
+    "new_deadline": "July 27 EoD AoE (Fall 2026)",
     "old_details": "The Iliad Fellowship is a <strong>3-month</strong>, full-time research fellowship in applied mathematics for AI alignment, targeting PhD or postdoctoral researchers in math, physics, or related fields. Fellows receive a <strong>$6,000/month</strong> travel-and-housing allowance and work in person at LISA in London (with some remote flexibility for exceptional applicants). The program aims to help fellows develop research proposals and secure philanthropic funding for continued work after the fellowship.",
-    "new_details": null,
-    "key_changes": "Could not fetch: JS-only page"
+    "new_details": "The Iliad Fellowship is a <strong>3-month</strong>, full-time research fellowship in applied mathematics for AI alignment, targeting PhD or postdoctoral researchers in math, physics, or related fields. Fellows receive a <strong>$6,000/month</strong> travel-and-housing allowance and work in person at LISA in London (with some remote flexibility for exceptional applicants). The program aims to help fellows develop research proposals and secure philanthropic funding for continued work after the fellowship.",
+    "new_structured": {
+      "stipend": "$6,000/month",
+      "duration": "3 months",
+      "location": "London (LISA)",
+      "program_dates": "September 7 – December 4, 2026"
+    },
+    "key_changes": "No changes detected"
   },
   {
     "name": "Schmidt Sciences AI2050",
@@ -1152,9 +1158,9 @@
     "old_details": "The Vitalik Buterin PhD Fellowship in AI Existential Safety supports PhD students working on AI existential safety research. Fellows receive <strong>full tuition and fees for 5 years</strong>, a <strong>$40,000 annual stipend</strong> (at US, UK, and Canadian universities), and a <strong>$10,000 annual research fund</strong> for travel and computing expenses. The fellowship includes invitations to virtual and in-person networking events with other researchers in the field, and applicants who are short-listed receive reimbursement for up to 5 PhD program application fees.",
     "new_details": "The Vitalik Buterin PhD Fellowship in AI Existential Safety supports PhD students working on AI existential safety research. Fellows receive <strong>full tuition and fees for 5 years</strong>, a <strong>$40,000 annual stipend</strong> (at US, UK, and Canadian universities), and a <strong>$10,000 annual research fund</strong> for travel and computing expenses. The fellowship includes invitations to virtual and in-person networking events with other researchers in the field, and applicants who are short-listed receive reimbursement for up to 5 PhD program application fees.",
     "new_structured": {
-      "stipend": "$40,000 annual + $10,000 research fund",
+      "stipend": "$40,000 annual",
       "duration": "5 years",
-      "location": "US, UK, and Canadian universities",
+      "location": "US, UK, and Canada",
       "program_dates": ""
     },
     "key_changes": "No changes detected"
@@ -1172,7 +1178,7 @@
     "new_details": "Part-time program bringing together approximately <strong>25 experienced AI policy professionals</strong> with <strong>6-25 years experience</strong> (including <strong>4+ years</strong> in AI policy organizations) from government, think tanks, military, intelligence community, and private sector. Features monthly evening discussions in Washington, DC and a multi-day learning trip to the San Francisco Bay Area in April 2026. All expenses covered including travel and accommodations; <strong>no stipend provided</strong>.",
     "new_structured": {
       "stipend": "",
-      "duration": "5 months",
+      "duration": "4.5 months",
       "location": "Washington, DC & San Francisco Bay Area",
       "program_dates": "Mid-March – late July 2026"
     },
@@ -1228,10 +1234,10 @@
     "old_details": "The Joseph S. Nye, Jr. National Security Internship and Mentoring Program at CNAS offers rigorous policy research internships across multiple programs including Communications, Design, Development, Defense, Energy Economics and Security, and Indo-Pacific Security. Interns work full-time for <strong>six months</strong> with a <strong>$1,900/month</strong> stipend plus <strong>$75/month</strong> transportation allowance. The program is in-person in <strong>Washington, DC</strong> and provides direct mentorship from CNAS staff on national security policy issues including defense innovation, economic statecraft, and regional security.",
     "new_details": "The Joseph S. Nye, Jr. National Security Internship and Mentoring Program at CNAS offers rigorous policy research internships across multiple programs including Communications, Design, Development, Defense, Energy Economics and Security, and Indo-Pacific Security. Interns work full-time for <strong>six months</strong> with a <strong>$1,900/month</strong> stipend plus <strong>$75/month</strong> transportation allowance. The program is in-person in <strong>Washington, DC</strong> and provides direct mentorship from CNAS staff on national security policy issues including defense innovation, economic statecraft, and regional security.",
     "new_structured": {
-      "stipend": "$1,900/month + $75/month transport",
+      "stipend": "$1,900/month + $75/month transportation",
       "duration": "6 months",
       "location": "Washington, DC",
-      "program_dates": "Various: June 2026 (Design), September 2026 (Defense, EES), October 2026 (Development), November 2026 (Communications)"
+      "program_dates": "Various start dates: June 2026 (Design), September 2026 (Defense, Energy/Economics/Security), October 2026 (Development), November 2026 (Communications)"
     },
     "key_changes": "No changes detected"
   },
@@ -1247,9 +1253,9 @@
     "old_details": "A <strong>10-week</strong> summer internship at Georgetown's Center for Security and Emerging Technology focused on emerging technologies (AI, cybersecurity, biotechnology) and national security policy. Designed specifically for students from Historically Black Colleges and Universities (HBCUs) and other Minority-Serving Institutions (MSIs). Interns receive a <strong>competitive hourly wage</strong> plus living stipend, housing at Georgetown University housing in downtown DC (<strong>55 H St NW</strong>), and travel reimbursement.",
     "new_details": "A <strong>10-week</strong> summer internship at Georgetown's Center for Security and Emerging Technology focused on emerging technologies (AI, cybersecurity, biotechnology) and national security policy. Designed specifically for students from Historically Black Colleges and Universities (HBCUs) and other Minority-Serving Institutions (MSIs). Interns receive a <strong>competitive hourly wage</strong> plus living stipend, housing at Georgetown University housing in downtown DC (<strong>55 H St NW</strong>), and travel reimbursement.",
     "new_structured": {
-      "stipend": "Competitive hourly wage + living stipend + housing + travel",
+      "stipend": "Competitive hourly wage plus living stipend",
       "duration": "10 weeks",
-      "location": "Washington, DC (Georgetown Capitol Campus)",
+      "location": "Washington, DC (Georgetown Capitol Campus, 500 1st NW, Suite 700)",
       "program_dates": ""
     },
     "key_changes": "No changes detected"
@@ -1273,23 +1279,23 @@
     "action": "changed",
     "error": null,
     "old_status": "closed",
-    "new_status": "closed",
+    "new_status": "open",
     "old_deadline": "Closed - sign up for notifications about future applications",
-    "new_deadline": "Closed - sign up for notifications about future applications",
-    "old_details": "Fully-funded fellowship placing early-career professionals in Washington, DC policy roles focused on AI, biotechnology, and emerging technologies. Fellows work in executive branch agencies, congressional offices, or think tanks for <strong>up to 2 years</strong> (1-year renewable terms; 6 months for junior think tank fellows). Competitive compensation: <strong>$113K/year</strong> for standard fellows or <strong>$75K/year</strong> for junior fellows, plus <strong>$15K</strong> health support, <strong>$3K</strong> professional development stipend, and up to <strong>$3K</strong> relocation assistance.",
-    "new_details": "Fully-funded fellowship placing early-career professionals in Washington, DC policy roles focused on AI, biotechnology, and emerging technologies. Fellows work in executive branch agencies, congressional offices, think tanks, or national laboratories for <strong>up to 2 years</strong> (1-year renewable terms; 6 months for junior think tank fellows). Competitive compensation: <strong>$113K/year</strong> for standard fellows or <strong>$75K/year</strong> for junior fellows, plus <strong>$15K</strong> health support, <strong>$3K</strong> professional development stipend, and up to <strong>$3K</strong> relocation assistance.",
+    "new_deadline": "August 30, 2026",
+    "old_details": "Fully-funded fellowship placing early-career professionals in Washington, DC policy roles focused on AI, biotechnology, and emerging technologies. Fellows work in executive branch agencies, congressional offices, think tanks, or national laboratories for <strong>up to 2 years</strong> (1-year renewable terms; 6 months for junior think tank fellows). Competitive compensation: <strong>$113K/year</strong> for standard fellows or <strong>$75K/year</strong> for junior fellows, plus <strong>$15K</strong> health support, <strong>$3K</strong> professional development stipend, and up to <strong>$3K</strong> relocation assistance.",
+    "new_details": "Fully-funded fellowship placing early-career professionals in Washington, DC policy roles focused on AI, biotechnology, and emerging technologies. Fellows work in executive branch agencies, congressional offices, think tanks, or national laboratories for <strong>up to 2 years</strong> (1-year renewable terms; 6 months for junior think tank fellows). Competitive compensation: <strong>$78K/year</strong> for junior fellows, <strong>$130K/year</strong> for fellows, or <strong>$190K+/year</strong> for senior fellows, plus <strong>$17K/year</strong> benefits-equivalent stipend, <strong>$3K</strong> professional development stipend, and up to <strong>$3K</strong> relocation assistance.",
     "new_structured": {
-      "stipend": "$113K/year (standard) or $75K/year (junior)",
-      "duration": "Up to 2 years (1-year renewable; 6 months for junior)",
+      "stipend": "$78K-$190K+/year (level-dependent) + $17K benefits + $3K professional development + up to $3K relocation",
+      "duration": "up to 2 years",
       "location": "Washington, DC area",
-      "program_dates": ""
+      "program_dates": "2027 cohort"
     },
-    "key_changes": "Added 'national laboratories' as a potential host organization type (mentioned on page alongside executive branch offices, congressional offices, and think tanks)"
+    "key_changes": "Status changed from closed to open. Deadline updated to August 30, 2026 for 2027 cohort. Compensation significantly increased: junior fellows now $78K/year (was $75K), fellows now $130K/year (was $113K), senior fellows added at $190K+/year. Benefits stipend increased to $17K/year (was $15K health support)."
   },
   {
     "name": "IAPS AI Policy Fellowship",
     "url": "https://www.iaps.ai/fellowship",
-    "action": "unchanged",
+    "action": "changed",
     "error": null,
     "old_status": "closed",
     "new_status": "closed",
@@ -1298,7 +1304,7 @@
     "old_details": "The IAPS AI Policy Fellowship is a fully-funded, <strong>3-month</strong> program for professionals from varied backgrounds seeking to strengthen practical policy skills for AI governance. Fellows receive <strong>$15K</strong> (Fellows) or <strong>$22K</strong> (Senior Fellows) stipends plus travel and accommodation support. The program includes a required <strong>2-week in-person residency in Washington D.C.</strong> (June 1-12) with the option to complete remaining time remotely or in D.C., and welcomes international applicants.",
     "new_details": "The IAPS AI Policy Fellowship is a fully-funded, <strong>3-month</strong> program for professionals from varied backgrounds seeking to strengthen practical policy skills for AI governance. Fellows receive <strong>$15K</strong> (Fellows) or <strong>$22K</strong> (Senior Fellows) stipends plus travel and accommodation support. The program includes a required <strong>2-week in-person residency in Washington D.C.</strong> (June 1-12) with the option to complete remaining time remotely or in D.C., and welcomes international applicants.",
     "new_structured": {
-      "stipend": "$15K-$22K",
+      "stipend": "$15K–$22K",
       "duration": "3 months",
       "location": "Washington D.C. or remote",
       "program_dates": "June 1 – Aug 21, 2026"
@@ -1338,7 +1344,7 @@
     "new_structured": {
       "stipend": "$60K-$110K",
       "duration": "1 year (9-month placement + 10-week course)",
-      "location": "Remote course + San Francisco Bay Area summit + various newsroom locations",
+      "location": "Remote course + Bay Area summit + newsroom placements (varies)",
       "program_dates": "June 8, 2026 – May 31, 2027"
     },
     "key_changes": "No changes detected"
@@ -1365,7 +1371,7 @@
   {
     "name": "ARC Visiting Researcher",
     "url": "https://www.alignment.org/hiring/",
-    "action": "unchanged",
+    "action": "changed",
     "error": null,
     "old_status": "expression_of_interest",
     "new_status": "expression_of_interest",
@@ -1375,7 +1381,7 @@
     "new_details": "Year-round visiting researcher positions at the Alignment Research Center, typically running for <strong>~10 weeks</strong> with flexible duration. Most successful candidates have a strong theoretical background in math, physics, or computer science. Most team members join as visiting researchers first to ensure a good fit before considering permanent positions.",
     "new_structured": {
       "stipend": "",
-      "duration": "~10 weeks",
+      "duration": "10 weeks",
       "location": "",
       "program_dates": ""
     },
@@ -1413,7 +1419,7 @@
     "new_details": "Research internship at UC Berkeley's Center for Human-Compatible Artificial Intelligence for individuals interested in human-compatible AI research, requiring background in machine learning, computer science, mathematics, or related fields. Interns work on supervised research projects, with most producing first-author workshop papers. <strong>12–16 weeks</strong> duration with <strong>$5,000/month</strong> for in-person interns at UC Berkeley or <strong>$3,500/month</strong> for remote positions.",
     "new_structured": {
       "stipend": "$5,000/month (in-person) or $3,500/month (remote)",
-      "duration": "12–16 weeks",
+      "duration": "12-16 weeks",
       "location": "UC Berkeley (in-person preferred) or remote",
       "program_dates": ""
     },
@@ -1422,15 +1428,21 @@
   {
     "name": "CLR Summer Research Fellowship",
     "url": "https://longtermrisk.org/summer-research-fellowship/",
-    "action": "js_only",
-    "error": "JS-only page",
+    "action": "changed",
+    "error": null,
     "old_status": "closed",
-    "new_status": null,
+    "new_status": "closed",
     "old_deadline": "Closed - check for next cycle (2027 applications not yet open)",
-    "new_deadline": null,
+    "new_deadline": "Closed - applications open in 2027 (subscribe to mailing list)",
     "old_details": "The Center on Long-Term Risk (CLR) runs an annual <strong>2-month</strong> Summer Research Fellowship focused on s-risks (risks of astronomical suffering) and technical AI safety. Fellows work on mentored research projects at CLR's London office, typically held between June and September. The program offers <strong>£4,925/month</strong> compensation plus professional development and wellbeing budgets, travel and visa support.",
-    "new_details": null,
-    "key_changes": "Could not fetch: JS-only page"
+    "new_details": "The Center on Long-Term Risk (CLR) runs an annual <strong>2-month</strong> Summer Research Fellowship focused on s-risks (risks of astronomical suffering) and technical AI safety. Fellows work on mentored research projects at CLR's London office, typically held between June and September. The program offers <strong>£4,925/month</strong> compensation plus professional development and wellbeing budgets, travel and visa support.",
+    "new_structured": {
+      "stipend": "£4,925/month",
+      "duration": "2 months",
+      "location": "London (CLR office)",
+      "program_dates": "June-September (varies by year)"
+    },
+    "key_changes": "No changes detected"
   },
   {
     "name": "Constellation Astra Fellowship",
@@ -1444,10 +1456,10 @@
     "old_details": "Astra is Constellation's flagship <strong>5-month</strong>, fully funded, in-person fellowship at their Berkeley research center that pairs emerging AI safety talent with senior advisors. Fellows receive a <strong>$8,400/month</strong> stipend, up to <strong>$15K/month</strong> compute budget for empirical researchers, visa support, and dedicated mentorship on technical research, governance, strategy, and field-building projects. Over 80% of the first cohort transitioned to full-time AI safety roles at organizations like Anthropic, OpenAI, DeepMind, METR, and Redwood Research.",
     "new_details": "Astra is Constellation's flagship <strong>5-month</strong>, fully funded, in-person fellowship at their Berkeley research center that pairs emerging AI safety talent with senior advisors. Fellows receive a <strong>$8,400/month</strong> stipend, up to <strong>$15K/month</strong> compute budget for empirical researchers, visa support, and dedicated mentorship on technical research, governance, strategy, and field-building projects. Over 80% of the first cohort transitioned to full-time AI safety roles at organizations like Anthropic, OpenAI, DeepMind, METR, and Redwood Research.",
     "new_structured": {
-      "stipend": "$8,400/month + $15K/month compute for empirical researchers",
+      "stipend": "$8,400/month",
       "duration": "5 months",
       "location": "Berkeley",
-      "program_dates": "Jan 5 – Jun 31, 2026 (with extension)"
+      "program_dates": "Jan 5 – Mar 31, 2026 (with extension to Jun 31)"
     },
     "key_changes": "No changes detected"
   },
@@ -1465,8 +1477,8 @@
     "new_structured": {
       "stipend": "",
       "duration": "12-24 weeks",
-      "location": "In-person at Google offices",
-      "program_dates": ""
+      "location": "In-person at a Google office",
+      "program_dates": "2025-2026 cycle"
     },
     "key_changes": "No changes detected"
   },
@@ -1530,20 +1542,14 @@
   {
     "name": "Virtue AI",
     "url": "https://jobs.ashbyhq.com/virtue-AI",
-    "action": "changed",
-    "error": null,
+    "action": "js_only",
+    "error": "JS-only page",
     "old_status": "closed",
-    "new_status": "closed",
+    "new_status": null,
     "old_deadline": "Closed - check for next cycle",
-    "new_deadline": "Closed - check for next cycle",
-    "old_details": "Virtue AI is an AI security and compliance platform founded by Bo Li and Dawn Song. The company previously offered full-time positions across research, engineering, operations, marketing, and sales in <strong>San Francisco</strong>, but currently has no open positions listed on their job board.",
-    "new_details": "Virtue AI is an AI security and compliance platform founded by Bo Li and Dawn Song. The company offers positions across research, engineering, operations, marketing, and sales in <strong>San Francisco</strong>, but currently has no open positions listed on their job board.",
-    "new_structured": {
-      "stipend": "",
-      "duration": "",
-      "location": "San Francisco",
-      "program_dates": ""
-    },
-    "key_changes": "No changes detected"
+    "new_deadline": null,
+    "old_details": "Virtue AI is an AI security and compliance platform founded by Bo Li and Dawn Song. The company offers positions across research, engineering, operations, marketing, and sales in <strong>San Francisco</strong>, but currently has no open positions listed on their job board.",
+    "new_details": null,
+    "key_changes": "Could not fetch: JS-only page"
   }
 ]
