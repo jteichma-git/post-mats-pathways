@@ -494,6 +494,87 @@ def scrape_grant_sources() -> List[Dict[str, str]]:
     return all_candidates
 
 
+def _tag_source(candidates: List[Dict[str, str]], source: str) -> List[Dict[str, str]]:
+    """Tag each candidate with where it came from (carried through to the issue)."""
+    for c in candidates:
+        c.setdefault("source", source)
+    return candidates
+
+
+# ---------------------------------------------------------------------------
+# Phase 2d: Web search for new grants (the wide net — noisy, opt-in in review)
+# ---------------------------------------------------------------------------
+
+def scrape_websearch_grants(anthropic_key: str, dry_run: bool = False) -> List[Dict[str, str]]:
+    """Phase 2d: Ask Claude (with the web-search server tool) for newly-open
+    AI-safety grants/RFPs anywhere on the web. This is the wide, noisy net —
+    everything it finds is tagged source="web-search" and lands in a separate
+    'unvetted' bucket of the weekly GitHub issue for manual opt-in, never
+    auto-published. Uses the existing ANTHROPIC_API_KEY; a few queries/week.
+    """
+    logger.info("=== Phase 2d: Web-searching for new AI-safety grants ===")
+    if dry_run:
+        logger.info("  [DRY RUN] Skipping web search")
+        return []
+    if not anthropic_key:
+        logger.warning("  ANTHROPIC_API_KEY not set — skipping web search")
+        return []
+
+    import anthropic
+    client = anthropic.Anthropic(api_key=anthropic_key)
+    prompt = (
+        "Search the web for AI safety / AI alignment research GRANTS, RFPs, and "
+        "funding calls that are currently open or were newly announced in roughly "
+        "the last 30 days. Focus on funding for researchers and organizations — "
+        "NOT job listings, fellowships, or courses. Prefer official funder pages "
+        "over news articles.\n\n"
+        "When done searching, respond with ONLY a JSON array (no prose, no "
+        'markdown fences) of at most 25 objects: [{"name": "Funder — Program", '
+        '"url": "https://..."}]. Use the canonical application or announcement URL.'
+    )
+    try:
+        response = client.messages.create(
+            model="claude-opus-4-8",
+            max_tokens=4096,
+            tools=[{"type": "web_search_20260209", "name": "web_search", "max_uses": 8}],
+            messages=[{"role": "user", "content": prompt}],
+        )
+    except Exception as e:
+        logger.warning("  Web-search call failed (%s) — skipping", e)
+        return []
+
+    text = "".join(
+        getattr(b, "text", "") for b in response.content
+        if getattr(b, "type", "") == "text"
+    ).strip()
+    text = _extract_json(text)
+    m = re.search(r"\[.*\]", text, re.DOTALL)
+    if m:
+        text = m.group(0)
+    try:
+        items = json.loads(text)
+    except json.JSONDecodeError as e:
+        logger.warning("  Could not parse web-search JSON (%s) — skipping", e)
+        return []
+
+    candidates, seen = [], set()
+    for it in items if isinstance(items, list) else []:
+        if not isinstance(it, dict):
+            continue
+        url = (it.get("url") or "").strip()
+        name = (it.get("name") or "").strip()
+        if not url or not name:
+            continue
+        normalized = normalize_url(url)
+        if normalized in seen:
+            continue
+        seen.add(normalized)
+        candidates.append({"name": name[:150], "url": url})
+
+    logger.info("Phase 2d total: %d candidate grants from web search", len(candidates))
+    return candidates
+
+
 # ---------------------------------------------------------------------------
 # Phase 3: Check known org career pages for new programs
 # ---------------------------------------------------------------------------
@@ -688,6 +769,7 @@ def evaluate_candidates(
                 "description": "[Dry run - not evaluated]",
                 "status": "unknown",
                 "deadline": None,
+                "source": c.get("source", "other"),
             })
         return results
 
@@ -729,6 +811,7 @@ def evaluate_candidates(
             result_text = _extract_json(result_text)
             result = json.loads(result_text)
 
+            result["source"] = candidate.get("source", "other")
             score = result.get("relevance_score", 0)
             if score >= MIN_RELEVANCE_SCORE:
                 logger.info("    RELEVANT (score=%d): %s", score, result.get("name", name))
@@ -876,20 +959,29 @@ def main() -> None:
     # Phase 2c: Sweep known funder RFP/opportunity pages for new grants
     grant_candidates = scrape_grant_sources()
 
+    # Phase 2d: Wide web search for new grants (noisy — opt-in bucket in review)
+    web_candidates = scrape_websearch_grants(anthropic_key, dry_run=args.dry_run)
+
     # Phase 3: Check career pages for new programs
     career_candidates = check_career_pages(resources, anthropic_key, dry_run=args.dry_run)
 
-    # Combine all candidates. Slack + grant-source candidates go first so they
-    # survive the MAX_TO_EVALUATE cap below — those are the highest-signal.
-    all_candidates = (slack_candidates + grant_candidates + aggregator_candidates
-                      + forum_candidates + career_candidates)
+    # Combine all candidates, tagging each with its source (carried to the issue).
+    # Higher-signal sources go first so they survive the MAX_TO_EVALUATE cap.
+    all_candidates = (
+        _tag_source(slack_candidates, "slack")
+        + _tag_source(grant_candidates, "grant-page")
+        + _tag_source(web_candidates, "web-search")
+        + _tag_source(aggregator_candidates, "aggregator")
+        + _tag_source(forum_candidates, "forum")
+        + _tag_source(career_candidates, "career-page")
+    )
     logger.info("Total raw candidates: %d", len(all_candidates))
 
     # Phase 4: Deduplicate
     unique_candidates = deduplicate(all_candidates, known_urls, known_domains, known_names)
 
     # Limit to a reasonable number to avoid excessive API calls
-    MAX_TO_EVALUATE = 40
+    MAX_TO_EVALUATE = 50
     if len(unique_candidates) > MAX_TO_EVALUATE:
         logger.info(
             "Limiting evaluation to %d candidates (from %d)",

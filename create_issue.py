@@ -26,9 +26,14 @@ def load_suggestions(path: str = "suggested_additions.json") -> Dict:
 
 def build_issue_body(suggestions: List[Dict]) -> str:
     """Build the markdown body of the GitHub Issue."""
-    # Group by category
+    # Web-search finds go in a separate "unvetted" bucket; everything else is
+    # grouped by category as usual.
+    web_finds = [s for s in suggestions if s.get("source") == "web-search"]
+
     by_category = {}  # type: Dict[str, List[Dict]]
     for s in suggestions:
+        if s.get("source") == "web-search":
+            continue
         cat = s.get("category", "unknown")
         if cat not in by_category:
             by_category[cat] = []
@@ -73,6 +78,23 @@ def build_issue_body(suggestions: List[Dict]) -> str:
             if deadline:
                 lines.append("- **Deadline:** {}".format(deadline))
             lines.append("- **Description:** {}".format(desc))
+            lines.append("")
+
+    if web_finds:
+        lines.append("## 🔍 Web-search finds (unvetted — review before adding)\n")
+        lines.append("_These came from an open web search, not a curated source — "
+                     "skim and add only the good ones._\n")
+        for item in sorted(web_finds, key=lambda x: x.get("relevance_score", 0), reverse=True):
+            score = item.get("relevance_score", "?")
+            name = item.get("name", "Unknown")
+            url = item.get("url", "")
+            cat = category_labels.get(item.get("category", "unknown"),
+                                      item.get("category", "unknown"))
+            desc = item.get("description", "")
+            lines.append("### [{}]({})".format(name, url))
+            lines.append("- **Relevance:** {}/5 · **Category:** {}".format(score, cat))
+            if desc:
+                lines.append("- {}".format(desc))
             lines.append("")
 
     lines.append("---\n")
