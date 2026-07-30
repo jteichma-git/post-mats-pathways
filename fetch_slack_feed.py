@@ -342,14 +342,18 @@ def render_feed(messages, variant):
         return "\n".join(lines)
 
     n = len(messages)
-    lines.append(
-        '<div class="live-jobs-header"><strong>From the MATS '
-        '#opportunities channel</strong> — {n} post{s} shared in the past '
-        '{days} days · last synced {today}. Hand-curated roles, '
-        'fellowships, funding and collaborations.</div>'.format(
-            n=n, s="" if n == 1 else "s", days=WINDOW_DAYS, today=today
+    # The index page shows this feed on the back of a flip-card whose FRONT
+    # already states the source and cadence, so the header would be redundant
+    # (and cramped). Only the full directory page gets the intro header.
+    if variant != "index":
+        lines.append(
+            '<div class="live-jobs-header"><strong>From the MATS '
+            '#opportunities channel</strong> — {n} post{s} shared in the past '
+            '{days} days · last synced {today}. Hand-curated roles, '
+            'fellowships, funding and collaborations.</div>'.format(
+                n=n, s="" if n == 1 else "s", days=WINDOW_DAYS, today=today
+            )
         )
-    )
     for msg in messages:
         lines.append(render_card(msg, variant))
     lines.append(END_MARKER)
