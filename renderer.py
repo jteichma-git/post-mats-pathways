@@ -84,6 +84,7 @@ def parse_deadline_date(deadline_text):
         "rolling", "continuous", "unknown", "tbd", "not yet",
         "not announced", "check ", "year-round", "updated ",
         "recurring", "multiple cohorts", "always open",
+        "quarterly", "each quarter", "monthly", "ongoing",
     ]
     lower = deadline_text.lower()
     if any(p in lower for p in skip_phrases):

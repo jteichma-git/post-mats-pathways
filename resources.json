@@ -432,6 +432,23 @@
     "last_content_change": "2026-05-25T12:36:01.453976+00:00"
   },
   {
+    "name": "Schmidt Sciences — Scaling AI Safety for a Multi-Agent World",
+    "url": "https://schmidtsciences.smapply.io/prog/scaling_ai_safety_for_a_multi_agent_world/",
+    "category": "grants",
+    "current_status": "open",
+    "current_deadline": "August 8, 2026 11:59 PM AoE",
+    "current_details": "A joint funding call from <strong>Schmidt Sciences, Google DeepMind, ARIA, the Cooperative AI Foundation, and Google.org</strong> for research on ensuring safety in a world of millions of interacting AI agents — spanning sandboxes and testbeds, agent network science, infrastructure strengthening, and multi-agent oversight. Two tiers: <strong>Tier 1 up to $300K</strong> and <strong>Tier 2 $300K–$1M</strong>, for 1–2 year projects. Open globally to individual researchers, teams, institutions, and multi-institution collaborations.",
+    "last_checked": "2026-07-30T21:21:14.294536+00:00",
+    "js_only": true,
+    "structured": {
+      "stipend": "Tier 1: up to $300K; Tier 2: $300K–$1M",
+      "duration": "1–2 years",
+      "location": "Global",
+      "program_dates": "Applications June 11 – August 8, 2026"
+    },
+    "last_content_change": "2026-07-30T21:21:14.294536+00:00"
+  },
+  {
     "name": "Survival & Flourishing Fund (SFF)",
     "url": "https://survivalandflourishing.fund/2026/application",
     "category": "grants",
