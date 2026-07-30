@@ -50,8 +50,7 @@ def git_commit_and_push() -> bool:
         "index.html",
         "directory.html",
         "change_report.json",
-        "80k_jobs.json",
-        "jobs_filter.py",
+        "slack_feed.json",
     ]
     for f in files_to_stage:
         filepath = BASE_DIR / f
@@ -154,37 +153,21 @@ def main():
             logger.error(f"Renderer failed with exit code {code}")
             sys.exit(1)
 
-    # Step 2b: Refresh the 80K Hours live-jobs section
+    # Step 2b: Refresh the Jobs section from the MATS #opportunities Slack channel
     logger.info("=" * 60)
-    logger.info("STEP 2b: Refreshing 80K Hours live listings...")
+    logger.info("STEP 2b: Mirroring the MATS #opportunities Slack channel...")
     logger.info("=" * 60)
 
     if args.dry_run:
-        logger.info("[DRY RUN] Skipping 80K Hours fetch.")
+        logger.info("[DRY RUN] Skipping Slack #opportunities sync.")
     else:
-        fetch_args = [sys.executable, str(BASE_DIR / "fetch_80k_jobs.py")]
+        fetch_args = [sys.executable, str(BASE_DIR / "fetch_slack_feed.py")]
         code, stdout, stderr = run_command(fetch_args)
         print(stdout)
         if stderr:
             print(stderr, file=sys.stderr)
         if code != 0:
-            logger.warning(f"80K Hours fetch finished with exit code {code} (non-fatal)")
-
-    # Step 2c: Gate the static Jobs-section org cards on current 80K listings
-    logger.info("=" * 60)
-    logger.info("STEP 2c: Filtering Jobs-section org cards by current 80K roles...")
-    logger.info("=" * 60)
-
-    if args.dry_run:
-        logger.info("[DRY RUN] Skipping jobs filter.")
-    else:
-        filter_args = [sys.executable, str(BASE_DIR / "jobs_filter.py")]
-        code, stdout, stderr = run_command(filter_args)
-        print(stdout)
-        if stderr:
-            print(stderr, file=sys.stderr)
-        if code != 0:
-            logger.warning(f"Jobs filter finished with exit code {code} (non-fatal)")
+            logger.warning(f"Slack feed sync finished with exit code {code} (non-fatal)")
 
     # Step 3: Optionally run cross-check reviewer
     if args.review:

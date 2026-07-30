@@ -66,6 +66,11 @@ REQUEST_TIMEOUT = 20  # seconds
 RATE_LIMIT_DELAY = 2  # seconds between requests
 MIN_RELEVANCE_SCORE = 3
 
+# How far back to look in the MATS #opportunities Slack channel for discovery.
+# Wider than the 7-day live-feed window because this is about not *missing* new
+# fellowships/academic/funding posts, not about freshness.
+SLACK_LOOKBACK_DAYS = 30
+
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (compatible; AISafetyScanner/1.0; "
@@ -367,6 +372,86 @@ def scrape_forums() -> List[Dict[str, str]]:
 
     logger.info("Phase 2 total: %d candidate links from forums", len(all_candidates))
     return all_candidates
+
+
+# ---------------------------------------------------------------------------
+# Phase 2b: Scan the MATS #opportunities Slack channel
+# ---------------------------------------------------------------------------
+
+# Utility / non-resource links that show up in posts but aren't opportunities
+# worth adding to resources.json.
+SLACK_SKIP_SUBSTRINGS = (
+    "mailto:", "docs.google.com", "drive.google.com", "calendly.com",
+    "luma.com", "lu.ma", "scholar.google", "airtable.com",
+    "x.com", "twitter.com", "linkedin.com", "facebook.com",
+    "jobs.80000hours.org",
+)
+
+# Link labels too generic to use as a candidate name.
+_GENERIC_LABELS = {
+    "here", "apply", "apply here", "link", "form", "this", "details",
+    "role description", "application form", "more", ".", "",
+}
+
+
+def _slack_candidate_name(label: str, url: str) -> str:
+    label = (label or "").strip()
+    if label and label.lower() not in _GENERIC_LABELS and len(label) >= 3:
+        return label[:150]
+    netloc = urlparse(url).netloc.lower().replace("www.", "")
+    return netloc or url
+
+
+def scrape_slack_opportunities() -> List[Dict[str, str]]:
+    """Phase 2b: Pull opportunity links from the MATS #opportunities channel.
+
+    Reuses the same SLACK_BOT_TOKEN as fetch_slack_feed.py. Each real link in a
+    post from the last SLACK_LOOKBACK_DAYS days becomes a candidate; the existing
+    dedup + Claude relevance/category evaluation then routes it (fellowships, phd,
+    jobs, grants, ...) into suggested_additions.json for review. Degrades to an
+    empty list (with a warning) if the token or module is unavailable.
+    """
+    logger.info("=== Phase 2b: Scanning #opportunities Slack channel ===")
+    token = os.environ.get("SLACK_BOT_TOKEN", "")
+    if not token:
+        logger.warning("  SLACK_BOT_TOKEN not set — skipping Slack scan.")
+        return []
+    try:
+        from fetch_slack_feed import fetch_messages_from_slack, CHANNEL_ID
+    except Exception as e:
+        logger.warning("  Could not import fetch_slack_feed (%s) — skipping.", e)
+        return []
+
+    oldest = datetime.now(timezone.utc).timestamp() - SLACK_LOOKBACK_DAYS * 86400
+    try:
+        messages = fetch_messages_from_slack(token, CHANNEL_ID, oldest)
+    except Exception as e:
+        logger.warning("  Slack fetch failed (%s) — skipping.", e)
+        return []
+
+    link_re = re.compile(r"<(https?://[^>|]+)(?:\|([^>]+))?>")
+    candidates = []
+    seen = set()  # type: Set[str]
+    for msg in messages:
+        if msg.get("subtype") in ("channel_join", "channel_leave", "tombstone"):
+            continue
+        text = msg.get("text", "") or ""
+        if "This message was deleted" in text:
+            continue
+        for m in link_re.finditer(text):
+            url = m.group(1).strip()
+            label = m.group(2)
+            if any(s in url.lower() for s in SLACK_SKIP_SUBSTRINGS):
+                continue
+            normalized = normalize_url(url)
+            if normalized in seen:
+                continue
+            seen.add(normalized)
+            candidates.append({"name": _slack_candidate_name(label, url), "url": url})
+
+    logger.info("Phase 2b total: %d candidate links from #opportunities "
+                "(%d messages scanned)", len(candidates), len(messages))
+    return candidates
 
 
 # ---------------------------------------------------------------------------
@@ -745,18 +830,22 @@ def main() -> None:
     # Phase 2: Scrape forums
     forum_candidates = scrape_forums()
 
+    # Phase 2b: Scan the MATS #opportunities Slack channel
+    slack_candidates = scrape_slack_opportunities()
+
     # Phase 3: Check career pages for new programs
     career_candidates = check_career_pages(resources, anthropic_key, dry_run=args.dry_run)
 
-    # Combine all candidates
-    all_candidates = aggregator_candidates + forum_candidates + career_candidates
+    # Combine all candidates. Slack candidates go first so they survive the
+    # MAX_TO_EVALUATE cap below — the whole point is to not miss channel posts.
+    all_candidates = slack_candidates + aggregator_candidates + forum_candidates + career_candidates
     logger.info("Total raw candidates: %d", len(all_candidates))
 
     # Phase 4: Deduplicate
     unique_candidates = deduplicate(all_candidates, known_urls, known_domains, known_names)
 
     # Limit to a reasonable number to avoid excessive API calls
-    MAX_TO_EVALUATE = 30
+    MAX_TO_EVALUATE = 40
     if len(unique_candidates) > MAX_TO_EVALUATE:
         logger.info(
             "Limiting evaluation to %d candidates (from %d)",
