@@ -455,6 +455,46 @@ def scrape_slack_opportunities() -> List[Dict[str, str]]:
 
 
 # ---------------------------------------------------------------------------
+# Phase 2c: Sweep known AI-safety funder RFP / opportunity pages for new grants
+# ---------------------------------------------------------------------------
+
+# Curated funder pages that list open grants / RFPs. Scraped for candidate links
+# each run; results flow through the same dedup + Claude relevance/category
+# evaluation. Starting point — tune based on the per-source fetch log below
+# (some funder pages are JS-heavy and yield little via static fetch).
+GRANT_SOURCE_URLS = [
+    "https://www.openphilanthropy.org/request-for-proposals/",
+    "https://coefficientgiving.org/",
+    "https://www.cooperativeai.com/",
+    "https://www.aria.org.uk/",
+    "https://www.longview.org/",
+    "https://survivalandflourishing.fund/",
+    "https://foresight.org/grants/",
+    "https://www.aisafetyfund.org/",
+    "https://www.schmidtsciences.org/",
+]
+
+
+def scrape_grant_sources() -> List[Dict[str, str]]:
+    """Phase 2c: Sweep known funder RFP/opportunity pages for new grant links."""
+    logger.info("=== Phase 2c: Sweeping AI-safety funder grant pages ===")
+    all_candidates = []
+    for url in GRANT_SOURCE_URLS:
+        logger.info("Fetching grant source: %s", url)
+        html = fetch_page(url)
+        if html:
+            links = extract_org_links(html, url)
+            logger.info("  Found %d links", len(links))
+            all_candidates.extend(links)
+        else:
+            logger.warning("  Failed to fetch %s", url)
+        time.sleep(RATE_LIMIT_DELAY)
+    logger.info("Phase 2c total: %d candidate links from funder pages",
+                len(all_candidates))
+    return all_candidates
+
+
+# ---------------------------------------------------------------------------
 # Phase 3: Check known org career pages for new programs
 # ---------------------------------------------------------------------------
 
@@ -833,12 +873,16 @@ def main() -> None:
     # Phase 2b: Scan the MATS #opportunities Slack channel
     slack_candidates = scrape_slack_opportunities()
 
+    # Phase 2c: Sweep known funder RFP/opportunity pages for new grants
+    grant_candidates = scrape_grant_sources()
+
     # Phase 3: Check career pages for new programs
     career_candidates = check_career_pages(resources, anthropic_key, dry_run=args.dry_run)
 
-    # Combine all candidates. Slack candidates go first so they survive the
-    # MAX_TO_EVALUATE cap below — the whole point is to not miss channel posts.
-    all_candidates = slack_candidates + aggregator_candidates + forum_candidates + career_candidates
+    # Combine all candidates. Slack + grant-source candidates go first so they
+    # survive the MAX_TO_EVALUATE cap below — those are the highest-signal.
+    all_candidates = (slack_candidates + grant_candidates + aggregator_candidates
+                      + forum_candidates + career_candidates)
     logger.info("Total raw candidates: %d", len(all_candidates))
 
     # Phase 4: Deduplicate
