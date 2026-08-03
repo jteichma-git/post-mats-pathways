@@ -1,9 +1,44 @@
 {
-  "synced_at": "2026-07-30T20:59:16.400185+00:00",
+  "synced_at": "2026-08-03T12:40:01.989459+00:00",
   "channel": "C05LWT1UG67",
   "window_days": 7,
-  "count": 14,
+  "count": 18,
   "messages": [
+    {
+      "ts": "1785691174.774589",
+      "user": "U02JZMGGYPL",
+      "text": "&gt; Hey all! Just launched <http://Neolithic.org|Neolithic.org> \u2014 building agentic tools to scale AI safety research\n&gt; \n&gt; We're looking to hire two members of technical staff asap.\n&gt; \n&gt; First project is underway: *working with Redwood and 0Labs to train Anthropic's cyber monitors*. Automated generation of tons of rogue deployment samples to understand and prevent future agent security hacks like we've seen from both Anthropic and OpenAI(xHuggingFace) in the last week.\n&gt; \n&gt; Would greatly appreciate any amount of energy to help spread the word so I can build the dream team :heart:\n&gt; \n&gt; <https://x.com/LeoMcKeeReid/status/2083004401833415027|x.com/LeoMcKeeReid/status/2083004401833415027>"
+    },
+    {
+      "ts": "1785681922.612519",
+      "user": "U0A0NF59K7S",
+      "text": "I'm (still) looking for a postdoc to join my group at the ELLIS Institute T\u00fcbingen / Max Planck Institute for Intelligent Systems! We offer very attractive working conditions (no teaching load, no bureaucracy, very competitive salary). Priority areas: scalable oversight, loss of control, RSI.\n\nWould love to hire someone who has done MATS! I'd also be interested in considering someone pivoting to AI safety who has shown excellence in some other field. If you're interested, fill out this form <http://forms.gle/uu1UrN8RQrSy8wUk8|forms.gle/\u2026>."
+    },
+    {
+      "ts": "1785607409.413629",
+      "user": "U084QSVD4SV",
+      "text": "Thinking Machines is hiring: <https://job-boards.greenhouse.io/thinkingmachines|job-boards.greenhouse.io/thinkingmachines>"
+    },
+    {
+      "ts": "1785547281.083519",
+      "user": "U0834EAV0R5",
+      "text": "*Call for applications: <http://www.longitudepolicy.org/|Longitude DC Intensive>, Oct 5 \u2013 14*\n\nThe Longitude DC Intensive is a fully funded eight-day AI policy program in Washington, DC for people with a *technical AI safety* background who think the US government will play an important part in how well AI development goes, and who are curious to explore how they could contribute in the AI policy ecosystem.\n\u2022 Eight days of talks, workshops and networking with DC AI policy organizations and professionals to learn and explore where and how your technical expertise is needed in the policy ecosystem\n\u2022 October 5 to 14, 2026, Washington, DC\n\u2022 15 participants\n\u2022 Travel, housing and meals are covered\n\u2022 More info: <http://longitudepolicy.org|longitudepolicy.org>\n*Why?*\nMore and more roles in the AI policy ecosystem need people who understand the technology and can reason about the risks, from developing and running evaluations to advising policy professionals on how to handle warning shots like the Hugging Face incident. Those roles get filled either way, and it matters whether they go to someone with AI safety context or not. The intensive is designed to help you find out whether one of those roles is your next step.\n*<http://longitude.fillout.com/apply?ref=generator|Apply here by August 16> or <https://longitude.fillout.com/refer|refer someone who should apply>!*"
+    },
+    {
+      "ts": "1785519519.503459",
+      "user": "U084QSVD4SV",
+      "text": "Wow, it's an 80K bonanza today!\n> \u2022 Model Evaluation and Threat Research: *<https://jobs.80000hours.org/?jobPk=20382&utm_source=job-board-slack-alerts|Security Engineer>*\n> \n> \u2022 Model Evaluation and Threat Research: *<https://jobs.80000hours.org/?jobPk=20381&utm_source=job-board-slack-alerts|Intern, Platform Engineering>*\n> \n> \u2022 Forethought: *<https://jobs.80000hours.org/?jobPk=20383&utm_source=job-board-slack-alerts|Operations Associate / Manager>*\n> \n> \u2022 Epoch AI: *<https://jobs.80000hours.org/?jobPk=20384&utm_source=job-board-slack-alerts|Head of People>*\n> \n> \u2022 Constellation: *<https://jobs.80000hours.org/?jobPk=20385&utm_source=job-board-slack-alerts|Program Manager, Talent Mobilization>*\n> \n> \u2022 Constellation: *<https://jobs.80000hours.org/?jobPk=20386&utm_source=job-board-slack-alerts|Coordinator / Specialist, People Operations>*\n> \n> \u2022 Constellation: *<https://jobs.80000hours.org/?jobPk=20387&utm_source=job-board-slack-alerts|Director, Site Services>*\n> \n> \u2022 Lawfare Institute: *<https://jobs.80000hours.org/?jobPk=20391&utm_source=job-board-slack-alerts|Associate Editor>*\n> \n> \u2022 Alice: *<https://jobs.80000hours.org/?jobPk=20394&utm_source=job-board-slack-alerts|Team Lead, GenAI Safety>*\n> \n> \u2022 Alice: *<https://jobs.80000hours.org/?jobPk=20393&utm_source=job-board-slack-alerts|Tech Lead, GenAI Safety>*\n> \n> \u2022 Alice: *<https://jobs.80000hours.org/?jobPk=20392&utm_source=job-board-slack-alerts|GenAI Chemical, Biological, Radiological, and Nuclear Expert>*\n> \n> \u2022 Valthos: *<https://jobs.80000hours.org/?jobPk=20397&utm_source=job-board-slack-alerts|Member of Technical Staff, Design Engineer>*\n> \n> \u2022 Valthos: *<https://jobs.80000hours.org/?jobPk=20396&utm_source=job-board-slack-alerts|Member of Technical Staff, Applied Computational Biology>*\n"
+    },
+    {
+      "ts": "1785518263.992909",
+      "user": "U084QSVD4SV",
+      "text": "Feeling that entrepreneurial itch?  Neolithic is a new startup in SF looking for a <https://neolithic.org/careers/founding-member-of-technical-staff/|Founding Member of Technical Staff>. They came to our MATS 10 career fair and are doing great work building open-source, agentic tools that automate and scale AI safety research."
+    },
+    {
+      "ts": "1785445832.290659",
+      "user": "U084QSVD4SV",
+      "text": "Killer (and timely) grant opportunity - Due Aug 8th: <https://schmidtsciences.smapply.io/prog/scaling_ai_safety_for_a_multi_agent_world/|schmidtsciences.smapply.io/prog/scaling_ai_safety_for_a_multi_agent_world>"
+    },
     {
       "ts": "1785435783.845749",
       "user": "U084QSVD4SV",
@@ -58,21 +93,6 @@
       "ts": "1785173514.501219",
       "user": "U084QSVD4SV",
       "text": "*Cofounder / ML Researcher, Formation Research*\nFormation Research is a UK-based AI safety nonprofit focused on mitigating lock-in risks from advanced AI, including AI-enabled authoritarianism, power concentration, and covert model behaviours.\n\nWe're looking for one or two people to join Alfie on the founding team.   See Reply for details.\n\n*Background reading*\n\u2022 <http://formationresearch.com|formationresearch.com> and the research listed there.\n\nIf you'd like to chat, or you know someone who might fit, get in touch: <mailto:alfie.lamerton@formationresearch.com|alfie.lamerton@formationresearch.com>"
-    },
-    {
-      "ts": "1784911030.262229",
-      "user": "U084QSVD4SV",
-      "text": "Iliad is running a Sept Intensive and Fall Fellowship; :alarm_clock: *applications close after Monday!*\n\nSeptember 2026 Iliad Intensive\n\nA 4-week taught introduction to technical AI alignment, emphasizing applied mathematics and broad coverage of the field\nLocation: LISA, London, UK\nDuration: Sept 7\u2014Oct 2 inclusive\nFinancial Support: $5,000 (USD) travel-and-housing allowance\nApplication Deadline: July 27 EoD AoE, apply here\n~~~\n\nFall 2026 Iliad Fellowship\n\nA 3-month mentored AI safety research fellowship, with a focus on applied mathematics\nLocation: LISA, London, UK\nDuration: Sept 7\u2014Dec 4 inclusive\nFinancial Support: $6,000 (USD) monthly travel-and-housing allowance\nApplication Deadline: July 27 EoD AoE, apply <https://www.iliad.ac/apply?r=direct|here>."
-    },
-    {
-      "ts": "1784893944.008789",
-      "user": "U0AD5S5PA3X",
-      "text": "Hi all \u2014 _the_ <http://www.saif.org|Safe AI Forum (SAIF)> is looking for a contract _research manager_ to give feedback on our team's draft papers and memos.\n\nIt's a generalist role focused on writing clarity, structure, and general AI governance takes (mostly review of docs) rather than project management or supervision. The RM would review work across our research areas \u2014 international agreements, verification, frontier AI regulation, and technical governance work on loss of control.\n\n:spiral_note_pad: _The details_\n\u2022 :moneybag: $75/hr, ~5\u201310 hrs/week, remote\n\u2022 :spiral_calendar_pad: Two-month trial across August\u2013September, with a view to continuing if it works for both sides\n:white_check_mark: _Likely a good fit if you_\n\u2022 Have managed research or given a lot of feedback on research writing\n\u2022 Know the AI governance space reasonably well and are a good generalist\n\u2022 Can turn things around dependably\n:link: *Role description <https://docs.google.com/document/d/1HRePHwBpnZwFVh0W_EpIRfsFsQDZcka1z2CUu2gYwOc/edit?tab=t.0|here>, and application form <https://airtable.com/appLVSukDo7XIX7VV/pagi8tCEi152w1JPa/form|here>* \u2014 _deadline 26th July_.\n\nWe'll run a quick round of interviews next week and aim to have someone starting early-to-mid August. Please pass it on to anyone who might be a fit \u2014 and happy to answer any questions :pray:"
-    },
-    {
-      "ts": "1784848339.424659",
-      "user": "U08V336C890",
-      "text": ":mats-torch::star2:MATS is hiring a <https://www.matsprogram.org/careers/head-of-finance|Head of Finance>!:star2::mats-torch:\n\nWe're looking for someone to build and run our finance function end to end (accounting, FP&amp;A, grants, payroll, procurement, audit, treasury) as MATS roughly doubles in size each year, reporting to the CFRO. Berkeley, hybrid. $160,000 to $220,000, rolling applications."
     }
   ]
 }
