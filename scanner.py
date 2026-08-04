@@ -502,17 +502,18 @@ def _tag_source(candidates: List[Dict[str, str]], source: str) -> List[Dict[str,
 
 
 # ---------------------------------------------------------------------------
-# Phase 2d: Web search for new grants (the wide net — noisy, opt-in in review)
+# Phase 2d: Web search for new grants + fellowships (the wide net — noisy, opt-in)
 # ---------------------------------------------------------------------------
 
-def scrape_websearch_grants(anthropic_key: str, dry_run: bool = False) -> List[Dict[str, str]]:
+def scrape_websearch_opportunities(anthropic_key: str, dry_run: bool = False) -> List[Dict[str, str]]:
     """Phase 2d: Ask Claude (with the web-search server tool) for newly-open
-    AI-safety grants/RFPs anywhere on the web. This is the wide, noisy net —
-    everything it finds is tagged source="web-search" and lands in a separate
-    'unvetted' bucket of the weekly GitHub issue for manual opt-in, never
-    auto-published. Uses the existing ANTHROPIC_API_KEY; a few queries/week.
+    AI-safety GRANTS/RFPs AND FELLOWSHIPS / research programs / residencies
+    anywhere on the web. This is the wide, noisy net — everything it finds is
+    tagged source="web-search" and lands in a separate 'unvetted' bucket of the
+    weekly GitHub issue for manual opt-in, never auto-published. Uses the
+    existing ANTHROPIC_API_KEY; a few queries/week.
     """
-    logger.info("=== Phase 2d: Web-searching for new AI-safety grants ===")
+    logger.info("=== Phase 2d: Web-searching for new AI-safety grants & fellowships ===")
     if dry_run:
         logger.info("  [DRY RUN] Skipping web search")
         return []
@@ -523,13 +524,17 @@ def scrape_websearch_grants(anthropic_key: str, dry_run: bool = False) -> List[D
     import anthropic
     client = anthropic.Anthropic(api_key=anthropic_key)
     prompt = (
-        "Search the web for AI safety / AI alignment research GRANTS, RFPs, and "
-        "funding calls that are currently open or were newly announced in roughly "
-        "the last 30 days. Focus on funding for researchers and organizations — "
-        "NOT job listings, fellowships, or courses. Prefer official funder pages "
-        "over news articles.\n\n"
+        "Search the web for AI safety / AI alignment opportunities that are "
+        "currently open or were newly announced in roughly the last 30 days, in "
+        "TWO categories:\n"
+        "  (1) research GRANTS, RFPs, and funding calls (for researchers/orgs), and\n"
+        "  (2) FELLOWSHIPS, residencies, and mentored research PROGRAMS.\n"
+        "Include named programs like the AE Studio alignment research grants, "
+        "Anthropic Fellows, MATS, Iliad, Constellation, ERA, SPAR, Pivotal, and "
+        "any newer or less-well-known ones you find. Do NOT include ordinary job "
+        "listings or paid courses. Prefer official program/funder pages over news.\n\n"
         "When done searching, respond with ONLY a JSON array (no prose, no "
-        'markdown fences) of at most 25 objects: [{"name": "Funder — Program", '
+        'markdown fences) of at most 25 objects: [{"name": "Org — Program", '
         '"url": "https://..."}]. Use the canonical application or announcement URL.'
     )
     try:
@@ -571,7 +576,7 @@ def scrape_websearch_grants(anthropic_key: str, dry_run: bool = False) -> List[D
         seen.add(normalized)
         candidates.append({"name": name[:150], "url": url})
 
-    logger.info("Phase 2d total: %d candidate grants from web search", len(candidates))
+    logger.info("Phase 2d total: %d candidate grants/fellowships from web search", len(candidates))
     return candidates
 
 
@@ -959,8 +964,8 @@ def main() -> None:
     # Phase 2c: Sweep known funder RFP/opportunity pages for new grants
     grant_candidates = scrape_grant_sources()
 
-    # Phase 2d: Wide web search for new grants (noisy — opt-in bucket in review)
-    web_candidates = scrape_websearch_grants(anthropic_key, dry_run=args.dry_run)
+    # Phase 2d: Wide web search for new grants + fellowships (noisy — opt-in bucket)
+    web_candidates = scrape_websearch_opportunities(anthropic_key, dry_run=args.dry_run)
 
     # Phase 3: Check career pages for new programs
     career_candidates = check_career_pages(resources, anthropic_key, dry_run=args.dry_run)

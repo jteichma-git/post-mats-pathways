@@ -267,6 +267,23 @@
     "last_content_change": "2026-08-03T12:29:16.949956+00:00"
   },
   {
+    "name": "AE Studio — AI Alignment Research Grants",
+    "url": "https://research.ae.studio/",
+    "category": "fellowships",
+    "current_status": "open",
+    "current_deadline": "Rolling",
+    "current_details": "AE Studio is a self-funded, independent AI alignment research group — collaborating with Anthropic, the UK AI Security Institute, and DARPA — that offers <strong>research grants</strong> and hands-on collaboration to external researchers pursuing high-impact, neglected approaches to aligning advanced AI. Bold, unconventional ideas are explicitly encouraged; applications are accepted on a <strong>rolling</strong> basis.",
+    "last_checked": "2026-07-31T23:22:59.783572+00:00",
+    "js_only": false,
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "Remote / global",
+      "program_dates": "Rolling"
+    },
+    "last_content_change": "2026-07-31T23:22:59.783572+00:00"
+  },
+  {
     "name": "Pivotal Research Fellowship",
     "url": "https://www.pivotal-research.org/fellowship",
     "category": "fellowships",
