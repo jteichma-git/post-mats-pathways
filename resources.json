@@ -1231,6 +1231,23 @@
     "last_content_change": "2026-07-27T12:28:20.991524+00:00"
   },
   {
+    "name": "Longitude DC Intensive",
+    "url": "https://longitudepolicy.org",
+    "category": "policy-internships",
+    "current_status": "open",
+    "current_deadline": "August 16, 2026, 11:59 PM PDT",
+    "current_details": "A fully funded <strong>eight-day</strong> AI policy program in Washington, DC for people with a <strong>technical AI safety</strong> background who want to explore how their technical expertise could contribute in the AI policy ecosystem. <strong>15 participants</strong> spend <strong>October 5–14, 2026</strong> in talks, workshops and networking with DC AI policy organizations and professionals, covering foundations of US government and AI policy, hands-on policy career workshops, and post-program support for transitioning into policy roles. Tuition, DC housing, meals on program days, and domestic travel are covered (international applicants may be asked to contribute toward flights). Requires a technical AI background (degree, research, or hands-on work), an undergraduate degree, and US-based status or US citizenship; prior policy experience is not required. <a href=\"https://longitude.fillout.com/apply?ref=website\" target=\"_blank\" rel=\"noopener\">Apply here</a>.",
+    "last_checked": "2026-08-06T00:00:00+00:00",
+    "js_only": false,
+    "structured": {
+      "stipend": "Fully funded (tuition, housing, meals, domestic travel)",
+      "duration": "8 days",
+      "location": "Washington, DC",
+      "program_dates": "October 5 – 14, 2026"
+    },
+    "last_content_change": "2026-08-06T00:00:00+00:00"
+  },
+  {
     "name": "RAND CAST Fellows",
     "url": "https://www.rand.org/global-and-emerging-risks/centers/ai-security-and-technology/fellows.html",
     "category": "policy-internships",
