@@ -1,93 +1,58 @@
 {
-  "synced_at": "2026-08-17T09:58:10.738252+00:00",
+  "synced_at": "2026-08-24T10:04:12.688729+00:00",
   "channel": "C05LWT1UG67",
   "window_days": 7,
-  "count": 17,
+  "count": 10,
   "messages": [
     {
-      "ts": "1786935446.395489",
+      "ts": "1787249634.153759",
+      "user": "U06DUHWE4LQ",
+      "text": "Apply for a share of the $1M grant to work on interp for alignment with Goodfire. Open to all academic and non-profit/independent researchers.\n <https://x.com/GoodfireAI/status/2090479184686842200|x.com/GoodfireAI/status/2090479184686842200>"
+    },
+    {
+      "ts": "1787180668.668249",
+      "user": "U0A08P15FGB",
+      "text": "A new AI policy research org is opening in Washington, DC -- they haven't formally posted any open positions yet, but if you'd be interested in working there, it's probably a good idea to let them know! <https://techstatecraft.org/research-item/statecraft-for-the-ai-transition/|techstatecraft.org/research-item/statecraft-for-the-ai-transition>"
+    },
+    {
+      "ts": "1787177234.232409",
+      "user": "U0834EAV0R5",
+      "text": ":robot_face: *Hiring: Member of Technical Staff, Frontier Robotics Evals @ Robocurve*\n\n<https://robocurve.org/|Robocurve> evaluates frontier AI robotics systems and informs the public on physical automation (i.e. \"METR for robots\"). We develop benchmarks and open-source tooling to evaluate AI on robots, working hands-on with real hardware (bimanual arms, humanoids, quadrupeds).\n\u2022 :round_pushpin: In-person, SF\n\u2022 :robot_face: No robotics background required, strong agentic coding skills (Claude Code, Codex) matter more\n\u2022 :moneybag: $150k\u2013$300k + equity (open to going higher for exceptional candidates)\n\u2022 :link: <https://tally.so/r/1AQAlW|Apply here>\nKnow someone who'd be great for this? We're also offering $5k for successful <https://tally.so/r/0QqQPZ|referrals>.\n\n---\n\nRobocurve is founded by <@U0A046H3K96> (MATS scholar), we expect MATS scholars to be great fits for this role!"
+    },
+    {
+      "ts": "1787161524.475639",
       "user": "U084QSVD4SV",
-      "text": "&gt; :mega: *Three days left to apply: <http://www.longitudepolicy.org|Longitude DC Intensive>, deadline Sunday, Aug 16*\n&gt; A fully funded, eight-day AI policy program in Washington, DC, for people with a technical AI safety background who want to find out where their expertise is needed in US policy.\n&gt; \n&gt; *Why should you apply?*\n&gt; \u2022 No policy experience needed \u2013 the program is built for people with a technical AI safety background.\n&gt; \u2022 Travel, housing, and meals are covered.\n&gt; \u2022 Program features a variety of speakers to explore the whole breadth of AI policy-related work *beyond AI policy research*\n&gt; \u2022 Multiple AI policy orgs have expressed hiring needs for technical talent and are interested in sourcing candidates from the cohort\n&gt; \n&gt; _October 5 to 14, 2026, Washington, DC_\n&gt; \n&gt;  *<https://longitude.fillout.com/apply?ref=far|Apply here by August 16>*\n&gt;  Know someone who should be there? <https://longitude.fillout.com/refer|Refer them here>."
+      "text": "80K today:\n&gt; \u2022 Constellation: *<https://jobs.80000hours.org/?jobPk=20632&amp;utm_source=job-board-slack-alerts|IT Coordinator / IT Specialist>*\n&gt; \n&gt; \u2022 Constellation: *<https://jobs.80000hours.org/?jobPk=20631&amp;utm_source=job-board-slack-alerts|Business Operations Generalist>*\n&gt; \n&gt; \u2022 AI Verification and Evaluation Research Institute: *<https://jobs.80000hours.org/?jobPk=20633&amp;utm_source=job-board-slack-alerts|Project Manager, Pilot Audits>*\n&gt; \n&gt; \u2022 Alice: *<https://jobs.80000hours.org/?jobPk=20635&amp;utm_source=job-board-slack-alerts|Principal Researcher, AI Security>*\n&gt; \n&gt; \u2022 AIGS Canada: *<https://jobs.80000hours.org/?jobPk=20638&amp;utm_source=job-board-slack-alerts|Head of Operations>*\n&gt; \n&gt; \u2022 AIGS Canada: *<https://jobs.80000hours.org/?jobPk=20637&amp;utm_source=job-board-slack-alerts|Head of Communications>*\n&gt; \n&gt; \u2022 Carnegie Mellon University, Software Engineering Institute: *<https://jobs.80000hours.org/?jobPk=20640&amp;utm_source=job-board-slack-alerts|Associate AI Red Team Engineer>*\n&gt; \n&gt; \u2022 Gray Swan: *<https://jobs.80000hours.org/?jobPk=20641&amp;utm_source=job-board-slack-alerts|Head of Cyber Safety>*\n&gt; \n&gt; \u2022 MiniMax: *<https://jobs.80000hours.org/?jobPk=20642&amp;utm_source=job-board-slack-alerts|AI Security Researcher>*"
     },
     {
-      "ts": "1786824072.260259",
+      "ts": "1787147914.567309",
+      "user": "U049HT57JJG",
+      "text": "*[Hiring] AI Safety Research Scientist (Independent Research Project)*\nWe\u2019re looking for an empirical AI safety research scientist to join our team in Cambridge/London on an independent AI safety research project.\n*12-month contract \u00b7 \u00a390k salary \u00b7 UK visa sponsorship available \u00b7 Remote considered*\nWe\u2019re studying how different alignment training interventions shape model behaviour, with projects on curriculum learning, on-/off-policy alignment, midtraining and model spec design.\nWe\u2019re looking for someone with a strong AI safety background and a record of published AI safety research.\nThe project is funded by Coefficient Giving, with Meridian providing fiscal sponsorship and/or acting as the employer of record, depending on the successful candidate\u2019s circumstances.\nSee the <https://docs.google.com/document/d/1L48xK5z0M4yJN3uwmcQU5Sxxn7b0yOoUy23b8VOeUJQ/edit?usp=sharing|job post> for details.\nApply via this <https://airtable.com/appL8qBpvd7dKMiGU/pags3e6dg8GUiKYmn/form|form> by 4 September.\nApplications are reviewed on a rolling basis and we aim to fill this role as soon as we find someone suitable."
+    },
+    {
+      "ts": "1787125885.417309",
+      "user": "U0AQN5MJV6E",
+      "text": "INESIA (France's AISI) is currently recruiting engineers (various experience levels) to work on an LLM evaluation platform. You can be based in Paris or a few other cities.\nApparently interviews will finish soon but *if you are interested please DM and I will send you a contact email.*"
+    },
+    {
+      "ts": "1787085898.001489",
       "user": "U084QSVD4SV",
-      "text": "5 new roles today on 80k hours!\n\n\u2022 Government of California, Office of Emergency Services: *<https://jobs.80000hours.org/?jobPk=20580&amp;utm_source=job-board-slack-alerts|Data Reporting Analyst, Artificial Intelligence Safety Reporting Program>*\n\n\u2022 Trajectory Labs: *<https://jobs.80000hours.org/?jobPk=20581&amp;utm_source=job-board-slack-alerts|Head of AI Red Teaming>*\n\n\u2022 Alice: *<https://jobs.80000hours.org/?jobPk=20583&amp;utm_source=job-board-slack-alerts|GenAI Biosecurity Expert>*\n\n\u2022 Alice: *<https://jobs.80000hours.org/?jobPk=20582&amp;utm_source=job-board-slack-alerts|GenAI Chemical, Biological, Radiological, Nuclear, and Explosives Cyber Expert>*\n\n\u2022 Institute for Security and Technology: *<https://jobs.80000hours.org/?jobPk=20585&amp;utm_source=job-board-slack-alerts|Contractor, Senior Technical Advisor, AI Capability Assessment>*\n\n"
+      "text": "<https://openai.com/index/pacing-model-development-cyber-capabilities/|Sam states OAI is slowing down RL> runs to make sure that OAI models are safe.  Might be a great team to <https://openai.com/careers/search/?q=Safety|join the team>?  They are:\n<https://openai.com/careers/researcher-recursive-self-improvement-safety-san-francisco/|openai.com/careers/researcher-recursive-self-improvement-safety-san-francisco>"
     },
     {
-      "ts": "1786817732.016419",
-      "user": "U08G094FTEG",
-      "text": "The Horizon Institute for Public Service is <https://horizonpublicservice.org/horizon-hiring/|hiring> for 9 roles based in Washington, DC (deadline Sunday, August 23).\n\nThey're looking for two Director-level hires to lead their<https://horizonpublicservice.org/director-events/| ><https://horizonpublicservice.org/director-events/|events work> and their<https://horizonpublicservice.org/director-policy-and-leadership-network/| ><https://horizonpublicservice.org/director-policy-and-leadership-network/|senior policy and leadership network> (salary $150\u2013200k+), plus seven Program Associate / Program Manager roles across<https://horizonpublicservice.org/program-associate-program-manager-communications/| >policy, events, comms, operations, and data (salary $100\u2013160k+). The roles are open to applicants from recent graduates to mid-career professionals, with visa sponsorship available. The <https://horizonpublicservice.fillout.com/hiring-summer-2026|initial application> is brief and allows you to apply for multiple roles at once."
-    },
-    {
-      "ts": "1786743767.544999",
+      "ts": "1787083033.251869",
       "user": "U084QSVD4SV",
-      "text": "Two more great opportunities from the esteemed Illiad program:\n&gt; *October 2026 Iliad Intensive*\n&gt; \u2022 A 4-week taught introduction to technical AI alignment, emphasizing applied math and broad coverage of the alignment field\n&gt; \u2022 *Location:* Mox, SF, USA\n&gt; \u2022 *Duration:* Oct 5\u201330 inclusive\n&gt; \u2022 *Financial Support:* $5,000 (USD) travel-and-housing allowance\n&gt; \u2022 *Application Deadline:* Aug 24 EoD AoE, apply <https://www.iliad.ac/apply?r=direct|here>\n&gt; \n&gt; ~~~\n&gt; \n&gt; Iliad is now also running _Fellowship_ cohorts in monthly (overlapping) windows:\n&gt; \n&gt; *October 2026 Iliad Fellowship*\n&gt; \u2022 A 3-month mentored, fully funded AI safety research fellowship, with a focus on applied math\n&gt; \u2022 *Location:* LISA, London, UK\n&gt; \u2022 *Duration:* Oct 5\u2014Dec 18 inclusive\n&gt; \u2022 *Financial Support:* $6,000 (USD) monthly travel-and-housing allowance\n&gt; \u2022 *Application Deadline:* Aug 31 EoD AoE, apply <https://www.iliad.ac/apply?r=direct|here>\n&gt; ILIAD\n&gt; <https://www.iliad.ac/apply?r=direct|Apply | Join Our Programs \u2013 Apply Now \u2014 ILIAD>"
+      "text": "Big day for jobs on 80K hours, I'm starting to see a trend towards field building roles:\n\n\u2022 Lightcone Infrastructure: *<https://jobs.80000hours.org/?jobPk=20588&amp;utm_source=job-board-slack-alerts|Corrigibility Research Fund>*\n\n\u2022 UK Government, AI Security Institute: *<https://jobs.80000hours.org/?jobPk=20590&amp;utm_source=job-board-slack-alerts|Head of Business Operations, AI Safety Institute>*\n\n\u2022 UK Government, AI Security Institute: *<https://jobs.80000hours.org/?jobPk=20589&amp;utm_source=job-board-slack-alerts|Head of Finance and Business Services>*\n\n\u2022 Centre for Effective Altruism: *<https://jobs.80000hours.org/?jobPk=20591&amp;utm_source=job-board-slack-alerts|Associate Program Officer, Transformative AI Fund>*\n\n\u2022 US Government, National Institute of Standards and Technology: *<https://jobs.80000hours.org/?jobPk=20593&amp;utm_source=job-board-slack-alerts|AI Standards Coordinator, Interdisciplinary>*\n\n\u2022 Center for a New American Security: *<https://jobs.80000hours.org/?jobPk=20596&amp;utm_source=job-board-slack-alerts|Research Assistant / Research Associate, Technology and National Security Program>*\n\n\u2022 Faculty: *<https://jobs.80000hours.org/?jobPk=20598&amp;utm_source=job-board-slack-alerts|Associate, Safety>*\n\n\u2022 Lucid Computing: *<https://jobs.80000hours.org/?jobPk=20600&amp;utm_source=job-board-slack-alerts|Member of Technical Staff>*\n\n\u2022 New Movement Organization for AI Regulation: *<https://jobs.80000hours.org/?jobPk=20605&amp;utm_source=job-board-slack-alerts|Distributed Organizer, Contractor>*\n\n\u2022 New Movement Organization for AI Regulation: *<https://jobs.80000hours.org/?jobPk=20604&amp;utm_source=job-board-slack-alerts|Organizing Director>*\n\n\u2022 New Movement Organization for AI Regulation: *<https://jobs.80000hours.org/?jobPk=20603&amp;utm_source=job-board-slack-alerts|Senior Digital Manager>*\n\n\u2022 New Movement Organization for AI Regulation: *<https://jobs.80000hours.org/?jobPk=20602&amp;utm_source=job-board-slack-alerts|Operations Director / Operations Manager>*"
     },
     {
-      "ts": "1786730672.321239",
+      "ts": "1787003534.822789",
       "user": "U084QSVD4SV",
-      "text": "From Rohan, great opportinity!\n&gt; For anyone in Berkeley/SF: *Sebastian Prasanna and I are running a Risk Report Review Workshop this weekend at Constellation.* Arrow (a new AI safety org started by Francis Rhys Ward) is collecting data (that may be used for METR's Time Horizon 2.0) and needs people to a) review frontier model model cards and b) grade those model card reviews.\n&gt; \n&gt; Participants will be paid $540 per day (up to 30 participants, which we likely won't hit). This is also useful for you to see what these risk reports and model cards say and to form views about what kinds of evidence justify claims of model safety.\n&gt; \n&gt; If you can't make both days, we'd still appreciate if you can join for one day, or even half a day. Just specify which day you will join when you RSVP. Sorry for the short notice: we may have to cancel if we get fewer than 10 people. (But we're pretty sure we can get at least 10, we're already close.)\n&gt; \n&gt; *Please sign up at this partiful soon if you're interested!*  <https://partiful.com/e/5hQITg4oRWbcOTvt53KA?c=pXFxstcE|partiful.com/e/\u2026?c=pXFxstcE> "
+      "text": "SL5 has a bunch of great career opportunities including researchers and red teaming, auditing and compliance roles: <https://sl5.org/careers|sl5.org/careers>"
     },
     {
-      "ts": "1786580576.561559",
+      "ts": "1786989961.278539",
       "user": "U084QSVD4SV",
-      "text": "A great opp from Illiad!\n&gt; <http://iliad.ac|Iliad> is hiring for a *<https://www.iliad.ac/opportunities-2/fellowship-director|Technical Research Manager>*:\n&gt; \u2022 *$105,000\u2013150,000*, full-time\n&gt; \u2022 *In-person, London, LISA*\n&gt; \u2022 Research manage in the Iliad style for the Iliad Fellowships; we need some kind of *mathematical background* and some context on alignment\n&gt; \u2022 *Apply <https://www.iliad.ac/opportunities-2/fellowship-director|here> by Aug 23* EoD AoE\n&gt; ILIAD\n&gt; <https://www.iliad.ac/opportunities-2/fellowship-director|Technical Research Manager (Iliad Fellowship) \u2014 ILIAD>\n&gt; Own the Iliad Fellowship end-to-end \u2014 from selection through alumni \u2014 while research-managing the fellows and the fellowship team. Full-time, London.\\"
-    },
-    {
-      "ts": "1786561411.375119",
-      "user": "U084QSVD4SV",
-      "text": "From <@U0AQ9Q60VS9> (if interested, Slack him directly)\n> a non-profit organization I\u2019m associated with back in the Netherlands is looking for a full-time Research Lead: someone who will take full responsibility for their Research Hub (matching Dutch AI safety talent with supervisors and leading the chapters\u2019 research teams). It\u2019s a paid position (\u20ac40\u201360k) based in Amsterdam, with an ASAP start date. Full description: <https://docs.google.com/document/d/17Ni_HjLQeETsQfxx9iWviVA2HC0oz9TH-J0nRPy45AI/edit?usp=sharing|docs.google.com/document/d/17Ni_HjLQeET\u2026/edit?usp=sharing>"
-    },
-    {
-      "ts": "1786556807.994049",
-      "user": "U084QSVD4SV",
-      "text": "80K today:\n&gt; \u2022 Centre for Effective Altruism: *<https://jobs.80000hours.org/?jobPk=20553&amp;utm_source=job-board-slack-alerts|Transformative AI Fund>*\n&gt; \n&gt; \u2022 UK Government, AI Security Institute: *<https://jobs.80000hours.org/?jobPk=20554&amp;utm_source=job-board-slack-alerts|Technical Programme Manager, Cyber and Autonomous Systems>*\n&gt; \n&gt; \u2022 Institute for AI Policy and Strategy: *<https://jobs.80000hours.org/?jobPk=20555&amp;utm_source=job-board-slack-alerts|Manager / Associate / Senior Associate, Special Projects>*\n"
-    },
-    {
-      "ts": "1786505389.532709",
-      "user": "U048BCNPAJH",
-      "text": "Up to FIVE more positions have recently opened in the California government to work on frontier AI safety issues, including the implementation of SB 53, the country\u2019s first frontier AI safety law. If you work at CalOES you can work with <@U098NNCBVMX> and <@U04G7R6ECMC>! More details in thread."
-    },
-    {
-      "ts": "1786489198.295619",
-      "user": "U084QSVD4SV",
-      "text": "&gt; IASEAI is trying to recruit their first Executive Director. Some interesting information in their job spec for their org strategy and setup:\n&gt; \u2022 Operating budget is estimated to be between 5-10 million raised through foundation and philanthropic donations\n&gt; \u2022 IASEAI policies are set by an elected Council and ED reports up to a separate Board and must negotiate across multiple stakeholders\n&gt; <https://www.iaseai.org/IASEAI-Executive_Director-Position_Specification.pdf|iaseai.org/IASEAI-Executive_Director-Position_Specification.pdf>"
-    },
-    {
-      "ts": "1786469962.815089",
-      "user": "U084QSVD4SV",
-      "text": "80K Hours Today:\n&gt; \u2022 MATS Research: *<https://jobs.80000hours.org/?jobPk=20542&amp;utm_source=job-board-slack-alerts|Neel Nanda Stream, MATS Program (Winter 2026)>*\n&gt; \n&gt; \u2022 Center on Long-Term Risk: *<https://jobs.80000hours.org/?jobPk=20543&amp;utm_source=job-board-slack-alerts|Research Affiliates Program>*\n&gt; \n&gt; \u2022 Cambridge Boston Alignment Initiative: *<https://jobs.80000hours.org/?jobPk=20544&amp;utm_source=job-board-slack-alerts|Workshop Lead>*\n&gt; \n&gt; \u2022 AI Security Bootcamp: *<https://jobs.80000hours.org/?jobPk=20545&amp;utm_source=job-board-slack-alerts|AI Security Bootcamp, San Francisco>*\n&gt; \n&gt; \u2022 Pour Demain: *<https://jobs.80000hours.org/?jobPk=20547&amp;utm_source=job-board-slack-alerts|Advisor / Senior Advisor, AI Safety>*\n&gt; \n&gt; \u2022 Pour Demain: *<https://jobs.80000hours.org/?jobPk=20546&amp;utm_source=job-board-slack-alerts|Managing Director,  Europe>*"
-    },
-    {
-      "ts": "1786458021.801649",
-      "user": "U0490T75ZAB",
-      "text": "Hi, we (<https://www.successif.org/|Successif>) are hiring a biosecurity career advisor! Find more information <https://www.successif.org/biosecurity-advisor|here> and apply by August 30. I'm a career advisor at Successif myself and I can attest that it is an amazing place to work. Feel free to reach out to me if you have any questions."
-    },
-    {
-      "ts": "1786405802.925319",
-      "user": "U0490T74W79",
-      "text": "Feel free to send me questions about the <https://ccst.us/senior-ai-fellow-cal-oes/|Senior AI Fellow at Cal OES> position, I would really encourage more people from MATS to apply and I think it's very impactful!\n\n<https://x.com/miclchen/status/2085779716842422515|https://x.com/miclchen/status/2085779716842422515>"
-    },
-    {
-      "ts": "1786395027.422669",
-      "user": "U084QSVD4SV",
-      "text": "A hearty mix of state, research and lab jobs today on 80K hours today:\n\n&gt; California Council on Science and Technology: *<https://jobs.80000hours.org/?jobPk=20486&amp;utm_source=job-board-slack-alerts|Senior AI Fellow, California Department of Technology>*\n&gt; \n&gt; \u2022 California Council on Science and Technology: *<https://jobs.80000hours.org/?jobPk=20485&amp;utm_source=job-board-slack-alerts|Senior AI Fellow, California Governor's Office of Emergency Services>*\n&gt; \n&gt; \u2022 Arcadia Impact: *<https://jobs.80000hours.org/?jobPk=20487&amp;utm_source=job-board-slack-alerts|AI Governance Taskforce (Autumn 2026)>*\n&gt; \n&gt; \u2022 INHR: *<https://jobs.80000hours.org/?jobPk=20488&amp;utm_source=job-board-slack-alerts|AI Policy Research Fellowship (x2)>*\n&gt; \n&gt; \u2022 Anthropic: *<https://jobs.80000hours.org/?jobPk=20491&amp;utm_source=job-board-slack-alerts|Insider Risk Investigator>*\n&gt; \n&gt; \u2022 Artificial Intelligence Underwriting Company: *<https://jobs.80000hours.org/?jobPk=20492&amp;utm_source=job-board-slack-alerts|Member of Technical Staff>*\n&gt; \n&gt; \u2022 Foresight Institute: *<https://jobs.80000hours.org/?jobPk=20493&amp;utm_source=job-board-slack-alerts|Foresight Fellowship>*"
-    },
-    {
-      "ts": "1786394996.060799",
-      "user": "U07779L9708",
-      "text": "Applications to <https://www.matsprogram.org/apply|Neel Nanda's Winter 2027> <https://www.matsprogram.org/apply|stream> are open! Tell your friends :mats-flame:"
-    },
-    {
-      "ts": "1786394876.503159",
-      "user": "U084QSVD4SV",
-      "text": "&gt; Exciting news from Pour Demain! Pour Demain Europe is hiring for two new roles, both working on frontier AI policy in the EU (AI Act implementation, the GPAI Code of Practice, and the AI Office).\n&gt; \n&gt; :compass: <https://eu.jotform.com/form/262166120063143|Managing Director >\u2014 to lead the organisation as it grows from 5 to 10+ staff. Open to two profiles: a senior AI leader, or a strong organisational leader with some grounding in AI safety.\n&gt; \n&gt; :microscope: <https://eu.jotform.com/form/262167068943162|(Senior) Advisor, AI Safety> \u2014 either a policy track (Brussels-based, engaging directly with EU institutions) or a research track (remote-friendly, frequent trips to Brussels).\n&gt; \n&gt; :hourglass_flowing_sand: Initial deadline 17 August, final deadline 31 August. Applications are reviewed as they come in, so earlier is better.\n&gt; \n&gt; Both forms take 5\u201310 minutes; no cover letter. Worth passing on to anyone who might be a fit! :pray:"
-    },
-    {
-      "ts": "1786385534.171049",
-      "user": "U03J7KAGVB7",
-      "text": "*We're accepting applications for the fifth iteration of the AI Security Bootcamp!*\n\n<https://aisb.dev|AI Security Bootcamp> is a fully funded program for senior security professionals shaping how we secure frontier AI systems.\n\nAISB is a 7-day intensive focused on the risks as frontier AI systems become more capable and are targeted by sophisticated attacks. The program covers threat modeling, adversarial attacks, LLM security, infrastructure controls, weight security, formal verification, data center security, AI control, and hardware governance.\n\nWe are looking for senior security professionals with 5+ years of experience. No AI or ML background required. Past participants have been affiliated with OpenAI, Anthropic, Nvidia, Google, Meta, Apple, Microsoft, AWS, Stanford, MIT, Oxford, Cambridge, and national security agencies.\n\nApplications close 16th Aug. We review on a rolling basis and encourage you to apply as early as possible.\n\n<https://airtable.com/appyq1bBRnK6s7AkM/paglvXzxYAiJclCZX/form|Apply here>, or learn more at <https://aisb.dev/sf26|aisb.dev/sf26>\n\nIf you know someone who might be a strong candidate, please share this with them, or send them the <https://www.linkedin.com/posts/ai-security-bootcamp_want-to-learn-why-anthropic-cannot-secure-activity-7477334551665475584-G68W?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAC90MxIBYeuJ2u9HmNlVyNUYtS8Tpjufl2U|linkedin post>."
+      "text": "Happy Monday!  Lots of field builder roles today (80K hours posts):\n&gt; \u2022 Lightcone Infrastructure: *<https://jobs.80000hours.org/?jobPk=20588&amp;utm_source=job-board-slack-alerts|Corrigibility Research Fund>*\n&gt; \n&gt; \u2022 UK Government, AI Security Institute: *<https://jobs.80000hours.org/?jobPk=20590&amp;utm_source=job-board-slack-alerts|Head of Business Operations, AI Safety Institute>*\n&gt; \n&gt; \u2022 UK Government, AI Security Institute: *<https://jobs.80000hours.org/?jobPk=20589&amp;utm_source=job-board-slack-alerts|Head of Finance and Business Services>*\n&gt; \n&gt; \u2022 Centre for Effective Altruism: *<https://jobs.80000hours.org/?jobPk=20591&amp;utm_source=job-board-slack-alerts|Associate Program Officer, Transformative AI Fund>*\n&gt; \n&gt; \u2022 US Government, National Institute of Standards and Technology: *<https://jobs.80000hours.org/?jobPk=20593&amp;utm_source=job-board-slack-alerts|AI Standards Coordinator, Interdisciplinary>*\n&gt; \n&gt; \u2022 Center for a New American Security: *<https://jobs.80000hours.org/?jobPk=20596&amp;utm_source=job-board-slack-alerts|Research Assistant / Research Associate, Technology and National Security Program>*\n&gt; \n&gt; \u2022 Faculty: *<https://jobs.80000hours.org/?jobPk=20598&amp;utm_source=job-board-slack-alerts|Associate, Safety>*\n&gt; \n&gt; \u2022 Lucid Computing: *<https://jobs.80000hours.org/?jobPk=20600&amp;utm_source=job-board-slack-alerts|Member of Technical Staff>*\n&gt; \n&gt; \u2022 New Movement Organization for AI Regulation: *<https://jobs.80000hours.org/?jobPk=20605&amp;utm_source=job-board-slack-alerts|Distributed Organizer, Contractor>*\n&gt; \n&gt; \u2022 New Movement Organization for AI Regulation: *<https://jobs.80000hours.org/?jobPk=20604&amp;utm_source=job-board-slack-alerts|Organizing Director>*\n&gt; \n&gt; \u2022 New Movement Organization for AI Regulation: *<https://jobs.80000hours.org/?jobPk=20603&amp;utm_source=job-board-slack-alerts|Senior Digital Manager>*\n&gt; \n&gt; \u2022 New Movement Organization for AI Regulation: *<https://jobs.80000hours.org/?jobPk=20602&amp;utm_source=job-board-slack-alerts|Operations Director / Operations Manager>*"
     }
   ]
 }
