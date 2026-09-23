@@ -54,4 +54,13 @@ jobs:
           git add resources.json index.html directory.html change_report.json slack_feed.json
           TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
           git commit -m "Auto-update resource statuses ($TIMESTAMP)"
-          git push
+          # A crawl takes ~20 minutes, so main can move under us while it runs.
+          # Without this the whole run's work is discarded on a rejected push.
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "pushed on attempt $attempt"; exit 0
+            fi
+            echo "push rejected; rebasing onto origin/main and retrying"
+            git pull --rebase --autostash origin main
+          done
+          echo "::error::could not push after 3 attempts"; exit 1
