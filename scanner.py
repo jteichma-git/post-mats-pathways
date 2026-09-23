@@ -22,7 +22,7 @@ import os
 import re
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from typing import Dict, List, Optional, Set, Tuple
 from urllib.parse import urlparse, urljoin
 
@@ -83,6 +83,8 @@ RELEVANCE_PROMPT = """You are an expert on AI safety career opportunities. Analy
 
 Be CONSERVATIVE. General AI/ML jobs, generic tech accelerators, or organizations that only tangentially touch AI safety should score low.
 
+This tracker lists PROGRAMS, FUNDERS and ORGANISATIONS — not individual job openings. A page advertising one role ("Research Engineer, Evaluations", "Head of Policy", "Chief of Staff") scores 1, however good the org is: those are mirrored separately from a live jobs feed, and repeating them here buries the programs. If a careers page as a whole is worth tracking, return the careers page, not the single role.
+
 IMPORTANT: AI governance and AI policy work focused on safety/security/alignment should score EQUALLY HIGH as technical AI safety work. Both technical and governance approaches are core to the AI safety field.
 
 Criteria for high scores:
@@ -124,6 +126,8 @@ Does this page now mention any NEW program types that are NOT reflected in the e
 - A new training program or course
 
 Be conservative - only flag genuinely new offerings, not minor updates to existing programs.
+
+Do NOT return individual job openings. A new role on an existing careers page is not a new program; a newly launched fellowship, residency, bootcamp, incubator or funding call is.
 
 If there are new programs, return a JSON array of objects, each with:
 - "name": string
@@ -658,6 +662,88 @@ def check_career_pages(
 
 
 # ---------------------------------------------------------------------------
+# What this site tracks, and what it deliberately ignores
+# ---------------------------------------------------------------------------
+#
+# The site lists programs, funders and organisations. Individual job postings
+# are already mirrored live from the MATS #opportunities Slack channel, so
+# surfacing them here duplicates that feed and buries the programs — 101 of
+# the 189 candidates in the July-September backlog were single roles.
+
+ATS_DOMAINS = (
+    "greenhouse.io", "grnh.se", "lever.co", "ashbyhq.com", "workable.com",
+    "smartrecruiters.com", "jobvite.com", "bamboohr.com", "recruitee.com",
+    "teamtailor.com", "breezy.hr", "applytojob.com", "jobs.80000hours.org",
+    "eu-careers.europa.eu", "civilservicejobs.service.gov.uk",
+    "calcareers.ca.gov", "apply.careers.microsoft.com", "jobs.ffwd.org",
+)
+
+_ROLE_TITLE_RE = re.compile(
+    r"\b(engineer|scientist|manager|director|analyst|associate|specialist|"
+    r"officer|counsel|consultant|contractor|coordinator|advisor|adviser|"
+    r"assistant|developer|designer|recruiter|administrator|"
+    r"member of technical staff|head of|chief)\b",
+    re.IGNORECASE,
+)
+
+
+def looks_like_job_posting(name: str, url: str) -> bool:
+    """True when a candidate is one role rather than a program or an org."""
+    host = urlparse(url).netloc.lower()
+    if any(d in host for d in ATS_DOMAINS):
+        return True
+    return bool(_ROLE_TITLE_RE.search(name or ""))
+
+
+# ---------------------------------------------------------------------------
+# Memory of what has already been shown
+# ---------------------------------------------------------------------------
+#
+# John's rule is that he only declines an entry when it is out of date, so
+# nothing here is a permanent blacklist on relevance grounds — this only stops
+# the weekly issue re-listing candidates it has already put in front of him.
+# Without it the issue repeats itself: ALIGN was re-surfaced 18 weeks running.
+
+SEEN_FILE = "seen_candidates.json"
+
+
+def load_seen(path: str) -> Dict[str, str]:
+    if not os.path.exists(path):
+        return {}
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, OSError) as e:
+        logger.warning("Could not read %s (%s) — treating as empty", path, e)
+        return {}
+
+
+def save_seen(path: str, seen: Dict[str, str], newly_shown: List[str]) -> None:
+    today = datetime.now(timezone.utc).date().isoformat()
+    for url in newly_shown:
+        seen.setdefault(normalize_url(url), today)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(seen, f, indent=2, sort_keys=True)
+    logger.info("Recorded %d candidate(s) as seen (%d total)", len(newly_shown), len(seen))
+
+
+def is_stale(candidate: Dict) -> bool:
+    """Out of date is the one reason we drop a candidate outright."""
+    if (candidate.get("status") or "").lower() == "closed":
+        return True
+    raw = candidate.get("deadline")
+    if not raw:
+        return False
+    m = re.search(r"(\d{4})-(\d{2})-(\d{2})", str(raw))
+    if not m:
+        return False
+    try:
+        return date(*(int(g) for g in m.groups())) < datetime.now(timezone.utc).date()
+    except ValueError:
+        return False
+
+
+# ---------------------------------------------------------------------------
 # Phase 4: Deduplicate against existing resources
 # ---------------------------------------------------------------------------
 
@@ -686,12 +772,15 @@ def deduplicate(
     known_urls: Set[str],
     known_domains: Set[str],
     known_names: Set[str],
+    already_seen: Optional[Dict[str, str]] = None,
 ) -> List[Dict[str, str]]:
     """Phase 4: Remove candidates that match existing resources."""
     logger.info("=== Phase 4: Deduplicating against %d known resources ===", len(known_urls))
+    already_seen = already_seen or {}
 
     unique = []
     seen_normalized = set()  # type: Set[str]
+    n_jobs = n_repeat = 0
 
     for candidate in candidates:
         url = candidate.get("url", "")
@@ -701,6 +790,16 @@ def deduplicate(
 
         # Skip if URL already tracked
         if normalized in known_urls:
+            continue
+
+        # Skip single job postings — the Slack mirror already carries those
+        if looks_like_job_posting(name, url):
+            n_jobs += 1
+            continue
+
+        # Skip anything a previous issue already put in front of a human
+        if normalized in already_seen:
+            n_repeat += 1
             continue
 
         # Skip if we already have this exact URL in our candidate list
@@ -722,6 +821,10 @@ def deduplicate(
         unique.append(candidate)
 
     logger.info("After dedup: %d candidates (removed %d)", len(unique), len(candidates) - len(unique))
+    logger.info(
+        "  of those removed: %d single job posting(s), %d already shown in an earlier issue",
+        n_jobs, n_repeat,
+    )
     return unique
 
 
@@ -952,6 +1055,10 @@ def main() -> None:
 
     known_urls, known_domains, known_names = build_known_sets(resources)
 
+    seen_path = os.path.join(script_dir, SEEN_FILE)
+    already_seen = load_seen(seen_path)
+    logger.info("%d candidate(s) previously shown in an issue", len(already_seen))
+
     # Phase 1: Scrape aggregators
     aggregator_candidates = scrape_aggregators()
 
@@ -983,7 +1090,9 @@ def main() -> None:
     logger.info("Total raw candidates: %d", len(all_candidates))
 
     # Phase 4: Deduplicate
-    unique_candidates = deduplicate(all_candidates, known_urls, known_domains, known_names)
+    unique_candidates = deduplicate(
+        all_candidates, known_urls, known_domains, known_names, already_seen
+    )
 
     # Limit to a reasonable number to avoid excessive API calls
     MAX_TO_EVALUATE = 50
@@ -997,9 +1106,23 @@ def main() -> None:
     # Phase 5: Evaluate with Claude
     results = evaluate_candidates(unique_candidates, anthropic_key, dry_run=args.dry_run)
 
+    # Out of date is the one reason we drop a candidate outright — everything
+    # else goes in front of a human once.
+    fresh = [r for r in results if not is_stale(r)]
+    if len(fresh) != len(results):
+        logger.info(
+            "Dropped %d candidate(s) whose deadline has passed", len(results) - len(fresh)
+        )
+    results = fresh
+
     # Phase 6: Save results
     output_path = os.path.join(script_dir, "suggested_additions.json")
     save_results(results, output_path)
+
+    # Record everything we are about to show, so next week's issue does not
+    # repeat it. Only on a real run — a dry run shows nobody anything.
+    if not args.dry_run:
+        save_seen(seen_path, already_seen, [r.get("url", "") for r in results if r.get("url")])
 
     logger.info("Scanner complete. Found %d relevant new opportunities.", len(results))
 
