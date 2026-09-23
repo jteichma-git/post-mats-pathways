@@ -1467,5 +1467,22 @@
       "program_dates": ""
     },
     "last_content_change": "2026-07-13T12:09:51.838093+00:00"
+  },
+  {
+    "name": "Coefficient Giving — Project Tailwind",
+    "url": "https://coefficientgiving.org/tailwind/",
+    "category": "grants",
+    "current_status": "open",
+    "current_deadline": "Rolling",
+    "current_details": "Coefficient Giving's call for founders to start new AI safety organisations, funded in three tiers: <strong>pre-seed $200K–$2M</strong>, <strong>seed $2M–$20M</strong>, and <strong>scale $20M–$200M</strong>, typically covering <strong>18–36 months</strong> of runway. Found an org on your own idea or one from Coefficient's published list — example areas include training fault injections, AI decision-making tools, alignment moonshots, and a frontier capabilities observatory. <strong>Pre-seed applications do not require an existing legal entity</strong>, and <strong>non-US teams and public-benefit for-profits are eligible</strong>. Launched <strong>August 2026</strong>.",
+    "last_checked": "2026-09-23T21:05:14.428076+00:00",
+    "js_only": false,
+    "structured": {
+      "stipend": "$200K–$200M",
+      "duration": "18–36 months runway",
+      "location": "Global",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T21:05:14.428076+00:00"
   }
 ]

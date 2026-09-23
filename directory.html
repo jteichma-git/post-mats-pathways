@@ -128,6 +128,26 @@
   .deadline.open { color: #34d399; }
   .deadline.upcoming { color: #fbbf24; }
   .deadline.closed { color: #64748b; }
+
+  /* Closed entries: visible but compact — name and status only, no prose. */
+  .opp-archive {
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(148, 163, 184, 0.18);
+  }
+  .opp-archive-heading {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #64748b;
+    margin-bottom: 7px;
+  }
+  .opp-archive .opp { margin-bottom: 4px; padding: 0; border: none; }
+  .opp-archive h3.opp-name-past { margin: 0; font-size: 13px; }
+  .opp-archive h3.opp-name-past a { color: #94a3b8; font-weight: 600; }
+  .opp-archive h3.opp-name-past a:hover { color: #cbd5e1; }
+  .opp-archive .deadline { margin-top: 0; font-size: 11px; }
   /* Mirrored posts from the MATS #opportunities Slack channel */
   .opp-live .slack-msg { font-size: 13px; color: #cbd5e1; line-height: 1.6; }
   .opp-live .slack-msg p { margin: 0 0 8px; }
@@ -239,7 +259,7 @@
 <h1>Post-MATS <span>Pathways</span></h1>
 <p>Comprehensive directory of AI safety opportunities for MATS alumni and researchers</p>
 <p>Fellowships, grants, internships, PhD programs, jobs, incubators, and community resources</p>
-<div class="meta"><span id="last-updated">Last updated: September 21, 2026</span><span class="desktop-only"> · <a href="index.html">View interactive version</a></span></div>
+<div class="meta"><span id="last-updated">Last updated: September 23, 2026</span><span class="desktop-only"> · <a href="index.html">View interactive version</a></span></div>
 </header>
 <nav aria-label="Table of contents">
 <h2>Contents</h2>
@@ -256,17 +276,12 @@
 </ol>
 </nav>
 <details class="whats-new" id="whats-new">
-<summary>What's New &mdash; September 21, 2026</summary>
+<summary>What's New &mdash; September 23, 2026</summary>
 <div class="wn-content">
 <div class="wn-group"><h4>Deadline Updates</h4><ul><li><strong>Iliad Intensive / Fellowship</strong> — deadline updated to Multiple cohorts; next deadlines Aug 24 &amp; Sep 28, 2026</li>
 <li><strong>Long-Term Future Fund (LTFF)</strong> — deadline updated to Closed - replaced by Transformative AI Fund</li>
 <li><strong>CNAS Nye Internship</strong> — deadline updated to Communications: November 2026, Design: October 2026, Development: October 2026, Defense: March 2027, Energy, Economics, and Security: April 2027, Indo-Pacific Security: Not specified</li>
 <li><strong>CLR Summer Research Fellowship</strong> — deadline updated to Closed - see Opportunities page for what is currently open</li></ul></div>
-<div class="wn-group"><h4>Fetch Errors</h4><ul><li><strong>Outsider&#x27;s Roadmap to AI Safety (LessWrong)</strong> — HTTP 403</li>
-<li><strong>CBAI Summer Research Fellowship</strong> — HTTP 404</li>
-<li><strong>Schmidt Sciences — Trustworthy AI RFP</strong> — HTTP 404</li>
-<li><strong>PIBBSS x Iliad Research Residency</strong> — HTTP 404</li>
-<li><strong>GovAI Summer Fellowship</strong> — HTTP 404</li></ul></div>
 </div>
 </details>
 <!-- 1. Career Resources -->
@@ -274,13 +289,13 @@
 <h2>1. Career Resources</h2>
 <p>Technical safety &amp; governance roles at labs and orgs. The AI safety roles significantly outpaced general tech hiring in 2024–25. Internships are a strong entry point.</p>
 <div class="opp">
-<h3><a href="https://80000hours.org/career-reviews/ai-safety-researcher/">80K Hours AI Safety Career Review</a></h3>
-<div class="details">Comprehensive career review for AI safety technical research covering two main paths: <strong>empirical AI safety</strong> (for strong software engineers who can apply for research contributor roles immediately, even without ML background) and <strong>theoretical AI safety</strong> (for those with very strong maths/theoretical CS backgrounds or ability to get into top 10 ML PhD programs). The review provides detailed guidance on learning resources, PhD considerations, job application strategies, key organizations, and predicting personal fit for this high-impact career focused on reducing existential risks from misaligned AI systems.</div>
-</div>
-<div class="opp">
 <h3><a href="https://jobs.80000hours.org/">80,000 Hours Job Board</a></h3>
 <div class="details">A curated job board featuring handpicked high-impact career opportunities focused on tackling the world's most pressing problems. Includes AI safety and alignment roles from organizations like CAIS, OpenAI, FAR AI, and DeepMind, along with opportunities in other cause areas such as future generations and artificial intelligence research. Users can filter by salary, set up job alerts, get personalized matches based on their background, and explore organizations hiring for impactful positions.</div>
 <div class="deadline open">Updated continuously</div>
+</div>
+<div class="opp">
+<h3><a href="https://80000hours.org/career-reviews/ai-safety-researcher/">80K Hours AI Safety Career Review</a></h3>
+<div class="details">Comprehensive career review for AI safety technical research covering two main paths: <strong>empirical AI safety</strong> (for strong software engineers who can apply for research contributor roles immediately, even without ML background) and <strong>theoretical AI safety</strong> (for those with very strong maths/theoretical CS backgrounds or ability to get into top 10 ML PhD programs). The review provides detailed guidance on learning resources, PhD considerations, job application strategies, key organizations, and predicting personal fit for this high-impact career focused on reducing existential risks from misaligned AI systems.</div>
 </div>
 <div class="opp">
 <h3><a href="https://www.aisafety.com/jobs">AISafety.com Jobs</a></h3>
@@ -344,7 +359,7 @@
 <div class="opp">
 <h3><a href="https://deepmindsafetyresearch.medium.com/introducing-our-short-course-on-agi-safety-1072adb7912c">Google DeepMind: AGI Safety Short Course</a></h3>
 <div class="details">A free, self-paced introductory course on AGI safety from Google DeepMind's safety research team, consisting of <strong>~75 minutes</strong> of short recorded talks and exercises with an accompanying slide deck and exercise workbook. Covers the case for advanced AI capabilities, risks from misaligned goals (instrumental subgoals and deliberate planning), how misalignment arises through specification gaming and goal misgeneralization, and DeepMind's current technical and governance approaches including amplified oversight, robust training, security & control, interpretability, and frontier safety practices. The course mentions research scientist and research engineer role applications open until Feb 28, but this is separate from the course itself.</div>
-<div class="deadline closed">Self-paced (no deadline); job applications close Feb 28, 2025</div>
+<div class="deadline open">Self-paced (no deadline); job applications close Feb 28, 2025</div>
 </div>
 <div class="opp">
 <h3><a href="https://mats-program.slack.com/archives/C05LWT1UG67">MATS Slack #opportunities</a></h3>
@@ -360,24 +375,14 @@
 <h2>3. Fellowships &amp; Research Programs</h2>
 <p>AI safety fellowships with stipends, mentorship, and compute. Many programs run multiple cohorts per year across the US and UK.</p>
 <div class="opp">
-<h3><a href="https://alignment.anthropic.com/2025/anthropic-fellows-program-2026/">Anthropic Fellows Program</a></h3>
-<div class="details">The Anthropic Fellows Program provides funding and mentorship for engineers and researchers to investigate high-priority AI safety research questions including scalable oversight, adversarial robustness, AI control, model organisms, mechanistic interpretability, AI security, and model welfare. Fellows receive a weekly stipend of <strong>$3,850 USD</strong> (<strong>£2,310 GBP</strong> / <strong>$4,300 CAD</strong>), <strong>~$15K/month</strong> in compute funding, and close mentorship from Anthropic researchers over a <strong>4-month</strong> period. Over 80% of fellows in the first cohort produced papers, and over 40% subsequently joined Anthropic full-time; no PhD, prior ML experience, or published papers required.</div>
-<div class="deadline closed">July 26, 2025</div>
-</div>
-<div class="opp">
-<h3><a href="https://safe.ai/fellowship">CAIS AI &amp; Society Fellowship</a></h3>
-<div class="details">A fully-funded, <strong>three-month</strong> fellowship for scholars in economics, law, international relations, and adjacent disciplines to conduct research on AI's societal impacts. Fellows receive a <strong>$25,000</strong> stipend plus covered travel expenses and daily meals, and work with significant autonomy on self-directed research projects in San Francisco. Open to professors, PhD/JD holders or students, and researchers with equivalent experience.</div>
-<div class="deadline closed">March 24, 11:59 PM PDT</div>
+<h3><a href="https://research.ae.studio/">AE Studio — AI Alignment Research Grants</a></h3>
+<div class="details">The AI Alignment Foundation (formerly AE Studio) provides <strong>research grants</strong> and <strong>dedicated engineering teams</strong> to accelerate AI alignment research. The program targets alignment researchers with ideas they can't pursue within current institutional funding, and technical experts from other fields (cognitive neuroscience, mathematics, physics) whose perspectives could produce breakthroughs. Engineering teams can execute on ideas with as little as <strong>one hour per week</strong> of researcher time, moving concepts from idea to published results.</div>
+<div class="deadline open">Rolling</div>
 </div>
 <div class="opp">
 <h3><a href="https://www.cbai.ai/summer-research-fellowship-26">CBAI Summer Research Fellowship</a></h3>
 <div class="details">The CBAI Fall Research Fellowship is an intensive <strong>9-week</strong> AI safety research program in Cambridge, MA (Harvard Square), running from October 13 to December 18, 2026. Fellows receive a <strong>$10,000</strong> stipend, housing, meals, up to <strong>$10,000</strong> in compute support, weekly mentorship from researchers at Harvard, MIT, and leading AI safety organizations, and 24/7 office access. Research tracks include Technical AI Safety, AI Governance, Technical Governance, and Economics of Transformative AI.</div>
 <div class="deadline upcoming">Not yet announced - applications open later this month</div>
-</div>
-<div class="opp">
-<h3><a href="https://erafellowship.org">ERA Fellowship (Cambridge)</a></h3>
-<div class="details">A <strong>10-week</strong> intensive fellowship in Cambridge, UK for researchers and entrepreneurs working on technical AI safety, governance, and technical AI governance. Fellows receive a <strong>competitive stipend</strong>, meals during working hours, and covered transport, visas, and lodging. The program includes mentorship from expert researchers across government, academia, and industry, with <strong>30+ events</strong> and access to a generous compute budget.</div>
-<div class="deadline closed">Closed - Winter 2027 cycle (Jan 18 - Mar 26, 2027)</div>
 </div>
 <div class="opp">
 <h3><a href="https://globalaisafetyfellowship.com/">Global AI Safety Fellowship</a></h3>
@@ -388,16 +393,6 @@
 <h3><a href="https://www.iliad.ac/">Iliad Intensive / Fellowship</a></h3>
 <div class="details">Iliad is an umbrella organization for applied mathematics research in AI alignment that incubates technical research organizations and runs training programs. The <strong>Iliad Intensive</strong> is a <strong>4-week</strong> taught course in foundational AI alignment for researchers and technical practitioners with strong mathematical backgrounds, running monthly with participants receiving a <strong>$5k</strong> travel-and-housing allowance. The <strong>Iliad Fellowship</strong> is a <strong>3-month</strong> mentored research program for researchers developing work in mathematical and theoretical AI safety, with fellows receiving <strong>$18k</strong> travel-and-housing funding.</div>
 <div class="deadline open">Multiple cohorts; next deadlines Aug 24 &amp; Sep 28, 2026</div>
-</div>
-<div class="opp">
-<h3><a href="https://www.matsprogram.org/">MATS (ML Alignment Theory Scholars)</a></h3>
-<div class="details">Independent research fellowship connecting talented researchers with top mentors in AI alignment, transparency, and security. Fellows conduct research for <strong>12 weeks</strong> at offices in Berkeley, CA and London, UK. The program offers the opportunity to apply for an additional <strong>6–12 month funded extension</strong> after the initial fellowship period.</div>
-<div class="deadline closed">Winter 2027 applications are closed</div>
-</div>
-<div class="opp">
-<h3><a href="https://research.ae.studio/">AE Studio — AI Alignment Research Grants</a></h3>
-<div class="details">The AI Alignment Foundation (formerly AE Studio) provides <strong>research grants</strong> and <strong>dedicated engineering teams</strong> to accelerate AI alignment research. The program targets alignment researchers with ideas they can't pursue within current institutional funding, and technical experts from other fields (cognitive neuroscience, mathematics, physics) whose perspectives could produce breakthroughs. Engineering teams can execute on ideas with as little as <strong>one hour per week</strong> of researcher time, moving concepts from idea to published results.</div>
-<div class="deadline open">Rolling</div>
 </div>
 <div class="opp">
 <h3><a href="https://www.pivotal-research.org/fellowship">Pivotal Research Fellowship</a></h3>
@@ -413,71 +408,83 @@
 <div class="details">SPAR is a <strong>3-month</strong>, part-time, remote research fellowship connecting aspiring AI safety and policy researchers with experienced professionals. Mentees commit <strong>5–40 hours/week</strong> on research projects, receive mentorship from <strong>250+ mentors</strong>, and present at Demo Day with <strong>$7K in prizes</strong>. The program culminates with a career fair featuring organizations like METR, Redwood Research, GovAI, and MATS.</div>
 <div class="deadline upcoming">Spring 2027 applications open around December</div>
 </div>
+<!-- archive:open --><div class="opp-archive"><div class="opp-archive-heading">Closed for now &mdash; worth knowing for the next cycle</div><!-- /archive:open -->
+<div class="opp">
+<h3 class="opp-name-past"><a href="https://alignment.anthropic.com/2025/anthropic-fellows-program-2026/">Anthropic Fellows Program</a></h3>
+<div class="deadline closed">July 26, 2025</div>
+</div>
+<div class="opp">
+<h3 class="opp-name-past"><a href="https://safe.ai/fellowship">CAIS AI &amp; Society Fellowship</a></h3>
+<div class="deadline closed">March 24, 11:59 PM PDT</div>
+</div>
+<div class="opp">
+<h3 class="opp-name-past"><a href="https://erafellowship.org">ERA Fellowship (Cambridge)</a></h3>
+<div class="deadline closed">Closed - Winter 2027 cycle (Jan 18 - Mar 26, 2027)</div>
+</div>
+<div class="opp">
+<h3 class="opp-name-past"><a href="https://www.matsprogram.org/">MATS (ML Alignment Theory Scholars)</a></h3>
+<div class="deadline closed">Winter 2027 applications are closed</div>
+</div>
+<!-- archive:close --></div><!-- /archive:close -->
 </section>
 <!-- 4. Grants & Funding -->
 <section class="s-green" id="grants">
 <h2>4. Grants &amp; Funding</h2>
 <p>Fund your own research through grants, regranters, and open RFPs. Many programs offer rolling applications with fast turnaround.</p>
 <div class="opp">
-<h3><a href="https://coefficientgiving.org/funds/global-catastrophic-risks-opportunities/career-development-and-transition-funding/">Coefficient Giving — Transition Grants</a></h3>
-<div class="details">Provided funding for individuals at any career stage pursuing careers to reduce global catastrophic risks or improve the long-term future. Supported graduate study, unpaid internships, independent study, career transitions, postdocs, professional certifications, and other career-capital-building activities. <strong>Program has been handed over to BlueDot Impact</strong> as of September 4, 2026 – prospective applicants should now apply through BlueDot Impact's career transition and rapid grants programs.</div>
-<div class="deadline closed">Program transferred to BlueDot Impact (September 4, 2026)</div>
-</div>
-<div class="opp">
-<h3><a href="https://coefficientgiving.org/funds/navigating-transformative-ai/request-for-proposals-technical-ai-safety-research/">Coefficient Giving — Technical AI Safety RFP</a></h3>
-<div class="details">Open Philanthropy's request for proposals for technical AI safety research across 21 research areas including adversarial machine learning, jailbreaks, control evaluations, model transparency, and alternative approaches to mitigating AI risks. Grants range from <strong>$50K–$5M</strong> with approximately <strong>$40M total</strong> available over 5 months. Applications closed April 15, 2025, but the submission form remains open until July 15 for revise-and-resubmit responses and late submissions (with a high bar for consideration).</div>
-<div class="deadline closed">July 15, 2025 (grace period for revise and resubmit and late submissions; original deadline April 15, 2025)</div>
-</div>
-<div class="opp">
 <h3><a href="https://foresight.org/grants/grants-ai-for-science-safety/">Foresight Institute AI Nodes</a></h3>
 <div class="details">Foresight Institute's AI Nodes in San Francisco, Berlin, and Cape Town provide grant funding, office/community space, and private local compute for AI-first researchers working on science and safety. Current RFP covers three focus areas: I. Local Compute, II. Coordination and accountability, III. AI-first science (Bio, Neuro, Nano). Typical grants range from <strong>$30,000 to $100,000</strong>, with higher amounts possible for the right project; strongly prioritizes applicants who will be active, in-person members of the physical hubs.</div>
 <div class="deadline open">October 31, 2026, 23:59 PDT</div>
 </div>
 <div class="opp">
-<h3><a href="https://funds.effectivealtruism.org/funds/far-future">Long-Term Future Fund (LTFF)</a></h3>
-<div class="details">The Long-Term Future Fund (LTFF) has been permanently closed and replaced by the Transformative AI Fund. The LTFF previously made early-stage grants (typically <strong>$10k-$150k</strong>, rarely exceeding <strong>$300k</strong>) to individuals and organizations working on reducing catastrophic risks from advanced AI, supporting technical research, policy analysis, forecasting, advocacy, and field-building. Applications and donations are no longer accepted.</div>
-<div class="deadline closed">Closed - replaced by Transformative AI Fund</div>
+<h3><a href="https://coefficientgiving.org/tailwind/">Coefficient Giving — Project Tailwind</a></h3>
+<div class="details">Coefficient Giving's call for founders to start new AI safety organisations, funded in three tiers: <strong>pre-seed $200K–$2M</strong>, <strong>seed $2M–$20M</strong>, and <strong>scale $20M–$200M</strong>, typically covering <strong>18–36 months</strong> of runway. Found an org on your own idea or one from Coefficient's published list — example areas include training fault injections, AI decision-making tools, alignment moonshots, and a frontier capabilities observatory. <strong>Pre-seed applications do not require an existing legal entity</strong>, and <strong>non-US teams and public-benefit for-profits are eligible</strong>. Launched <strong>August 2026</strong>.</div>
+<div class="deadline open">Rolling</div>
 </div>
 <div class="opp">
 <h3><a href="https://manifund.org/about/regranting">Manifund Regranting</a></h3>
 <div class="details">Manifund partners with expert AI safety regrantors, each with independent budgets ranging from <strong>$100K–$350K</strong>, to make fast grants to projects and individuals. Typical grants range from <strong>$5K–$200K</strong> and can be funded in days rather than months. The program supports projects not yet registered as charities, individuals, and for-profit organizations through Manifund's 501c3 fiscal sponsorship.</div>
 <div class="deadline open">Rolling</div>
 </div>
+<!-- archive:open --><div class="opp-archive"><div class="opp-archive-heading">Closed for now &mdash; worth knowing for the next cycle</div><!-- /archive:open -->
 <div class="opp">
-<h3><a href="https://www.meridiancambridge.org/research-accelerator-week">Meridian Cambridge — Research Accelerator Week</a></h3>
-<div class="details">Intensive <strong>6-day program</strong> (May 18-23, 2026) in Cambridge, UK helping AI safety researchers transition to independent research by securing funding through a dedicated Coefficient Giving pathway. Provides expert guidance on proposals, structured team formation, fiscal sponsorship through Meridian, and automatic consideration for a <strong>3-12 month</strong> Visiting Researcher Programme residency. Covers workspace, accommodation, meals, and travel reimbursement (up to <strong>£700 international</strong>). Previous cohort secured over <strong>$1M in funding</strong>.</div>
+<h3 class="opp-name-past"><a href="https://coefficientgiving.org/funds/navigating-transformative-ai/request-for-proposals-technical-ai-safety-research/">Coefficient Giving — Technical AI Safety RFP</a></h3>
+<div class="deadline closed">July 15, 2025 (grace period for revise and resubmit and late submissions; original deadline April 15, 2025)</div>
+</div>
+<div class="opp">
+<h3 class="opp-name-past"><a href="https://coefficientgiving.org/funds/global-catastrophic-risks-opportunities/career-development-and-transition-funding/">Coefficient Giving — Transition Grants</a></h3>
+<div class="deadline closed">Program transferred to BlueDot Impact (September 4, 2026)</div>
+</div>
+<div class="opp">
+<h3 class="opp-name-past"><a href="https://funds.effectivealtruism.org/funds/far-future">Long-Term Future Fund (LTFF)</a></h3>
+<div class="deadline closed">Closed - replaced by Transformative AI Fund</div>
+</div>
+<div class="opp">
+<h3 class="opp-name-past"><a href="https://www.meridiancambridge.org/research-accelerator-week">Meridian Cambridge — Research Accelerator Week</a></h3>
 <div class="deadline closed">April 12, 2025</div>
 </div>
 <div class="opp">
-<h3><a href="https://schmidtsciences.smapply.io/prog/scaling_ai_safety_for_a_multi_agent_world/">Schmidt Sciences — Scaling AI Safety for a Multi-Agent World</a></h3>
-<div class="details">A joint funding call from <strong>Schmidt Sciences, Google DeepMind, ARIA, the Cooperative AI Foundation, and Google.org</strong> for research on ensuring safety in multi-agent AI systems with millions of interacting agents built by different actors. Two funding tiers: <strong>Tier 1 up to $300K</strong> and <strong>Tier 2 $300K–$1M</strong>, for <strong>1–2 year projects</strong>. Focus areas include sandboxes and testbeds, agent network science, infrastructure strengthening, and multi-agent oversight and control. Open globally to individual researchers, teams, institutions, and multi-institution collaborations.</div>
+<h3 class="opp-name-past"><a href="https://schmidtsciences.smapply.io/prog/scaling_ai_safety_for_a_multi_agent_world/">Schmidt Sciences — Scaling AI Safety for a Multi-Agent World</a></h3>
 <div class="deadline closed">August 9, 2026 11:59 PM AoE</div>
 </div>
 <div class="opp">
-<h3><a href="https://www.schmidtsciences.org/opportunity/2026-science-of-trustworthy-ai-rfp/">Schmidt Sciences — Trustworthy AI RFP</a></h3>
-<div class="details">Up to $5M per grant (Tier 1: up to $1M, Tier 2: $1M–$5M). 1–3 year projects + compute.</div>
+<h3 class="opp-name-past"><a href="https://www.schmidtsciences.org/opportunity/2026-science-of-trustworthy-ai-rfp/">Schmidt Sciences — Trustworthy AI RFP</a></h3>
 <div class="deadline closed">May 17, 2026 11:59 PM AoE</div>
 </div>
 <div class="opp">
-<h3><a href="https://survivalandflourishing.fund/2026/application">Survival &amp; Flourishing Fund (SFF)</a></h3>
-<div class="details">The Survival and Flourishing Fund (SFF) is organizing its 2026 S-Process Grant Round with <strong>$20–40M+</strong> in total funding across multiple tracks and rounds. The Main Round includes <strong>$14–28M</strong> distributed across Main Track ($10–20M), Freedom Track ($2–4M), and Fairness Track ($2–4M), with recommendations announced in September 2026. Three new Theme Rounds offer <strong>$6–12M</strong> total ($2–4M each) for Climate Change, Animal Welfare, and Human Self-Enhancement & Empowerment (HSEE), with recommendations announced in November 2026.</div>
+<h3 class="opp-name-past"><a href="https://survivalandflourishing.fund/2026/application">Survival &amp; Flourishing Fund (SFF)</a></h3>
 <div class="deadline closed">Main Round: April 22, 2026 11:59:59 PM PT; Theme Rounds: Climate Change June 10, 2026, Animal Welfare June 24, 2026, HSEE July 8, 2026 (all at 11:59:59 PM PT)</div>
 </div>
 <div class="opp">
-<h3><a href="https://alignmentproject.aisi.gov.uk/">UK AISI Alignment Project</a></h3>
-<div class="details">The Alignment Project is a global fund launched in 2025 by an international coalition including UK AISI, CAISI, OpenAI, Microsoft, AWS, Anthropic, and others. Provides grants of <strong>£50,000 to £1,000,000</strong> to researchers across disciplines for AI alignment research, plus dedicated cloud computing/API credits and support from AISI's Alignment team. Round 1 awarded over <strong>£27 million</strong> to over 60 projects.</div>
+<h3 class="opp-name-past"><a href="https://alignmentproject.aisi.gov.uk/">UK AISI Alignment Project</a></h3>
 <div class="deadline closed">Closed - unlikely to run in 2026; check aisi.gov.uk/grants for future programs</div>
 </div>
+<!-- archive:close --></div><!-- /archive:close -->
 </section>
 <!-- 5. Incubators & Startup Programs -->
 <section class="s-cyan" id="startups">
 <h2>5. Incubators &amp; Startup Programs</h2>
 <p>Launch a new org or project via incubators and grants. Multiple programs offer stipends, mentorship, co-founder matching, and seed funding.</p>
-<div class="opp">
-<h3><a href="https://fiftyyears.com/5050/ai-2">5050 AI (Fifty Years)</a></h3>
-<div class="details">5050 AI is a <strong>13-week</strong> free accelerator program helping AI researchers build startups focused on AI safety and alignment. <strong>No equity taken, no fees.</strong> Features mentors from OpenAI, Anthropic, and leading AI organizations including Wojciech Zaremba (OpenAI co-founder), Emmett Shear (former OpenAI interim CEO), and Ronnie Chatterji (Chief Economist at OpenAI). Cohorts run in <strong>SF, Boston, and London</strong> (in partnership with ARIA). <strong>95%</strong> seed raise success rate across 340+ alumni who have launched 78 companies.</div>
-<div class="deadline closed">September 14, 2025</div>
-</div>
 <div class="opp">
 <h3><a href="https://catalyze-impact.org/the-program">Catalyze Impact</a></h3>
 <div class="details">Catalyze Impact is a 501(c)(3) non-profit incubator for AI safety, security, and resilience organizations. They provide highly customized 1-on-1 support including direction & strategy guidance, co-founder matching, mentorship from world-class experts, and access to seed funding networks, plus stipends so founders can work full-time. The program has incubated <strong>~15 organizations</strong> to date, with the majority raising <strong>6 or 7 figures</strong> in funding, working on solutions ranging from AI control to governance and hardware security.</div>
@@ -507,6 +514,12 @@
 <div class="details">WorkStream Nonprofit provides operational consulting and training to help nonprofits increase impact by <strong>30% or more</strong> on the same budget. Services include Operations Fundamentals (full organizational assessment and redesign), Support and Implementation (embedded execution support), and a <strong>six-month</strong> Operations Accelerator cohort program bringing together six growth-stage organizations. Also offers free monthly webinars on budgeting, compliance, hiring, workflow optimization, and fundraising throughout 2024.</div>
 <div class="deadline open">Rolling</div>
 </div>
+<!-- archive:open --><div class="opp-archive"><div class="opp-archive-heading">Closed for now &mdash; worth knowing for the next cycle</div><!-- /archive:open -->
+<div class="opp">
+<h3 class="opp-name-past"><a href="https://fiftyyears.com/5050/ai-2">5050 AI (Fifty Years)</a></h3>
+<div class="deadline closed">September 14, 2025</div>
+</div>
+<!-- archive:close --></div><!-- /archive:close -->
 </section>
 <!-- 6. Jobs -->
 <section class="s-lime" id="jobs">
@@ -580,53 +593,45 @@
 <div class="deadline open">Updated continuously</div>
 </div>
 <div class="opp">
-<h3><a href="https://www.cooperativeai.com/post/announcing-the-2026-cooperative-ai-phd-fellows">Cooperative AI PhD Fellowship</a></h3>
-<div class="details">The Cooperative AI PhD Fellowship supports PhD students working on multi-agent cooperation and AI safety. Fellows receive annual budgets for conferences, compute, wellbeing, and productivity, plus invitations to CAIF events and collaboration opportunities. CAIF Scholars (top 1% of applicants) receive additional top-up funding of <strong>up to $40,000 per year</strong> for living expenses, for <strong>up to 3 years</strong>.</div>
-<div class="deadline closed">Closed - check for next cycle</div>
-</div>
-<div class="opp">
-<h3><a href="https://www.cai-research-fellowship.com/">Cooperative AI Research Fellowship (Cape Town)</a></h3>
-<div class="details">A full-time <strong>3-month</strong> research fellowship for participants from diverse backgrounds to pursue AI safety research from a cooperative AI perspective in Cape Town, South Africa. Fellows receive a <strong>$3,000/month</strong> stipend, private accommodation in group houses, flights to/from Cape Town, office space with meals, and compute budget. Includes mentorship from top researchers at Google DeepMind, Oxford, and MIT, focusing on multi-agent safety, AI for human cooperation, and mitigating gradual disempowerment.</div>
-<div class="deadline closed">Closed - check for next cycle</div>
-</div>
-<div class="opp">
 <h3><a href="https://futureoflife.org/about-us/our-people/ai-existential-safety-community/">FLI AI Safety PhD Advisor Directory</a></h3>
 <div class="details">A directory of faculty members and AI researchers working on AI existential safety at universities worldwide. Lists <strong>65 faculty members</strong> and <strong>114+ AI researchers</strong> at institutions including Oxford, UC Berkeley, Stanford, Cambridge, and CMU who are willing to advise students on AI safety research. The directory serves as a resource for finding faculty mentors for the Vitalik Buterin postdoctoral and PhD fellowships, and researchers can apply for community membership to access travel support, workshops, and networking events.</div>
 </div>
+<!-- archive:open --><div class="opp-archive"><div class="opp-archive-heading">Closed for now &mdash; worth knowing for the next cycle</div><!-- /archive:open -->
 <div class="opp">
-<h3><a href="https://princint.ai/programs/residency/">PIBBSS x Iliad Research Residency</a></h3>
-<div class="details">The Iliad Fellowship is a <strong>3-month</strong>, full-time research fellowship in applied mathematics for AI alignment, targeting PhD or postdoctoral researchers in math, physics, or related fields. Fellows receive a <strong>$6,000/month</strong> travel-and-housing allowance and work in person at LISA in London (with some remote flexibility for exceptional applicants). The program aims to help fellows develop research proposals and secure philanthropic funding for continued work after the fellowship.</div>
+<h3 class="opp-name-past"><a href="https://www.cooperativeai.com/post/announcing-the-2026-cooperative-ai-phd-fellows">Cooperative AI PhD Fellowship</a></h3>
+<div class="deadline closed">Closed - check for next cycle</div>
+</div>
+<div class="opp">
+<h3 class="opp-name-past"><a href="https://www.cai-research-fellowship.com/">Cooperative AI Research Fellowship (Cape Town)</a></h3>
+<div class="deadline closed">Closed - check for next cycle</div>
+</div>
+<div class="opp">
+<h3 class="opp-name-past"><a href="https://princint.ai/programs/residency/">PIBBSS x Iliad Research Residency</a></h3>
 <div class="deadline closed">July 27 EoD AoE (Fall 2026)</div>
 </div>
 <div class="opp">
-<h3><a href="https://ai2050.schmidtsciences.org/">Schmidt Sciences AI2050</a></h3>
-<div class="details">AI2050 is a philanthropic initiative of Schmidt Sciences that supports exceptional researchers working on key opportunities and hard problems critical to ensuring AI benefits society. Awards exceptional people as Early Career and Senior Fellows through a nomination-only process, bringing them together into an interdisciplinary community. The <strong>2025 cohort</strong> includes <strong>28 scholars</strong> receiving <strong>$18M+ total</strong> in multi-year awards.</div>
+<h3 class="opp-name-past"><a href="https://ai2050.schmidtsciences.org/">Schmidt Sciences AI2050</a></h3>
 <div class="deadline closed">Nomination-only — no open application</div>
 </div>
 <div class="opp">
-<h3><a href="https://futureoflife.org/grant-program/phd-fellowships/">Vitalik Buterin PhD Fellowship (FLI)</a></h3>
-<div class="details">The Vitalik Buterin PhD Fellowship in AI Existential Safety supports PhD students working on AI existential safety research. Fellows receive <strong>full tuition and fees for 5 years</strong>, a <strong>$40,000 annual stipend</strong> (at US, UK, and Canadian universities), and a <strong>$10,000 annual research fund</strong> for travel and computing expenses. The program is currently closed and will not accept applications in fall 2026, as FLI is pausing to reassess the program's direction.</div>
+<h3 class="opp-name-past"><a href="https://futureoflife.org/grant-program/phd-fellowships/">Vitalik Buterin PhD Fellowship (FLI)</a></h3>
 <div class="deadline closed">November 21, 2025</div>
 </div>
+<!-- archive:close --></div><!-- /archive:close -->
 </section>
 <!-- 8. Policy & Governance Internships -->
 <section class="s-teal" id="policy-internships">
 <h2>8. Policy &amp; Governance Internships</h2>
 <p>Fellowships and internships at policy orgs, think tanks, and government-adjacent institutions working on AI governance and safety policy.</p>
 <div class="opp">
-<h3><a href="https://aipolicyleaders.net">AI Policy Leadership Network (APLN)</a></h3>
-<div class="details">Part-time program for experienced AI policy professionals with <strong>6-25 years experience</strong> (including <strong>4+ years</strong> in AI policy organizations) from government, think tanks, military, intelligence community, and private sector. Features monthly evening discussions in Washington, DC and a multi-day learning trip to the San Francisco Bay Area in April 2026. All expenses covered including travel and accommodations; <strong>no stipend provided</strong>.</div>
-<div class="deadline closed">Applications closed December 18, 2025</div>
+<h3><a href="https://www.iaps.ai/fellowship">IAPS AI Policy Fellowship</a></h3>
+<div class="details">The IAPS AI Policy Fellowship is a fully-funded, <strong>3-month</strong> program for professionals from varied backgrounds seeking to strengthen practical policy skills for AI governance. Fellows receive <strong>$18K</strong> (Fellows) or <strong>$24K</strong> (Senior Fellows) stipends, with an additional <strong>$3K</strong> for those on the DC or London track, plus travel and accommodation support. The program includes a required <strong>2-week in-person residency in Washington D.C.</strong> (February 22 - March 5, 2027), with options to complete remaining time in D.C., London, or remotely.</div>
+<div class="deadline open">September 27, 2026</div>
 </div>
 <div class="opp">
 <h3><a href="https://ari.us/careers/">Americans for Responsible Innovation</a></h3>
 <div class="details">Americans for Responsible Innovation (ARI) is a bipartisan AI policy nonprofit based in <strong>Washington, DC</strong> that advocates for thoughtful and proactive AI policy frameworks. They offer a referral bonus program of <strong>$3,000</strong> for Director/VP level positions and <strong>$1,500</strong> for other roles. The careers page currently shows no open positions listed.</div>
 <div class="deadline upcoming">Updated continuously</div>
-</div>
-<div class="opp">
-<h3><a href="https://horizonpublicservice.org/programs/career-accelerator/">Career Accelerator (Horizon)</a></h3>
-<div class="details">A <strong>9-month</strong>, part-time, remote program to launch your career in AI policy. Participants receive personalized mentorship, application coaching, networking opportunities, and access to exclusive job listings. Can apply for up to <strong>$100,000</strong> in flexible funding for internships, upskilling, relocation, and career transitions. Open to applicants from all backgrounds and experience levels—from students and recent graduates to mid-career professionals pivoting into AI policy work.</div>
-<div class="deadline closed">Closed - check for next cycle</div>
 </div>
 <div class="opp">
 <h3><a href="https://center-for-a-new-american-security.breezy.hr/p/5e0162b7f5ba-joseph-s-nye-jr--national-security-internship-and-mentoring-program">CNAS Nye Internship</a></h3>
@@ -639,78 +644,49 @@
 <div class="deadline upcoming">Not yet announced</div>
 </div>
 <div class="opp">
-<h3><a href="https://www.governance.ai/post/summer-fellowship-2026-research-track">GovAI Summer Fellowship</a></h3>
-<div class="details">Three-month AI governance research fellowship at GovAI in London where participants conduct independent research projects with expert mentorship. Fellows receive a <strong>£12,000</strong> stipend plus travel support and weekday lunches, and participate in seminars, Q&A sessions with experts, and networking events. Open to candidates from diverse backgrounds including government, academia, industry, and civil society, from early-career to experienced professionals.</div>
-<div class="deadline closed">Applications now closed</div>
-</div>
-<div class="opp">
-<h3><a href="https://horizonpublicservice.org/programs/become-a-fellow/">Horizon Fellowship</a></h3>
-<div class="details">Fully-funded fellowship placing early-career professionals in Washington, DC policy roles focused on AI, biotechnology, and emerging technologies. Fellows work in executive branch agencies, congressional offices, think tanks, or national laboratories for <strong>up to 2 years</strong> (1-year renewable terms; 6 months for junior think tank fellows). Competitive compensation: <strong>$78K/year</strong> for junior fellows, <strong>$130K/year</strong> for fellows, or <strong>$190K+/year</strong> for senior fellows, plus <strong>$17K/year</strong> benefits-equivalent stipend, <strong>$3K</strong> professional development stipend, and up to <strong>$3K</strong> relocation assistance.</div>
-<div class="deadline closed">Closed - check for next cycle</div>
-</div>
-<div class="opp">
-<h3><a href="https://www.iaps.ai/fellowship">IAPS AI Policy Fellowship</a></h3>
-<div class="details">The IAPS AI Policy Fellowship is a fully-funded, <strong>3-month</strong> program for professionals from varied backgrounds seeking to strengthen practical policy skills for AI governance. Fellows receive <strong>$18K</strong> (Fellows) or <strong>$24K</strong> (Senior Fellows) stipends, with an additional <strong>$3K</strong> for those on the DC or London track, plus travel and accommodation support. The program includes a required <strong>2-week in-person residency in Washington D.C.</strong> (February 22 - March 5, 2027), with options to complete remaining time in D.C., London, or remotely.</div>
-<div class="deadline open">September 27, 2026</div>
-</div>
-<div class="opp">
-<h3><a href="https://longitudepolicy.org">Longitude DC Intensive</a></h3>
-<div class="details">A fully funded <strong>eight-day</strong> AI policy program in Washington, DC for people with a <strong>technical AI safety</strong> background who want to explore how their technical expertise could contribute in the AI policy ecosystem. <strong>15 participants</strong> spend <strong>October 5–14, 2026</strong> in talks, workshops and networking with DC AI policy organizations and professionals, covering foundations of US government and AI policy, hands-on policy career workshops, and post-program support for transitioning into policy roles. Tuition, DC housing, meals on program days, and domestic travel are covered (international applicants may be asked to contribute toward flights).</div>
-<div class="deadline upcoming">Closed - check for next cycle</div>
-</div>
-<div class="opp">
 <h3><a href="https://www.rand.org/global-and-emerging-risks/centers/ai-security-and-technology/fellows.html">RAND CAST Fellows</a></h3>
 <div class="details">The RAND Center on AI, Security, and Technology Fellowship develops policy analysts and implementors at the intersection of technology and security. Fellows perform research in AI Security, Technology Policy and Governance, or Biosecurity, with <strong>$40,000–$200,000/year</strong> stipends for full-time fellows plus monthly health/dental payments. Fellowships run <strong>6 months to 3 years</strong>, can be full- or part-time, and are based in Washington DC, San Francisco, Pittsburgh, remote US locations, or the UK.</div>
 <div class="deadline open">Applications reviewed quarterly: February 1st (response by March 1st), May 1st (response by June 1st), August 1st (response by September 1st), November 1st (response by December 1st)</div>
 </div>
+<!-- archive:open --><div class="opp-archive"><div class="opp-archive-heading">Closed for now &mdash; worth knowing for the next cycle</div><!-- /archive:open -->
 <div class="opp">
-<h3><a href="https://www.tarbellcenter.org/fellowship">Tarbell AI Journalism Fellowship</a></h3>
-<div class="details">One-year journalism fellowship program for journalists interested in covering artificial intelligence. Fellows receive a <strong>$60K–$110K stipend</strong> (depending on experience and location) and secure a <strong>9-month placement</strong> at major newsrooms including Bloomberg, the Guardian, MIT Technology Review, and TIME. Program includes a <strong>10-week remote AI and journalism fundamentals course</strong> and a weeklong summit in the San Francisco Bay Area.</div>
+<h3 class="opp-name-past"><a href="https://aipolicyleaders.net">AI Policy Leadership Network (APLN)</a></h3>
+<div class="deadline closed">Applications closed December 18, 2025</div>
+</div>
+<div class="opp">
+<h3 class="opp-name-past"><a href="https://horizonpublicservice.org/programs/career-accelerator/">Career Accelerator (Horizon)</a></h3>
+<div class="deadline closed">Closed - check for next cycle</div>
+</div>
+<div class="opp">
+<h3 class="opp-name-past"><a href="https://www.governance.ai/post/summer-fellowship-2026-research-track">GovAI Summer Fellowship</a></h3>
+<div class="deadline closed">Applications now closed</div>
+</div>
+<div class="opp">
+<h3 class="opp-name-past"><a href="https://horizonpublicservice.org/programs/become-a-fellow/">Horizon Fellowship</a></h3>
+<div class="deadline closed">Closed - check for next cycle</div>
+</div>
+<div class="opp">
+<h3 class="opp-name-past"><a href="https://longitudepolicy.org">Longitude DC Intensive</a></h3>
+<div class="deadline closed">Closed - check for next cycle</div>
+</div>
+<div class="opp">
+<h3 class="opp-name-past"><a href="https://www.tarbellcenter.org/fellowship">Tarbell AI Journalism Fellowship</a></h3>
 <div class="deadline closed">Jan. 7, 2026 (2026 cohort closed); 2027 cohort deadline not yet announced</div>
 </div>
+<!-- archive:close --></div><!-- /archive:close -->
 </section>
 <!-- 9. Technical Safety Internships -->
 <section class="s-rose" id="tech-internships">
 <h2>9. Technical Safety Internships</h2>
 <p>Internships and short-term research roles at AI safety labs, startups, and research orgs. Many hire through pipeline programs like MATS and LASR.</p>
 <div class="opp">
-<h3><a href="https://www.ycombinator.com/companies/andon-labs/jobs">Andon Labs — Summer 2026 Role</a></h3>
-<div class="details">Andon Labs is a Y Combinator W24 company building autonomous organizations without humans in the loop. The company is based in <strong>San Francisco</strong> with a team of <strong>11 people</strong>. No job openings are currently posted on the YC platform.</div>
-<div class="deadline closed">No current openings</div>
-</div>
-<div class="opp">
-<h3><a href="https://www.alignment.org/hiring/">ARC Visiting Researcher</a></h3>
-<div class="details">Year-round visiting researcher positions at the Alignment Research Center, typically running for <strong>~10 weeks</strong> with flexible duration. Most successful candidates have a strong theoretical background in math, physics, or computer science. Most team members join as visiting researchers first to ensure a good fit before considering permanent positions.</div>
-<div class="deadline upcoming">Hiring temporarily closed for summer; plans to re-open in September</div>
-</div>
-<div class="opp">
 <h3><a href="https://safe.ai/careers">CAIS Research Engineer Intern (Fall 2026)</a></h3>
 <div class="details">The Center for AI Safety (CAIS) is an AI safety nonprofit working to reduce societal-scale risks from artificial intelligence. The careers page provides general information about employment opportunities and encourages prospective applicants to reach out to hiring@safe.ai with questions. No specific open positions, internship details, or application information are currently listed on the page.</div>
-</div>
-<div class="opp">
-<h3><a href="https://humancompatible.ai/jobs">CHAI Internship (UC Berkeley)</a></h3>
-<div class="details">Research internship at UC Berkeley's Center for Human-Compatible Artificial Intelligence for individuals interested in human-compatible AI research, requiring background in machine learning, computer science, mathematics, or related fields. Interns work on supervised research projects, with most producing first-author workshop papers. <strong>12–16 weeks</strong> duration with <strong>$5,000/month</strong> for in-person interns at UC Berkeley or <strong>$3,500/month</strong> for remote positions.</div>
-<div class="deadline closed">Applications for 2026 internships are now closed</div>
-</div>
-<div class="opp">
-<h3><a href="https://longtermrisk.org/summer-research-fellowship/">CLR Summer Research Fellowship</a></h3>
-<div class="details">The Center on Long-Term Risk (CLR) runs an annual <strong>2-month</strong> Summer Research Fellowship focused on s-risks (risks of astronomical suffering) and technical AI safety. Fellows work on mentored research projects at CLR's London office, typically held between June and September. The program offers <strong>£4,925/month</strong> compensation plus professional development and wellbeing budgets, travel and visa support.</div>
-<div class="deadline closed">Closed - see Opportunities page for what is currently open</div>
-</div>
-<div class="opp">
-<h3><a href="https://www.constellation.org/programs/astra-fellowship">Constellation Astra Fellowship</a></h3>
-<div class="details">Astra is Constellation's flagship <strong>5-month</strong>, fully funded, in-person fellowship at their Berkeley research center that pairs emerging AI safety talent with senior advisors. Fellows receive a <strong>$8,400/month</strong> stipend, up to <strong>$15K/month</strong> compute budget for empirical researchers, visa support, and dedicated mentorship on technical research, governance, strategy, and field-building projects. Over 80% of the first cohort transitioned to full-time AI safety roles at organizations like Anthropic, OpenAI, DeepMind, METR, and Redwood Research.</div>
-<div class="deadline closed">Closed - applications closed Sep 26, 2025</div>
 </div>
 <div class="opp">
 <h3><a href="https://deepmind.google/student-researcher-program/">DeepMind Student Researcher</a></h3>
 <div class="details">Paid research internship program for students enrolled in Bachelor's, Master's, or PhD programs to collaborate with leading AI researchers at Google DeepMind, Google Research, and other Google AI teams. Placements run <strong>between 12 and 24 weeks</strong> with a minimum commitment of <strong>four days per week</strong>, working in-person at a Google office. Applications are organized by degree level (BS, MS, PhD) and location, with placement across various Google AI teams based on skills and interests.</div>
 <div class="deadline open">Check Google Careers page for specific deadlines by degree level and location</div>
-</div>
-<div class="opp">
-<h3><a href="https://www.lasrlabs.org/">LASR Labs — Summer 2026</a></h3>
-<div class="details">LASR Labs is a <strong>13-week</strong> technical AI safety research program in London where participants work in teams of 3-4 with experienced supervisors to produce an academic paper and blog post. Participants receive a <strong>£15,000</strong> stipend plus food, office space, and travel support. The program runs three times per year at the London Initiative for Safe AI, with alumni joining UK AISI, Apollo Research, OpenAI, and Open Philanthropy, and recent publications accepted to NeurIPS, ICLR, and ICML workshops including three NeurIPS 2025 main conference papers.</div>
-<div class="deadline closed">September 20th, 2026 at 23:59 GMT</div>
 </div>
 <div class="opp">
 <h3><a href="https://openai.com/careers/emerging-talent/">OpenAI Emerging Talent</a></h3>
@@ -723,14 +699,39 @@
 <div class="deadline open">Rolling</div>
 </div>
 <div class="opp">
-<h3><a href="https://jobs.ashbyhq.com/virtue-AI">Virtue AI</a></h3>
-<div class="details">Virtue AI is an AI security and compliance platform founded by Bo Li and Dawn Song. The company offers positions across research, engineering, operations, marketing, and sales in <strong>San Francisco</strong>, but currently has no open positions listed on their job board.</div>
-<div class="deadline closed">Closed - check for next cycle</div>
-</div>
-<div class="opp">
 <h3><strong>Pipeline note:</strong></h3>
 <div class="details">Many orgs (Redwood Research, Apollo Research, Goodfire, Transluce, UK AISI) hire primarily through <strong>MATS</strong> and <strong>LASR</strong> rather than direct internships. Apply to those programs to work with these orgs' researchers as mentors.</div>
 </div>
+<!-- archive:open --><div class="opp-archive"><div class="opp-archive-heading">Closed for now &mdash; worth knowing for the next cycle</div><!-- /archive:open -->
+<div class="opp">
+<h3 class="opp-name-past"><a href="https://www.ycombinator.com/companies/andon-labs/jobs">Andon Labs — Summer 2026 Role</a></h3>
+<div class="deadline closed">No current openings</div>
+</div>
+<div class="opp">
+<h3 class="opp-name-past"><a href="https://www.alignment.org/hiring/">ARC Visiting Researcher</a></h3>
+<div class="deadline closed">Hiring temporarily closed for summer; plans to re-open in September</div>
+</div>
+<div class="opp">
+<h3 class="opp-name-past"><a href="https://humancompatible.ai/jobs">CHAI Internship (UC Berkeley)</a></h3>
+<div class="deadline closed">Applications for 2026 internships are now closed</div>
+</div>
+<div class="opp">
+<h3 class="opp-name-past"><a href="https://longtermrisk.org/summer-research-fellowship/">CLR Summer Research Fellowship</a></h3>
+<div class="deadline closed">Closed - see Opportunities page for what is currently open</div>
+</div>
+<div class="opp">
+<h3 class="opp-name-past"><a href="https://www.constellation.org/programs/astra-fellowship">Constellation Astra Fellowship</a></h3>
+<div class="deadline closed">Closed - applications closed Sep 26, 2025</div>
+</div>
+<div class="opp">
+<h3 class="opp-name-past"><a href="https://www.lasrlabs.org/">LASR Labs — Summer 2026</a></h3>
+<div class="deadline closed">September 20th, 2026 at 23:59 GMT</div>
+</div>
+<div class="opp">
+<h3 class="opp-name-past"><a href="https://jobs.ashbyhq.com/virtue-AI">Virtue AI</a></h3>
+<div class="deadline closed">Closed - check for next cycle</div>
+</div>
+<!-- archive:close --></div><!-- /archive:close -->
 </section>
 <footer>
 <p>MATS · Post-Program Pathways · 2026</p>

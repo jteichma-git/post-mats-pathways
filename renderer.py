@@ -11,6 +11,7 @@ Drift between resources.json and the HTML is structurally impossible because
 we always render JSON -> HTML, never the reverse.
 """
 
+import bisect
 import json
 import logging
 import re
@@ -76,6 +77,21 @@ def parse_deadline_date(deadline_text):
     """
     Try to extract a concrete datetime from a deadline string.
     Returns None for rolling/TBD/unknown/etc.
+
+    Thin wrapper over parse_deadline() for callers that only want the date.
+    """
+    parsed = parse_deadline(deadline_text)
+    return parsed[0] if parsed else None
+
+
+def parse_deadline(deadline_text):
+    """
+    Try to extract a concrete datetime from a deadline string.
+    Returns (datetime, year_assumed) or None for rolling/TBD/unknown/etc.
+
+    `year_assumed` is True when the string carried no year and we filled in
+    the current one — those entries expire on a guess, so run_renderer lists
+    them for a human to confirm.
     """
     if not deadline_text:
         return None
@@ -85,6 +101,10 @@ def parse_deadline_date(deadline_text):
         "not announced", "check ", "year-round", "updated ",
         "recurring", "multiple cohorts", "always open",
         "quarterly", "each quarter", "monthly", "ongoing",
+        # An entry with no real submission window: any date in the string
+        # belongs to something else (a past job posting, a cohort that ran).
+        "self-paced", "self paced", "no deadline", "nomination-only",
+        "nomination only",
     ]
     lower = deadline_text.lower()
     if any(p in lower for p in skip_phrases):
@@ -105,7 +125,7 @@ def parse_deadline_date(deadline_text):
             date_str = match.group(1)
             for fmt in year_formats:
                 try:
-                    return datetime.strptime(date_str, fmt)
+                    return datetime.strptime(date_str, fmt), False
                 except ValueError:
                     continue
 
@@ -122,7 +142,10 @@ def parse_deadline_date(deadline_text):
             else:
                 day_str, month_str = match.group(1), match.group(2)
             try:
-                return datetime.strptime(f"{month_str} {day_str} {current_year}", "%B %d %Y")
+                return (
+                    datetime.strptime(f"{month_str} {day_str} {current_year}", "%B %d %Y"),
+                    True,
+                )
             except ValueError:
                 continue
 
@@ -146,6 +169,45 @@ def derive_status_class(status, deadline_text):
         "closed": "closed",
     }
     return mapping.get(status, "")
+
+
+# --- Expiry: once you can no longer submit, the card leaves the main list ---
+
+def expiry(resource):
+    """
+    Decide whether a resource still accepts submissions.
+
+    Returns (expired: bool, year_assumed: bool). A resource expires the day
+    after its deadline — there is no grace period, because a passed deadline
+    is exactly the thing we don't want on the page.
+    """
+    if resource.get("current_status") == "closed":
+        return True, False
+    deadline_text = resource.get("current_deadline") or ""
+    # The crawler sometimes files a closed program under expression_of_interest
+    # while writing "Closed - ..." into the deadline. Trust the deadline text.
+    if "closed" in deadline_text.lower():
+        return True, False
+    parsed = parse_deadline(deadline_text)
+    if not parsed:
+        return False, False
+    deadline_date, year_assumed = parsed
+    return deadline_date.date() < datetime.now().date(), year_assumed
+
+
+def is_expired(resource):
+    return expiry(resource)[0]
+
+
+def sort_key(resource):
+    """
+    Order live cards: soonest real deadline first, then everything undated
+    (rolling, continuous, directories) alphabetically.
+    """
+    parsed = parse_deadline(resource.get("current_deadline") or "")
+    if parsed:
+        return (0, parsed[0], resource.get("name", "").lower())
+    return (1, datetime.max, resource.get("name", "").lower())
 
 
 # --- Card-block locator: find <div class="opp">...</div> by URL ---
@@ -242,48 +304,148 @@ def render_directory_card(resource, status_class):
     return "\n".join(parts)
 
 
+# --- Closed entries: one grey line each, below the live cards ---
+#
+# A closed program still tells a reader something ("CHAI runs an internship,
+# watch for it"), but it should cost one line to learn that, not a full card.
+# So the name and the closing note survive; the description does not.
+
+# The wrapper is marked so the next run can peel it off WITHOUT eating the
+# cards inside it — a closed program must stay a real .opp block, or it can
+# never be promoted back to live when its next cycle opens.
+ARCHIVE_OPEN = ("<!-- archive:open -->", "<!-- /archive:open -->")
+ARCHIVE_CLOSE = ("<!-- archive:close -->", "<!-- /archive:close -->")
+
+ARCHIVE_HEADING = "Closed for now &mdash; worth knowing for the next cycle"
+
+
+def render_index_closed(resource):
+    """A closed card: same .opp wrapper, name and closing note only."""
+    url = attr_escape(resource["url"])
+    name = text_escape(resource["name"])
+    note = resource.get("current_deadline") or "Closed"
+    return (
+        f'<div class="opp">\n'
+        f'<a class="opp-name opp-name-past" href="{url}" '
+        f'onclick="event.stopPropagation()" target="_blank">{name}</a>\n'
+        f'<div class="opp-deadline closed">{text_escape(note)}</div>\n'
+        f'</div>'
+    )
+
+
+def render_directory_closed(resource):
+    url = attr_escape(resource["url"])
+    name = text_escape(resource["name"])
+    note = resource.get("current_deadline") or "Closed"
+    return (
+        f'<div class="opp">\n'
+        f'<h3 class="opp-name-past"><a href="{url}">{name}</a></h3>\n'
+        f'<div class="deadline closed">{text_escape(note)}</div>\n'
+        f'</div>'
+    )
+
+
+def render_archive(closed_html):
+    """Wrap the closed cards in peelable markers."""
+    if not closed_html:
+        return ""
+    head = (
+        f'{ARCHIVE_OPEN[0]}<div class="opp-archive">'
+        f'<div class="opp-archive-heading">{ARCHIVE_HEADING}</div>{ARCHIVE_OPEN[1]}'
+    )
+    tail = f'{ARCHIVE_CLOSE[0]}</div>{ARCHIVE_CLOSE[1]}'
+    return head + "\n" + "\n".join(closed_html) + "\n" + tail
+
+
+def strip_archives(content):
+    """
+    Peel off archive wrappers, leaving the .opp cards they contain in place,
+    so every run re-derives the live/closed split from resources.json.
+    """
+    for opener, closer in (ARCHIVE_OPEN, ARCHIVE_CLOSE):
+        # Swallow the whitespace on either side too, so repeated runs converge
+        # instead of adding a blank line per section every week.
+        content = re.sub(
+            r"\s*" + re.escape(opener) + r".*?" + re.escape(closer) + r"\s*",
+            "\n",
+            content,
+            flags=re.DOTALL,
+        )
+    return content
+
+
 # --- Rendering pass over a single HTML file ---
 
-def rerender_file(filepath, resources, card_renderer):
-    """Walk `filepath`, replace every .opp block with a freshly-rendered one."""
-    content = filepath.read_text(encoding="utf-8")
+def rerender_file(filepath, resources, card_renderer, closed_renderer, container_pattern):
+    """
+    Rebuild every .opp block in `filepath` from resources.json.
+
+    Unlike a card-for-card replacement, this re-partitions each container
+    (a flip card's back, or a directory section): live opportunities first,
+    ordered by how soon they close, then any hand-written blocks we don't
+    own, then the grey one-line list of closed entries.
+    """
+    content = strip_archives(filepath.read_text(encoding="utf-8"))
     by_url = {r["url"]: r for r in resources}
 
-    # Find all .opp blocks once, then rebuild content from the slices.
     blocks = list(find_opp_blocks(content))
     if not blocks:
         logger.warning(f"No .opp blocks found in {filepath.name}")
         return 0
 
-    new_content_parts = []
-    cursor = 0
-    rendered = 0
-    skipped = 0
+    container_starts = [m.start() for m in re.finditer(container_pattern, content, re.IGNORECASE)]
+    grouped = {}
+    for block in blocks:
+        idx = bisect.bisect_right(container_starts, block[0]) - 1
+        grouped.setdefault(idx, []).append(block)
 
-    for start, end in blocks:
-        new_content_parts.append(content[cursor:start])
-        block_html = content[start:end]
-        url = extract_opp_url(block_html)
-        if url and url in by_url:
-            resource = by_url[url]
-            status_class = derive_status_class(
-                resource.get("current_status"), resource.get("current_deadline")
+    new_content = content
+    rendered = live_total = closed_total = skipped = 0
+
+    # Reverse document order keeps earlier offsets valid as we splice.
+    for idx in sorted(grouped, reverse=True):
+        group = grouped[idx]
+        live, closed, orphans = [], [], []
+
+        for start, end in group:
+            block_html = content[start:end]
+            url = extract_opp_url(block_html)
+            resource = by_url.get(url) if url else None
+            if resource is None:
+                orphans.append(block_html)
+                skipped += 1
+            elif is_expired(resource):
+                closed.append(resource)
+            else:
+                live.append(resource)
+
+        live.sort(key=sort_key)
+        closed.sort(key=lambda r: r.get("name", "").lower())
+
+        parts = [
+            card_renderer(
+                r,
+                derive_status_class(r.get("current_status"), r.get("current_deadline")),
             )
-            new_content_parts.append(card_renderer(resource, status_class))
-            rendered += 1
-        else:
-            new_content_parts.append(block_html)
-            skipped += 1
-        cursor = end
+            for r in live
+        ]
+        parts.extend(orphans)
+        archive = render_archive([closed_renderer(r) for r in closed])
+        if archive:
+            parts.append(archive)
 
-    new_content_parts.append(content[cursor:])
-    new_content = "".join(new_content_parts)
+        new_content = (
+            new_content[: group[0][0]] + "\n".join(parts) + new_content[group[-1][1] :]
+        )
+        rendered += len(live) + len(closed)
+        live_total += len(live)
+        closed_total += len(closed)
 
-    if new_content != content:
+    if new_content != filepath.read_text(encoding="utf-8"):
         filepath.write_text(new_content, encoding="utf-8")
         logger.info(
-            f"  {filepath.name}: rerendered {rendered} cards "
-            f"({skipped} skipped - no matching resource)"
+            f"  {filepath.name}: {live_total} live, {closed_total} moved to closed lists "
+            f"({skipped} hand-written blocks preserved)"
         )
     else:
         logger.info(f"  {filepath.name}: no changes")
@@ -327,11 +489,17 @@ def generate_whats_new_html(report):
                     f'<li><strong>{html_escape(name)}</strong> — deadline updated to {html_escape(str(new_d))}</li>'
                 )
         elif action in ("fetch_error", "http_error"):
-            errors.append(
-                f'<li><strong>{html_escape(name)}</strong> — {html_escape(str(entry.get("error", "could not fetch")))}</li>'
-            )
+            # Recorded in change_report.json and surfaced in the run log; a
+            # reader of the site has no use for our HTTP status codes.
+            errors.append(f'{name} — {entry.get("error", "could not fetch")}')
 
-    if not status_changes and not deadline_updates and not errors:
+    if errors:
+        logger.warning(
+            "  %d fetch error(s) this cycle (not shown on the page): %s",
+            len(errors), "; ".join(errors),
+        )
+
+    if not status_changes and not deadline_updates:
         inner = '<p class="wn-empty">No changes detected this cycle.</p>'
     else:
         parts = []
@@ -344,11 +512,6 @@ def generate_whats_new_html(report):
             parts.append(
                 '<div class="wn-group"><h4>Deadline Updates</h4><ul>'
                 + "\n".join(deadline_updates) + "</ul></div>"
-            )
-        if errors:
-            parts.append(
-                '<div class="wn-group"><h4>Fetch Errors</h4><ul>'
-                + "\n".join(errors) + "</ul></div>"
             )
         inner = "\n".join(parts)
 
@@ -409,6 +572,20 @@ def update_last_updated_stamp(resources):
 
 # --- Entry point ---
 
+def report_expiries(resources):
+    """Log what dropped off the page this run, and what needs a human."""
+    expired = [r for r in resources if is_expired(r)]
+    assumed = [r["name"] for r in resources if expiry(r) == (True, True)]
+    logger.info(
+        f"  {len(resources) - len(expired)} live, {len(expired)} closed"
+    )
+    if assumed:
+        logger.warning(
+            "  Expired on an assumed year (deadline text has no year — verify): %s",
+            ", ".join(assumed),
+        )
+
+
 def load_resources():
     if not RESOURCES_FILE.exists():
         logger.error(f"Resources file not found: {RESOURCES_FILE}")
@@ -423,10 +600,18 @@ def run_renderer():
 
     logger.info(f"Rendering {len(resources)} resources -> HTML")
     logger.info(f"\nRendering {INDEX_FILE.name}...")
-    rerender_file(INDEX_FILE, resources, render_index_card)
+    rerender_file(
+        INDEX_FILE, resources, render_index_card, render_index_closed,
+        r'<div class="card-back">',
+    )
 
     logger.info(f"\nRendering {DIRECTORY_FILE.name}...")
-    rerender_file(DIRECTORY_FILE, resources, render_directory_card)
+    rerender_file(
+        DIRECTORY_FILE, resources, render_directory_card, render_directory_closed,
+        r'<section\b',
+    )
+
+    report_expiries(resources)
 
     logger.info(f"\nUpdating 'What's New' section...")
     update_whats_new(report)
