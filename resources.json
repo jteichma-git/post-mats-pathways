@@ -1351,7 +1351,7 @@
   },
   {
     "name": "Constellation Astra Fellowship",
-    "url": "https://www.constellation.org/programs/astra-fellowship",
+    "url": "https://www.constellation.org/programs/astra",
     "category": "tech-internships",
     "current_status": "expression_of_interest",
     "current_deadline": "Closed - applications closed Sep 26, 2025",
@@ -1467,5 +1467,689 @@
       "program_dates": ""
     },
     "last_content_change": "2026-09-23T21:05:14.428076+00:00"
+  },
+  {
+    "name": "Thinking Machines Lab — Safety Research Grants",
+    "url": "https://thinkingmachines.ai/news/safety-research-grants/",
+    "category": "grants",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "IFP — The Launch Sequence RFP",
+    "url": "https://ifp.org/rfp-launch/",
+    "category": "grants",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "Paradigm 3 Research Fund",
+    "url": "https://www.paradigm3.org/research/fund",
+    "category": "grants",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "grantmaking.ai Launch Round",
+    "url": "https://app.grantmaking.ai/apply/launch",
+    "category": "grants",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "Falcon Fund (Manifund)",
+    "url": "https://manifund.org/projects/falcon-fund",
+    "category": "grants",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "MARS — Cambridge AI Safety Hub",
+    "url": "https://caish.org/mars",
+    "category": "fellowships",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "TARA — Technical Alignment Research Accelerator",
+    "url": "https://www.taraprogram.org/",
+    "category": "fellowships",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "AI Safety Camp",
+    "url": "https://www.aisafety.camp/",
+    "category": "fellowships",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "Dovetail Research Fellowship",
+    "url": "https://dovetailresearch.org/",
+    "category": "fellowships",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "Generator Residency",
+    "url": "https://generatorresidency.org/",
+    "category": "fellowships",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "AIXI Labs Fellowship",
+    "url": "https://uaiasi.com/",
+    "category": "fellowships",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "Frame Fellowship",
+    "url": "https://framefellowship.com/",
+    "category": "fellowships",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "Collective Intelligence Project Research Fellowship",
+    "url": "https://www.cip.org/research-fellowship/",
+    "category": "fellowships",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "Frontier AI Security Residency",
+    "url": "https://securefrontier.ai/",
+    "category": "fellowships",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "Heron AI Security Research Fellowship",
+    "url": "https://www.heronsec.ai/researchfellowship",
+    "category": "fellowships",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "CBAI AIxBiosecurity Fellowship",
+    "url": "https://www.cbai.ai/aixbiosecurity-fellowship-program",
+    "category": "fellowships",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "AI Security Bootcamp — London",
+    "url": "https://aisb.dev/london",
+    "category": "tech-internships",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "Frontier AI Security Training (FAST)",
+    "url": "https://www.securefast.ai/",
+    "category": "tech-internships",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "FAS AI Safety Policy Entrepreneurship Fellowship",
+    "url": "https://fas.org/career/ai-safety-pef/",
+    "category": "policy-internships",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "GovAI U.S. AI Policy Program",
+    "url": "https://www.governance.ai/post/govai-u-s-ai-policy-program",
+    "category": "policy-internships",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "Vista Institute for AI Policy",
+    "url": "https://vistainstituteai.org/",
+    "category": "policy-internships",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "Singapore AI Safety Hub (SASH)",
+    "url": "https://www.aisafety.sg/",
+    "category": "policy-internships",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "Center for Technology & Statecraft",
+    "url": "https://techstatecraft.org/",
+    "category": "policy-internships",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "Secure AI Project",
+    "url": "https://secureaiproject.org/",
+    "category": "policy-internships",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "SAIGE Incubator — Safe AI Germany",
+    "url": "https://safeaigermany.org/incubator",
+    "category": "startups",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "BlueDot Impact — Incubator Week",
+    "url": "https://bluedot.org/programs/incubator-week",
+    "category": "startups",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "Neolithic",
+    "url": "https://neolithic.org/",
+    "category": "startups",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "d_model",
+    "url": "https://dmodel.ai/",
+    "category": "startups",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "Allelo",
+    "url": "https://allelo.ai/",
+    "category": "startups",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "RESI — Institute for Responsible Superintelligence",
+    "url": "https://resi.org/",
+    "category": "startups",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "Verified Mechanisms",
+    "url": "https://verifiedmechanisms.ai/",
+    "category": "jobs",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "PauseAI — Vacancies",
+    "url": "https://pauseai.info/vacancies",
+    "category": "jobs",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "ML4Good Technical Bootcamp",
+    "url": "https://ml4good.org/technical-track/",
+    "category": "community",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "Successif",
+    "url": "https://www.successif.org/",
+    "category": "community",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "MIT AI Risk Initiative",
+    "url": "https://airisk.mit.edu/",
+    "category": "community",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "ALIGN — AI Alignment Network",
+    "url": "https://www.aialign.net/recruit",
+    "category": "community",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "Vegas AI Security Forum",
+    "url": "https://aisecurity.forum/",
+    "category": "community",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
+  },
+  {
+    "name": "ELLIS Institute Tübingen — AI Safety & Alignment Group",
+    "url": "https://institute-tue.ellis.eu/aisa",
+    "category": "phd",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "",
+    "last_checked": "",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-09-23T22:02:32.346578+00:00"
   }
 ]
