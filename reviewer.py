@@ -3,7 +3,7 @@
 reviewer.py - Cross-checks displayed entry details against live source pages.
 
 For each entry in directory.html, independently extracts structured facts from
-the source URL using Claude Sonnet, then programmatically compares against what
+the source URL using Claude Opus, then programmatically compares against what
 the page currently displays. Outputs discrepancies to review_report.json.
 
 Usage:
@@ -37,7 +37,7 @@ DIRECTORY_FILE = BASE_DIR / "directory.html"
 REPORT_FILE = BASE_DIR / "review_report.json"
 
 # Use a different model than the crawler (which uses Haiku) for independent review
-REVIEW_MODEL = "claude-sonnet-4-5-20250929"
+REVIEW_MODEL = "claude-opus-5"
 
 REQUEST_TIMEOUT = 30
 REQUEST_DELAY = 2

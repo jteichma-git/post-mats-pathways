@@ -115,7 +115,7 @@ def main():
     parser.add_argument(
         "--review",
         action="store_true",
-        help="Run cross-check reviewer after updating (uses Claude Sonnet)",
+        help="Run cross-check reviewer after updating (uses Claude Opus)",
     )
     args = parser.parse_args()
 

@@ -1316,23 +1316,6 @@
     "last_content_change": "2026-09-14T15:47:12.683734+00:00"
   },
   {
-    "name": "CAIS Research Engineer Intern (Fall 2026)",
-    "url": "https://safe.ai/careers",
-    "category": "tech-internships",
-    "current_status": "open",
-    "current_deadline": "",
-    "current_details": "The Center for AI Safety (CAIS) is an AI safety nonprofit working to reduce societal-scale risks from artificial intelligence. The careers page provides general information about employment opportunities and encourages prospective applicants to reach out to hiring@safe.ai with questions. No specific open positions, internship details, or application information are currently listed on the page.",
-    "last_checked": "2026-09-21T15:46:42.596586+00:00",
-    "js_only": false,
-    "structured": {
-      "stipend": "",
-      "duration": "",
-      "location": "",
-      "program_dates": ""
-    },
-    "last_content_change": "2026-09-21T15:46:42.596586+00:00"
-  },
-  {
     "name": "CHAI Internship (UC Berkeley)",
     "url": "https://humancompatible.ai/jobs",
     "category": "tech-internships",

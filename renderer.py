@@ -188,6 +188,14 @@ def expiry(resource):
     # while writing "Closed - ..." into the deadline. Trust the deadline text.
     if "closed" in deadline_text.lower():
         return True, False
+    # Prefer the crawler's machine-readable date: it was resolved against the
+    # real calendar with the page in view, rather than regexed out of prose.
+    iso = (resource.get("deadline_iso") or "").strip()
+    if iso:
+        try:
+            return datetime.strptime(iso, "%Y-%m-%d").date() < datetime.now().date(), False
+        except ValueError:
+            logger.warning("  Malformed deadline_iso %r on %s", iso, resource.get("name"))
     parsed = parse_deadline(deadline_text)
     if not parsed:
         return False, False
@@ -204,6 +212,12 @@ def sort_key(resource):
     Order live cards: soonest real deadline first, then everything undated
     (rolling, continuous, directories) alphabetically.
     """
+    iso = (resource.get("deadline_iso") or "").strip()
+    if iso:
+        try:
+            return (0, datetime.strptime(iso, "%Y-%m-%d"), resource.get("name", "").lower())
+        except ValueError:
+            pass
     parsed = parse_deadline(resource.get("current_deadline") or "")
     if parsed:
         return (0, parsed[0], resource.get("name", "").lower())

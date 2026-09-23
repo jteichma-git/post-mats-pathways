@@ -539,7 +539,7 @@ def scrape_websearch_opportunities(anthropic_key: str, dry_run: bool = False) ->
     )
     try:
         response = client.messages.create(
-            model="claude-opus-4-8",
+            model="claude-opus-5",
             max_tokens=4096,
             tools=[{"type": "web_search_20260209", "name": "web_search", "max_uses": 8}],
             messages=[{"role": "user", "content": prompt}],
@@ -633,7 +633,7 @@ def check_career_pages(
             import anthropic
             client = anthropic.Anthropic(api_key=anthropic_key)
             response = client.messages.create(
-                model="claude-haiku-4-5-20251001",
+                model="claude-haiku-4-5",
                 max_tokens=1024,
                 messages=[{"role": "user", "content": prompt}],
             )
@@ -808,7 +808,7 @@ def evaluate_candidates(
 
         try:
             response = client.messages.create(
-                model="claude-haiku-4-5-20251001",
+                model="claude-haiku-4-5",
                 max_tokens=512,
                 messages=[{"role": "user", "content": prompt}],
             )

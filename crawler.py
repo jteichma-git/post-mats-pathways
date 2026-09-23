@@ -256,12 +256,18 @@ def analyze_with_claude(resource, page_text, client):
     Output schema:
       status:      one of open/closed/upcoming/expression_of_interest/unknown
       deadline:    display-ready string (never null — use "Rolling", "TBD", etc.)
+      deadline_iso: YYYY-MM-DD for a concrete submission deadline, else ""
+                   — the renderer expires entries on this, so it must not be a guess
       description: 2-3 sentence prose; may use <strong> for key facts; may be ""
                    if no description should be shown
       structured:  {stipend, duration, location, program_dates} — strings, "" if absent
       key_changes: free text summarizing what's different from stored info
     """
+    today = datetime.now(timezone.utc).date().isoformat()
     prompt = f"""Analyze this web page content for an AI safety opportunity tracker.
+
+TODAY'S DATE IS {today}. Judge every date on the page against it — a page that
+still says "apply now" next to a date that has passed is CLOSED, not open.
 
 RESOURCE INFO ON FILE:
 - Name: {resource['name']}
@@ -282,6 +288,7 @@ Respond with ONLY valid JSON (no markdown, no code fences):
 {{
   "status": "open" | "closed" | "upcoming" | "expression_of_interest" | "unknown",
   "deadline": "display-ready string, never null",
+  "deadline_iso": "YYYY-MM-DD, or empty string",
   "description": "2-3 sentence summary or empty string",
   "structured": {{
     "stipend": "e.g. '$15K' or '£6K-8K' or ''",
@@ -294,18 +301,33 @@ Respond with ONLY valid JSON (no markdown, no code fences):
 
 Rules:
 
-STATUS:
+STATUS — decide against TODAY'S DATE above, not against the page's tone:
 - "open" = actively accepting applications now
 - "closed" = applications closed, past deadline, or program ended
 - "upcoming" = will open soon, or has a future deadline but not yet accepting
 - "expression_of_interest" = accepting EOI but not formal applications
 - "unknown" = cannot determine (e.g., resource page, directory, career board with no specific deadline)
 
-DEADLINE — never return null. Use the literal page text when there's a concrete
-date. Otherwise use one of: "Rolling", "TBD", "Not yet announced", "Updated continuously",
-"Recurring events", "Multiple cohorts per year", "Closed - check for next cycle".
-If the entry truly has no concept of a deadline (e.g., a permanent resource page),
-return "" (empty string) and the renderer will omit the deadline badge.
+DEADLINE — never return null. Use the page's wording when there's a concrete
+date, but ALWAYS include the year, even when the page omits it: "March 24" is
+useless to us, "March 24, 2027" is not. Infer the year from context (the cohort
+it belongs to, the page's other dates) and prefer the reading that is consistent
+with TODAY'S DATE. Otherwise use one of: "Rolling", "TBD", "Not yet announced",
+"Updated continuously", "Recurring events", "Multiple cohorts per year",
+"Closed - check for next cycle". If the entry truly has no concept of a deadline
+(e.g., a permanent resource page), return "" (empty string) and the renderer
+will omit the deadline badge.
+
+DEADLINE_ISO — the single date by which an application must be SUBMITTED, as
+YYYY-MM-DD. This is what the site expires entries on, so:
+- Return "" for anything rolling, continuous, recurring, not yet announced, or
+  with no submission window at all. "" is always safer than a guess.
+- Return "" if the page gives a date with no year and context does not settle
+  which year it is.
+- Use the SUBMISSION deadline only — not the program start, not the cohort end,
+  not a date attached to some other posting on the same page. A self-paced
+  course whose page happens to mention a 2025 job posting has no deadline_iso.
+- When several rounds are open, use the next one that has not yet passed.
 
 DESCRIPTION — 2-3 sentences. Lead with what the program/opportunity is and the
 key facts (duration, stipend, location, eligibility). Use <strong> to emphasize
@@ -319,11 +341,15 @@ when info isn't present. These are for downstream filtering, not display.
 
     try:
         message = client.messages.create(
-            model="claude-sonnet-4-5-20250929",
-            max_tokens=1200,
+            model="claude-opus-5",
+            max_tokens=2000,
+            thinking={"type": "adaptive"},
+            output_config={"effort": "medium"},
             messages=[{"role": "user", "content": prompt}],
         )
-        response_text = message.content[0].text.strip()
+        response_text = "".join(
+            b.text for b in message.content if getattr(b, "type", "") == "text"
+        ).strip()
 
         # Try to extract JSON from response (handle occasional markdown wrapping)
         json_match = re.search(r"\{[\s\S]*\}", response_text)
@@ -492,6 +518,15 @@ def run_crawler(dry_run: bool = False) -> list[dict]:
         new_deadline = analysis.get("deadline")
         new_description = analysis.get("description")
         new_structured = analysis.get("structured") or {}
+        new_deadline_iso = (analysis.get("deadline_iso") or "").strip()
+        # Only accept a well-formed date; anything else means "no deadline",
+        # which the renderer treats as "don't expire this on a date".
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", new_deadline_iso):
+            if new_deadline_iso:
+                logger.warning(
+                    "  %s: ignoring malformed deadline_iso %r", name, new_deadline_iso
+                )
+            new_deadline_iso = ""
         key_changes = analysis.get("key_changes", "")
 
         # Normalize: deadline is always a string in the new schema (may be "").
@@ -554,6 +589,7 @@ def run_crawler(dry_run: bool = False) -> list[dict]:
         if not dry_run:
             resource["current_status"] = write_status
             resource["current_deadline"] = write_deadline
+            resource["deadline_iso"] = new_deadline_iso
             resource["current_details"] = write_details
             resource["structured"] = write_structured
             if content_changed:
