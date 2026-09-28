@@ -1,9 +1,49 @@
 {
-  "synced_at": "2026-09-23T22:41:59.621177+00:00",
+  "synced_at": "2026-09-28T17:48:06.209564+00:00",
   "channel": "C05LWT1UG67",
   "window_days": 7,
-  "count": 11,
+  "count": 16,
   "messages": [
+    {
+      "ts": "1790597599.609369",
+      "user": "U0841BUBVH7",
+      "text": "Hi everyone! *Applications are open for LawAI\u2019s <https://law-ai.org/wrf-eu/|Winter Research Fellowship (EU Law)>*. The *10-week full-time fellowship* runs from 1 February to 9 April 2027. This is a high-impact opportunity for lawyers and legal researchers interested in deepening their understanding of AI and law and contributing to this field. Previous Seasonal Research Fellows have gone on to pursue legal and policy roles in the European AI Office, leading AI companies, academia, and think tanks, including the Institute for Law &amp; AI (LawAI) itself. Fellows receive *a \u00a31,000 weekly stipend,* a \u00a37,000 relocation and housing payment, and work from our Cambridge, UK office, with *close support and mentorship from our staff*. Remote candidates will be considered in exceptional circumstances. We welcome applications from graduate law students, professionals, and academics with diverse skill sets, experience levels, and degrees of knowledge in AI law and policy. Applications close on *12 October 2026* and will be considered on a rolling basis as they are received. You can apply for the fellowship *<https://airtable.com/app5cvdeXoRE1FvKj/pag8dyaPFWfkFRMI9/form|here>*. We\u2019re also offering a $1,000 reward to anyone who refers a candidate to us who we end up accepting into the programme. Read about the terms of the referral programme <https://docs.google.com/document/d/1ETgnWJaw57YZZFTojUE5nRot5Ylo6e4hHNt3XrzBIcA/edit?tab=t.0#heading=h.sv0x95v2xq5m|here>."
+    },
+    {
+      "ts": "1790508288.783879",
+      "user": "U084PNXDVMF",
+      "text": "I'm interested in hiring swe contractors to build things for MATS but it's much easier to find people that can build things than to find people that can build things securely, especially if they need to be built to be robust to staff using our software with LLMs. Does anyone have recommendations on security engineers we could work with on pentesting our work?"
+    },
+    {
+      "ts": "1790375502.290969",
+      "user": "U084QSVD4SV",
+      "text": "I bet you have seen all the recent action in the <#C02JGJ4SZL6> channel from <https://robocurve.org/|Robocurve>.  Well <@U0A046H3K96> and team are hiring for a Member of Technical Staff! You need to be really, really good at evals, no robotics experience required.  Great opportunity to get in at the ground floor  <https://robocurve.org/careers/mts-frontier-robotics-evals/|robocurve.org/careers/mts-frontier-robotics-evals>"
+    },
+    {
+      "ts": "1790367862.821499",
+      "user": "U05EGUAHXEK",
+      "text": "Big RFP from Astralis and Macroscopic for policy proposals on \"middle powers and transformative AI\": <https://middlepowers.ai/#projects-we-want-to-fund>\n\nDue Oct 23"
+    },
+    {
+      "ts": "1790356955.834409",
+      "user": "U084QSVD4SV",
+      "text": "This one is pretty special as well (suggest reading the reply for detailed job before applying):\n&gt; \n&gt; Researcher, AI and Cognitive Autonomy \n&gt; *AI Objectives Institute* \u00b7 Contract, 4 months \u00b7 $8-15,000 per month \u00b7 part-time / full time -  Bay Area / DC / London / Remote\n&gt; About the AI Objectives Institute\n&gt; AI Objectives Institute (AOI) focuses on harnessing the potential of large-scale systems, including AI, markets, and bureaucracies, to advance humanity's interests.\n&gt; \n&gt; Fill out the <https://tally.so/r/MepkYl|application form> and we\u2019ll be in touch if you might be a good fit. Applications are rolling with a goal of hiring by September 30th.\n"
+    },
+    {
+      "ts": "1790356845.156049",
+      "user": "U084QSVD4SV",
+      "text": "Awesome role Head of Frontier AI Risk at AISA: <https://docs.google.com/forms/d/e/1FAIpQLSf1eF2TiIXOALKDBAlied2GQmUlzDxGkX7K2ttYBhpd6rXjuw/viewform|docs.google.com/forms/\u2026/viewform>\n\n:brain::earth_asia: AISA is hiring a Head of Frontier AI Risk \u2014 our authoritative voice on frontier AI, briefing ministers, regulators, and AI safety institute leadership across Asia on capabilities, risk, and governance options."
+    },
+    {
+      "ts": "1790302618.322099",
+      "user": "U0A0S6YJBU5",
+      "text": "Celeste Li and I are *launching <https://aistranslate.org/|Babel Translation>, which translates impactful English-language AI safety content into Mandarin Chinese for free! We\u2019re (1) opening the call for translations and (2) hiring translation contractors.* :star2:\n\nHigh-quality translations are very useful for global AI safety fieldbuilding; if you have impactful English-language AIS content, you should consider having it be translated. Our previous work includes the Chinese-language translation of METR\u2019s OpenAI/Hugging Face Risk Report, &amp; we\u2019re assembling a team of strong translators with AI safety context.\n\n\u2022 *To request a translation:* *<https://docs.google.com/document/d/1D5xk0az__sHpmAXvnFNsour9JPlAGso0nbed2KHyPxM/edit?tab=t.0|here\u2019s a 1-pager>* with more info! DM me, email <mailto:hello@aistranslate.org|hello@aistranslate.org>, and/or set up a 15-min call <https://cal.com/team/babel-translation/lets-chat?layout=mobile|here>.\n\u2022 *To join us as a translator:* we\u2019re hiring paid contractors with native-level Chinese / Spanish / Japanese, strong writing and editing skills, and AI safety context. We\u2019ll also support your general development in AI safety, through coaching and guidance. DM/email me, *and* please fill out <https://airtable.com/appD0QSGMLFDV7EYN/pag0SbynIYntVpqvp/form|this form>!"
+    },
+    {
+      "ts": "1790271115.071009",
+      "user": "U084QSVD4SV",
+      "text": "From Oliver Makins at UK AISI\n&gt; Hi everyone! UK AISI are looking for <https://job-boards.eu.greenhouse.io/aisi/jobs/4977896101|software engineers> and <https://job-boards.eu.greenhouse.io/aisi/jobs/4978575101|cyber security experts> to join the Cyber and Autonomous Systems team. The deadline for both roles is 11 October 2026.\n&gt; \n&gt; We work to equip the UK government and its partners with the scientific understanding of the risks posed by advanced AI. To see more of our team's work, I'd encourage you to check out our <https://www.aisi.gov.uk/blog?category_equal=%5B%22Cyber+%26+Autonomous+Systems%22%5D|blog posts!> :raised_hands:\n&gt; \n&gt; The roles are based in London, but we are able to sponsor visas for exceptional candidates. If you're excited by our mission, I'd encourage you to apply!"
+    },
     {
       "ts": "1790193209.796549",
       "user": "U084QSVD4SV",
@@ -43,21 +83,6 @@
       "ts": "1790015085.113259",
       "user": "U084QSVD4SV",
       "text": "AI Safety/Security consulting with the big firms may start being a thing , FYI.\n<https://x.com/anthropicai/status/2101039819870937247?s=42|x.com/anthropicai/status/2101039819870937247?s=42>"
-    },
-    {
-      "ts": "1789931839.004619",
-      "user": "U07SW87618A",
-      "text": "*Open positions at Arcadia Impact*\n\u201cArcadia Impact\u2019s alignment team is growing and has encouragement from several parties to be ambitious. We are therefore hiring for two roles: <https://www.arcadiaimpact.org/alignment-researcher|alignment researcher> and <https://www.arcadiaimpact.org/alignment-fellow|alignment fellow>. Both roles would pay well and let you do high-impact work on pressing alignment questions! *Please apply by September 20th* and reach out to Andrew (<mailto:andrew@arcadiaimpact.org|andrew@arcadiaimpact.org>) if you have any questions \u201d"
-    },
-    {
-      "ts": "1789743411.161159",
-      "user": "U084QSVD4SV",
-      "text": "More 80k hours opportunities:\n\n\n\u2022 BlueDot Impact: *<https://jobs.80000hours.org/?jobPk=21021&amp;utm_source=job-board-slack-alerts|Program Lead, Frontier AI Governance Course>*\n\n\u2022 BlueDot Impact: *<https://jobs.80000hours.org/?jobPk=21020&amp;utm_source=job-board-slack-alerts|Program Lead, Technical AI Safety Course>*\n\n\u2022 BlueDot Impact: *<https://jobs.80000hours.org/?jobPk=21019&amp;utm_source=job-board-slack-alerts|Program Lead, AGI Strategy Course>*\n\n\u2022 Concordia AI: *<https://jobs.80000hours.org/?jobPk=21022&amp;utm_source=job-board-slack-alerts|AI Governance Researcher / Research Manager, Singapore>*\n\n\u2022 Model Evaluation and Threat Research: *<https://jobs.80000hours.org/?jobPk=21023&amp;utm_source=job-board-slack-alerts|Chief Information Security Officer>*\n\n\u2022 UK Government, AI Security Institute: *<https://jobs.80000hours.org/?jobPk=21024&amp;utm_source=job-board-slack-alerts|Software Engineer, Cyber and Autonomous Systems Team>*\n\n\u2022 Secure AI Project: *<https://jobs.80000hours.org/?jobPk=21025&amp;utm_source=job-board-slack-alerts|Operations Director, Finance>*\n\n\u2022 AI Whistleblower Initiative: *<https://jobs.80000hours.org/?jobPk=21030&amp;utm_source=job-board-slack-alerts|Growth and Education Delivery>*\n\n\u2022 AI Whistleblower Initiative: *<https://jobs.80000hours.org/?jobPk=21029&amp;utm_source=job-board-slack-alerts|Research Manager>*\n\n\u2022 State AI Collaborative: *<https://jobs.80000hours.org/?jobPk=21032&amp;utm_source=job-board-slack-alerts|Policy Director / Policy Manager>*\n\n\u2022 State AI Collaborative: *<https://jobs.80000hours.org/?jobPk=21031&amp;utm_source=job-board-slack-alerts|Senior Advisor, State Engagement>*\n\n\u2022 Centre for Effective Altruism: *<https://jobs.80000hours.org/?jobPk=20553&amp;utm_source=job-board-slack-alerts|Grant, Transformative AI Fund>*\n\n\u2022 Constellation: *<https://jobs.80000hours.org/?jobPk=21033&amp;utm_source=job-board-slack-alerts|Cook>*\n\n\u2022 Successif: *<https://jobs.80000hours.org/?jobPk=21037&amp;utm_source=job-board-slack-alerts|Application Scorer>*\n\n"
-    },
-    {
-      "ts": "1789647106.456879",
-      "user": "U084QSVD4SV",
-      "text": "More 80K posted opps (and more bespoke ones on the horizon):\n&gt; \n&gt; UK Government, AI Security Institute: *<https://jobs.80000hours.org/?jobPk=21001&amp;utm_source=job-board-slack-alerts|Research Engineer / Research Scientist, Alignment Red Team>*\n&gt; \n&gt; \u2022 UK Government, AI Security Institute: *<https://jobs.80000hours.org/?jobPk=21000&amp;utm_source=job-board-slack-alerts|Research Engineer, Human Influence>*\n&gt; \n&gt; \u2022 UK Government, AI Security Institute: *<https://jobs.80000hours.org/?jobPk=20999&amp;utm_source=job-board-slack-alerts|Engineering Lead, Human Influence>*\n&gt; \n&gt; \u2022 RAND Corporation: *<https://jobs.80000hours.org/?jobPk=21002&amp;utm_source=job-board-slack-alerts|Associate General Counsel, AI, Biosecurity, and Emerging Technologies>*\n&gt; \n&gt; \u2022 American Association for the Advancement of Science: *<https://jobs.80000hours.org/?jobPk=21003&amp;utm_source=job-board-slack-alerts|Science and Technology Policy Fellow, Legislative Branch Cohort in AI>*\n&gt; \n&gt; \u2022 London Initiative for Safe AI: *<https://jobs.80000hours.org/?jobPk=21007&amp;utm_source=job-board-slack-alerts|Associate, Member Experience>*\n&gt; \n&gt; \u2022 London Initiative for Safe AI: *<https://jobs.80000hours.org/?jobPk=21006&amp;utm_source=job-board-slack-alerts|Operations Manager>*\n&gt; \n&gt; \u2022 London Initiative for Safe AI: *<https://jobs.80000hours.org/?jobPk=21005&amp;utm_source=job-board-slack-alerts|Operations Senior Manager>*\n&gt; \n&gt; \u2022 London Initiative for Safe AI: *<https://jobs.80000hours.org/?jobPk=21004&amp;utm_source=job-board-slack-alerts|Head of People>*\n&gt; \n&gt; \u2022 Alice: *<https://jobs.80000hours.org/?jobPk=21009&amp;utm_source=job-board-slack-alerts|Senior Researcher, AI>*\n&gt; \n&gt; \u2022 Alice: *<https://jobs.80000hours.org/?jobPk=21008&amp;utm_source=job-board-slack-alerts|Research Lead, Evaluations and Benchmarks>*\n&gt; \n&gt; \u2022 Legal Advocates for Safe Science and Technology: *<https://jobs.80000hours.org/?jobPk=21010&amp;utm_source=job-board-slack-alerts|Summer Fellowships>*\n&gt; \n&gt; \u2022 Partnership for Research into Sentient Machines: *<https://jobs.80000hours.org/?jobPk=21011&amp;utm_source=job-board-slack-alerts|Head of Operations>*\n&gt; \n&gt; \u2022 Cedar Research: *<https://jobs.80000hours.org/?jobPk=21014&amp;utm_source=job-board-slack-alerts|Technical Specialist>*"
     }
   ]
 }
