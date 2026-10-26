@@ -1081,15 +1081,15 @@
   {
     "name": "Virtue AI",
     "url": "https://jobs.ashbyhq.com/virtue-AI",
-    "action": "js_only",
-    "error": "JS-only page",
+    "action": "http_error",
+    "error": "HTTP 404",
     "old_status": "closed",
     "new_status": null,
     "old_deadline": "Closed - check for next cycle",
     "new_deadline": null,
     "old_details": "Virtue AI is an AI security and compliance platform founded by Bo Li and Dawn Song. The company offers positions across research, engineering, operations, marketing, and sales in <strong>San Francisco</strong>, but currently has no open positions listed on their job board.",
     "new_details": null,
-    "key_changes": "Could not fetch: JS-only page"
+    "key_changes": "Could not fetch: HTTP 404"
   },
   {
     "name": "Coefficient Giving — Project Tailwind",
