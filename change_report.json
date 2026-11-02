@@ -1068,15 +1068,15 @@
   {
     "name": "Tilde Research",
     "url": "https://jobs.ashbyhq.com/tilderesearch",
-    "action": "analysis_error",
-    "error": "Claude analysis returned no result",
+    "action": "http_error",
+    "error": "HTTP 404",
     "old_status": "open",
     "new_status": null,
     "old_deadline": "Rolling",
     "new_deadline": null,
     "old_details": "Tilde Research is a mechanistic interpretability lab (backed by Khosla Ventures) currently listing <strong>3</strong> open technical roles: <strong>ML Researcher</strong>, <strong>ML Engineer</strong>, and <strong>Kernel Engineer</strong>. Each role is offered as either an <strong>internship or full-time</strong> position and is based <strong>on-site in San Francisco</strong>. Postings have been live since July 2025 and are reviewed on a rolling basis through the Ashby job board.",
     "new_details": null,
-    "key_changes": "Analysis failed"
+    "key_changes": "Could not fetch: HTTP 404"
   },
   {
     "name": "Virtue AI",
