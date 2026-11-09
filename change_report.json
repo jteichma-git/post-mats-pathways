@@ -80,15 +80,15 @@
   {
     "name": "Google DeepMind: AGI Safety Short Course",
     "url": "https://deepmindsafetyresearch.medium.com/introducing-our-short-course-on-agi-safety-1072adb7912c",
-    "action": "http_error",
-    "error": "HTTP 403",
+    "action": "analysis_error",
+    "error": "Claude analysis returned no result",
     "old_status": "open",
     "new_status": null,
     "old_deadline": "Self-paced — no deadline",
     "new_deadline": null,
     "old_details": "A free, self-paced introductory course on AGI safety from Google DeepMind's safety research team, consisting of <strong>~75 minutes</strong> of short recorded talks and exercises plus an accompanying slide deck and exercise workbook. It covers the path to superhuman capabilities, risks from deliberate planning and instrumental subgoals, how misaligned goals arise (specification gaming vs. goal misgeneralization), DeepMind's technical alignment approach (amplified oversight, robust training & monitoring, security & control, interpretability, safer design patterns, alignment stress tests), and its governance approach including frontier safety practices and dangerous capability evaluations. Aimed at students, researchers and professionals who want an accessible one-hour introduction to AI alignment.",
     "new_details": null,
-    "key_changes": "Could not fetch: HTTP 403"
+    "key_changes": "Analysis failed"
   },
   {
     "name": "Outsider's Roadmap to AI Safety (LessWrong)",
@@ -132,15 +132,15 @@
   {
     "name": "CBAI Summer Research Fellowship",
     "url": "https://www.cbai.ai/upcoming-research-fellowships-1",
-    "action": "analysis_error",
-    "error": "Claude analysis returned no result",
+    "action": "http_error",
+    "error": "HTTP 404",
     "old_status": "expression_of_interest",
     "new_status": null,
     "old_deadline": "Rolling — Expression of Interest open for Spring 2026",
     "new_deadline": null,
     "old_details": "The Cambridge Boston Alignment Initiative (CBAI) Research Fellowship is an intensive, fully-funded <strong>ten-week</strong> program in Cambridge, Massachusetts for researchers building careers in technical AI safety, AI governance, or technical governance. Fellows receive an <strong>$8,000</strong> stipend, housing for non-local participants, weekday meals, 24/7 Harvard Square workspace, up to <strong>$10,000</strong> in compute credits, and <strong>1–2 hours</strong> weekly of mentorship from researchers at Harvard, MIT, Google DeepMind, the UK AI Security Institute, CNAS, RAND, and the Institute for Progress. Open to undergraduates, master's and PhD students, postdocs, and early-career professionals (18+; OPT/CPT accepted but no visa sponsorship), with an extension program of up to <strong>4 months</strong> available.",
     "new_details": null,
-    "key_changes": "Analysis failed"
+    "key_changes": "Could not fetch: HTTP 404"
   },
   {
     "name": "ERA Fellowship (Cambridge)",
@@ -158,15 +158,15 @@
   {
     "name": "Global AI Safety Fellowship",
     "url": "https://globalaisafetyfellowship.com/",
-    "action": "analysis_error",
-    "error": "Claude analysis returned no result",
+    "action": "http_error",
+    "error": "HTTP 404",
     "old_status": "expression_of_interest",
     "new_status": null,
     "old_deadline": "Closed — final deadline was 31 December 2024; expressions of interest accepted for the second iteration",
     "new_deadline": null,
     "old_details": "Impact Academy's Global AI Safety Fellowship is a fully funded research program placing exceptional STEM talent with leading AI safety organisations including CHAI (UC Berkeley), Conjecture, FAR.AI, and the UK AI Safety Institute. Fellows work full-time for <strong>up to 6 months</strong> (or longer) and receive <strong>up to $30,000</strong>, plus an optional fully-funded AI safety bootcamp, mentorship, 1:1 coaching, and visa/logistics support. A cohort of <strong>10–20</strong> fellows is selected worldwide via a two-phase, <strong>4–6 week</strong> process requiring demonstrated ML/deep learning knowledge, programming experience, and scholastic excellence.",
     "new_details": null,
-    "key_changes": "Analysis failed"
+    "key_changes": "Could not fetch: HTTP 404"
   },
   {
     "name": "Iliad Intensive / Fellowship",
