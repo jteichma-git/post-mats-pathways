@@ -8,6 +8,7 @@ and produces a change report. Updates resources.json with new statuses.
 
 import json
 import api_guard
+import topics
 import logging
 import os
 import re
@@ -297,6 +298,7 @@ Respond with ONLY valid JSON (no markdown, no code fences):
     "location": "e.g. 'Berkeley & London' or ''",
     "program_dates": "e.g. 'June 6 – Sep 5, 2026' or ''"
   }},
+  "topics": ["zero or more topic keys from the TOPICS list below"],
   "key_changes": "what's different from stored info, or 'No changes detected'"
 }}
 
@@ -337,6 +339,10 @@ publication lists, partner/collaborator lists and site-navigation details. Use <
 dollar amounts, durations, and other critical numbers — e.g. "<strong>$15K</strong>
 stipend". Do NOT include the deadline in the description (it has its own field).
 Return "" only if the page is truly description-less.
+
+TOPICS — return the list of topic keys that apply (usually none). Each key and
+its rule:
+{topics.prompt_block()}
 
 STRUCTURED — extract facts that appear on the page. Empty strings are fine
 when info isn't present. These are for downstream filtering, not display.
@@ -533,6 +539,7 @@ def run_crawler(dry_run: bool = False) -> list[dict]:
                 )
             new_deadline_iso = ""
         key_changes = analysis.get("key_changes", "")
+        new_topics = topics.clean(analysis.get("topics"))
 
         # Normalize: deadline is always a string in the new schema (may be "").
         if new_deadline is None or new_deadline == "null":
@@ -597,6 +604,10 @@ def run_crawler(dry_run: bool = False) -> list[dict]:
             resource["deadline_iso"] = new_deadline_iso
             resource["current_details"] = write_details
             resource["structured"] = write_structured
+            if new_topics:
+                resource["tags"] = new_topics
+            else:
+                resource.pop("tags", None)
             if content_changed:
                 resource["last_content_change"] = now
 

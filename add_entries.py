@@ -111,6 +111,7 @@ def make_resource_entry(entry: Dict) -> Dict:
         "current_details": entry.get("description", ""),
         "last_checked": datetime.now(timezone.utc).isoformat(),
         "js_only": False,
+        **({"tags": entry["topics"]} if entry.get("topics") else {}),
     }
 
 

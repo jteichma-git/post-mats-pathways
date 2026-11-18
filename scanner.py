@@ -17,6 +17,7 @@ Usage:
 
 import argparse
 import api_guard
+import topics
 import json
 import logging
 import os
@@ -88,6 +89,8 @@ This tracker lists PROGRAMS, FUNDERS and ORGANISATIONS — not individual job op
 
 IMPORTANT: AI governance and AI policy work focused on safety/security/alignment should score EQUALLY HIGH as technical AI safety work. Both technical and governance approaches are core to the AI safety field.
 
+ALSO IN SCOPE: MATS has a biosecurity track, so programs, funders and organisations focused on biosecurity, biodefense, pandemic prevention or AI-enabled biological risk score just as high as AI safety ones.
+
 Criteria for high scores:
 - 5: Directly and primarily focused on AI safety/alignment/security/governance (e.g., an alignment research lab, an AI safety fellowship, an AI governance think tank, an AI security startup)
 - 4: Strong AI safety/governance component as a major part of their mission
@@ -109,6 +112,7 @@ Return ONLY a JSON object (no markdown, no explanation) with these fields:
 - "description": string — 1-2 sentence description of what this opportunity offers
 - "status": string — one of: "open", "closed", "upcoming", "expression_of_interest", "unknown"
 - "deadline": string or null — application deadline if mentioned
+- "topics": list — topic keys that apply, usually [] (rules below)
 
 Category meanings (choose by what the opportunity OFFERS the reader, not by what kind of organisation runs it):
   - "fellowships": structured research fellowships, residencies and mentored programs (including part-time ones, even if called an "incubator")
@@ -118,7 +122,10 @@ Category meanings (choose by what the opportunity OFFERS the reader, not by what
   - "tech-internships" / "policy-internships": internships and short visiting roles, technical or governance
   - "phd": PhD programs, PhD fellowships and academic positions
   - "community": courses, upskilling, events, communities and reading lists
-  - "career-resources": career advice and directories"""
+  - "career-resources": career advice and directories
+
+Topic rules:
+""" + topics.prompt_block().replace("{", "{{").replace("}", "}}")
 
 CAREER_CHECK_PROMPT = """You are an expert on AI safety career opportunities. I have an existing entry for this organization in our database:
 
@@ -540,7 +547,8 @@ def scrape_websearch_opportunities(anthropic_key: str, dry_run: bool = False) ->
     import anthropic
     client = anthropic.Anthropic(api_key=anthropic_key)
     prompt = (
-        "Search the web for AI safety / AI alignment opportunities that are "
+        "Search the web for AI safety / AI alignment opportunities, and for "
+        "biosecurity opportunities (especially AI-enabled biological risk), that are "
         "currently open or were newly announced in roughly the last 30 days, in "
         "TWO categories:\n"
         "  (1) research GRANTS, RFPs, and funding calls (for researchers/orgs), and\n"

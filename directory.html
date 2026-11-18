@@ -247,7 +247,7 @@
   .opp-tag-biosecurity {
     background: rgba(52, 211, 153, 0.14); color: #6ee7b7; border: 1px solid rgba(52, 211, 153, 0.4);
   }
-  .topic-filter { text-align: center; margin: 10px 0 4px; }
+  .topic-filter { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; margin: 10px 0 4px; }
   .topic-filter button {
     font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; padding: 7px 16px;
     border-radius: 999px; color: #6ee7b7; background: rgba(52, 211, 153, 0.08);
@@ -259,6 +259,19 @@
   body.only-biosecurity .opp-archive:not(:has(.opp-tag-biosecurity)),
   body.only-biosecurity .card-container:not(:has(.opp-tag-biosecurity)),
   body.only-biosecurity section:not(:has(.opp-tag-biosecurity)) { display: none; }
+  .opp-tag-governance {
+    background: rgba(129, 140, 248, 0.14); color: #a5b4fc; border: 1px solid rgba(129, 140, 248, 0.45);
+  }
+  .topic-filter button[data-topic-btn="governance"] {
+    color: #a5b4fc; background: rgba(129, 140, 248, 0.08); border-color: rgba(129, 140, 248, 0.5);
+  }
+  .topic-filter button[data-topic-btn="governance"]:hover { background: rgba(129, 140, 248, 0.16); }
+  .topic-filter button[data-topic-btn="governance"][aria-pressed="true"] { background: #818cf8; color: #11133a; border-color: #818cf8; }
+  .topic-filter::before { content: "Show only:"; color: #94a3b8; font-size: 13px; }
+  body.only-governance .opp:not(:has(.opp-tag-governance)),
+  body.only-governance .opp-archive:not(:has(.opp-tag-governance)),
+  body.only-governance .card-container:not(:has(.opp-tag-governance)),
+  body.only-governance section:not(:has(.opp-tag-governance)) { display: none; }
 </style>
 <script type="application/ld+json">
 {
@@ -283,13 +296,20 @@
 <p>Fellowships, grants, internships, PhD programs, jobs, incubators, and community resources</p>
 <div class="meta"><span id="last-updated">Last updated: November 18, 2026</span><span class="desktop-only"> · <a href="index.html">View interactive version</a></span></div>
 </header>
-<div class="topic-filter"><button type="button" data-topic-btn="biosecurity" aria-pressed="false" onclick="toggleTopic('biosecurity')">🧬 Show biosecurity opportunities only</button></div>
+<div class="topic-filter">
+<button type="button" data-topic-btn="biosecurity" aria-pressed="false" onclick="toggleTopic('biosecurity')">🧬 Biosecurity</button>
+<button type="button" data-topic-btn="governance" aria-pressed="false" onclick="toggleTopic('governance')">🏛️ Governance</button>
+</div>
 <script>
+  // Show only entries carrying one topic tag; click again (or another topic) to switch.
+  var TOPIC_KEYS = ["biosecurity", "governance"];
   function toggleTopic(key) {
-    var on = document.body.classList.toggle("only-" + key);
-    document.querySelectorAll('[data-topic-btn="' + key + '"]').forEach(function (b) {
-      b.setAttribute("aria-pressed", on);
-      b.textContent = on ? "🧬 Showing biosecurity only — show everything" : "🧬 Show biosecurity opportunities only";
+    var on = !document.body.classList.contains("only-" + key);
+    TOPIC_KEYS.forEach(function (k) {
+      document.body.classList.toggle("only-" + k, on && k === key);
+      document.querySelectorAll('[data-topic-btn="' + k + '"]').forEach(function (b) {
+        b.setAttribute("aria-pressed", on && k === key);
+      });
     });
     try {
       var u = new URL(location.href);
@@ -298,7 +318,8 @@
     } catch (e) {}
   }
   document.addEventListener("DOMContentLoaded", function () {
-    if (new URLSearchParams(location.search).get("topic") === "biosecurity") toggleTopic("biosecurity");
+    var t = new URLSearchParams(location.search).get("topic");
+    if (TOPIC_KEYS.indexOf(t) !== -1) toggleTopic(t);
   });
 </script>
 <nav aria-label="Table of contents">
