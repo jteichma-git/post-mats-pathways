@@ -18,12 +18,22 @@ TOPICS = {
         ),
     },
     "governance": {
-        "label": "Governance",
+        "label": "Policy & Governance",
         "rule": (
             "include it if the opportunity is primarily about AI governance, AI policy, "
             "AI law, standards or regulation, OR has a dedicated, named governance or "
             "policy track, team, stream or funding area. Technical AI safety work that "
             "merely informs policy does NOT count."
+        ),
+    },
+    "security": {
+        "label": "Security",
+        "rule": (
+            "include it if the opportunity is primarily about AI security or "
+            "cybersecurity as it relates to AI — securing model weights, compute and AI "
+            "infrastructure, AI-enabled cyber threats, adversarial attacks and security "
+            "red-teaming of AI systems — OR has a dedicated, named security track, team, "
+            "stream or funding area. Generic IT or 'safe and secure AI' slogans do NOT count."
         ),
     },
 }

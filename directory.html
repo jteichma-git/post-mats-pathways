@@ -272,6 +272,18 @@
   body.only-governance .opp-archive:not(:has(.opp-tag-governance)),
   body.only-governance .card-container:not(:has(.opp-tag-governance)),
   body.only-governance section:not(:has(.opp-tag-governance)) { display: none; }
+  .opp-tag-security {
+    background: rgba(251, 113, 133, 0.14); color: #fda4af; border: 1px solid rgba(251, 113, 133, 0.45);
+  }
+  .topic-filter button[data-topic-btn="security"] {
+    color: #fda4af; background: rgba(251, 113, 133, 0.08); border-color: rgba(251, 113, 133, 0.5);
+  }
+  .topic-filter button[data-topic-btn="security"]:hover { background: rgba(251, 113, 133, 0.16); }
+  .topic-filter button[data-topic-btn="security"][aria-pressed="true"] { background: #fb7185; color: #3b0a14; border-color: #fb7185; }
+  body.only-security .opp:not(:has(.opp-tag-security)),
+  body.only-security .opp-archive:not(:has(.opp-tag-security)),
+  body.only-security .card-container:not(:has(.opp-tag-security)),
+  body.only-security section:not(:has(.opp-tag-security)) { display: none; }
 </style>
 <script type="application/ld+json">
 {
@@ -298,11 +310,12 @@
 </header>
 <div class="topic-filter">
 <button type="button" data-topic-btn="biosecurity" aria-pressed="false" onclick="toggleTopic('biosecurity')">🧬 Biosecurity</button>
-<button type="button" data-topic-btn="governance" aria-pressed="false" onclick="toggleTopic('governance')">🏛️ Governance</button>
+<button type="button" data-topic-btn="governance" aria-pressed="false" onclick="toggleTopic('governance')">🏛️ Policy &amp; Governance</button>
+<button type="button" data-topic-btn="security" aria-pressed="false" onclick="toggleTopic('security')">🔐 Security</button>
 </div>
 <script>
   // Show only entries carrying one topic tag; click again (or another topic) to switch.
-  var TOPIC_KEYS = ["biosecurity", "governance"];
+  var TOPIC_KEYS = ["biosecurity", "governance", "security"];
   function toggleTopic(key) {
     var on = !document.body.classList.contains("only-" + key);
     TOPIC_KEYS.forEach(function (k) {
