@@ -604,6 +604,7 @@ def run_crawler(dry_run: bool = False) -> list[dict]:
             resource["deadline_iso"] = new_deadline_iso
             resource["current_details"] = write_details
             resource["structured"] = write_structured
+            new_topics = topics.effective(resource, new_topics)
             if new_topics:
                 resource["tags"] = new_topics
             else:

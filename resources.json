@@ -272,7 +272,12 @@
     "deadline_iso": "",
     "tags": [
       "security"
-    ]
+    ],
+    "tag_overrides": {
+      "add": [
+        "biosecurity"
+      ]
+    }
   },
   {
     "name": "AE Studio — AI Alignment Research Grants",

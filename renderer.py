@@ -278,6 +278,7 @@ def extract_opp_url(block_html):
 # Tags live INSIDE the .opp block, never on the wrapper: find_opp_blocks only
 # recognises a bare <div class="opp">. The pages' filter button hides every
 # .opp that lacks the matching .opp-tag-<key> span.
+import topics
 from topics import TOPICS
 TAG_LABELS = {k: v["label"] for k, v in TOPICS.items()}
 
@@ -285,7 +286,7 @@ TAG_LABELS = {k: v["label"] for k, v in TOPICS.items()}
 def render_tags(resource):
     return "".join(
         f'<span class="opp-tag opp-tag-{t}">{TAG_LABELS[t]}</span>'
-        for t in resource.get("tags") or []
+        for t in topics.effective(resource)
         if t in TAG_LABELS
     )
 
