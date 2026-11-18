@@ -273,6 +273,22 @@ def extract_opp_url(block_html):
     return m.group(1) if m else None
 
 
+# --- Topic tags (e.g. biosecurity) ---
+#
+# Tags live INSIDE the .opp block, never on the wrapper: find_opp_blocks only
+# recognises a bare <div class="opp">. The pages' filter button hides every
+# .opp that lacks the matching .opp-tag-<key> span.
+TAG_LABELS = {"biosecurity": "Biosecurity"}
+
+
+def render_tags(resource):
+    return "".join(
+        f'<span class="opp-tag opp-tag-{t}">{TAG_LABELS[t]}</span>'
+        for t in resource.get("tags") or []
+        if t in TAG_LABELS
+    )
+
+
 # --- Card renderers (one per HTML variant) ---
 
 def render_index_card(resource, status_class):
@@ -287,6 +303,7 @@ def render_index_card(resource, status_class):
         (
             f'<a class="opp-name" href="{url}" '
             f'onclick="event.stopPropagation()" target="_blank">{name}</a>'
+            f'{render_tags(resource)}'
         ),
     ]
     if details:
@@ -307,7 +324,7 @@ def render_directory_card(resource, status_class):
 
     parts = [
         '<div class="opp">',
-        f'<h3><a href="{url}">{name}</a></h3>',
+        f'<h3><a href="{url}">{name}</a>{render_tags(resource)}</h3>',
     ]
     if details:
         parts.append(f'<div class="details">{details}</div>')
@@ -341,7 +358,7 @@ def render_index_closed(resource):
     return (
         f'<div class="opp">\n'
         f'<a class="opp-name opp-name-past" href="{url}" '
-        f'onclick="event.stopPropagation()" target="_blank">{name}</a>\n'
+        f'onclick="event.stopPropagation()" target="_blank">{name}</a>{render_tags(resource)}\n'
         f'<div class="opp-deadline closed">{text_escape(note)}</div>\n'
         f'</div>'
     )
@@ -353,7 +370,7 @@ def render_directory_closed(resource):
     note = resource.get("current_deadline") or "Closed"
     return (
         f'<div class="opp">\n'
-        f'<h3 class="opp-name-past"><a href="{url}">{name}</a></h3>\n'
+        f'<h3 class="opp-name-past"><a href="{url}">{name}</a>{render_tags(resource)}</h3>\n'
         f'<div class="deadline closed">{text_escape(note)}</div>\n'
         f'</div>'
     )

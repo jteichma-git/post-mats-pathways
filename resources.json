@@ -242,7 +242,10 @@
       "program_dates": ""
     },
     "last_content_change": "2026-11-18T21:43:21.237060+00:00",
-    "deadline_iso": ""
+    "deadline_iso": "",
+    "tags": [
+      "biosecurity"
+    ]
   },
   {
     "name": "AE Studio — AI Alignment Research Grants",
@@ -314,7 +317,10 @@
       "program_dates": "Spring 2027 cohort"
     },
     "last_content_change": "2026-11-18T21:43:21.237060+00:00",
-    "deadline_iso": "2027-01-13"
+    "deadline_iso": "2027-01-13",
+    "tags": [
+      "biosecurity"
+    ]
   },
   {
     "name": "Foresight Institute AI Nodes",
@@ -1628,7 +1634,10 @@
       "location": "Harvard Square, Cambridge, MA",
       "program_dates": "Oct 13 – Dec 18, 2026 (fall 2026 cohort); next cohort summer 2027"
     },
-    "last_content_change": "2026-11-18T21:43:21.237060+00:00"
+    "last_content_change": "2026-11-18T21:43:21.237060+00:00",
+    "tags": [
+      "biosecurity"
+    ]
   },
   {
     "name": "AI Security Bootcamp — London",
@@ -2096,7 +2105,10 @@
       "location": "London, UK (options in Birmingham, Cardiff, Darlington, Edinburgh, Salford, Bristol)",
       "program_dates": ""
     },
-    "last_content_change": "2026-11-18T21:43:21.237060+00:00"
+    "last_content_change": "2026-11-18T21:43:21.237060+00:00",
+    "tags": [
+      "biosecurity"
+    ]
   },
   {
     "name": "US CAISSI (NIST) — Careers",
@@ -2114,7 +2126,10 @@
       "location": "Washington, DC & San Francisco",
       "program_dates": "NRC Research Associateship Program: February and August cycles"
     },
-    "last_content_change": "2026-11-18T21:43:21.237060+00:00"
+    "last_content_change": "2026-11-18T21:43:21.237060+00:00",
+    "tags": [
+      "biosecurity"
+    ]
   },
   {
     "name": "Constellation Visiting Fellowship",
@@ -2277,5 +2292,362 @@
       "program_dates": "Spring 2027 cohort"
     },
     "last_content_change": "2026-11-18T21:43:21.237060+00:00"
+  },
+  {
+    "name": "ERA AIxBiosecurity Fellowship",
+    "url": "https://aixbiosecurity.org/",
+    "category": "fellowships",
+    "current_status": "closed",
+    "current_deadline": "Winter 2027 applications closed — join the mailing list for future rounds",
+    "current_details": "ERA's fully funded <strong>10-week</strong> in-person fellowship in <strong>Cambridge, UK</strong> on AI-enabled biological risk. Fellows take a research, placement or founding track with weekly mentorship and research management. <strong>£10,000</strong> stipend; open to anyone <strong>18+</strong>.",
+    "last_checked": "2026-11-18T22:24:33.950285+00:00",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "£10,000",
+      "duration": "10 weeks",
+      "location": "Cambridge, UK",
+      "program_dates": "18 Jan – 26 Mar 2027"
+    },
+    "last_content_change": "2026-11-18T22:24:33.950285+00:00",
+    "tags": [
+      "biosecurity"
+    ]
+  },
+  {
+    "name": "Pivotal — Frontier Biodefense Fellowship",
+    "url": "https://www.pivotal-research.org/fellowships/biodefense-fellowship",
+    "category": "fellowships",
+    "current_status": "expression_of_interest",
+    "current_deadline": "2027 dates not yet announced — expression of interest open",
+    "current_details": "<strong>15 weeks</strong> full-time at LISA in <strong>London</strong> on frontier biological threats — AI×bio, PPE, biohardening and detection — with weekly 1:1 expert mentorship and dedicated research and project managers. <strong>£15,000–£18,000</strong> stipend.",
+    "last_checked": "2026-11-18T22:24:33.950285+00:00",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "£15,000–£18,000",
+      "duration": "15 weeks",
+      "location": "London",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-11-18T22:24:33.950285+00:00",
+    "tags": [
+      "biosecurity"
+    ]
+  },
+  {
+    "name": "Council on Strategic Risks — Fellowship for Ending Bioweapons",
+    "url": "https://councilonstrategicrisks.org/about/opportunities/",
+    "category": "policy-internships",
+    "current_status": "closed",
+    "current_deadline": "Closed — 2027 class selected; next call expected around September 2027",
+    "current_details": "A <strong>10-month</strong> part-time, remote fellowship on reducing deliberate biological-weapons risk, including AI–bio convergence, with monthly mentoring and <strong>three</strong> funded US trips. <strong>$1,000/month</strong> stipend. Needs a <strong>graduate degree or PhD enrolment</strong> and citizenship of a NATO country, Australia, Japan, NZ or South Korea.",
+    "last_checked": "2026-11-18T22:24:33.950285+00:00",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "$1,000/month",
+      "duration": "10 months, part-time",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-11-18T22:24:33.950285+00:00",
+    "tags": [
+      "biosecurity"
+    ]
+  },
+  {
+    "name": "Johns Hopkins CHS — Emerging Leaders in Biosecurity",
+    "url": "https://centerforhealthsecurity.org/education-training/emerging-leaders-in-biosecurity-fellowship",
+    "category": "policy-internships",
+    "current_status": "closed",
+    "current_deadline": "Closed — 2027 class selected; applications usually open in August",
+    "current_details": "The field's flagship part-time fellowship, running since 2012 with <strong>300+</strong> alumni across government, science and policy. Over <strong>10 months</strong> fellows attend two workshops and a symposium, with travel covered and no relocation. Needs a <strong>master's or doctorate</strong>, PhD enrolment, or <strong>3+ years</strong> of relevant experience.",
+    "last_checked": "2026-11-18T22:24:33.950285+00:00",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "10 months, part-time",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-11-18T22:24:33.950285+00:00",
+    "tags": [
+      "biosecurity"
+    ]
+  },
+  {
+    "name": "BlueDot — Biosecurity Course",
+    "url": "https://bluedot.org/courses/biosecurity",
+    "category": "community",
+    "current_status": "open",
+    "current_deadline": "November 22, 2026",
+    "current_details": "BlueDot's free cohort-based course on pandemic prevention as AI raises biological risk, built for AI researchers, builders and policy people with <strong>no biology background</strong> needed. About <strong>30 hours</strong> online in small groups, as an intensive <strong>6 days</strong> or part-time over <strong>6 weeks</strong>.",
+    "last_checked": "2026-11-18T22:24:33.950285+00:00",
+    "js_only": false,
+    "deadline_iso": "2026-11-22",
+    "structured": {
+      "stipend": "",
+      "duration": "30 hours (6 days or 6 weeks)",
+      "location": "Online",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-11-18T22:24:33.950285+00:00",
+    "tags": [
+      "biosecurity"
+    ]
+  },
+  {
+    "name": "BlueDot — Career Transition Grants",
+    "url": "https://bluedot.org/grants/career-transition",
+    "category": "grants",
+    "current_status": "open",
+    "current_deadline": "Rolling",
+    "current_details": "Grants of <strong>$20k–$200k</strong> for a set period of full-time work moving into AI safety or <strong>biosecurity</strong>; decisions in about <strong>2 weeks</strong>. Took over Coefficient Giving's career-transition funding in September 2026.",
+    "last_checked": "2026-11-18T22:24:33.950285+00:00",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "$20k–$200k",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-11-18T22:24:33.950285+00:00",
+    "tags": [
+      "biosecurity"
+    ]
+  },
+  {
+    "name": "Coefficient Giving — Biosecurity & Pandemic Preparedness",
+    "url": "https://coefficientgiving.org/funds/biosecurity-pandemic-preparedness/",
+    "category": "grants",
+    "current_status": "closed",
+    "current_deadline": "2026 open call closed May 11, 2026 — proposals by email still considered",
+    "current_details": "The largest funder in the field, expecting to direct <strong>$100M+</strong> in 2026 across transmission suppression, technical safeguards where AI meets biology (e.g. synthesis screening, misuse classifiers), policy and field-building. Proposals can go to biosecurity@coefficientgiving.org; the bar is high.",
+    "last_checked": "2026-11-18T22:24:33.950285+00:00",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-11-18T22:24:33.950285+00:00",
+    "tags": [
+      "biosecurity"
+    ]
+  },
+  {
+    "name": "Fourth Eon Biosecurity Institute — Fellowships & RFPs",
+    "url": "https://fourtheon.bio/fellowships/",
+    "category": "grants",
+    "current_status": "open",
+    "current_deadline": "Rolling",
+    "current_details": "Funds people to scope new biosecurity programmes: up to <strong>$75,000</strong> for <strong>three months</strong> as a solo Program Architect or two-person team, reviewed as proposals arrive. Open RFP areas include safeguards for biological AI models and <strong>bio capability evals</strong>. Fourth Eon also mentors the MATS biosecurity stream.",
+    "last_checked": "2026-11-18T22:24:33.950285+00:00",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "up to $75,000",
+      "duration": "3 months",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-11-18T22:24:33.950285+00:00",
+    "tags": [
+      "biosecurity"
+    ]
+  },
+  {
+    "name": "SecureBio",
+    "url": "https://securebio.org/careers/",
+    "category": "jobs",
+    "current_status": "open",
+    "current_deadline": "Rolling",
+    "current_details": "Protects against engineered and AI-enabled biological threats. Its AI team builds bio evaluations for frontier models such as the Virology Capabilities Test; its Detection team runs metagenomic early-warning sequencing. Hiring senior AI-bio research scientists; mostly in person in <strong>Cambridge, MA</strong>.",
+    "last_checked": "2026-11-18T22:24:33.950285+00:00",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "Cambridge, MA",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-11-18T22:24:33.950285+00:00",
+    "tags": [
+      "biosecurity"
+    ]
+  },
+  {
+    "name": "Centre for Long-Term Resilience (CLTR)",
+    "url": "https://www.longtermresilience.org/work-with-us/",
+    "category": "jobs",
+    "current_status": "open",
+    "current_deadline": "Rolling",
+    "current_details": "<strong>London</strong> think tank advising the UK government on AI, biosecurity and risk management, with a dedicated Biosecurity Policy Unit. Lists live roles and runs a rolling open call for contractors on AI, biosecurity and AI–bio work.",
+    "last_checked": "2026-11-18T22:24:33.950285+00:00",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "London",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-11-18T22:24:33.950285+00:00",
+    "tags": [
+      "biosecurity"
+    ]
+  },
+  {
+    "name": "Frontier Model Forum — Careers",
+    "url": "https://www.frontiermodelforum.org/careers/",
+    "category": "jobs",
+    "current_status": "open",
+    "current_deadline": "Rolling — send a CV any time",
+    "current_details": "The industry body of leading frontier AI developers; its AI-Bio workstream sets shared practice on biological capability assessments and safeguards. No fixed postings — send a CV and cover letter to careers@frontiermodelforum.org.",
+    "last_checked": "2026-11-18T22:24:33.950285+00:00",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-11-18T22:24:33.950285+00:00",
+    "tags": [
+      "biosecurity"
+    ]
+  },
+  {
+    "name": "Valthos",
+    "url": "https://jobs.ashbyhq.com/valthos",
+    "category": "jobs",
+    "current_status": "open",
+    "current_deadline": "Rolling",
+    "current_details": "AI biodefense startup building systems that detect biological threats and design medical countermeasures in real time, backed by OpenAI, Lux Capital and Founders Fund. Hiring computational biologists, applied AI engineers and software engineers (<strong>8</strong> roles listed).",
+    "last_checked": "2026-11-18T22:24:33.950285+00:00",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-11-18T22:24:33.950285+00:00",
+    "tags": [
+      "biosecurity"
+    ]
+  },
+  {
+    "name": "Red Queen Bio",
+    "url": "https://www.redqueen.bio/work-with-us",
+    "category": "jobs",
+    "current_status": "expression_of_interest",
+    "current_deadline": "No posted roles — send a CV to jobs@redqueen.bio",
+    "current_details": "AI-powered biodefense startup aiming to design, make and deliver countermeasures fast enough to stop engineered threats, scaling defences as frontier AI capabilities grow.",
+    "last_checked": "2026-11-18T22:24:33.950285+00:00",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-11-18T22:24:33.950285+00:00",
+    "tags": [
+      "biosecurity"
+    ]
+  },
+  {
+    "name": "IBBIS",
+    "url": "https://ibbis.bio/about/careers/",
+    "category": "jobs",
+    "current_status": "unknown",
+    "current_deadline": "No open roles right now",
+    "current_details": "Swiss non-profit in <strong>Geneva</strong> building global infrastructure for <strong>DNA synthesis screening</strong>: the open-source Commec screening tool, customer screening and international sequence-biosecurity standards. New roles are posted on this page.",
+    "last_checked": "2026-11-18T22:24:33.950285+00:00",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "Geneva",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-11-18T22:24:33.950285+00:00",
+    "tags": [
+      "biosecurity"
+    ]
+  },
+  {
+    "name": "Cambridge Biosecurity Hub",
+    "url": "https://www.cambiohub.org/",
+    "category": "community",
+    "current_status": "open",
+    "current_deadline": "Every term",
+    "current_details": "Cambridge, UK community for biosecurity. Runs a <strong>7-week</strong> introductory Pandemic Prevention Fellowship <strong>every term</strong>, events such as an AI×bio symposium, and a public career-resources doc. Advises ERA's AIxBio, Pivotal's Biodefense and SPAR's bio stream.",
+    "last_checked": "2026-11-18T22:24:33.950285+00:00",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "7 weeks",
+      "location": "Cambridge, UK",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-11-18T22:24:33.950285+00:00",
+    "tags": [
+      "biosecurity"
+    ]
+  },
+  {
+    "name": "Oxford Biosecurity Group",
+    "url": "https://www.oxfordbiosecuritygroup.com/",
+    "category": "community",
+    "current_status": "open",
+    "current_deadline": "January 31, 2027 (project-lead talent database)",
+    "current_details": "Runs part-time biosecurity research projects with partner organisations (<strong>5–10 hours/week</strong>) and an online Introduction to Biosecurity course. Currently building a talent database of future project leads.",
+    "last_checked": "2026-11-18T22:24:33.950285+00:00",
+    "js_only": false,
+    "deadline_iso": "2027-01-31",
+    "structured": {
+      "stipend": "",
+      "duration": "5–10 hours/week",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-11-18T22:24:33.950285+00:00",
+    "tags": [
+      "biosecurity"
+    ]
+  },
+  {
+    "name": "GCBR Organization Updates (newsletter)",
+    "url": "https://gcbrupdates.substack.com/",
+    "category": "community",
+    "current_status": "unknown",
+    "current_deadline": "",
+    "current_details": "Substack digest of updates from organisations working on global catastrophic biological risks — biosecurity, biosafety, pandemic preparedness and AI–bio — every <strong>1–2 months</strong>. The easiest way to keep up with new bio jobs, fellowships and funding.",
+    "last_checked": "2026-11-18T22:24:33.950285+00:00",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-11-18T22:24:33.950285+00:00",
+    "tags": [
+      "biosecurity"
+    ]
   }
 ]

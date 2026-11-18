@@ -237,6 +237,28 @@
   .wn-upcoming { color: #fbbf24; }
   .wn-empty { color: #64748b; font-style: italic; }
   @media (max-width: 700px) { .desktop-only { display: none; } }
+
+  /* Topic tags + "show only" filter (tags rendered by renderer.py) */
+  .opp-tag {
+    display: inline-block; margin-left: 6px; padding: 1px 7px; border-radius: 999px;
+    font-size: 9px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+    vertical-align: middle; line-height: 1.5;
+  }
+  .opp-tag-biosecurity {
+    background: rgba(52, 211, 153, 0.14); color: #6ee7b7; border: 1px solid rgba(52, 211, 153, 0.4);
+  }
+  .topic-filter { text-align: center; margin: 10px 0 4px; }
+  .topic-filter button {
+    font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; padding: 7px 16px;
+    border-radius: 999px; color: #6ee7b7; background: rgba(52, 211, 153, 0.08);
+    border: 1px solid rgba(52, 211, 153, 0.45);
+  }
+  .topic-filter button:hover { background: rgba(52, 211, 153, 0.16); }
+  .topic-filter button[aria-pressed="true"] { background: #34d399; color: #052e1f; border-color: #34d399; }
+  body.only-biosecurity .opp:not(:has(.opp-tag-biosecurity)),
+  body.only-biosecurity .opp-archive:not(:has(.opp-tag-biosecurity)),
+  body.only-biosecurity .card-container:not(:has(.opp-tag-biosecurity)),
+  body.only-biosecurity section:not(:has(.opp-tag-biosecurity)) { display: none; }
 </style>
 <script type="application/ld+json">
 {
@@ -261,6 +283,24 @@
 <p>Fellowships, grants, internships, PhD programs, jobs, incubators, and community resources</p>
 <div class="meta"><span id="last-updated">Last updated: November 18, 2026</span><span class="desktop-only"> · <a href="index.html">View interactive version</a></span></div>
 </header>
+<div class="topic-filter"><button type="button" data-topic-btn="biosecurity" aria-pressed="false" onclick="toggleTopic('biosecurity')">🧬 Show biosecurity opportunities only</button></div>
+<script>
+  function toggleTopic(key) {
+    var on = document.body.classList.toggle("only-" + key);
+    document.querySelectorAll('[data-topic-btn="' + key + '"]').forEach(function (b) {
+      b.setAttribute("aria-pressed", on);
+      b.textContent = on ? "🧬 Showing biosecurity only — show everything" : "🧬 Show biosecurity opportunities only";
+    });
+    try {
+      var u = new URL(location.href);
+      if (on) u.searchParams.set("topic", key); else u.searchParams.delete("topic");
+      history.replaceState(null, "", u);
+    } catch (e) {}
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    if (new URLSearchParams(location.search).get("topic") === "biosecurity") toggleTopic("biosecurity");
+  });
+</script>
 <nav aria-label="Table of contents">
 <h2>Contents</h2>
 <ol>
@@ -365,6 +405,11 @@
 <div class="deadline open">Nov 22, 2026 (Technical AI Safety &amp; Biosecurity); AGI Strategy Nov 29; Frontier AI Governance Dec 6, 2026 — grants rolling</div>
 </div>
 <div class="opp">
+<h3><a href="https://bluedot.org/courses/biosecurity">BlueDot — Biosecurity Course</a><span class="opp-tag opp-tag-biosecurity">Biosecurity</span></h3>
+<div class="details">BlueDot's free cohort-based course on pandemic prevention as AI raises biological risk, built for AI researchers, builders and policy people with <strong>no biology background</strong> needed. About <strong>30 hours</strong> online in small groups, as an intensive <strong>6 days</strong> or part-time over <strong>6 weeks</strong>.</div>
+<div class="deadline open">November 22, 2026</div>
+</div>
+<div class="opp">
 <h3><a href="https://aisecurity.forum/">Vegas AI Security Forum</a></h3>
 <div class="details">Invite-based event series convening experts in AI, cybersecurity, and national security to secure powerful AI models, with editions in Las Vegas, DC, Tel Aviv, and Paris. Applications are open for <strong>TLV '26</strong> in Israel and a rolling US-based DC Reading Group. Fiscally sponsored by Hack Club, a 501(c)(3) nonprofit.</div>
 <div class="deadline open">TLV '26 on Nov 22, 2026 — applications open (DC Reading Group rolling)</div>
@@ -373,6 +418,11 @@
 <h3><a href="https://apartresearch.com/">Apart Research Hackathons</a></h3>
 <div class="details">Apart Research runs weekend research sprints (hackathons) tackling a single AI safety question, open to anyone worldwide, online and at local in-person sites. Standouts are invited to Apart Studio, the route into the Apart Fellowship; Partnered Fellowships take direct applications. Research focuses on manipulation and dark patterns in frontier AI systems.</div>
 <div class="deadline open">Next Sprint: Threat Intelligence &amp; Threat Modelling Hackathon, Dec 4–6, 2026</div>
+</div>
+<div class="opp">
+<h3><a href="https://www.oxfordbiosecuritygroup.com/">Oxford Biosecurity Group</a><span class="opp-tag opp-tag-biosecurity">Biosecurity</span></h3>
+<div class="details">Runs part-time biosecurity research projects with partner organisations (<strong>5–10 hours/week</strong>) and an online Introduction to Biosecurity course. Currently building a talent database of future project leads.</div>
+<div class="deadline open">January 31, 2027 (project-lead talent database)</div>
 </div>
 <div class="opp">
 <h3><a href="https://80000hours.org/2025/06/technical-ai-safety-upskilling-resources/">80K Hours Upskilling Resources</a></h3>
@@ -386,6 +436,15 @@
 <h3><a href="https://www.aialign.net/recruit">ALIGN — AI Alignment Network</a></h3>
 <div class="details">ALIGN, a Japanese non-profit focused on AI alignment research, community building and outreach, is recruiting volunteer staff for event operations, community management, PR/social media, research and writing, website upkeep and organizational administration. Ideally <strong>3–4+ hours per week</strong>, with basic admin/IT skills and English welcomed; depending on fit and funding, a paid <strong>1–2 days/week</strong> role may be discussed. Apply via the Contact form; screening plus online interview.</div>
 <div class="deadline open">Rolling</div>
+</div>
+<div class="opp">
+<h3><a href="https://www.cambiohub.org/">Cambridge Biosecurity Hub</a><span class="opp-tag opp-tag-biosecurity">Biosecurity</span></h3>
+<div class="details">Cambridge, UK community for biosecurity. Runs a <strong>7-week</strong> introductory Pandemic Prevention Fellowship <strong>every term</strong>, events such as an AI×bio symposium, and a public career-resources doc. Advises ERA's AIxBio, Pivotal's Biodefense and SPAR's bio stream.</div>
+<div class="deadline open">Every term</div>
+</div>
+<div class="opp">
+<h3><a href="https://gcbrupdates.substack.com/">GCBR Organization Updates (newsletter)</a><span class="opp-tag opp-tag-biosecurity">Biosecurity</span></h3>
+<div class="details">Substack digest of updates from organisations working on global catastrophic biological risks — biosecurity, biosafety, pandemic preparedness and AI–bio — every <strong>1–2 months</strong>. The easiest way to keep up with new bio jobs, fellowships and funding.</div>
 </div>
 <div class="opp">
 <h3><a href="https://deepmindsafetyresearch.medium.com/introducing-our-short-course-on-agi-safety-1072adb7912c">Google DeepMind: AGI Safety Short Course</a></h3>
@@ -435,7 +494,7 @@
 <div class="deadline open">January 7, 2027 (Spring 2027 cohort)</div>
 </div>
 <div class="opp">
-<h3><a href="https://sparai.org/">SPAR</a></h3>
+<h3><a href="https://sparai.org/">SPAR</a><span class="opp-tag opp-tag-biosecurity">Biosecurity</span></h3>
 <div class="details">SPAR, run by Kairos, is a <strong>3-month</strong> remote fellowship pairing students and professionals with experienced mentors on AI safety, policy, biosecurity, communications and fieldbuilding projects. Fellows commit <strong>5–40 hours/week</strong> alongside other work and present at a virtual Demo Day with <strong>$7,000</strong> in prizes. Open to all experience levels; an expression-of-interest form is live for Spring 2027.</div>
 <div class="deadline upcoming">Spring 2027 applications open December 16, 2026 and close January 13, 2027 (mentor/org applications close November 30, 2026)</div>
 </div>
@@ -450,7 +509,7 @@
 <div class="deadline open">Rolling — next cohort deadline TBA</div>
 </div>
 <div class="opp">
-<h3><a href="https://www.cbai.ai/aixbiosecurity-fellowship-program">CBAI AIxBiosecurity Fellowship</a></h3>
+<h3><a href="https://www.cbai.ai/aixbiosecurity-fellowship-program">CBAI AIxBiosecurity Fellowship</a><span class="opp-tag opp-tag-biosecurity">Biosecurity</span></h3>
 <div class="details">A fully-funded <strong>10-week</strong> research fellowship in Harvard Square, Cambridge MA on AI-enabled biological risk — dangerous capability evals, safeguards and unlearning, threat modeling, biosurveillance, DNA synthesis screening and governance. Fellows get a <strong>$15,000</strong> stipend, housing, meals, weekly 1:1 mentorship and ~<strong>$1,500/week</strong> compute credits, with extension funding up to <strong>6 months</strong>.</div>
 <div class="deadline upcoming">Summer 2027 applications open early 2027 — EOI form open now</div>
 </div>
@@ -462,6 +521,11 @@
 <div class="opp">
 <h3><a href="https://dovetailresearch.org/">Dovetail Research Fellowship</a></h3>
 <div class="details">Dovetail is a research group pursuing foundational mathematics research to understand the nature of AI agents, with the mission of helping humanity safely navigate powerful AI. Its research agenda is published as a public wiki, and it is funded in part by the Long-Term Future Fund and ARIA. A Jobs section is linked, but no fellowship cohort, stipend, or application details are listed.</div>
+</div>
+<div class="opp">
+<h3><a href="https://www.pivotal-research.org/fellowships/biodefense-fellowship">Pivotal — Frontier Biodefense Fellowship</a><span class="opp-tag opp-tag-biosecurity">Biosecurity</span></h3>
+<div class="details"><strong>15 weeks</strong> full-time at LISA in <strong>London</strong> on frontier biological threats — AI×bio, PPE, biohardening and detection — with weekly 1:1 expert mentorship and dedicated research and project managers. <strong>£15,000–£18,000</strong> stipend.</div>
+<div class="deadline upcoming">2027 dates not yet announced — expression of interest open</div>
 </div>
 <div class="opp">
 <h3><a href="https://safeaigermany.org/incubator">SAIGE Incubator — Safe AI Germany</a></h3>
@@ -485,6 +549,10 @@
 <div class="opp">
 <h3 class="opp-name-past"><a href="https://www.cip.org/research-fellowship/">Collective Intelligence Project Research Fellowship</a></h3>
 <div class="deadline closed">Closed — deadline was May 15, 2026</div>
+</div>
+<div class="opp">
+<h3 class="opp-name-past"><a href="https://aixbiosecurity.org/">ERA AIxBiosecurity Fellowship</a><span class="opp-tag opp-tag-biosecurity">Biosecurity</span></h3>
+<div class="deadline closed">Winter 2027 applications closed — join the mailing list for future rounds</div>
 </div>
 <div class="opp">
 <h3 class="opp-name-past"><a href="https://erafellowship.org">ERA Fellowship (Cambridge)</a></h3>
@@ -511,7 +579,7 @@
 <div class="deadline closed">Closed May 10, 2026 — check for next cycle</div>
 </div>
 <div class="opp">
-<h3 class="opp-name-past"><a href="https://www.matsprogram.org/">MATS (ML Alignment Theory Scholars)</a></h3>
+<h3 class="opp-name-past"><a href="https://www.matsprogram.org/">MATS (ML Alignment Theory Scholars)</a><span class="opp-tag opp-tag-biosecurity">Biosecurity</span></h3>
 <div class="deadline closed">Closed - check for next cycle (mentor applications open for Summer &amp; Autumn 2027)</div>
 </div>
 <div class="opp">
@@ -529,6 +597,11 @@
 <h2>4. Grants &amp; Funding</h2>
 <p>Fund your own research through grants, regranters, and open RFPs. Many programs offer rolling applications with fast turnaround.</p>
 <div class="opp">
+<h3><a href="https://bluedot.org/grants/career-transition">BlueDot — Career Transition Grants</a><span class="opp-tag opp-tag-biosecurity">Biosecurity</span></h3>
+<div class="details">Grants of <strong>$20k–$200k</strong> for a set period of full-time work moving into AI safety or <strong>biosecurity</strong>; decisions in about <strong>2 weeks</strong>. Took over Coefficient Giving's career-transition funding in September 2026.</div>
+<div class="deadline open">Rolling</div>
+</div>
+<div class="opp">
 <h3><a href="https://coefficientgiving.org/tailwind/">Coefficient Giving — Project Tailwind</a></h3>
 <div class="details">Project Tailwind is Coefficient Giving's call for founders to launch ambitious new AI safety organisations, funded across three tiers: <strong>pre-seed $200K–$2M</strong>, <strong>seed $2M–$20M</strong>, and <strong>scale $20M–$200M</strong>, typically covering <strong>18–36 months</strong> of runway. Founders can pitch their own idea or tackle one of Coefficient's published unsolved problems in AI safety.</div>
 <div class="deadline open">Rolling</div>
@@ -541,6 +614,11 @@
 <div class="opp">
 <h3><a href="https://manifund.org/projects/falcon-fund">Falcon Fund (Manifund)</a></h3>
 <div class="details">Manifund-hosted animal welfare fund led by regrantor Marcus Abramovitch, making rapid (<strong>under 1 week</strong>) early-stage grants of <strong>$25K–$150K</strong>, focused on the intersection of animal welfare and transformative AI. Priorities include animal harm benchmarks, animal welfare constitutions, AI-in-factory-farming watchdog work, and raising animal salience in AI labs. Grantmaking is mostly outbound; contact marcus.s.abramovitch@gmail.com.</div>
+<div class="deadline open">Rolling</div>
+</div>
+<div class="opp">
+<h3><a href="https://fourtheon.bio/fellowships/">Fourth Eon Biosecurity Institute — Fellowships &amp; RFPs</a><span class="opp-tag opp-tag-biosecurity">Biosecurity</span></h3>
+<div class="details">Funds people to scope new biosecurity programmes: up to <strong>$75,000</strong> for <strong>three months</strong> as a solo Program Architect or two-person team, reviewed as proposals arrive. Open RFP areas include safeguards for biological AI models and <strong>bio capability evals</strong>. Fourth Eon also mentors the MATS biosecurity stream.</div>
 <div class="deadline open">Rolling</div>
 </div>
 <div class="opp">
@@ -559,6 +637,10 @@
 <div class="deadline open">Rolling</div>
 </div>
 <!-- archive:open --><div class="opp-archive"><div class="opp-archive-heading">Closed for now &mdash; worth knowing for the next cycle</div><!-- /archive:open -->
+<div class="opp">
+<h3 class="opp-name-past"><a href="https://coefficientgiving.org/funds/biosecurity-pandemic-preparedness/">Coefficient Giving — Biosecurity &amp; Pandemic Preparedness</a><span class="opp-tag opp-tag-biosecurity">Biosecurity</span></h3>
+<div class="deadline closed">2026 open call closed May 11, 2026 — proposals by email still considered</div>
+</div>
 <div class="opp">
 <h3 class="opp-name-past"><a href="https://foresight.org/grants/grants-ai-for-science-safety/">Foresight Institute AI Nodes</a></h3>
 <div class="deadline closed">Closed — deadline was October 31, 2026, 23:59 PDT</div>
@@ -790,6 +872,11 @@
 <div class="deadline open">Rolling</div>
 </div>
 <div class="opp">
+<h3><a href="https://www.longtermresilience.org/work-with-us/">Centre for Long-Term Resilience (CLTR)</a><span class="opp-tag opp-tag-biosecurity">Biosecurity</span></h3>
+<div class="details"><strong>London</strong> think tank advising the UK government on AI, biosecurity and risk management, with a dedicated Biosecurity Policy Unit. Lists live roles and runs a rolling open call for contractors on AI, biosecurity and AI–bio work.</div>
+<div class="deadline open">Rolling</div>
+</div>
+<div class="opp">
 <h3><a href="https://dmodel.ai/">d_model</a></h3>
 <div class="details">d_model is a fundamental AI research lab building RL environments that train LLM agents to do open-ended interpretability research, partnering with frontier labs while pursuing independent interpretability work. Career interest is collected via a general Hiring Interest Form rather than a formal application window; the team page lists a <strong>summer 2027</strong> intern cohort.</div>
 <div class="deadline upcoming">Rolling</div>
@@ -810,6 +897,11 @@
 <div class="deadline upcoming">Rolling — no application deadline</div>
 </div>
 <div class="opp">
+<h3><a href="https://www.frontiermodelforum.org/careers/">Frontier Model Forum — Careers</a><span class="opp-tag opp-tag-biosecurity">Biosecurity</span></h3>
+<div class="details">The industry body of leading frontier AI developers; its AI-Bio workstream sets shared practice on biological capability assessments and safeguards. No fixed postings — send a CV and cover letter to careers@frontiermodelforum.org.</div>
+<div class="deadline open">Rolling — send a CV any time</div>
+</div>
+<div class="opp">
 <h3><a href="https://www.goodfire.ai/careers">Goodfire</a></h3>
 <div class="details">Goodfire is an AI interpretability startup hiring agentic, mission-driven people to advance understanding of AI systems, with product lines spanning LLMs and life sciences. All roles are <strong>full-time, in person five days a week</strong> at their <strong>San Francisco (Telegraph Hill)</strong> office. The careers page's live listings failed to load; the full role listing is hosted on Greenhouse.</div>
 <div class="deadline open">Rolling</div>
@@ -823,6 +915,11 @@
 <h3><a href="https://www.grayswan.ai/careers">Gray Swan AI</a></h3>
 <div class="details">Gray Swan AI is an AI security company building adversarial evaluation and red-teaming tools (Shade, Cygnal, and the Arena red-teaming network), with research informing safety evaluations of frontier models. The careers page highlights <strong>Software Engineer</strong> openings, reviewed on a rolling basis. Benefits include <strong>28 days</strong> off, <strong>401(k) with 4%</strong> matching, visa sponsorship, flexible work, and <strong>100% paid</strong> parental leave with up to <strong>14 weeks</strong> birthing leave.</div>
 <div class="deadline open">Rolling</div>
+</div>
+<div class="opp">
+<h3><a href="https://ibbis.bio/about/careers/">IBBIS</a><span class="opp-tag opp-tag-biosecurity">Biosecurity</span></h3>
+<div class="details">Swiss non-profit in <strong>Geneva</strong> building global infrastructure for <strong>DNA synthesis screening</strong>: the open-source Commec screening tool, customer screening and international sequence-biosecurity standards. New roles are posted on this page.</div>
+<div class="deadline">No open roles right now</div>
 </div>
 <div class="opp">
 <h3><a href="https://job-boards.greenhouse.io/lawzero">LawZero</a></h3>
@@ -845,6 +942,11 @@
 <div class="deadline open">Rolling</div>
 </div>
 <div class="opp">
+<h3><a href="https://www.redqueen.bio/work-with-us">Red Queen Bio</a><span class="opp-tag opp-tag-biosecurity">Biosecurity</span></h3>
+<div class="details">AI-powered biodefense startup aiming to design, make and deliver countermeasures fast enough to stop engineered threats, scaling defences as frontier AI capabilities grow.</div>
+<div class="deadline upcoming">No posted roles — send a CV to jobs@redqueen.bio</div>
+</div>
+<div class="opp">
 <h3><a href="https://www.redwoodresearch.org/careers">Redwood Research</a></h3>
 <div class="details">Redwood Research, a nonprofit AI safety research organization, is hiring in <strong>Berkeley</strong> (on-site). Technical roles include Empirical Researcher and Conceptual Reasoning Capabilities Researcher at <strong>$350K–$850K</strong>; generalist roles include People Operations Lead (<strong>$200K–$250K</strong>) and IT Systems Administrator (<strong>$250K–$300K</strong>). A general expression of interest is also accepted.</div>
 <div class="deadline open">Rolling</div>
@@ -865,6 +967,11 @@
 <div class="deadline upcoming">Rolling</div>
 </div>
 <div class="opp">
+<h3><a href="https://securebio.org/careers/">SecureBio</a><span class="opp-tag opp-tag-biosecurity">Biosecurity</span></h3>
+<div class="details">Protects against engineered and AI-enabled biological threats. Its AI team builds bio evaluations for frontier models such as the Virology Capabilities Test; its Detection team runs metagenomic early-warning sequencing. Hiring senior AI-bio research scientists; mostly in person in <strong>Cambridge, MA</strong>.</div>
+<div class="deadline open">Rolling</div>
+</div>
+<div class="opp">
 <h3><a href="https://www.simplexaisafety.com/">Simplex</a></h3>
 <div class="details">Simplex is an AI safety research organization building a science of intelligence, using computational mechanics and interpretability to study belief state geometry, in-context learning, and factored world models in transformers. They are currently hiring <strong>Research Scientists</strong> in the <strong>Bay Area</strong> and <strong>London</strong>.</div>
 <div class="deadline open">Rolling</div>
@@ -875,9 +982,14 @@
 <div class="deadline">Rolling</div>
 </div>
 <div class="opp">
-<h3><a href="https://www.aisi.gov.uk/careers">UK AI Security Institute — Careers</a></h3>
+<h3><a href="https://www.aisi.gov.uk/careers">UK AI Security Institute — Careers</a><span class="opp-tag opp-tag-biosecurity">Biosecurity</span></h3>
 <div class="details">The UK government's AI Security Institute is the largest government technical AI safety team (red-teaming, evaluations, control, security). Currently listing technical roles including Software Engineer – Red Team, Research Scientist – Human Influence, Technical Writer, plus expressions of interest for Chem/Bio, Cyber, Core Technology and Research Director. Based in <strong>London</strong>, hybrid, with <strong>28.97%</strong> pension contribution.</div>
 <div class="deadline open">Rolling — hires in waves</div>
+</div>
+<div class="opp">
+<h3><a href="https://jobs.ashbyhq.com/valthos">Valthos</a><span class="opp-tag opp-tag-biosecurity">Biosecurity</span></h3>
+<div class="details">AI biodefense startup building systems that detect biological threats and design medical countermeasures in real time, backed by OpenAI, Lux Capital and Founders Fund. Hiring computational biologists, applied AI engineers and software engineers (<strong>8</strong> roles listed).</div>
+<div class="deadline open">Rolling</div>
 </div>
 <!-- archive:open --><div class="opp-archive"><div class="opp-archive-heading">Closed for now &mdash; worth knowing for the next cycle</div><!-- /archive:open -->
 <div class="opp">
@@ -889,7 +1001,7 @@
 <div class="deadline closed">Closed - register interest for future cohorts</div>
 </div>
 <div class="opp">
-<h3 class="opp-name-past"><a href="https://www.nist.gov/caissi/careers-caissi">US CAISSI (NIST) — Careers</a></h3>
+<h3 class="opp-name-past"><a href="https://www.nist.gov/caissi/careers-caissi">US CAISSI (NIST) — Careers</a><span class="opp-tag opp-tag-biosecurity">Biosecurity</span></h3>
 <div class="deadline closed">Closed - check for next cycle</div>
 </div>
 <!-- archive:close --></div><!-- /archive:close -->
@@ -989,6 +1101,10 @@
 <div class="deadline closed">Closed - check for next cycle</div>
 </div>
 <div class="opp">
+<h3 class="opp-name-past"><a href="https://councilonstrategicrisks.org/about/opportunities/">Council on Strategic Risks — Fellowship for Ending Bioweapons</a><span class="opp-tag opp-tag-biosecurity">Biosecurity</span></h3>
+<div class="deadline closed">Closed — 2027 class selected; next call expected around September 2027</div>
+</div>
+<div class="opp">
 <h3 class="opp-name-past"><a href="https://fas.org/talent-hub/policy-entrepreneurship-fellowship/">FAS AI Safety Policy Entrepreneurship Fellowship</a></h3>
 <div class="deadline closed">Closed - check for next cycle</div>
 </div>
@@ -1003,6 +1119,10 @@
 <div class="opp">
 <h3 class="opp-name-past"><a href="https://www.iaps.ai/fellowship">IAPS AI Policy Fellowship</a></h3>
 <div class="deadline closed">Closed – applications for Spring 2027 closed September 27, 2026</div>
+</div>
+<div class="opp">
+<h3 class="opp-name-past"><a href="https://centerforhealthsecurity.org/education-training/emerging-leaders-in-biosecurity-fellowship">Johns Hopkins CHS — Emerging Leaders in Biosecurity</a><span class="opp-tag opp-tag-biosecurity">Biosecurity</span></h3>
+<div class="deadline closed">Closed — 2027 class selected; applications usually open in August</div>
 </div>
 <div class="opp">
 <h3 class="opp-name-past"><a href="https://longitudepolicy.org">Longitude DC Intensive</a></h3>
