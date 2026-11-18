@@ -16,6 +16,7 @@ Usage:
 """
 
 import argparse
+import api_guard
 import json
 import logging
 import os
@@ -58,8 +59,8 @@ ALGOLIA_80K = {
 
 FORUM_URLS = [
     "https://forum.effectivealtruism.org/topics/ai-safety",
-    "https://www.lesswrong.com/tag/ai-safety",
-    "https://aisafetyfunding.substack.com/",
+    # LessWrong's tag page (404s, JS-only) and the aisafetyfunding Substack
+    # (403s to bots) were dropped Nov 2026 — neither had returned links in weeks.
 ]
 
 REQUEST_TIMEOUT = 20  # seconds
@@ -104,10 +105,20 @@ Return ONLY a JSON object (no markdown, no explanation) with these fields:
 - "name": string — the organization or program name
 - "url": string — the best URL for this opportunity
 - "relevance_score": integer 1-5
-- "category": string — one of: "career-resources", "community", "fellowships", "grants", "startups", "jobs", "phd", "policy-internships", "tech-internships"
+- "category": string — one of: "career-resources", "community", "fellowships", "grants", "startups", "jobs", "phd", "policy-internships", "tech-internships" (meanings below)
 - "description": string — 1-2 sentence description of what this opportunity offers
 - "status": string — one of: "open", "closed", "upcoming", "expression_of_interest", "unknown"
-- "deadline": string or null — application deadline if mentioned"""
+- "deadline": string or null — application deadline if mentioned
+
+Category meanings (choose by what the opportunity OFFERS the reader, not by what kind of organisation runs it):
+  - "fellowships": structured research fellowships, residencies and mentored programs (including part-time ones, even if called an "incubator")
+  - "grants": funding a person or project can apply for
+  - "startups": support for people FOUNDING an AI-safety organisation — incubators, accelerators, founder residencies, fiscal sponsorship, ops support. A young organisation that is itself hiring is NOT "startups"; it is "jobs".
+  - "jobs": an organisation's careers / hiring page (research labs, nonprofits, government institutes, young startups)
+  - "tech-internships" / "policy-internships": internships and short visiting roles, technical or governance
+  - "phd": PhD programs, PhD fellowships and academic positions
+  - "community": courses, upskilling, events, communities and reading lists
+  - "career-resources": career advice and directories"""
 
 CAREER_CHECK_PROMPT = """You are an expert on AI safety career opportunities. I have an existing entry for this organization in our database:
 
@@ -134,6 +145,7 @@ If there are new programs, return a JSON array of objects, each with:
 - "url": string
 - "description": string
 - "category": string (one of: "fellowships", "grants", "tech-internships", "policy-internships", "jobs", "community", "phd", "startups")
+  ("startups" means support for people founding an organisation — incubators, accelerators, fiscal sponsorship. A young organisation that is hiring is "jobs".)
 
 If there is nothing new, return an empty JSON array: []
 
@@ -550,7 +562,9 @@ def scrape_websearch_opportunities(anthropic_key: str, dry_run: bool = False) ->
         )
     except Exception as e:
         logger.warning("  Web-search call failed (%s) — skipping", e)
+        api_guard.record(False, e)
         return []
+    api_guard.record(True)
 
     text = "".join(
         getattr(b, "text", "") for b in response.content
@@ -641,6 +655,7 @@ def check_career_pages(
                 max_tokens=1024,
                 messages=[{"role": "user", "content": prompt}],
             )
+            api_guard.record(True)
             result_text = response.content[0].text.strip()
             # Try to parse JSON from the response
             result_text = _extract_json(result_text)
@@ -654,6 +669,7 @@ def check_career_pages(
             logger.warning("    Failed to parse Claude response as JSON")
         except Exception as e:
             logger.warning("    Error calling Claude API: %s", e)
+            api_guard.record(False, e)
 
         time.sleep(RATE_LIMIT_DELAY)
 
@@ -915,6 +931,7 @@ def evaluate_candidates(
                 max_tokens=512,
                 messages=[{"role": "user", "content": prompt}],
             )
+            api_guard.record(True)
             result_text = response.content[0].text.strip()
             result_text = _extract_json(result_text)
             result = json.loads(result_text)
@@ -930,6 +947,7 @@ def evaluate_candidates(
             logger.warning("    Failed to parse Claude response as JSON")
         except Exception as e:
             logger.warning("    Error calling Claude API: %s", e)
+            api_guard.record(False, e)
 
         time.sleep(RATE_LIMIT_DELAY)
 
@@ -1117,6 +1135,7 @@ def main() -> None:
 
     # Phase 6: Save results
     output_path = os.path.join(script_dir, "suggested_additions.json")
+    api_guard.check()  # fail red rather than file an issue from a broken run
     save_results(results, output_path)
 
     # Record everything we are about to show, so next week's issue does not

@@ -7,6 +7,7 @@ and produces a change report. Updates resources.json with new statuses.
 """
 
 import json
+import api_guard
 import logging
 import os
 import re
@@ -289,7 +290,7 @@ Respond with ONLY valid JSON (no markdown, no code fences):
   "status": "open" | "closed" | "upcoming" | "expression_of_interest" | "unknown",
   "deadline": "display-ready string, never null",
   "deadline_iso": "YYYY-MM-DD, or empty string",
-  "description": "2-3 sentence summary or empty string",
+  "description": "2-3 sentence summary (max 60 words) or empty string",
   "structured": {{
     "stipend": "e.g. '$15K' or '£6K-8K' or ''",
     "duration": "e.g. '12 weeks' or '3 months' or ''",
@@ -329,8 +330,10 @@ YYYY-MM-DD. This is what the site expires entries on, so:
   course whose page happens to mention a 2025 job posting has no deadline_iso.
 - When several rounds are open, use the next one that has not yet passed.
 
-DESCRIPTION — 2-3 sentences. Lead with what the program/opportunity is and the
-key facts (duration, stipend, location, eligibility). Use <strong> to emphasize
+DESCRIPTION — 2-3 short sentences, AT MOST 60 WORDS. Readers scan these cards
+on a phone. Lead with what the program/opportunity is, then the hard facts a
+reader filters on (stipend, duration, location, eligibility). Leave out history,
+publication lists, partner/collaborator lists and site-navigation details. Use <strong> to emphasize
 dollar amounts, durations, and other critical numbers — e.g. "<strong>$15K</strong>
 stipend". Do NOT include the deadline in the description (it has its own field).
 Return "" only if the page is truly description-less.
@@ -352,6 +355,7 @@ when info isn't present. These are for downstream filtering, not display.
         ).strip()
 
         # Try to extract JSON from response (handle occasional markdown wrapping)
+        api_guard.record(True)
         json_match = re.search(r"\{[\s\S]*\}", response_text)
         if json_match:
             return json.loads(json_match.group())
@@ -363,6 +367,7 @@ when info isn't present. These are for downstream filtering, not display.
         return None
     except Exception as e:
         logger.error(f"Claude API error for {resource['name']}: {e}")
+        api_guard.record(False, e)
         return None
 
 
@@ -599,6 +604,9 @@ def run_crawler(dry_run: bool = False) -> list[dict]:
 
         # Rate limiting
         time.sleep(REQUEST_DELAY)
+
+    # Don't overwrite resources.json from a run where Claude mostly failed.
+    api_guard.check()
 
     # Save updated resources and report
     if not dry_run:
