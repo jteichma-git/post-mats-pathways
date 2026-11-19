@@ -2809,5 +2809,47 @@
     "tags": [
       "biosecurity"
     ]
+  },
+  {
+    "name": "LawAI Summer Research Fellowships",
+    "url": "https://law-ai.org/srf-lf/",
+    "category": "policy-internships",
+    "current_status": "open",
+    "current_deadline": "January 29, 2027 (11:59 p.m. ET)",
+    "current_details": "The Institute for Law & AI's paid <strong>10-week</strong> summer fellowships for law students, lawyers and researchers working on law and AI governance. The US track pays <strong>$2,000/week</strong> plus a <strong>$10K</strong> relocation stipend for DC; the Legal Frontiers track is remote-first, with Cambridge (UK) and DC options.",
+    "last_checked": "2026-11-19T00:00:00+00:00",
+    "js_only": false,
+    "deadline_iso": "2027-01-29",
+    "structured": {
+      "stipend": "$2,000/week (US track) + $10K DC relocation",
+      "duration": "10 weeks",
+      "location": "Washington DC, Cambridge UK, or remote",
+      "program_dates": "June 14 – August 20, 2027"
+    },
+    "last_content_change": "2026-11-19T00:00:00+00:00",
+    "tags": [
+      "governance"
+    ]
+  },
+  {
+    "name": "ControlAI — Careers",
+    "url": "https://controlai.com/careers",
+    "category": "jobs",
+    "current_status": "open",
+    "current_deadline": "Rolling",
+    "current_details": "AI-risk advocacy and policy organisation campaigning to prevent the development of superintelligence. Currently hiring a <strong>(Senior) Policy Advisor</strong> in <strong>Washington DC</strong> and open \"Exceptional Talent\" roles in the <strong>US</strong> and <strong>London</strong>, all on-site and full-time.",
+    "last_checked": "2026-11-19T00:00:00+00:00",
+    "js_only": false,
+    "deadline_iso": "",
+    "structured": {
+      "stipend": "",
+      "duration": "",
+      "location": "Washington DC / London",
+      "program_dates": ""
+    },
+    "last_content_change": "2026-11-19T00:00:00+00:00",
+    "tags": [
+      "governance"
+    ]
   }
 ]
