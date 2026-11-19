@@ -1,9 +1,14 @@
 {
-  "synced_at": "2026-11-18T23:39:10.276795+00:00",
+  "synced_at": "2026-11-19T04:08:20.659240+00:00",
   "channel": "C05LWT1UG67",
   "window_days": 7,
-  "count": 21,
+  "count": 22,
   "messages": [
+    {
+      "ts": "1795050428.371059",
+      "user": "U08MN5FM16X",
+      "text": "*Constellation Visiting Fellows \u2013 Spring 2027 Cohort!* :constellation-icon: \n\nApplications are open for the Spring cohort of Constellation\u2019s Visiting Fellows Program (February\u2013May 2027)!\n\n\u2022 Great fit for people whose work would be unblocked or accelerated by access to the Constellation workspace and network.\n\u2022 We are especially excited about applicants working full-time on (1) work relevant for pacing or (2) making RSI go well given lots of AI labor (automated alignment, control, elicitation on conceptual reasoning, etc.), and other areas that address catastrophic risks from AI.\n\u2022 Fellows get 3\u20136 months of workspace access, plus travel and housing reimbursement.\n\u2022 *<https://constellation.org/programs/visiting-fellowship|Apply by November 29>*\nPlease share with anyone who might be a good fit!"
+    },
     {
       "ts": "1795034064.721219",
       "user": "U084PNXDVMF",
