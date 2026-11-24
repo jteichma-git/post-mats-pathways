@@ -2530,25 +2530,26 @@
     "last_analyzed": "2026-11-24T01:13:49.572006+00:00"
   },
   {
-    "name": "Vegas AI Security Forum",
-    "url": "https://aisecurity.forum/",
+    "name": "AI Security Forum",
+    "url": "https://ai-security-forum.super.site/",
     "category": "community",
-    "current_status": "open",
-    "current_deadline": "TLV '26 on Nov 22, 2026 — applications open (DC Reading Group rolling)",
-    "current_details": "Invite-based forum series convening AI, cybersecurity, and national security experts to secure powerful AI models, with editions in Las Vegas, DC, Tel Aviv, and Paris. Applications are open for <strong>TLV '26</strong> in Israel and a rolling US-based DC Reading Group. Fiscally sponsored by Hack Club, a 501(c)(3) nonprofit.",
+    "current_status": "expression_of_interest",
+    "current_deadline": "Check site for the next forum",
+    "current_details": "Invite-based forum series bringing together AI, cybersecurity and national security experts to secure powerful AI models, with editions in <strong>Las Vegas</strong> (alongside DEF CON), <strong>DC</strong>, <strong>Tel Aviv</strong> and <strong>Paris</strong>. Fiscally sponsored by Hack Club.",
     "last_checked": "2026-11-24T01:13:49.572006+00:00",
     "js_only": false,
-    "deadline_iso": "2026-11-22",
+    "deadline_iso": "",
     "structured": {
       "stipend": "",
       "duration": "",
       "location": "Tel Aviv, Washington DC, Las Vegas, Paris",
-      "program_dates": "TLV '26: Nov 22, 2026"
+      "program_dates": ""
     },
     "last_content_change": "2026-11-19T03:50:05.846914+00:00",
     "tags": [
       "security"
-    ]
+    ],
+    "notes": "Main site aisecurity.forum went down Nov 2026 (Vercel DEPLOYMENT_NOT_FOUND); super.site copy blocks the crawler, so check by hand. Switch back if aisecurity.forum returns."
   },
   {
     "name": "ELLIS Institute Tübingen — AI Safety & Alignment Group",
