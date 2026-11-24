@@ -37,7 +37,7 @@ DIRECTORY_FILE = BASE_DIR / "directory.html"
 REPORT_FILE = BASE_DIR / "review_report.json"
 
 # Use a different model than the crawler (which uses Haiku) for independent review
-REVIEW_MODEL = "claude-opus-5"
+REVIEW_MODEL = "claude-sonnet-5-5"
 
 REQUEST_TIMEOUT = 30
 REQUEST_DELAY = 2

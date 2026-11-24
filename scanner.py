@@ -563,7 +563,7 @@ def scrape_websearch_opportunities(anthropic_key: str, dry_run: bool = False) ->
     )
     try:
         response = client.messages.create(
-            model="claude-opus-5",
+            model="claude-sonnet-5-5",
             max_tokens=4096,
             tools=[{"type": "web_search_20260209", "name": "web_search", "max_uses": 8}],
             messages=[{"role": "user", "content": prompt}],

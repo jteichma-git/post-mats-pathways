@@ -6,6 +6,7 @@ Reads resources.json, fetches each URL, sends content to Claude Haiku for analys
 and produces a change report. Updates resources.json with new statuses.
 """
 
+import hashlib
 import json
 import api_guard
 import topics
@@ -19,6 +20,32 @@ from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
+
+# Haiku is plenty for pulling deadlines/descriptions out of a page, and costs a
+# fraction of Opus. (Opus 5 here burned a $20 top-up in ~2 weeks, Sep–Nov 2026.)
+CRAWL_MODEL = "claude-haiku-4-5"
+
+# Skip the Claude call when a page's text hasn't changed since the last
+# analysis. Bump PROMPT_VERSION whenever the analysis prompt changes in a way
+# that should re-analyse every page; topic-rule edits re-analyse automatically.
+PROMPT_VERSION = "2026-11-23"
+RECHECK_DAYS = 28  # re-analyse anyway after this long, as a safety net
+
+
+def content_hash(page_text: str) -> str:
+    key = PROMPT_VERSION + "\n" + topics.prompt_block() + "\n" + page_text[:8000]
+    return hashlib.sha256(key.encode("utf-8")).hexdigest()
+
+
+def recently_analyzed(resource: dict, now_dt: datetime) -> bool:
+    ts = resource.get("last_analyzed")
+    if not ts:
+        return False
+    try:
+        then = datetime.fromisoformat(ts)
+    except ValueError:
+        return False
+    return (now_dt - then).days < RECHECK_DAYS
 
 # Configure logging
 logging.basicConfig(
@@ -350,10 +377,8 @@ when info isn't present. These are for downstream filtering, not display.
 
     try:
         message = client.messages.create(
-            model="claude-opus-5",
+            model=CRAWL_MODEL,
             max_tokens=2000,
-            thinking={"type": "adaptive"},
-            output_config={"effort": "medium"},
             messages=[{"role": "user", "content": prompt}],
         )
         response_text = "".join(
@@ -396,7 +421,9 @@ def run_crawler(dry_run: bool = False) -> list[dict]:
 
     resources = load_resources()
     change_report = []
-    now = datetime.now(timezone.utc).isoformat()
+    now_dt = datetime.now(timezone.utc)
+    now = now_dt.isoformat()
+    skipped_unchanged = 0
 
     total = len(resources)
     logger.info(f"Starting crawl of {total} resources...")
@@ -495,6 +522,37 @@ def run_crawler(dry_run: bool = False) -> list[dict]:
 
         if len(page_text) < 50:
             logger.warning(f"  Very little text content extracted ({len(page_text)} chars)")
+
+        # Skip Claude if the page is unchanged since the last analysis.
+        page_hash = content_hash(page_text)
+        if (
+            resource.get("content_hash") == page_hash
+            and recently_analyzed(resource, now_dt)
+        ):
+            logger.info("  Page unchanged since last analysis — skipping Claude")
+            if not dry_run and "auto_tags" in resource:
+                tags = topics.effective(resource, resource["auto_tags"])
+                if tags:
+                    resource["tags"] = tags
+                else:
+                    resource.pop("tags", None)
+            change_report.append({
+                "name": name,
+                "url": url,
+                "action": "unchanged",
+                "error": None,
+                "old_status": resource["current_status"],
+                "new_status": resource["current_status"],
+                "old_deadline": resource.get("current_deadline"),
+                "new_deadline": resource.get("current_deadline"),
+                "old_details": resource.get("current_details"),
+                "new_details": resource.get("current_details"),
+                "key_changes": "Page unchanged — not re-analysed",
+            })
+            skipped_unchanged += 1
+            resource["last_checked"] = now
+            time.sleep(REQUEST_DELAY)
+            continue
 
         # Analyze with Claude
         logger.info(f"  Sending to Claude for analysis...")
@@ -604,6 +662,9 @@ def run_crawler(dry_run: bool = False) -> list[dict]:
             resource["deadline_iso"] = new_deadline_iso
             resource["current_details"] = write_details
             resource["structured"] = write_structured
+            resource["auto_tags"] = new_topics
+            resource["content_hash"] = page_hash
+            resource["last_analyzed"] = now
             new_topics = topics.effective(resource, new_topics)
             if new_topics:
                 resource["tags"] = new_topics
@@ -637,6 +698,7 @@ def run_crawler(dry_run: bool = False) -> list[dict]:
     logger.info(f"  Errors: {len(errors)}")
     logger.info(f"  JS-only (manual review): {len(js_only)}")
     logger.info(f"  Unchanged: {total - len(changes) - len(errors) - len(js_only)}")
+    logger.info(f"  Skipped (page unchanged, no Claude call): {skipped_unchanged}")
     logger.info(f"{'='*60}")
 
     if changes:
