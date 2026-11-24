@@ -12,6 +12,7 @@ Usage:
     python reviewer.py --limit 5       # Only check first N entries
 """
 
+import cost_tracker
 import argparse
 import json
 import logging
@@ -157,10 +158,14 @@ Respond with ONLY valid JSON (no markdown, no code fences):
     try:
         message = client.messages.create(
             model=REVIEW_MODEL,
-            max_tokens=500,
+            max_tokens=4000,
+            output_config={"effort": "medium"},
             messages=[{"role": "user", "content": prompt}],
         )
-        response_text = message.content[0].text.strip()
+        response_text = "".join(
+            getattr(b, "text", "") for b in message.content
+            if getattr(b, "type", "") == "text"
+        ).strip()
         json_match = re.search(r"\{[\s\S]*\}", response_text)
         if json_match:
             return json.loads(json_match.group())
@@ -281,7 +286,7 @@ def run_reviewer(dry_run: bool = False, limit: int = None) -> list[dict]:
         sys.exit(1)
 
     import anthropic
-    client = anthropic.Anthropic(api_key=api_key)
+    client = cost_tracker.track(anthropic.Anthropic(api_key=api_key), "reviewer")
 
     report = []
     checked = 0

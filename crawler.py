@@ -9,6 +9,7 @@ and produces a change report. Updates resources.json with new statuses.
 import hashlib
 import json
 import api_guard
+import cost_tracker
 import topics
 import logging
 import os
@@ -23,7 +24,7 @@ from bs4 import BeautifulSoup
 
 # Haiku is plenty for pulling deadlines/descriptions out of a page, and costs a
 # fraction of Opus. (Opus 5 here burned a $20 top-up in ~2 weeks, Sep–Nov 2026.)
-CRAWL_MODEL = "claude-haiku-4-5"
+CRAWL_MODEL = "claude-haiku-5-5"
 
 # Skip the Claude call when a page's text hasn't changed since the last
 # analysis. Bump PROMPT_VERSION whenever the analysis prompt changes in a way
@@ -378,9 +379,14 @@ when info isn't present. These are for downstream filtering, not display.
     try:
         message = client.messages.create(
             model=CRAWL_MODEL,
-            max_tokens=2000,
+            max_tokens=4000,  # room for (low-effort) thinking plus the JSON
+            output_config={"effort": "low"},
             messages=[{"role": "user", "content": prompt}],
         )
+        if message.stop_reason == "refusal":
+            api_guard.record(True)
+            logger.warning(f"Claude declined to analyse {resource['name']}")
+            return None
         response_text = "".join(
             b.text for b in message.content if getattr(b, "type", "") == "text"
         ).strip()
@@ -417,7 +423,7 @@ def run_crawler(dry_run: bool = False) -> list[dict]:
 
     # Initialize Anthropic client
     import anthropic
-    client = anthropic.Anthropic(api_key=api_key)
+    client = cost_tracker.track(anthropic.Anthropic(api_key=api_key), "crawler")
 
     resources = load_resources()
     change_report = []

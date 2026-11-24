@@ -17,6 +17,7 @@ Usage:
 
 import argparse
 import api_guard
+import cost_tracker
 import topics
 import json
 import logging
@@ -162,6 +163,14 @@ Return ONLY the JSON array, no markdown or explanation."""
 # ---------------------------------------------------------------------------
 # URL normalization
 # ---------------------------------------------------------------------------
+
+
+def _response_text(response):
+    """Join the text blocks (newer models may put thinking blocks first)."""
+    return "".join(
+        getattr(b, "text", "") for b in response.content
+        if getattr(b, "type", "") == "text"
+    ).strip()
 
 def normalize_url(url: str) -> str:
     """Normalize a URL for deduplication comparison."""
@@ -545,7 +554,7 @@ def scrape_websearch_opportunities(anthropic_key: str, dry_run: bool = False) ->
         return []
 
     import anthropic
-    client = anthropic.Anthropic(api_key=anthropic_key)
+    client = cost_tracker.track(anthropic.Anthropic(api_key=anthropic_key), "scanner")
     prompt = (
         "Search the web for AI safety / AI alignment opportunities, and for "
         "biosecurity opportunities (especially AI-enabled biological risk), that are "
@@ -564,7 +573,8 @@ def scrape_websearch_opportunities(anthropic_key: str, dry_run: bool = False) ->
     try:
         response = client.messages.create(
             model="claude-sonnet-5-5",
-            max_tokens=4096,
+            max_tokens=8000,
+            output_config={"effort": "medium"},
             tools=[{"type": "web_search_20260209", "name": "web_search", "max_uses": 8}],
             messages=[{"role": "user", "content": prompt}],
         )
@@ -657,14 +667,15 @@ def check_career_pages(
 
         try:
             import anthropic
-            client = anthropic.Anthropic(api_key=anthropic_key)
+            client = cost_tracker.track(anthropic.Anthropic(api_key=anthropic_key), "scanner")
             response = client.messages.create(
-                model="claude-haiku-4-5",
-                max_tokens=1024,
+                model="claude-haiku-5-5",
+                max_tokens=4000,
+                output_config={"effort": "low"},
                 messages=[{"role": "user", "content": prompt}],
             )
             api_guard.record(True)
-            result_text = response.content[0].text.strip()
+            result_text = _response_text(response)
             # Try to parse JSON from the response
             result_text = _extract_json(result_text)
             programs = json.loads(result_text)
@@ -906,7 +917,7 @@ def evaluate_candidates(
         return results
 
     import anthropic
-    client = anthropic.Anthropic(api_key=anthropic_key)
+    client = cost_tracker.track(anthropic.Anthropic(api_key=anthropic_key), "scanner")
     evaluated = []
 
     for i, candidate in enumerate(candidates):
@@ -935,12 +946,13 @@ def evaluate_candidates(
 
         try:
             response = client.messages.create(
-                model="claude-haiku-4-5",
-                max_tokens=512,
+                model="claude-haiku-5-5",
+                max_tokens=3000,
+                output_config={"effort": "low"},
                 messages=[{"role": "user", "content": prompt}],
             )
             api_guard.record(True)
-            result_text = response.content[0].text.strip()
+            result_text = _response_text(response)
             result_text = _extract_json(result_text)
             result = json.loads(result_text)
 

@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   update:
@@ -32,10 +33,17 @@ jobs:
         run: playwright install chromium --with-deps
 
       - name: Run crawler and renderer
+        id: main
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
         run: python run.py
+
+      - name: Report API cost (posts to the "API cost tracker" issue, which emails John)
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python report_cost.py --workflow crawl --jobs crawler reviewer --status "${{ steps.main.outcome }}"
 
       - name: Check for changes
         id: check_changes
@@ -51,7 +59,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add resources.json index.html directory.html change_report.json slack_feed.json
+          git add resources.json index.html directory.html change_report.json slack_feed.json cost_history_crawl.csv
           TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
           git commit -m "Auto-update resource statuses ($TIMESTAMP)"
           # A crawl takes ~20 minutes, so main can move under us while it runs.

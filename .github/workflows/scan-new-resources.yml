@@ -30,10 +30,17 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run discovery scanner
+        id: main
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
         run: python scanner.py
+
+      - name: Report API cost (posts to the "API cost tracker" issue, which emails John)
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python report_cost.py --workflow scan --jobs scanner --status "${{ steps.main.outcome }}"
 
       - name: Create GitHub Issue with results
         env:
@@ -44,7 +51,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add seen_candidates.json
+          git add seen_candidates.json cost_history_scan.csv
           # Without committing this, every run starts with no memory and the
           # weekly issue re-lists everything it has ever found.
           if git diff --cached --quiet; then
