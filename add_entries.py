@@ -42,6 +42,12 @@ CATEGORY_CONFIG = {
 }
 
 
+
+def _without_slack_feed(html: str) -> str:
+    """The HTML minus the 7-day #opportunities mirror. A URL that only appears
+    there is temporary, so it must not block adding a permanent card."""
+    return re.sub(r"<!-- slack-feed:start -->.*?<!-- slack-feed:end -->", "", html, flags=re.S)
+
 def load_suggestions() -> List[Dict]:
     with open(SUGGESTIONS_PATH) as f:
         data = json.load(f)
@@ -175,7 +181,7 @@ def add_to_index_html(entries: List[Dict]) -> None:
         deadline = entry.get("deadline")
         category = entry.get("category", "")
 
-        if url.split("?")[0].rstrip("/") in html:
+        if url.split("?")[0].rstrip("/") in _without_slack_feed(html):
             print("  SKIP index.html (URL already present): {}".format(name))
             continue
 
@@ -284,7 +290,7 @@ def add_to_directory_html(entries: List[Dict]) -> None:
         deadline = entry.get("deadline")
         category = entry.get("category", "")
 
-        if url.split("?")[0].rstrip("/") in html:
+        if url.split("?")[0].rstrip("/") in _without_slack_feed(html):
             print("  SKIP directory.html (URL already present): {}".format(name))
             continue
 

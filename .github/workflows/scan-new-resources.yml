@@ -51,7 +51,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add seen_candidates.json cost_history_scan.csv
+          git add seen_candidates.json cost_history_scan.csv suggested_additions.json
           # Without committing this, every run starts with no memory and the
           # weekly issue re-lists everything it has ever found.
           if git diff --cached --quiet; then

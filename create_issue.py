@@ -53,7 +53,14 @@ def build_issue_body(suggestions: List[Dict]) -> str:
         "unknown": "Uncategorized",
     }
 
+    # The number shown is each item's position in suggested_additions.json,
+    # which is what `add_entries.py --ids` expects.
+    number = {id(s): i for i, s in enumerate(suggestions, 1)}
+
     lines = []
+    lines.append("**To add items:** note the numbers (**#1**, **#2**, …) and tell Claude, "
+                 "e.g. \"add 2, 4 and 7 from the scan of {}\".\n".format(
+                     datetime.now(timezone.utc).strftime("%-d %b %Y")))
     lines.append("The automated scanner found the following new AI safety opportunities ")
     lines.append("that are **not currently tracked** in `resources.json`.\n")
     lines.append("Please review each suggestion and add relevant ones to the site.\n")
@@ -71,7 +78,7 @@ def build_issue_body(suggestions: List[Dict]) -> str:
             status = item.get("status", "unknown")
             deadline = item.get("deadline")
 
-            lines.append("### [{}]({})".format(name, url))
+            lines.append("### #{} [{}]({})".format(number[id(item)], name, url))
             lines.append("- **Relevance:** {}/5".format(score))
             lines.append("- **Category:** {}".format(label))
             lines.append("- **Status:** {}".format(status))
@@ -91,7 +98,7 @@ def build_issue_body(suggestions: List[Dict]) -> str:
             cat = category_labels.get(item.get("category", "unknown"),
                                       item.get("category", "unknown"))
             desc = item.get("description", "")
-            lines.append("### [{}]({})".format(name, url))
+            lines.append("### #{} [{}]({})".format(number[id(item)], name, url))
             lines.append("- **Relevance:** {}/5 · **Category:** {}".format(score, cat))
             if desc:
                 lines.append("- {}".format(desc))
@@ -104,7 +111,7 @@ def build_issue_body(suggestions: List[Dict]) -> str:
     lines.append("Use `add_entries.py` to add approved entries to all three site files at once:\n")
     lines.append("```bash")
     lines.append("python add_entries.py          # Interactive: review and pick by number")
-    lines.append("python add_entries.py --ids 1,3,5  # Add specific entries")
+    lines.append("python add_entries.py --ids 1,3,5  # Add entries #1, #3 and #5")
     lines.append("python add_entries.py --all    # Add all with relevance >= 3")
     lines.append("```\n")
     lines.append("Then review with `git diff` and push.")

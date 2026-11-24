@@ -165,6 +165,16 @@
     "last_content_change": "2026-05-25T12:36:01.453976+00:00"
   },
   {
+    "name": "NDIF — Looped Lens Challenge",
+    "url": "https://ndif.us/looped-lens-challenge/",
+    "category": "community",
+    "current_status": "open",
+    "current_deadline": "Rolling",
+    "current_details": "Open interpretability competition: build a <strong>lens</strong> that reveals what Thinking Machines' looped open-weights model <strong>Inkling 2 Mini</strong> computes but doesn't write out. Run remotely on the National Deep Inference Fabric (NDIF) with a free API key; results go on a public leaderboard.",
+    "last_checked": "2026-11-24T04:24:14.248697+00:00",
+    "js_only": false
+  },
+  {
     "name": "Outsider's Roadmap to AI Safety (LessWrong)",
     "url": "https://www.lesswrong.com/posts/bcuzjKmNZHWDuEwBz/an-outsider-s-roadmap-into-ai-safety-research-2025",
     "category": "community",
@@ -785,6 +795,30 @@
     "auto_tags": [],
     "content_hash": "3049e8b85801eb4fb431534fea21264419deb71b2809cdcda97db3ec5c732aaf",
     "last_analyzed": "2026-11-24T01:13:49.572006+00:00"
+  },
+  {
+    "name": "Meridian Labs — Member of Technical Staff, Research",
+    "url": "https://meridianlabs.ai/careers/mts-research",
+    "category": "jobs",
+    "current_status": "open",
+    "current_deadline": "Rolling",
+    "current_details": "Meridian Labs builds open-source evaluation tools (<strong>Inspect AI</strong>, Inspect Scout, Petri) used by AI Security Institutes in five countries and by METR, Apollo and Redwood. Research role on automated alignment audits, agent monitoring and transcript analysis.",
+    "last_checked": "2026-11-24T04:24:14.248852+00:00",
+    "js_only": false,
+    "tags": [
+      "security"
+    ]
+  },
+  {
+    "name": "Mycelium — Research Scientist / Engineer",
+    "url": "https://www.projectmycelium.ai/careers/research-scientist-engineer",
+    "category": "jobs",
+    "current_status": "open",
+    "current_deadline": "Dec 1, 2026 (rolling review)",
+    "current_details": "Full-time ML research on <strong>robust moral values</strong> in AI systems, with a focus on animal welfare and neglected moral patients: building benchmarks, evals and empirical research. Bay Area preferred, remote considered. <strong>$130K–$225K</strong> (senior <strong>$225K–$320K</strong>).",
+    "last_checked": "2026-11-24T04:24:14.248844+00:00",
+    "js_only": false,
+    "deadline_iso": "2026-12-01"
   },
   {
     "name": "What AI Safety Orgs Want in a Hire",
@@ -3320,5 +3354,18 @@
     ],
     "content_hash": "17561dc1ecf31be03476ec1487ce126026f7817fae7ae32fcba91b0aeab75c80",
     "last_analyzed": "2026-11-24T01:13:49.572006+00:00"
+  },
+  {
+    "name": "Staffing the New Congress — Guide for AI Safety Applicants",
+    "url": "https://congress.safeai.org/go/guide",
+    "category": "career-resources",
+    "current_status": "open",
+    "current_deadline": "Rolling",
+    "current_details": "Living guide for AI safety people applying to join the staffs of newly elected <strong>U.S. Congress</strong> members and governors, who are hiring over the next <strong>2–3 months</strong>. Covers eligibility (most paid roles need U.S. citizenship), which jobs and offices to target, and where to send a resume.",
+    "last_checked": "2026-11-24T04:24:14.248825+00:00",
+    "js_only": false,
+    "tags": [
+      "governance"
+    ]
   }
 ]
